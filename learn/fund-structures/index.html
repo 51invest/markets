@@ -1,0 +1,341 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light" data-theme-mode="auto"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark"><title>基金的基本结构 · 巫妖投资</title><meta name="description" content="基金把众多投资者的资金集合起来按合同投资；法律形式、份额权利、估值和退出机制比名称更能说明风险。"><link rel="canonical" href="https://markets.51invest.com/learn/fund-structures/"><link rel="alternate" hreflang="zh-CN" href="https://markets.51invest.com/learn/fund-structures/"><link rel="alternate" hreflang="en" href="https://markets.51invest.com/en/learn/fund-structures/"><link rel="alternate" hreflang="x-default" href="https://markets.51invest.com/learn/fund-structures/"><link rel="icon" type="image/png" href="/_astro/neutral.Dr5C2SoA.png"><script>
+  (() => {
+    const root = document.documentElement;
+    const readCookie = key => {
+      try {
+        return document.cookie.split('; ').find(value => value.startsWith(`51invest-${key}=`))?.split('=').slice(1).join('=') ?? null;
+      } catch {
+        return null;
+      }
+    };
+    const readLocal = key => {
+      try {
+        return localStorage.getItem(`51invest-${key}`);
+      } catch {
+        return null;
+      }
+    };
+    const storedTheme = readCookie('theme') || readLocal('theme');
+    const mode = ['light', 'dark', 'auto'].includes(storedTheme) ? storedTheme : 'auto';
+    const media = matchMedia('(prefers-color-scheme: dark)');
+    const apply = () => {
+      root.dataset.theme = mode === 'auto' ? (media.matches ? 'dark' : 'light') : mode;
+      root.dataset.themeMode = mode;
+    };
+    apply();
+    media.addEventListener('change', () => {
+      if (root.dataset.themeMode === 'auto') apply();
+    });
+  })();
+</script><link rel="stylesheet" href="/_astro/Base.CocbJOeh.css"></head> <body>  <a class="skip-link" href="#main">跳到正文</a> <header class="site-header"> <div class="container header-inner"> <a class="brand" href="https://51invest.com/" data-main-home aria-label="巫妖投资"> <span class="brand-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="36" height="36" alt class="mascot" loading="lazy" decoding="async"></span> <span class="brand-copy"> <span class="brand-name">巫妖投资</span> <span class="brand-caption">51INVEST</span> </span> </a> <nav class="desktop-nav" aria-label="知识分站"> <a class="nav-link" href="https://51invest.com/" data-main-home> 首页 </a> <a class="nav-link" href="https://economics.51invest.com/"> 经济学 </a><a class="nav-link" href="https://finance.51invest.com/"> 金融基础 </a><a class="nav-link active" href="/" aria-current="page"> 市场与产品 </a><a class="nav-link" href="https://invest.51invest.com/"> 投资方法 </a><a class="nav-link" href="https://history.51invest.com/"> 经济与金融史 </a><a class="nav-link" href="https://research.51invest.com/"> 研究方法 </a> <a class="nav-link" href="https://51invest.com/contents/"> 内容地图 </a> </nav> <div class="header-tools"> <a class="icon-button language-button" href="/en/learn/fund-structures/" hreflang="en" lang="en" data-language-link="en" aria-label="切换为英文" title="切换为英文"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>English</span> </a> <button class="icon-button theme-button" type="button" data-theme-toggle aria-label="主题: 跟随系统" title="主题: 跟随系统" data-label-auto="主题: 跟随系统" data-label-light="主题: 浅色" data-label-dark="主题: 深色"> <span class="theme-icon" data-theme-icon="auto"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>        <circle cx="12" cy="12" r="8.5"></circle><path d="M12 3.5v17"></path><path d="M12 7a5 5 0 0 1 0 10" fill="currentColor" stroke="none"></path> </svg></span> <span class="theme-icon" data-theme-icon="light"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>       <circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>  </svg></span> <span class="theme-icon" data-theme-icon="dark"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>      <path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"></path>   </svg></span> <span class="theme-text" data-theme-text="auto">跟随系统</span> <span class="theme-text" data-theme-text="light">浅色</span> <span class="theme-text" data-theme-text="dark">深色</span> </button> </div> </div> </header> <main id="main" class="site-main" data-pagefind-body>  <div class="reading-progress" data-reading-progress aria-hidden="true"><span></span></div> <div class="container"> <nav class="breadcrumbs" aria-label="Breadcrumb"> <a href="https://51invest.com/" data-main-home>首页</a> <span class="sep">/</span> <a href="/">市场与产品</a> <span class="sep">/</span> <span aria-current="page">基金的基本结构</span> </nav> </div> <article> <header class="article-header"> <div class="container"> <span class="article-type">产品与品种</span> <h1 class="article-title">基金的基本结构</h1> <p class="article-summary">基金把众多投资者的资金集合起来按合同投资；法律形式、份额权利、估值和退出机制比名称更能说明风险。</p>  <div class="meta-grid"> <div class="meta-item"><span>模块</span><strong>MKT-M05 · 基金与交易所产品</strong></div> <div class="meta-item"><span>层级</span><strong>入门</strong></div> <div class="meta-item"><span>阅读</span><strong>21 分钟 · 15 节</strong></div> </div> <p class="demo-jump"> <a href="#demo-check"> 这篇有一个可以动手操作的演示 <span aria-hidden="true">↓</span> </a> </p> </div> </header> <div class="container article-layout"> <div class="article-body"> <h2>产品定义</h2>
+<p>基金集合投资者资金，按基金合同或章程投资于股票、债券、货币市场工具等资产。法律形式因辖区而异；本篇范围限定为美国 SEC 注册基金这一类，其他辖区的法律形式不在本篇展开，要展开须先按当地注册文件与规则文本另立来源。在美国注册结构里，开放式投资公司、封闭式投资公司与单位投资信托是常见形式[3]。共同基金是注册的开放式投资公司，ETF 通常也注册为开放式投资公司或单位投资信托 [1]。名称不决定结构，份额权利、估值和退出机制才决定产品边界。</p>
+<h2>基金的分类维度</h2>
+<p>基金名称常把几个独立维度叠在一起：法律形式（开放式、封闭式、单位投资信托）、发行方式（公开注册发行或私募）、管理方式（主动或被动）、资产类别（股票、债券、货币市场或混合）、交易结构（ETF、LOF）和投资层级（FOF）。同一只基金可以同时是“开放式、公募、主动、股票型、ETF”，也可以只取其中几项；一个维度不能替代另一个维度。以下以美国 SEC 注册基金为主，LOF 单独标为中国境内口径。</p>
+<h3>开放式与封闭式：份额是变动还是固定</h3>
+<p>开放式基金持续向投资者发行和赎回份额，份额总数随申赎变动，投资者通常按当日或下一计算日净值与基金交易；封闭式基金在首次公开发行时卖出固定数量份额，之后通常不再连续发行或赎回，持有人主要在二级市场买卖[1][9]。</p>
+<p>开放式基金的退出通道是基金本身：投资者把份额交回基金，基金按净值付款；为应付日常赎回，基金要持有现金和流动性资产，赎回压力大时可能卖出资产、产生交易成本，剩余持有人共同承担。封闭式基金没有这条日常赎回通道，价格由二级市场供需决定，可能高于净值（溢价）或低于净值（折价）；因为不能按净值赎回，折价不会自动被套利抹平。封闭式基金也不必为每日赎回保留同样多的流动性，可能有更多空间持有非流动性资产或使用杠杆[9]。</p>
+<p>教学假设，非真实报价：某开放式基金净值 10.00，投资者申购 10,000，忽略费用得 1,000 份；次日若大量持有人赎回，基金卖出组合资产，剩余持有人承担由此产生的交易成本。某封闭式基金净值 10.00，市价 8.50，折价 15%；买方用 8.50 买到价值 10.00 的净资产，但折价可能扩大到 20%，且基金使用杠杆时净值波动会被放大[9]。</p>
+<p>开放式“可每日赎回”不等于“任何时点都能按净值无成本退出”：赎回可能受开放日、赎回费、暂停赎回或市场流动性影响；封闭式“折价”也不等于免费午餐：折价可能长期存在甚至扩大，持有人没有要求基金按净值赎回的权利，除非基金文件另有定期回购、要约收购或转为开放式等安排。开放/封闭是法律与交易结构，不是风险高低的标签。</p>
+<h3>公募与私募：发行对象与注册状态</h3>
+<p>在美国，公募基金通常指向公众公开发行、并按 1940 年投资公司法注册的投资公司；私募基金是依据 3(c)(1) 或 3(c)(7) 排除在“投资公司”定义之外的集合投资工具，不按投资公司注册，也不能公开要约其份额[4]。</p>
+<p>公募注册基金要面对公开投资者，受注册、披露、董事会监督、分散化与流动性等规则约束；开放式公募基金通常要按净值处理每日申赎。私募基金通过豁免发行募集：3(c)(1) 基金不超过 100 名受益所有人，3(c)(7) 基金限于合格购买者；常见发行依据是 Regulation D 的 Rule 506(b) 或 506(c)，前者一般禁止公开招揽，后者允许广泛招揽但需核实投资者资格；私募基金顾问一般需注册或符合豁免[4]。私募基金通常可以有锁定期、赎回限制、杠杆和业绩分成，披露与估值频率低于注册基金；但反欺诈条款仍适用[4]。</p>
+<p>教学假设：某 3(c)(1) 基金有 90 名受益所有人，若再接纳 20 名就可能超过 100 名上限，因此必须停止募集或改为其他结构；某注册开放式基金可以向公众持续发行，投资者人数不受 100 人限制，但每日申赎和披露义务更重。某 3(c)(7) 基金不使用 100 人上限，而要求投资者为合格购买者[4]。</p>
+<p>“私募”不等于不受任何监管：它仍受证券法反欺诈、顾问注册或豁免、发行豁免条件约束；“公募”也不等于政府所有或保本。对冲基金、私募股权基金是按策略或资产类别称呼的私募基金类型，不是独立法律形式。跨境时“公募/私募”标签不能直接互换：中国公募基金、私募基金的监管口径与美国注册/私募基金不同，比较时必须先对齐辖区定义。</p>
+<h3>主动与被动：谁决定组合</h3>
+<p>主动管理基金由管理人选证券、择时或做策略配置，目标是跑赢基准或实现特定绝对收益；被动/指数基金的目标是跟踪某个市场指数的回报，通常复制指数成分或抽样复制[5]。</p>
+<p>主动管理的研究、交易与换手通常更高，费用率也可能更高；组合可以偏离基准，因而有跑赢或跑输的可能。被动基金按指数规则持有，换手通常较低、费用率通常较低，但并不是“零成本”：它仍有管理费、交易成本、指数许可费、现金拖累和抽样误差；指数调仓时基金必须跟着买卖，可能产生成本。被动基金跟踪的是指数，不是指数本身，也不能保证完全复制[5]。</p>
+<p>教学假设：某指数只有 A、B 两只股票，各占 50%。一年内 A 涨 100%，B 不变，指数涨 50%。完全复制的被动基金在扣费前约涨 50%；主动基金若只持 B，收益约 0%，若只持 A，收益约 100%。假设被动费率 0.05%、主动费率 1.50%，在选股差异面前，费率差只能解释约 1.45 个百分点，不能解释 0 与 100% 的收益差。数字为教学假设，不是任何真实基金业绩。</p>
+<p>被动不等于低风险：指数可能集中、估值高或下跌，跟踪误差和折溢价仍存在；主动不等于一定跑赢：主动管理可能跑输，名为主动也可能组合与基准高度接近。智能 beta 或非传统指数基金仍按规则跟踪自定义指数，不是传统市值加权指数；主动/被动是管理方式，不是法律形式，可以出现在开放式、封闭式、ETF 等不同结构中[5]。</p>
+<h3>股票、债券、货币与混合：资产类别不是法律形式</h3>
+<p>按主要资产类别，基金常分为股票基金、债券基金、货币市场基金和混合/平衡基金。股票基金主要投股票；债券基金主要投债券或其他债务工具；货币市场基金投高质量、短期债务、现金及等价物；混合基金同时投股票、债券，有时也持货币市场工具[1][6]。</p>
+<p>四类基金的收益来源不同：股票基金主要受盈利、估值和市场风险驱动；债券基金主要受票息、利率、信用利差和违约影响；货币市场基金主要受短端利率和流动性影响，政府型与零售型货币市场基金尝试维持 1.00 美元的稳定净值，机构优先和机构免税货币市场基金则采用浮动净值[6]；混合基金按股票/债券比例组合，风险和收益是各资产风险的加权结果，不是简单相加[1]。</p>
+<p>教学假设：某混合基金 60% 股票、40% 债券。股票跌 20%、债券涨 5%，组合收益约 0.6×(-20%)+0.4×5% = -10%。某货币市场基金净值 1.00，投入 10,000，若年化收益 4% 且全年不变，一年分配约 400；但收益率会随短端利率变化，稳定净值也不保证不“破净”[6]。数字为教学假设。</p>
+<p>资产类别标签不是收益保证，也不是法律结构：债券基金不等于低风险，长久期、信用下沉和杠杆会放大损失；货币市场基金不是银行存款，不受 FDIC 保险，稳定净值可能被打破；混合基金的股债比例可以随市场或策略漂移，名称中的“平衡”不保证固定比例。美国注册基金名称暗示某类投资时，通常至少 80% 资产要投于该类，但仍有最多约 20% 可投其他证券，所以名称不能替代招募书[1]。同一基金可以同时是股票型、主动、公募、开放式；资产类别只是其中一个维度。</p>
+<h3>ETF：交易所交易的开放式结构</h3>
+<p>ETF 是在交易所上市的基金，通常注册为开放式投资公司或单位投资信托；份额代表组合的按比例权益，零售投资者在二级市场按市价买卖，只有授权参与者能以创设单位向基金申赎[1][2]。</p>
+<p>ETF 同时有两个价格：交易所的实时市价和基金每日计算的净值。授权参与者用一篮子证券和/或现金创设或赎回创设单位；当市价高于净值，套利者可以买入篮子、创设份额并在交易所卖出；当市价低于净值，可以买入份额、赎回为篮子或现金。这个机制通常压缩折溢价，但不保证：授权参与者可能退出，卖空或借券可能受限，跨境市场休市、篮子成本和创设暂停都会让价差持续[2]。ETF 可以跟踪指数，也可以主动管理；可以持有股票、债券、商品或其他资产，不能把 ETF 等同于“指数基金”。</p>
+<p>教学假设：某 ETF 净值 4.00，市价 4.08，溢价 2%；创设单位 50,000 份，篮子净值 200,000。授权参与者按净值创设 50,000 份、按市价卖出，忽略费用和冲击成本，毛利约 4,000（50,000×0.08）。若溢价在交易完成前消失，这笔毛利可能变成亏损。数字为教学假设，不是真实报价。</p>
+<p>ETF 不是指数本身，不保证完全复制，也不保证折溢价消失；ETF 不是 ETN：ETF 持有组合资产，ETN 是发行人债务；ETF 的授权参与者不是零售投资者的代理人，没有义务持续创设赎回。杠杆或反向 ETF 的每日重置目标在更长持有期内会偏离标的倍数。ETF 的法律结构、资产类别和管理方式要分开看[2]。</p>
+<h3>LOF：中国境内的上市开放式基金</h3>
+<p>LOF（上市开放式基金）是中国境内的一种开放式基金：基金份额总额不固定，投资者既可以通过交易所会员在场内认购、申购、赎回和交易，也可以通过场外销售机构认购、申购和赎回[7]。它本质仍是开放式基金，不是封闭式基金，也不是 ETF。</p>
+<p>LOF 有两条价格通道：场外或场内申赎按当日基金份额净值定价；交易所买卖按撮合成交价定价。上证 LOF 的场内申购以金额申报，申购金额为 1 元的整倍数且不低于 1,000 元；赎回以份额申报，应为整数份额；场内申赎成交价格按当日基金份额净值确定；申购所得份额在业务确认日当日不可卖出、赎回或转托管[8]。当交易所价格高于净值，投资者可尝试按净值申购再卖出；低于净值，可买入再按净值赎回，但确认、转托管、费用、额度和流动性会让套利不即时、也不保证。</p>
+<p>教学假设：某 LOF 净值为 1.200，交易所市价为 1.260，溢价 5%。投资者按净值申购 12,000，忽略费用得 10,000 份；若能在 1.260 卖出，毛收入 12,600，毛利 600。但申购确认前不能卖出，价格可能在确认期间回落；若买入 10,000 份花了 12,600，再按净值 1.200 赎回，则毛亏 600。数字为教学假设，不含费用、时间与额度限制。</p>
+<p>LOF 是中国辖区口径，不能直接套进美国 SEC 注册基金的法律形式；它也不是 ETF：ETF 通常由授权参与者以创设单位申赎，LOF 允许场内/场外按净值申赎并由交易所撮合交易。LOF 的折溢价可能持续，套利受申购确认、转托管、费用、暂停申赎、最低金额和流动性限制；场内价格可能远离净值，成交也可能很薄。把 LOF 当成“可以随时按净值套利的 ETF”是常见错误。</p>
+<h3>FOF：投资其他基金的基金</h3>
+<p>FOF（基金中的基金）是把资产投资于其他基金份额的基金，而不是直接持有一篮子股票或债券；顶层基金持有底层基金的份额，底层基金再持有证券或其他资产[10]。</p>
+<p>FOF 提供一层“基金组合”的分散化：一次投资可以接触多只底层基金、多个管理人和多种策略。代价是费用分层：顶层基金收管理费，底层基金也收管理费和其他费用；美国注册 FOF 的监管关注“过度叠加费用”，申请结构中常见顶层顾问对从底层基金取得的某些补偿进行豁免，并要求董事会判断顶层与底层的服务不是重复收费[10]。美国 1940 年投资公司法第 12(d)(1) 对注册基金投资其他投资公司设有限制，FOF 结构通常需要依赖该条、规则或豁免申请；分析时要穿透看底层持仓、底层费用和底层流动性，而不是只看顶层名称[10]。</p>
+<p>教学假设：某 FOF 资产 100，顶层管理费 0.30%；它把 60 投在管理费 0.80% 的股票基金、40 投在管理费 0.50% 的债券基金。底层费用约 0.6×0.80%+0.4×0.50%=0.68%，加上顶层费用，总成本约 0.98%。若两只底层基金都重仓同一批大科技股，表面上的“分散”可能只是重复持仓。数字为教学假设，不是任何真实 FOF 的费率。</p>
+<p>FOF 不是“绝对不会亏”的分散化：底层基金可能重叠、同时下跌，穿透后可能集中；双层费用会拖累长期收益；底层基金若流动性差，顶层 FOF 的每日赎回可能面临流动性错配；12(d)(1) 的限制和豁免条件会影响可投资的底层范围。FOF 可以是主动或被动、开放式或封闭式，也可以投资 ETF 或其他注册基金；“基金中的基金”是投资层级，不是法律形式。中国公募 FOF 适用中国辖区的基金规则，不能把美国 12(d)(1) 分析直接套用。</p>
+<h2>权利、义务与现金流</h2>
+<p>基金份额代表对基金财产的按比例权益；持有人分享收益、承担损失，不直接拥有组合中的公司，也不是基金发行人的债权人。管理人和托管人按基金文件履职。</p>
+<table>
+<thead>
+<tr>
+<th>时点或条件</th>
+<th>现金流</th>
+<th>金额</th>
+<th>币种</th>
+<th>不确定性</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>申购</td>
+<td>投资者支付申购款和费用，获得份额</td>
+<td>份额 × 申购日净值 + 费用</td>
+<td>基金计价币种</td>
+<td>净值在定价前未知</td>
+</tr>
+<tr>
+<td>持有</td>
+<td>基金分配股息、利息或资本利得</td>
+<td>按份额比例，不保证</td>
+<td>基金计价币种</td>
+<td>取决于收益与分配政策</td>
+</tr>
+<tr>
+<td>赎回</td>
+<td>投资者交回份额，收到赎回款</td>
+<td>份额 × 赎回日净值 - 费用</td>
+<td>基金计价币种</td>
+<td>受开放日、暂停赎回等条件限制</td>
+</tr>
+<tr>
+<td>持续</td>
+<td>管理费、托管费等从基金资产扣除</td>
+<td>按合同费率</td>
+<td>基金计价币种</td>
+<td>费率可能调整，以文件为准</td>
+</tr>
+</tbody></table>
+<p>份额意味着什么，按 Investor.gov：共同基金由在 SEC 注册的投资顾问管理，基金份额代表对基金组合的按比例所有权，投资者向基金申购与赎回，价格按每日净值计算[2]。</p>
+<h2>参与者与场所</h2>
+<p>持有人为最终受益人；董事会或受托人监督基金；投资顾问管理组合；托管人保管资产；过户代理登记份额；分销商和经纪商销售。ETF 还涉及授权参与者、交易所和清算机构。共同基金在一级市场向基金申赎；ETF 在二级市场交易；封闭式基金通常不每日赎回。</p>
+<h2>交易、持有与退出</h2>
+<p>共同基金按下一个计算日的净值向基金申赎，定价前不知成交价。ETF 零售投资者按市价买卖，只有授权参与者能以创设单位与基金申赎。封闭式基金通常不连续赎回，退出靠二级市场，价格可能高于或低于净值。基金可合并、清算或按文件暂停赎回。</p>
+<h2>成本</h2>
+<p>成本包括管理费、托管费、销售服务费、申赎费、佣金、买卖价差和税费。费用从基金资产扣除会降低净值；ETF 还有折溢价。费率与税项因法域、基金文件、份额类别和投资者账户而异；比较时统一费率、持有期和税务口径。</p>
+<p>开放式结构与费用、风险口径按 FINRA：共同基金通常可按每日净值买入和赎回，费用包括销售费与年度费用率，风险包括市场、通胀、利率与流动性风险[3]。</p>
+<h2>风险</h2>
+<p>基金不保本，也不受存款保险保障（例如美国 FDIC 存款保险不覆盖基金）。风险包括市场、信用、利率、流动性、集中度、跟踪误差、交易对手、杠杆和条款风险。ETF 可能溢价或折价交易；封闭式或流动性差的基金可能难以按净值退出。过往表现不预示未来回报。</p>
+<h2>条款与文件</h2>
+<p>以招募说明书、基金合同或章程、托管协议和定期报告为准；核对投资目标、范围、份额类别、费率、估值、分红、赎回、暂停赎回和清算安排。跨境基金还涉及汇率、时区和当地监管。</p>
+<h2>比较与边界</h2>
+<p>共同基金、ETF 和封闭式基金是不同法律与交易结构，不是存款、债券或保险。投资者按净值向基金赎回共同基金份额；ETF 在交易所按市价交易并通过授权参与者申赎；封闭式基金份额通常固定，主要在二级市场交易。不能仅凭名称判断风险。</p>
+<h2>图表</h2>
+<figure>
+  <svg role="img" aria-labelledby="fig-fund-structures-title fig-fund-structures-desc" viewBox="0 0 470 323" width="100%">
+<title id="fig-fund-structures-title">基金的基本结构：概念对照</title>
+<desc id="fig-fund-structures-desc">共同基金: 向基金按净值申赎; 每日定价; 费用与市场风险 | ETF: 交易所按市价交易; 授权参与者负责申赎; 折溢价与流动性风险 | 封闭式基金: 份额通常固定; 主要靠二级市场退出; 价格可大幅偏离净值</desc>
+<rect x="0.5" y="0.5" width="469" height="322" rx="12" fill="var(--surface)" stroke="var(--border)"/>
+      <rect x="20" y="18" width="430" height="89" rx="9" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="32" y="38" font-size="13" font-weight="650" fill="var(--accent)" font-family="inherit">共同基金</text>
+      <circle cx="32" cy="51" r="2.4" fill="var(--accent)"/><text x="42" y="54" font-size="10.6" font-weight="400" fill="var(--secondary)" text-anchor="start" font-family="inherit"><tspan x="42" dy="0">向基金按净值申赎</tspan></text><circle cx="32" cy="66" r="2.4" fill="var(--accent)"/><text x="42" y="69" font-size="10.6" font-weight="400" fill="var(--secondary)" text-anchor="start" font-family="inherit"><tspan x="42" dy="0">每日定价</tspan></text><circle cx="32" cy="81" r="2.4" fill="var(--accent)"/><text x="42" y="84" font-size="10.6" font-weight="400" fill="var(--secondary)" text-anchor="start" font-family="inherit"><tspan x="42" dy="0">费用与市场风险</tspan></text>
+      <rect x="20" y="117" width="430" height="89" rx="9" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="32" y="137" font-size="13" font-weight="650" fill="var(--accent)" font-family="inherit">ETF</text>
+      <circle cx="32" cy="150" r="2.4" fill="var(--accent)"/><text x="42" y="153" font-size="10.6" font-weight="400" fill="var(--secondary)" text-anchor="start" font-family="inherit"><tspan x="42" dy="0">交易所按市价交易</tspan></text><circle cx="32" cy="165" r="2.4" fill="var(--accent)"/><text x="42" y="168" font-size="10.6" font-weight="400" fill="var(--secondary)" text-anchor="start" font-family="inherit"><tspan x="42" dy="0">授权参与者负责申赎</tspan></text><circle cx="32" cy="180" r="2.4" fill="var(--accent)"/><text x="42" y="183" font-size="10.6" font-weight="400" fill="var(--secondary)" text-anchor="start" font-family="inherit"><tspan x="42" dy="0">折溢价与流动性风险</tspan></text>
+      <rect x="20" y="216" width="430" height="89" rx="9" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="32" y="236" font-size="13" font-weight="650" fill="var(--accent)" font-family="inherit">封闭式基金</text>
+      <circle cx="32" cy="249" r="2.4" fill="var(--accent)"/><text x="42" y="252" font-size="10.6" font-weight="400" fill="var(--secondary)" text-anchor="start" font-family="inherit"><tspan x="42" dy="0">份额通常固定</tspan></text><circle cx="32" cy="264" r="2.4" fill="var(--accent)"/><text x="42" y="267" font-size="10.6" font-weight="400" fill="var(--secondary)" text-anchor="start" font-family="inherit"><tspan x="42" dy="0">主要靠二级市场退出</tspan></text><circle cx="32" cy="279" r="2.4" fill="var(--accent)"/><text x="42" y="282" font-size="10.6" font-weight="400" fill="var(--secondary)" text-anchor="start" font-family="inherit"><tspan x="42" dy="0">价格可大幅偏离净值</tspan></text>
+</svg>
+  <figcaption>图 1：“基金的基本结构”的权利与风险对照。图为概念示意，具体条款以正文引用的文件为准。</figcaption>
+</figure>
+
+<!-- kp-supplement:start -->
+<h2>知识点精读</h2>
+<h3>开放封闭</h3>
+<p><strong>定义</strong>：开放式基金可申购赎回、份额可变，封闭式基金份额固定、通常在交易所交易。</p>
+<p><strong>机制</strong>：开放式按净值申赎，流动性由基金提供；封闭式价格由供需决定，可能出现溢价或折价，到期或开放后收敛。</p>
+<p><strong>例子</strong>：例如开放式货币基金每日可赎回，封闭式基金折价交易直到到期。</p>
+<p><strong>边界</strong>：封闭式不是一定便宜；折价可能反映费用、治理和流动性，溢价也可能出现，开放式赎回有费用和延迟，流动性不是免费。</p>
+<h3>公募私募</h3>
+<p><strong>定义</strong>：公募基金向公众募集、监管和披露较严，私募基金向合格投资者募集、限制较多、披露较少。</p>
+<p><strong>机制</strong>：公募强调投资者保护、流动性和分散，私募强调策略灵活、锁定期和门槛；费用、杠杆和监管差异大。</p>
+<p><strong>例子</strong>：例如公募股票基金每日估值和披露，私募基金按合同披露并设锁定期。</p>
+<p><strong>边界</strong>：私募不是高收益保证；流动性差、杠杆和策略不透明会增加风险，公募也不是低风险，销售适当性和利益冲突都需关注。</p>
+<h3>主动被动</h3>
+<p><strong>定义</strong>：主动基金由经理选股择时追求超额收益，被动基金复制指数追求基准收益。</p>
+<p><strong>机制</strong>：主动依赖研究、信息和执行，费用较高、风格和经理风险大；被动低成本、透明但承担指数集中和跟踪误差。</p>
+<p><strong>例子</strong>：例如主动基金超配行业，指数基金按权重持有全部成分。</p>
+<p><strong>边界</strong>：主动不是必然跑赢；多数长期落后、费用和规模侵蚀，被动也不是无风险，指数泡沫、集中度和规则缺陷会影响结果。</p>
+<h3>股票债券货币混合</h3>
+<p><strong>定义</strong>：股票基金主要投股票，债券基金主要投债券，货币基金投短期高流动性工具，混合基金跨资产配置。</p>
+<p><strong>机制</strong>：风险收益由资产比例决定；股票长期回报高但波动大，债券提供收益和分散，货币基金接近现金，混合基金按目标调整。</p>
+<p><strong>例子</strong>：例如退休组合用混合基金平衡股票和债券，短期资金放货币基金。</p>
+<p><strong>边界</strong>：分类不是风险标签；基金可能风格漂移、杠杆和衍生品改变风险，债券有利率和信用风险，货币基金也可能破净或流动性紧张。</p>
+<h3>ETF</h3>
+<p><strong>定义</strong>：ETF 是交易所交易、通常跟踪指数的开放式基金，份额通过授权参与者申赎。</p>
+<p><strong>机制</strong>：套利机制使价格贴近净值；费率、跟踪误差、买卖价差和底层流动性决定成本，杠杆和反向 ETF 每日重置。</p>
+<p><strong>例子</strong>：例如宽基 ETF 盘中交易、费率低，适合长期配置和战术调整。</p>
+<p><strong>边界</strong>：ETF 不是股票；折溢价、流动性、合成结构和杠杆会带来风险，主题 ETF 可能集中，杠杆 ETF 长期路径依赖。</p>
+<h3>LOF</h3>
+<p><strong>定义</strong>：LOF 是既可在场外申购赎回、又可在交易所买卖的开放式基金，兼具开放式和封闭式特征。</p>
+<p><strong>机制</strong>：LOF 存在场内价格和场外净值两个价格，套利机制受申赎效率、费用和限额影响，折溢价可能持续。</p>
+<p><strong>例子</strong>：例如投资者在场外按净值申购，再转托管到场内卖出赚取溢价。</p>
+<p><strong>边界</strong>：LOF 不是无风险套利；转托管时间、申赎限制和流动性会使价差消失或反转，小规模 LOF 波动大，费用也侵蚀收益。</p>
+<h3>FOF</h3>
+<p><strong>定义</strong>：FOF 是投资其他基金的基金，通过多基金组合实现分散、资产配置和专业筛选。</p>
+<p><strong>机制</strong>：FOF 降低单基金和经理风险，但存在双层费用、延迟和透明度问题；目标日期、养老和配置型 FOF 常见。</p>
+<p><strong>例子</strong>：例如养老 FOF 配置股票、债券和货币基金，随目标日期降低风险。</p>
+<p><strong>边界</strong>：FOF 不是免费分散；双层费用拖累收益，底层基金可能重叠和风格漂移，申赎和估值滞后，筛选也可能追涨杀跌。</p>
+<h3>ETN 和其他 ETP 的结构差异</h3>
+<p><strong>定义</strong>：ETN 是发行人发行的无抵押或抵押债务凭证，跟踪指数；ETP 是交易所交易产品的统称，包括 ETF、ETN、ETC 和 ETMF。</p>
+<p><strong>机制</strong>：ETN 是发行人的信用暴露，不是基金资产；ETP 在结构、抵押、赎回和税务上不同，杠杆和商品产品常见。</p>
+<p><strong>例子</strong>：例如 ETN 跟踪波动率指数，若发行人信用恶化，投资者可能无法全额收回。</p>
+<p><strong>边界</strong>：ETN 不是 ETF；无底层资产隔离、发行人违约和停发风险高，杠杆 ETP 有每日重置和路径依赖，商品 ETC 还有托管和滚动成本。</p>
+<!-- kp-supplement:end -->
+
+<h2>关联</h2>
+<ul>
+<li>必需先修：资产与工具的区别（MKT-001）。</li>
+<li>相关与推荐阅读：债券的权利与现金流（MKT-004）、ETF 的申赎与折溢价（MKT-007）、分散化与共同风险（INV-017）。</li>
+</ul>
+<h2>图解</h2>
+<p>下面三张图分别检查本文的机制、边界与对照；图内文字取自本文小节，不是新数据。</p>
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-chain-title fig-batch-chain-desc" viewBox="0 0 340 304" width="100%">
+    <title id="fig-batch-chain-title">基金的基本结构：机制链</title>
+    <desc id="fig-batch-chain-desc">基金的基本结构 的三段结构：问题、机制、判断。图内文字取自本文小节，不是新的数据估计。</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">基金的基本结构：机制链</text>
+    <text x="14" y="38" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">图内文字取自本文小节；三段缺一不可。</text>
+    <line x1="14" y1="46" x2="326" y2="46" stroke="var(--border)" stroke-width="1"/>
+    <g>
+      <rect x="14" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="22" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">问题</text>
+      <text x="22" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">基金把众多投资者的资</text>
+      <text x="22" y="102" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">金集合起来按合同投资…</text>
+      <text x="22" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">基金把众多投资者的</text>
+      <text x="22" y="141" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">资金集合起来按合同</text>
+      <text x="22" y="158" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">投资；法律形式、份</text>
+      <text x="22" y="175" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">额权利、估值和退出</text>
+      <text x="22" y="192" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">机制比名称更能说明…</text>
+    </g>
+      <g>
+      <rect x="123" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="131" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">产品定义</text>
+      <text x="131" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">产品定义：基金集合投</text>
+      <text x="131" y="102" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">资者资金，按基金合同…</text>
+      <text x="131" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">产品定义：基金集合</text>
+      <text x="131" y="141" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">投资者资金，按基金</text>
+      <text x="131" y="158" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">合同或章程投资于股</text>
+      <text x="131" y="175" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">票、债券、货币市场</text>
+      <text x="131" y="192" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">工具等资产。法律形…</text>
+    </g>
+      <g>
+      <rect x="232" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="240" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">成本</text>
+      <text x="240" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">成本包括管理费、托管</text>
+      <text x="240" y="102" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">费、销售服务费、申赎…</text>
+      <text x="240" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">成本包括管理费、托</text>
+      <text x="240" y="141" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">管费、销售服务费、</text>
+      <text x="240" y="158" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">申赎费、佣金、买卖</text>
+      <text x="240" y="175" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">价差和税费。费用从</text>
+      <text x="240" y="192" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">基金资产扣除会降低…</text>
+    </g>
+    <line x1="108" y1="144" x2="123" y2="144" stroke="var(--border)" stroke-width="1.1"/>
+    <path d="M120 140 L125 144 L120 148" fill="none" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="217" y1="144" x2="232" y2="144" stroke="var(--border)" stroke-width="1.1"/>
+    <path d="M229 140 L234 144 L229 148" fill="none" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="14" y1="250" x2="326" y2="250" stroke="var(--border)" stroke-width="1"/>
+    <text x="14" y="266" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">读法：先看问题能否成立，再看机制能否连通，最后看判断会不会越界。</text>
+    <text x="14" y="280" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">若中间一步缺证据，后面的结论只能当假设，不能当事实。</text>
+    <text x="14" y="294" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">图为结构示意，不是新的数据图；样本为本文论证。</text>
+  </svg>
+  <figcaption>图 2：基金的基本结构的机制链：从问题、机制到判断。样本为本文论证，单位为文中标注。</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-boundary-title fig-batch-boundary-desc" viewBox="0 0 340 244" width="100%">
+    <title id="fig-batch-boundary-title">基金的基本结构：适用边界</title>
+    <desc id="fig-batch-boundary-desc">把成立条件与失效条件分开；局部例子不能自动推广到所有情形。</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">基金的基本结构：什么情况下成立？</text>
+    <line x1="14" y1="34" x2="326" y2="34" stroke="var(--border)" stroke-width="1"/>
+    <rect x="14" y="44" width="312" height="38" rx="7" fill="var(--surface-2)" stroke="var(--border)"/>
+    <text x="170" y="62" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="middle">先检查条件，再看结论</text>
+    <text x="170" y="75" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="middle">条件、口径或样本一变，结论可能要重算</text>
+    <line x1="170" y1="82" x2="90" y2="104" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="170" y1="82" x2="250" y2="104" stroke="var(--border)" stroke-width="1.1"/>
+    <rect x="14" y="104" width="148" height="100" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+    <text x="24" y="122" font-size="8.6" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">成立</text>
+    <text x="24" y="138" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">基金不保本，也不受存款保险保障（</text>
+      <text x="24" y="154" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">例如美国 FDIC 存款保险不覆盖基</text>
+      <text x="24" y="170" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">金）。风险包括市场、信用、利率、</text>
+      <text x="24" y="186" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">流动性、集中度、跟踪误差、交易对…</text>
+    <rect x="178" y="104" width="148" height="100" rx="8" fill="var(--gold)" opacity="0.18" stroke="var(--border)"/>
+    <text x="188" y="122" font-size="8.6" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">不成立 / 需改写</text>
+    <text x="188" y="138" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">共同基金、ETF 和封闭式基金是不</text>
+      <text x="188" y="154" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">同法律与交易结构，不是存款、债券</text>
+      <text x="188" y="170" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">或保险。投资者按净值向基金赎回共</text>
+      <text x="188" y="186" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">同基金份额；ETF 在交易所按市价交…</text>
+    <line x1="14" y1="216" x2="326" y2="216" stroke="var(--border)" stroke-width="1"/>
+    <text x="14" y="232" font-size="8.3" fill="var(--muted)" font-family="inherit" text-anchor="start">图为边界示意；样本为本文论证，单位为文中标注。</text>
+  </svg>
+  <figcaption>图 3：基金的基本结构的边界：哪些条件成立，哪些条件失效。样本为本文论证，单位为文中标注。</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-compare-title fig-batch-compare-desc" viewBox="0 0 340 252" width="100%">
+    <title id="fig-batch-compare-title">基金的基本结构：对象、前提与常见误区</title>
+    <desc id="fig-batch-compare-desc">三行比较本文概念、成立条件与常见误区；比较不等于等价，也不能替代定义。</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">基金的基本结构：一张表看对象、前提与误区</text>
+    <line x1="14" y1="34" x2="326" y2="34" stroke="var(--border)" stroke-width="1"/>
+    <text x="82" y="46" font-size="8.4" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">本篇</text>
+    <text x="200" y="46" font-size="8.4" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">容易混淆</text>
+    <g>
+      <rect x="14" y="52" width="312" height="58" fill="transparent" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="72" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">对象</text>
+      <text x="82" y="72" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">基金把众多投资者的资金集</text>
+      <text x="82" y="88" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">合起来按合同投资；法律形…</text>
+      <text x="200" y="72" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">相邻概念/常见说法</text>
+    </g>
+    <g>
+      <rect x="14" y="110" width="312" height="58" fill="var(--surface-2)" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="130" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">前提</text>
+      <text x="82" y="130" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">基金不保本，也不受存款保</text>
+      <text x="82" y="146" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">险保障（例如美国 FDIC…</text>
+      <text x="200" y="130" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">共同基金、ETF 和封闭式基金是不同法</text>
+      <text x="200" y="146" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">律与交易结构，不是存款、债券或保险。…</text>
+    </g>
+    <g>
+      <rect x="14" y="168" width="312" height="58" fill="transparent" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="188" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">检查</text>
+      <text x="82" y="188" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">先定义，再比较；不能只看</text>
+      <text x="82" y="204" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">名称</text>
+      <text x="200" y="188" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">相关不等于因果，局部不等于普遍</text>
+    </g>
+    <text x="14" y="244" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">图为比较示意；样本为本文论证，单位为文中标注。</text>
+  </svg>
+  <figcaption>图 4：基金的基本结构的对象、前提与常见误区比较。样本为本文论证，单位为文中标注。</figcaption>
+</figure>
+
+<h2>练习</h2>
+<p>以下教学假设均以基金计价货币为单位；数字不是任何真实基金的报价。</p>
+<ol>
+<li><strong>申购份额。</strong> 某共同基金净值为 1.2500，投资者支付 10,000，申购费 100，净申购 9,900。可得多少份额？</li>
+<li><strong>折溢价。</strong> 某 ETF 净值为 4.00，市价为 4.08。溢价率是多少？若创设单位为 50,000 份，按净值计算的篮子价值是多少？</li>
+<li><strong>结构边界。</strong> 某封闭式基金净值 10.00、市价 9.00。折价率是多少？持有人能否要求按净值赎回？</li>
+</ol>
+<details>
+<summary>参考答案</summary>
+
+<ol>
+<li>9,900 ÷ 1.2500 = 7,920 份。</li>
+<li>溢价率 = (4.08 - 4.00) ÷ 4.00 = 2%。篮子净值 = 50,000 × 4.00 = 200,000。</li>
+<li>折价率 = (10.00 - 9.00) ÷ 10.00 = 10%。封闭式基金通常不按净值赎回，持有人需在二级市场卖出，除非文件另有规定。</li>
+</ol>
+</details>
+
+<h2>来源</h2>
+<ol>
+<li>U.S. Securities and Exchange Commission. “Mutual Funds and ETFs – A Guide for Investors.” <a href="https://www.investor.gov/sites/investorgov/files/2019-02/mutual-funds-ETFs.pdf">https://www.investor.gov/sites/investorgov/files/2019-02/mutual-funds-ETFs.pdf</a>（访问日期：2026-10-30）</li>
+<li>U.S. Securities and Exchange Commission, Investor.gov. “Mutual Funds.” <a href="https://www.investor.gov/introduction-investing/investing-basics/investment-products/mutual-funds-and-exchange-traded-1">https://www.investor.gov/introduction-investing/investing-basics/investment-products/mutual-funds-and-exchange-traded-1</a>（访问日期：2026-10-30）</li>
+<li>FINRA. “Mutual Funds.” <a href="https://www.finra.org/investors/investing/investment-products/mutual-funds">https://www.finra.org/investors/investing/investment-products/mutual-funds</a>（访问日期：2026-11-05）</li>
+<li>U.S. Securities and Exchange Commission. “Private Funds.” <a href="https://www.sec.gov/resources-small-businesses/capital-raising-building-blocks/private-funds">https://www.sec.gov/resources-small-businesses/capital-raising-building-blocks/private-funds</a>（访问日期：2026-11-24）</li>
+<li>U.S. Securities and Exchange Commission, Office of Investor Education and Advocacy. “Investor Bulletin: Index Funds.” <a href="https://www.sec.gov/oiea/investor-alerts-and-bulletins/ib_indexfunds">https://www.sec.gov/oiea/investor-alerts-and-bulletins/ib_indexfunds</a>（访问日期：2026-11-24）</li>
+<li>U.S. Securities and Exchange Commission, Office of Investor Education and Advocacy. “Money Market Funds: Investor Bulletin.” <a href="https://www.sec.gov/resources-for-investors/investor-alerts-bulletins/investoralertsmmf-investoralerthtm">https://www.sec.gov/resources-for-investors/investor-alerts-bulletins/investoralertsmmf-investoralerthtm</a>（访问日期：2026-11-24）</li>
+<li>上海证券交易所. “上市开放式基金（LOF）.” <a href="https://www.sse.com.cn/assortment/fund/lof/home/">https://www.sse.com.cn/assortment/fund/lof/home/</a>（访问日期：2026-11-24）</li>
+<li>上海证券交易所. “上海证券交易所上市开放式基金业务指引.” <a href="https://www.sse.com.cn/lawandrules/sselawsrules2025/fund/trading/c/c_20250519_10779392.shtml">https://www.sse.com.cn/lawandrules/sselawsrules2025/fund/trading/c/c_20250519_10779392.shtml</a>（访问日期：2026-11-24）</li>
+<li>U.S. Securities and Exchange Commission, Office of Investor Education and Advocacy. “Investor Bulletin: Publicly Traded Closed-End Funds.” <a href="https://www.sec.gov/oiea/investor-alerts-and-bulletins/investor-bulletin-publicly-traded-closed-end-funds">https://www.sec.gov/oiea/investor-alerts-and-bulletins/investor-bulletin-publicly-traded-closed-end-funds</a>（访问日期：2026-11-24）</li>
+<li>U.S. Securities and Exchange Commission. “FundVantage Trust, et al.; Notice of Application.” <a href="https://www.sec.gov/files/rules/ic/2014/ic-31003.pdf">https://www.sec.gov/files/rules/ic/2014/ic-31003.pdf</a>（访问日期：2026-11-24）</li>
+</ol>
+  <section class="article-demo" id="demo-check" data-demo="check" data-lang="zh" aria-labelledby="demo-check-title" data-check-done="三项都能说清：这篇的核心已经过关。" data-check-pending="还差一项：回到正文对应小节，找一个反例或数字再讲一遍。" data-check-count="已勾选"> <header class="demo-head"> <div class="demo-head-top"> <p class="demo-eyebrow">动手演示</p> <button class="demo-reset" type="button" data-demo-reset>恢复默认</button> </div> <h2 id="demo-check-title">读完自检：三句话能不能说清</h2> <p class="demo-intro">不用背定义。把下面三句逐个勾上，看自己能不能用自己的话讲清机制、算例和边界。</p> </header>          <div class="demo-check"> <ul class="demo-check-list"> <li> <label> <input type="checkbox" data-check-index="0"> <span>能按法律形式、发行方式、管理方式、资产类别、交易结构和投资层级拆解一只基金，并说明各维度不能互相替代</span> </label> </li><li> <label> <input type="checkbox" data-check-index="1"> <span>能用份额权利、估值与退出机制说明开放式、封闭式、ETF、LOF 与 FOF 的实质差别</span> </label> </li><li> <label> <input type="checkbox" data-check-index="2"> <span>能说出一个本文结论不适用的条件</span> </label> </li> </ul> <p class="demo-check-status" data-out="checkStatus" role="status"> 已勾选 0 / 3
+</p> </div> <p class="demo-footnote">数字为教学假设，用来展示关系，不构成预测或投资建议。</p> </section><script type="module" src="/_astro/ArticleDemo.astro_astro_type_script_index_0_lang.C9VQAsQ0.js"></script> <p class="notice"> 本文已通过当前发布门槛；事实、计算与译文如有修订，会同步更新两个语言版本。 </p> <p> <a class="button secondary" href="/"> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class> <path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path>        </svg>返回分站 </a> </p> </div> <aside class="article-aside" aria-label="文章信息"> <section class="aside-card"> <h2>学习目标</h2> <ul> <li>能按法律形式、发行方式、管理方式、资产类别、交易结构和投资层级拆解一只基金，并说明各维度不能互相替代</li><li>能用份额权利、估值与退出机制说明开放式、封闭式、ETF、LOF 与 FOF 的实质差别</li> </ul> </section> <section class="aside-card"> <h2>必需先修</h2> <ul> <li> <a href="/learn/assets-vs-instruments/">MKT-001 · 资产与工具的区别</a> </li> </ul> </section> <section class="aside-card"> <h2>建议阅读</h2> <ul> <li> <a href="/learn/bond-rights-and-cash-flows/">MKT-004 · 债券的权利与现金流</a> </li><li> <a href="/learn/etf-creation-redemption-and-premiums/">MKT-007 · ETF 的申赎与折溢价</a> </li><li> <a href="https://invest.51invest.com/learn/diversification-and-common-risk/">INV-017 · 分散化与共同风险</a> </li> </ul> </section> <section class="aside-card"> <h2>AI 复核记录</h2> <p class="muted"> 本项目没有真人签字；下列状态来自 AI-only 编辑复核。 </p> <ul> <li> 事实与计算 ：AI 复核通过 </li><li> 学科 ：AI 复核通过 </li><li> 英文 ：AI 复核通过 </li><li> 页面 ：AI 复核通过 </li> </ul> </section> <section class="aside-card"> <h2>来源</h2> <div class="source"> <a href="https://www.investor.gov/sites/investorgov/files/2019-02/mutual-funds-ETFs.pdf" rel="noopener noreferrer" target="_blank">Mutual Funds and ETFs – A Guide for Investors</a> <p>U.S. Securities and Exchange Commission · U.S. Securities and Exchange Commission</p> <p>访问：2026-10-30 · 许可：FINRA-operated site for the SEC; © FINRA — cite and link only, no reproduction</p> <p>支持论点：共同基金是 SEC 注册的开放式投资公司；投资公司还包括封闭式基金和单位投资信托；共同基金按下一个计算的净值申购赎回，ETF 通过授权参与人以创设单位申赎。 复探注记（2026-11-05）：该 URL 对本环境返回 HTTP 403（PDF 拒绝页 455 字节，专题页 508 字节），因此 2026-10-30 记录在本条的句子本轮无法对着在线页面复核；原先依赖此句的三种法律形式改由可重读的 FINRA 页支撑，本条没有凭记忆新增任何内容。</p> </div><div class="source"> <a href="https://www.investor.gov/introduction-investing/investing-basics/investment-products/mutual-funds-and-exchange-traded-1" rel="noopener noreferrer" target="_blank">Mutual Funds</a> <p>U.S. Securities and Exchange Commission, Investor.gov · Investor.gov</p> <p>访问：2026-10-30 · 许可：FINRA-operated site for the SEC; © FINRA — cite and link only, no reproduction</p> <p>支持论点：共同基金由 SEC 注册的投资顾问管理，份额代表对基金组合的按比例所有权；投资者向基金申购和赎回，价格按下一个净值，费用从基金资产中扣除，基金不受 FDIC 保障。 复探注记（2026-11-05）：同上，该 URL 返回 HTTP 403（508 字节拒绝页），2026-10-30 的记录未能在此环境重新对照在线页面，正文涉及申赎与按比例所有权的那句仍标为既有登记，本轮未升格为已复核。</p> </div><div class="source"> <a href="https://www.finra.org/investors/investing/investment-products/mutual-funds" rel="noopener noreferrer" target="_blank">Mutual Funds</a> <p>FINRA · FINRA</p> <p>访问：2026-11-05 · 许可：© 2026 FINRA. All rights reserved. Linked summary only.</p> <p>支持论点：共同基金是开放式基金，通常可按每日净值买入和赎回；费用包括销售费和年度费用率；风险包括市场、通胀、利率和流动性风险。 覆盖范围注记（2026-11-05 重读，HTTP 200，136,919 字节，去标签文本 41,966 字符，缓存 docs/data-evidence/m006-finra-mf.html）：该页 open-end 出现 6 次、closed-end 6 次、unit investment trust 1 次、exchange-traded fund 2 次、net asset value 2 次，因此正文点名的三种法律形式改用这条可重读的来源支撑，正文用自己的话表述，不转载页面句子。</p> </div><div class="source"> <a href="https://www.sec.gov/resources-small-businesses/capital-raising-building-blocks/private-funds" rel="noopener noreferrer" target="_blank">Private Funds</a> <p>U.S. Securities and Exchange Commission · SEC</p> <p>访问：2026-11-24 · 许可：U.S. Government work (public domain), 17 U.S.C. §105</p> <p>支持论点：私募基金依据 3(c)(1) 或 3(c)(7) 排除在投资公司定义之外：3(c)(1) 不超过 100 名受益所有人，3(c)(7) 限于合格购买者；私募基金不能公开要约，常见豁免发行依据是 Regulation D 的 Rule 506(b) 或 506(c)，顾问一般需注册或符合豁免。</p> </div><div class="source"> <a href="https://www.sec.gov/oiea/investor-alerts-and-bulletins/ib_indexfunds" rel="noopener noreferrer" target="_blank">Investor Bulletin: Index Funds</a> <p>U.S. Securities and Exchange Commission, Office of Investor Education and Advocacy · SEC</p> <p>访问：2026-11-24 · 许可：U.S. Government work (public domain), 17 U.S.C. §105</p> <p>支持论点：指数基金以跟踪市场指数回报为目标，通常采用被动方式，换手较低、费用可能较低；指数基金可以复制全部成分或抽样复制，但跟踪误差和费用仍然存在，非传统指数基金可能跟踪自定义指数。</p> </div><div class="source"> <a href="https://www.sec.gov/resources-for-investors/investor-alerts-bulletins/investoralertsmmf-investoralerthtm" rel="noopener noreferrer" target="_blank">Money Market Funds: Investor Bulletin</a> <p>U.S. Securities and Exchange Commission, Office of Investor Education and Advocacy · SEC</p> <p>访问：2026-11-24 · 许可：U.S. Government work (public domain), 17 U.S.C. §105</p> <p>支持论点：货币市场基金是共同基金的一种，投资流动性较高的短期债务、现金及等价物；政府型与零售型货币市场基金尝试维持 1.00 美元的稳定净值，机构优先与机构免税型采用浮动净值；稳定净值可能被打破，基金份额不受存款保险保障。</p> </div><div class="source"> <a href="https://www.sse.com.cn/assortment/fund/lof/home/" rel="noopener noreferrer" target="_blank">上市开放式基金（LOF）</a> <p>Shanghai Stock Exchange · Shanghai Stock Exchange</p> <p>访问：2026-11-24 · 许可：Official exchange page; cite and link only, no reproduction.</p> <p>支持论点：LOF 是可在上海证券交易所认购、申购、赎回及交易的开放式基金；份额总额不固定；投资者可通过场内证券经营机构或场外基金销售机构申赎，也可在交易所按撮合成交价买卖。</p> </div><div class="source"> <a href="https://www.sse.com.cn/lawandrules/sselawsrules2025/fund/trading/c/c_20250519_10779392.shtml" rel="noopener noreferrer" target="_blank">上海证券交易所上市开放式基金业务指引</a> <p>Shanghai Stock Exchange · Shanghai Stock Exchange</p> <p>访问：2026-11-24 · 许可：Official exchange rule; cite and link only, no reproduction.</p> <p>支持论点：上证 LOF 场内申赎在开放期交易日规定时段受理；采用金额申购、份额赎回；申购金额为 1 元整倍数且不低于 1,000 元，赎回份额为整数份额；成交价格按当日基金份额净值确定；申购所得份额在业务确认日当日不可卖出、赎回或转托管。</p> </div><div class="source"> <a href="https://www.sec.gov/oiea/investor-alerts-and-bulletins/investor-bulletin-publicly-traded-closed-end-funds" rel="noopener noreferrer" target="_blank">Investor Bulletin: Publicly Traded Closed-End Funds</a> <p>U.S. Securities and Exchange Commission, Office of Investor Education and Advocacy · SEC</p> <p>访问：2026-11-24 · 许可：U.S. Government work (public domain), 17 U.S.C. §105</p> <p>支持论点：公开交易封闭式基金在首次公开发行后不持续发行份额，也不被要求按净值买回份额；二级市场价格可高于或低于净值，形成溢价或折价；封闭式基金可使用杠杆、持有较非流动性资产，折价可能持续。</p> </div><div class="source"> <a href="https://www.sec.gov/files/rules/ic/2014/ic-31003.pdf" rel="noopener noreferrer" target="_blank">FundVantage Trust, et al.; Notice of Application</a> <p>U.S. Securities and Exchange Commission · SEC</p> <p>访问：2026-11-24 · 许可：U.S. Government work (public domain), 17 U.S.C. §105</p> <p>支持论点：注册开放式基金可作为 FOF 投资其他注册开放式基金和单位投资信托；1940 年投资公司法第 12(d)(1) 对注册基金投资其他投资公司设限，FOF 结构通常申请豁免；监管关注过度费用叠加，申请条件包括费用豁免和董事会判断顶层与底层服务不重复。</p> </div> </section> </aside> </div> </article><script type="module">var e=document.querySelector(`[data-reading-progress] span`),t=document.querySelector(`article`);if(e&&t){let n=()=>{let n=t.offsetTop,r=t.offsetHeight-window.innerHeight,i=r>0?(window.scrollY-n)/r:0;e.style.width=`${Math.min(1,Math.max(0,i))*100}%`};window.addEventListener(`scroll`,n,{passive:!0}),window.addEventListener(`resize`,n),n()}</script>  </main> <footer class="site-footer"> <div class="container footer-inner"> <div class="footer-brand"> <span class="footer-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="28" height="28" alt class="mascot" loading="lazy" decoding="async"></span> <div> <strong>巫妖投资 51Invest</strong> <p class="footer-note">非商业免费知识站。每篇标出来源与口径；这里没有投资建议。</p> </div> </div> <nav class="footer-links" aria-label="知识分站"> <a href="https://51invest.com/" data-main-home>首页</a> <a href="https://51invest.com/contents/">内容地图</a> <a href="/glossary/">术语表</a> <a href="/search/">搜索</a> <a href="https://51invest.com/charts/" data-main-link>图表</a> <a href="https://51invest.com/sources/" data-main-link>数据与许可</a> <a href="/">分站首页</a> </nav> </div> </footer> <nav class="mobile-nav" aria-label="知识分站"> <a class="mobile-link" href="https://51invest.com/" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>    <path d="m3 10 9-7 9 7"></path><path d="M5 9v11h14V9"></path><path d="M9 20v-6h6v6"></path>     </svg> <span>首页</span> </a> <a class="mobile-link" href="https://51invest.com/#stations" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>   <rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect>      </svg> <span>知识分站</span> </a> <a class="mobile-link active" href="/" aria-current="page"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>  <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v18H6.5A2.5 2.5 0 0 1 4 18.5z"></path><path d="M4 18.5A2.5 2.5 0 0 1 6.5 16H20"></path>       </svg> <span>分站首页</span> </a> <a class="mobile-link" href="/en/learn/fund-structures/" data-language-link="en"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>English</span> </a> </nav><script type="module">var e=document.documentElement,t=[`auto`,`light`,`dark`],n=matchMedia(`(prefers-color-scheme: dark)`),r=()=>{let t=e.dataset.themeMode;return t===`light`||t===`dark`?t:`auto`},i=e=>{try{localStorage.setItem(`51invest-theme`,e)}catch{}try{let t=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-theme=${e}; Path=/; Max-Age=31536000; SameSite=Lax${t}`}catch{}},a=e=>{document.querySelectorAll(`[data-theme-toggle]`).forEach(t=>{let n=t.dataset[`label${e[0].toUpperCase()}${e.slice(1)}`];n&&(t.setAttribute(`aria-label`,n),t.setAttribute(`title`,n))})},o=t=>{e.dataset.themeMode=t,e.dataset.theme=t===`auto`?n.matches?`dark`:`light`:t,i(t),a(t)};a(r()),document.querySelectorAll(`[data-theme-toggle]`).forEach(e=>{e.addEventListener(`click`,()=>{let e=t[(t.indexOf(r())+1)%t.length];o(e)})}),n.addEventListener(`change`,()=>{r()===`auto`&&(e.dataset.theme=n.matches?`dark`:`light`)}),document.querySelectorAll(`[data-language-link]`).forEach(e=>{e.addEventListener(`click`,()=>{let t=e.dataset.languageLink;if(t===`zh`||t===`en`){try{localStorage.setItem(`51invest-language`,JSON.stringify(t))}catch{}try{let e=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-language=${t}; Path=/; Max-Age=31536000; SameSite=Lax${e}`}catch{}}})});</script> </body> </html>

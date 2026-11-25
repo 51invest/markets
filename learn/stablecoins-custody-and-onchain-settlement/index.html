@@ -1,0 +1,272 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light" data-theme-mode="auto"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark"><title>稳定币、托管与链上结算风险 · 巫妖投资</title><meta name="description" content="稳定币是发行人的负债，不是银行存款；储备、赎回权、托管和链上最终性决定它能否在压力下保持锚定。"><link rel="canonical" href="https://markets.51invest.com/learn/stablecoins-custody-and-onchain-settlement/"><link rel="alternate" hreflang="zh-CN" href="https://markets.51invest.com/learn/stablecoins-custody-and-onchain-settlement/"><link rel="alternate" hreflang="en" href="https://markets.51invest.com/en/learn/stablecoins-custody-and-onchain-settlement/"><link rel="alternate" hreflang="x-default" href="https://markets.51invest.com/learn/stablecoins-custody-and-onchain-settlement/"><link rel="icon" type="image/png" href="/_astro/neutral.Dr5C2SoA.png"><script>
+  (() => {
+    const root = document.documentElement;
+    const readCookie = key => {
+      try {
+        return document.cookie.split('; ').find(value => value.startsWith(`51invest-${key}=`))?.split('=').slice(1).join('=') ?? null;
+      } catch {
+        return null;
+      }
+    };
+    const readLocal = key => {
+      try {
+        return localStorage.getItem(`51invest-${key}`);
+      } catch {
+        return null;
+      }
+    };
+    const storedTheme = readCookie('theme') || readLocal('theme');
+    const mode = ['light', 'dark', 'auto'].includes(storedTheme) ? storedTheme : 'auto';
+    const media = matchMedia('(prefers-color-scheme: dark)');
+    const apply = () => {
+      root.dataset.theme = mode === 'auto' ? (media.matches ? 'dark' : 'light') : mode;
+      root.dataset.themeMode = mode;
+    };
+    apply();
+    media.addEventListener('change', () => {
+      if (root.dataset.themeMode === 'auto') apply();
+    });
+  })();
+</script><link rel="stylesheet" href="/_astro/Base.CocbJOeh.css"></head> <body>  <a class="skip-link" href="#main">跳到正文</a> <header class="site-header"> <div class="container header-inner"> <a class="brand" href="https://51invest.com/" data-main-home aria-label="巫妖投资"> <span class="brand-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="36" height="36" alt class="mascot" loading="lazy" decoding="async"></span> <span class="brand-copy"> <span class="brand-name">巫妖投资</span> <span class="brand-caption">51INVEST</span> </span> </a> <nav class="desktop-nav" aria-label="知识分站"> <a class="nav-link" href="https://51invest.com/" data-main-home> 首页 </a> <a class="nav-link" href="https://economics.51invest.com/"> 经济学 </a><a class="nav-link" href="https://finance.51invest.com/"> 金融基础 </a><a class="nav-link active" href="/" aria-current="page"> 市场与产品 </a><a class="nav-link" href="https://invest.51invest.com/"> 投资方法 </a><a class="nav-link" href="https://history.51invest.com/"> 经济与金融史 </a><a class="nav-link" href="https://research.51invest.com/"> 研究方法 </a> <a class="nav-link" href="https://51invest.com/contents/"> 内容地图 </a> </nav> <div class="header-tools"> <a class="icon-button language-button" href="/en/learn/stablecoins-custody-and-onchain-settlement/" hreflang="en" lang="en" data-language-link="en" aria-label="切换为英文" title="切换为英文"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>English</span> </a> <button class="icon-button theme-button" type="button" data-theme-toggle aria-label="主题: 跟随系统" title="主题: 跟随系统" data-label-auto="主题: 跟随系统" data-label-light="主题: 浅色" data-label-dark="主题: 深色"> <span class="theme-icon" data-theme-icon="auto"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>        <circle cx="12" cy="12" r="8.5"></circle><path d="M12 3.5v17"></path><path d="M12 7a5 5 0 0 1 0 10" fill="currentColor" stroke="none"></path> </svg></span> <span class="theme-icon" data-theme-icon="light"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>       <circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>  </svg></span> <span class="theme-icon" data-theme-icon="dark"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>      <path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"></path>   </svg></span> <span class="theme-text" data-theme-text="auto">跟随系统</span> <span class="theme-text" data-theme-text="light">浅色</span> <span class="theme-text" data-theme-text="dark">深色</span> </button> </div> </div> </header> <main id="main" class="site-main" data-pagefind-body>  <div class="reading-progress" data-reading-progress aria-hidden="true"><span></span></div> <div class="container"> <nav class="breadcrumbs" aria-label="Breadcrumb"> <a href="https://51invest.com/" data-main-home>首页</a> <span class="sep">/</span> <a href="/">市场与产品</a> <span class="sep">/</span> <span aria-current="page">稳定币、托管与链上结算风险</span> </nav> </div> <article> <header class="article-header"> <div class="container"> <span class="article-type">产品与品种</span> <h1 class="article-title">稳定币、托管与链上结算风险</h1> <p class="article-summary">稳定币是发行人的负债，不是银行存款；储备、赎回权、托管和链上最终性决定它能否在压力下保持锚定。</p>  <div class="meta-grid"> <div class="meta-item"><span>模块</span><strong>MKT-M20 · 数字资产与数字金融</strong></div> <div class="meta-item"><span>层级</span><strong>入门</strong></div> <div class="meta-item"><span>阅读</span><strong>9 分钟 · 18 节</strong></div> </div> <p class="demo-jump"> <a href="#demo-check"> 这篇有一个可以动手操作的演示 <span aria-hidden="true">↓</span> </a> </p> </div> </header> <div class="container article-layout"> <div class="article-body"> <h2>定义</h2>
+<p><strong>稳定币</strong>通常指发行人承诺按 1:1 兑换法币或参考资产的加密代币。持有人拥有的是对发行人的赎回请求权，不是银行存款，也不受存款保险保护[1]。储备可能包括现金、短期国债、回购和商业票据，资产质量、期限和托管安排决定压力下的兑付能力。<strong>链上结算</strong>指交易在分布式账本上记录和确认；最终性取决于共识规则和网络拥堵。</p>
+<h2>直觉</h2>
+<p>稳定币像一张“仓库提货单”：发行人说你随时可以拿代币换回一元现金，但能不能换、换多快，取决于仓库里真正有什么。若仓库里全是短期国债和银行存款，提货单的信用接近现金；若仓库里混入商业票据、长期债或关联方贷款，提货单就有了信用和期限风险。链上结算是“把提货单过户”的记账层：它可以让转让在几分钟内完成，但不能保证仓库里的资产存在，也不能保证托管人不会冻结。看稳定币，先看储备，再看赎回权，最后看链和托管。</p>
+<h2>机制</h2>
+<p>锚定靠三种机制维持：足额储备与可验证披露、按面值赎回的通道、以及做市商在二级市场的套利。若储备中有折价资产或期限较长，集中赎回会迫使折价出售，赎回门槛和暂停条款会扩大折价。托管风险包括发行人破产隔离、托管人再抵押和私钥管理；智能合约风险包括代码漏洞、管理员权限和预言机错误。链上转账“不可逆”不等于法律所有权不可争议，破产、制裁和欺诈仍可追索[2][3]。</p>
+<h2>例子与计算</h2>
+<p>假设稳定币发行 100 亿元，储备为 60 亿元短期国债、30 亿元回购和 10 亿元商业票据。若商业票据跌价 10%、回购折扣扩大使可变现价值降到 27 亿元，储备市值变为 60 + 27 + 9 = 96 亿元，覆盖率 96%。若 20% 持有人同时赎回，需要 20 亿元现金；若流动资产只有 60 亿元且赎回门槛为每日 5%，只能兑付 5 亿元，其余排队，二级市场价格可能跌到 0.95。以上为教学假设，不含费用和法律程序。</p>
+<h2>第二个算例：赎回冲击与储备缺口</h2>
+<p>假设某稳定币发行 1 亿枚，储备为 8,000 万元短期国债、1,500 万元银行存款、500 万元商业票据，账面储备率 100%。若 10% 的代币赎回，即 1,000 万元，发行人先卖国债：若折价 1%，损失 10 万元；若同时有 500 万元银行存款被冻结，可动用现金只剩 9,500 万元，面对 1,000 万元赎回仍有 500 万元缺口。若商业票据在压力时折价 10% 卖出，损失 50 万元，储备率降到 99.5%。若发行人以关联方贷款补足储备，账面仍为 100%，但贷款变现能力差，实际流动性缺口更大。以上为教学假设，不含费用和链上拥堵。</p>
+<h2>边界与误区</h2>
+<p>第一，稳定币不是存款，不受存款保险保护；发行人破产时持有人是债权人。第二，储备审计或鉴证不是实时偿付能力保证，披露频率和范围有限。第三，二级市场价格等于 1 不代表可按 1 赎回；流动性、门槛和地区限制会影响兑付。第四，链上转账不可逆不代表交易合法或最终；制裁、欺诈和私钥丢失仍会造成损失。第五，算法稳定币依靠套利和信心维持锚定，在压力下可能进入反射性抛售。</p>
+<h2>失败模式</h2>
+<p>第一种失败是把“1:1 储备”当成“1:1 现金”。储备可能是短期国债、银行存款、商业票据或关联方贷款，信用、期限和变现能力完全不同。第二种失败是忽略赎回权的法律结构：发行人可能有权延迟、限额或暂停赎回，托管人可能冻结资产，链上代币持有者未必对储备有直接追索权。第三种失败是只看链上透明度，不看托管和审计：地址余额可以伪造或重复质押，储备证明不等于审计报表。第四种失败是忽略智能合约风险：升级权限、预言机操纵、桥接漏洞和私钥管理都可能让代币失去价值。第五种失败是把“锚定 1 元”当成永久承诺，脱锚往往先发生在流动性最差的交易对。</p>
+<h2>三问自检</h2>
+<p>第一，储备里到底有什么：现金、国债、存款、商业票据还是关联方贷款，期限和折扣率是多少？第二，赎回权是否可执行：谁有资格赎回、限额和延迟条款、托管人与司法辖区在哪里？第三，链和托管是否可信：合约是否可升级、预言机来源、桥接和私钥管理是否分散？三问答不清，“稳定”就只是名称，不是可验证的现金流。</p>
+<h2>相邻概念与反例</h2>
+<p>稳定币容易和货币基金、央行数字货币混淆。货币基金持有短期证券，净值可能浮动，受证券监管；央行数字货币是央行负债，有法定清偿地位；稳定币是私人发行人的负债，靠储备和赎回承诺维持锚定。三者的信用来源、赎回权和监管不同。反例是“储备率 100% 就安全”：储备可能包含商业票据、长期债或关联方贷款，账面价值不等于压力下的变现价值；如果储备期限长于赎回期限，100% 也可能出现流动性缺口。另一个反例是“链上透明就等于审计”：地址余额可以重复质押或由托管人控制，储备证明不等于审计报表。比较稳定币，应同时看储备质量、赎回权、托管和链上合约风险。</p>
+<h2>适用边界</h2>
+<p>本文的稳定币框架适用于储备构成可披露、赎回权可执行、托管与链上合约可审计的发行人。若储备含关联方贷款、期限长于赎回负债，或托管人同时控制链上地址，储备率和透明度都会失真。它不适用于把链上余额当作审计报表，也不适用于忽略合约升级和私钥风险的支付场景。使用时先看储备质量、赎回门槛、托管安排和合约权限，再用折价、冻结和脱锚三种情景复算；锚定不是存款保险。</p>
+<p>最后，脱锚情景应包含交易所冻结和托管人破产。</p>
+<h2>关联</h2>
+<ul>
+<li>MKT-024 数字资产与数字金融分类：本文的相邻主文，先读它再读本补篇。</li>
+<li>MKT-001 资产与工具的区别：本文的相邻主文，先读它再读本补篇。</li>
+</ul>
+<h2>资料说明</h2>
+<p>本文用 U.S. Securities and Exchange Commission、Financial Stability Board、Bank for International Settlements 核对定义、制度或统计口径；具体条款、数字与日期以来源原文为准[1][2][3]。</p>
+<h2>产品定义、权利与现金流结构</h2>
+<p>稳定币是一种以法币、短期证券或其他储备资产支持的可转让代币，目标是维持相对稳定的价格。它同时是支付工具、结算网络和一种对发行人的债权，价格稳定取决于储备、赎回权和市场信任。</p>
+<p>持有人拥有按面值赎回的合同权利（如果条款提供），并依赖发行人的储备与托管安排；发行人拥有储备资产的管理权，但受牌照、披露和赎回规则约束。链上托管还涉及私钥控制和智能合约权限。</p>
+<table>
+<thead>
+<tr>
+<th>日期/条件</th>
+<th>现金流/收付</th>
+<th align="right">金额</th>
+<th>币种</th>
+<th>不确定性</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>发行</td>
+<td>用户交付法币、收到代币</td>
+<td align="right">− 100 美元，+100 代币</td>
+<td>USD</td>
+<td>储备到账与合规审查</td>
+</tr>
+<tr>
+<td>赎回</td>
+<td>销毁代币、取回法币</td>
+<td align="right">−100 代币，+100 美元</td>
+<td>USD</td>
+<td>赎回门槛与排队</td>
+</tr>
+<tr>
+<td>二级交易</td>
+<td>代币转手</td>
+<td align="right">按市价</td>
+<td>USD</td>
+<td>脱锚与流动性</td>
+</tr>
+</tbody></table>
+<h2>参与者、交易、持有与退出</h2>
+<p>参与者包括发行人、储备托管行、做市商、交易所、钱包服务商、支付商户、审计机构和监管机构。发行人管理储备与赎回，托管行保管资产，做市商维持二级价格，监管机构发放牌照并监督披露。</p>
+<p>稳定币可以在一级市场铸造与赎回，也可以在二级市场交易、借贷和跨链桥接。持有期要关注储备构成、赎回通道和链上合约权限；退出可以是赎回、卖出或跨链转移。</p>
+<h2>成本、风险与条款文件</h2>
+<p>成本：铸造与赎回费、买卖价差、链上 gas、托管费、跨链桥费用和合规成本。看似 1:1 的价格，实际进出成本可能来自价差、门槛和等待时间。</p>
+<p>风险：储备风险、脱锚风险、挤兑风险、托管与私钥风险、智能合约风险、跨链桥风险、监管风险和赎回暂停风险。稳定币不是银行存款，也没有存款保险。</p>
+<p>条款：主要文件是发行条款、储备披露、赎回政策、托管协议、智能合约审计报告和牌照文件。要核对储备构成、赎回门槛、暂停条款、私钥权限和适用司法辖区。</p>
+<h2>图解</h2>
+<p>下面四张图分别检查本文的机制、边界与对照；图内文字取自本文小节，不是新数据。</p>
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-chain-title fig-batch-chain-desc" viewBox="0 0 340 304" width="100%">
+    <title id="fig-batch-chain-title">稳定币、托管与链上结算风险：机制链</title>
+    <desc id="fig-batch-chain-desc">稳定币、托管与链上结算风险 的三段结构：问题、机制、判断。图内文字取自本文小节，不是新的数据估计。</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">稳定币、托管与链上结算风险：机制链</text>
+    <text x="14" y="38" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">图内文字取自本文小节；三段缺一不可。</text>
+    <line x1="14" y1="46" x2="326" y2="46" stroke="var(--border)" stroke-width="1"/>
+    <g>
+      <rect x="14" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="22" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">问题</text>
+      <text x="22" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">稳定币是发行人的负债</text>
+      <text x="22" y="102" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">，不是银行存款；储备…</text>
+      <text x="22" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">稳定币是发行人的负</text>
+      <text x="22" y="141" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">债，不是银行存款；</text>
+      <text x="22" y="158" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">储备、赎回权、托管</text>
+      <text x="22" y="175" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">和链上最终性决定它</text>
+      <text x="22" y="192" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">能否在压力下保持锚…</text>
+    </g>
+      <g>
+      <rect x="123" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="131" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">定义</text>
+      <text x="131" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">定义：稳定币通常指发</text>
+      <text x="131" y="102" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">行人承诺按 1:1…</text>
+      <text x="131" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">定义：稳定币通常指</text>
+      <text x="131" y="141" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">发行人承诺按 1:1</text>
+      <text x="131" y="158" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">兑换法币或参考资产</text>
+      <text x="131" y="175" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">的加密代币。持有人</text>
+      <text x="131" y="192" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">拥有的是对发行人的…</text>
+    </g>
+      <g>
+      <rect x="232" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="240" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">例子与计算</text>
+      <text x="240" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">假设稳定币发行 100</text>
+      <text x="240" y="102" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">亿元，储备为 60…</text>
+      <text x="240" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">假设稳定币发行</text>
+      <text x="240" y="141" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">100 亿元，储备为</text>
+      <text x="240" y="158" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">60 亿元短期国债、</text>
+      <text x="240" y="175" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">30 亿元回购和 10</text>
+      <text x="240" y="192" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">亿元商业票据。若商…</text>
+    </g>
+    <line x1="108" y1="144" x2="123" y2="144" stroke="var(--border)" stroke-width="1.1"/>
+    <path d="M120 140 L125 144 L120 148" fill="none" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="217" y1="144" x2="232" y2="144" stroke="var(--border)" stroke-width="1.1"/>
+    <path d="M229 140 L234 144 L229 148" fill="none" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="14" y1="250" x2="326" y2="250" stroke="var(--border)" stroke-width="1"/>
+    <text x="14" y="266" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">读法：先看问题能否成立，再看机制能否连通，最后看判断会不会越界。</text>
+    <text x="14" y="280" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">若中间一步缺证据，后面的结论只能当假设，不能当事实。</text>
+    <text x="14" y="294" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">图为结构示意，不是新的数据图；样本为本文论证。</text>
+  </svg>
+  <figcaption>图 1：稳定币、托管与链上结算风险的机制链：从问题、机制到判断。样本为本文论证，单位为文中标注。</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-boundary-title fig-batch-boundary-desc" viewBox="0 0 340 244" width="100%">
+    <title id="fig-batch-boundary-title">稳定币、托管与链上结算风险：适用边界</title>
+    <desc id="fig-batch-boundary-desc">把成立条件与失效条件分开；局部例子不能自动推广到所有情形。</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">稳定币、托管与链上结算风险：什么情况下成立？</text>
+    <line x1="14" y1="34" x2="326" y2="34" stroke="var(--border)" stroke-width="1"/>
+    <rect x="14" y="44" width="312" height="38" rx="7" fill="var(--surface-2)" stroke="var(--border)"/>
+    <text x="170" y="62" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="middle">先检查条件，再看结论</text>
+    <text x="170" y="75" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="middle">条件、口径或样本一变，结论可能要重算</text>
+    <line x1="170" y1="82" x2="90" y2="104" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="170" y1="82" x2="250" y2="104" stroke="var(--border)" stroke-width="1.1"/>
+    <rect x="14" y="104" width="148" height="100" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+    <text x="24" y="122" font-size="8.6" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">成立</text>
+    <text x="24" y="138" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">第一，稳定币不是存款，不受存款保</text>
+      <text x="24" y="154" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">险保护；发行人破产时持有人是债权</text>
+      <text x="24" y="170" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">人。第二，储备审计或鉴证不是实时</text>
+      <text x="24" y="186" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">偿付能力保证，披露频率和范围有限…</text>
+    <rect x="178" y="104" width="148" height="100" rx="8" fill="var(--gold)" opacity="0.18" stroke="var(--border)"/>
+    <text x="188" y="122" font-size="8.6" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">不成立 / 需改写</text>
+    <text x="188" y="138" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">第一，稳定币不是存款，不受存款保</text>
+      <text x="188" y="154" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">险保护；发行人破产时持有人是债权</text>
+      <text x="188" y="170" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">人。第二，储备审计或鉴证不是实时</text>
+      <text x="188" y="186" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">偿付能力保证，披露频率和范围有限…</text>
+    <line x1="14" y1="216" x2="326" y2="216" stroke="var(--border)" stroke-width="1"/>
+    <text x="14" y="232" font-size="8.3" fill="var(--muted)" font-family="inherit" text-anchor="start">图为边界示意；样本为本文论证，单位为文中标注。</text>
+  </svg>
+  <figcaption>图 2：稳定币、托管与链上结算风险的边界：哪些条件成立，哪些条件失效。样本为本文论证，单位为文中标注。</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-compare-title fig-batch-compare-desc" viewBox="0 0 340 252" width="100%">
+    <title id="fig-batch-compare-title">稳定币、托管与链上结算风险：对象、前提与常见误区</title>
+    <desc id="fig-batch-compare-desc">三行比较本文概念、成立条件与常见误区；比较不等于等价，也不能替代定义。</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">稳定币、托管与链上结算风险：一张表看对象、前提与误区</text>
+    <line x1="14" y1="34" x2="326" y2="34" stroke="var(--border)" stroke-width="1"/>
+    <text x="82" y="46" font-size="8.4" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">本篇</text>
+    <text x="200" y="46" font-size="8.4" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">容易混淆</text>
+    <g>
+      <rect x="14" y="52" width="312" height="58" fill="transparent" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="72" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">对象</text>
+      <text x="82" y="72" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">稳定币是发行人的负债，不</text>
+      <text x="82" y="88" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">是银行存款；储备、赎回权…</text>
+      <text x="200" y="72" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">相邻概念/常见说法</text>
+    </g>
+    <g>
+      <rect x="14" y="110" width="312" height="58" fill="var(--surface-2)" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="130" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">前提</text>
+      <text x="82" y="130" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">第一，稳定币不是存款，不</text>
+      <text x="82" y="146" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">受存款保险保护；发行人破…</text>
+      <text x="200" y="130" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">第一，稳定币不是存款，不受存款保险保</text>
+      <text x="200" y="146" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">护；发行人破产时持有人是债权人。第二…</text>
+    </g>
+    <g>
+      <rect x="14" y="168" width="312" height="58" fill="transparent" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="188" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">检查</text>
+      <text x="82" y="188" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">先定义，再比较；不能只看</text>
+      <text x="82" y="204" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">名称</text>
+      <text x="200" y="188" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">相关不等于因果，局部不等于普遍</text>
+    </g>
+    <text x="14" y="244" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">图为比较示意；样本为本文论证，单位为文中标注。</text>
+  </svg>
+  <figcaption>图 3：稳定币、托管与链上结算风险的对象、前提与常见误区比较。样本为本文论证，单位为文中标注。</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-039-stablecoins-custody-and-onchain-settlement-example-title fig-039-stablecoins-custody-and-onchain-settlement-example-desc" viewBox="0 0 460 290" width="100%">
+    <title id="fig-039-stablecoins-custody-and-onchain-settlement-example-title">算例三行卡：稳定币：储备市值、覆盖率与赎回</title>
+    <desc id="fig-039-stablecoins-custody-and-onchain-settlement-example-desc">读图路径：三行分别给出关键数字、单位和算例条件；不是市场数据。</desc>
+    <text x="16" y="24" font-size="12.2" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">算例三行卡</text>
+    <text x="16" y="40" font-size="9.2" fill="var(--muted)" font-family="inherit" text-anchor="start">单位为文中标注；样本为本文教学假设</text>
+    <line x1="12" y1="48" x2="448" y2="48" stroke="var(--border)" stroke-width="1"/>
+    <g>
+      <rect x="12" y="58" width="436" height="58" rx="9" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="24" y="76" font-size="10.2" fill="var(--muted)" font-family="inherit" text-anchor="start">储备市值</text>
+      <text x="448" y="80" font-size="17" font-weight="700" fill="var(--accent)" font-family="inherit" text-anchor="end">96 亿元</text>
+      <text x="24" y="96" font-size="9.3" fill="var(--text)" font-family="inherit" text-anchor="start">60 + 27 + 9</text>
+    </g>
+    <g>
+      <rect x="12" y="128" width="436" height="58" rx="9" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="24" y="146" font-size="10.2" fill="var(--muted)" font-family="inherit" text-anchor="start">储备覆盖率</text>
+      <text x="448" y="150" font-size="17" font-weight="700" fill="var(--accent)" font-family="inherit" text-anchor="end">96%</text>
+      <text x="24" y="166" font-size="9.3" fill="var(--text)" font-family="inherit" text-anchor="start">96 / 100</text>
+    </g>
+    <g>
+      <rect x="12" y="198" width="436" height="58" rx="9" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="24" y="216" font-size="10.2" fill="var(--muted)" font-family="inherit" text-anchor="start">20% 赎回所需现金</text>
+      <text x="448" y="220" font-size="17" font-weight="700" fill="var(--accent)" font-family="inherit" text-anchor="end">20 亿元</text>
+      <text x="24" y="236" font-size="9.3" fill="var(--text)" font-family="inherit" text-anchor="start">100 亿枚 × 20%</text>
+    </g>
+    <line x1="12" y1="266" x2="448" y2="266" stroke="var(--border)" stroke-width="1"/>
+    <text x="16" y="280" font-size="8.8" fill="var(--muted)" font-family="inherit" text-anchor="start">只看数量关系，不构成预测或投资建议</text>
+  </svg>
+  <figcaption>图 4：账面储备率不等于压力时的流动性覆盖率。单位为文中标注；样本为本文教学假设，不是市场或统计数据；只用于展示数量关系。</figcaption>
+</figure>
+
+<h2>练习</h2>
+<ol>
+<li><strong>概念辨别：</strong> 概念辨别：稳定币持有人对发行人的权利是存款还是债权？</li>
+<li><strong>计算或推理：</strong> 计算：储备 60+27+9=96 亿元，发行 100 亿元，覆盖率是多少？</li>
+<li><strong>适用条件：</strong> 适用条件：为什么链上转账不可逆不等于法律所有权最终？</li>
+</ol>
+<details>
+<summary>参考答案</summary>
+
+<ol>
+<li>是对发行人的赎回请求权/债权，不是银行存款，不受存款保险保护。</li>
+<li>96/100 = 96%。</li>
+<li>破产、制裁、欺诈、托管人和私钥问题仍可推翻或追索；账本记录不等于法律确权。</li>
+</ol>
+</details>
+
+<h2>来源</h2>
+<ol>
+<li>U.S. Securities and Exchange Commission. <em>Crypto Assets</em>. U.S. Securities and Exchange Commission. U.S. public information; copying and further distribution allowed. <a href="https://www.sec.gov/securities-topics/crypto-assets">https://www.sec.gov/securities-topics/crypto-assets</a>（访问日期：2026-10-30）</li>
+<li>Financial Stability Board. <em>Crypto-assets and Global Stablecoins</em>. Financial Stability Board. FSB terms; linked summary only. <a href="https://www.fsb.org/work-of-the-fsb/financial-innovation-and-structural-change/crypto-assets-and-global-stablecoins/">https://www.fsb.org/work-of-the-fsb/financial-innovation-and-structural-change/crypto-assets-and-global-stablecoins/</a>（访问日期：2026-11-05）</li>
+<li>Bank for International Settlements. <em>Central bank digital currencies: foundational principles and core features</em>. Bank for International Settlements. BIS terms: non-commercial download, display and redistribution allowed with attribution. <a href="https://www.bis.org/publ/othp33.htm">https://www.bis.org/publ/othp33.htm</a>（访问日期：2026-11-05）</li>
+</ol>
+  <section class="article-demo" id="demo-check" data-demo="check" data-lang="zh" aria-labelledby="demo-check-title" data-check-done="三项都能说清：这篇的核心已经过关。" data-check-pending="还差一项：回到正文对应小节，找一个反例或数字再讲一遍。" data-check-count="已勾选"> <header class="demo-head"> <div class="demo-head-top"> <p class="demo-eyebrow">动手演示</p> <button class="demo-reset" type="button" data-demo-reset>恢复默认</button> </div> <h2 id="demo-check-title">读完自检：三句话能不能说清</h2> <p class="demo-intro">不用背定义。把下面三句逐个勾上，看自己能不能用自己的话讲清机制、算例和边界。</p> </header>          <div class="demo-check"> <ul class="demo-check-list"> <li> <label> <input type="checkbox" data-check-index="0"> <span>区分稳定币、银行存款和货币基金的法律结构与赎回权。</span> </label> </li><li> <label> <input type="checkbox" data-check-index="1"> <span>说明储备资产、折扣、赎回门槛和做市商如何影响锚定。</span> </label> </li><li> <label> <input type="checkbox" data-check-index="2"> <span>能说出一个本文结论不适用的条件</span> </label> </li> </ul> <p class="demo-check-status" data-out="checkStatus" role="status"> 已勾选 0 / 3
+</p> </div> <p class="demo-footnote">数字为教学假设，用来展示关系，不构成预测或投资建议。</p> </section><script type="module" src="/_astro/ArticleDemo.astro_astro_type_script_index_0_lang.C9VQAsQ0.js"></script> <p class="notice"> 本文已通过当前发布门槛；事实、计算与译文如有修订，会同步更新两个语言版本。 </p> <p> <a class="button secondary" href="/"> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class> <path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path>        </svg>返回分站 </a> </p> </div> <aside class="article-aside" aria-label="文章信息"> <section class="aside-card"> <h2>学习目标</h2> <ul> <li>区分稳定币、银行存款和货币基金的法律结构与赎回权。</li><li>说明储备资产、折扣、赎回门槛和做市商如何影响锚定。</li><li>识别托管、智能合约、预言机和链上结算的失败点。</li> </ul> </section> <section class="aside-card"> <h2>必需先修</h2> <ul> <li> <a href="/learn/digital-assets-and-digital-finance/">MKT-024 · 数字资产与数字金融分类</a> </li> </ul> </section> <section class="aside-card"> <h2>建议阅读</h2> <ul> <li> <a href="/learn/assets-vs-instruments/">MKT-001 · 资产与工具的区别</a> </li> </ul> </section> <section class="aside-card"> <h2>AI 复核记录</h2> <p class="muted"> 本项目没有真人签字；下列状态来自 AI-only 编辑复核。 </p> <ul> <li> 事实与计算 ：AI 复核通过 </li><li> 学科 ：AI 复核通过 </li><li> 英文 ：AI 复核通过 </li><li> 页面 ：AI 复核通过 </li> </ul> </section> <section class="aside-card"> <h2>来源</h2> <div class="source"> <a href="https://www.sec.gov/securities-topics/crypto-assets" rel="noopener noreferrer" target="_blank">Crypto Assets</a> <p>U.S. Securities and Exchange Commission · U.S. Securities and Exchange Commission</p> <p>访问：2026-10-30 · 许可：U.S. public information; copying and further distribution allowed</p> <p>支持论点：用于核对“稳定币、托管与链上结算风险”涉及的定义、制度、统计口径或产品条款；正文不把来源未写的内容当作事实，具体数字与日期以来源原文为准。</p> </div><div class="source"> <a href="https://www.fsb.org/work-of-the-fsb/financial-innovation-and-structural-change/crypto-assets-and-global-stablecoins/" rel="noopener noreferrer" target="_blank">Crypto-assets and Global Stablecoins</a> <p>Financial Stability Board · Financial Stability Board</p> <p>访问：2026-11-05 · 许可：FSB terms; linked summary only</p> <p>支持论点：用于核对“稳定币、托管与链上结算风险”涉及的定义、制度、统计口径或产品条款；正文不把来源未写的内容当作事实，具体数字与日期以来源原文为准。</p> </div><div class="source"> <a href="https://www.bis.org/publ/othp33.htm" rel="noopener noreferrer" target="_blank">Central bank digital currencies: foundational principles and core features</a> <p>Bank for International Settlements · Bank for International Settlements</p> <p>访问：2026-11-05 · 许可：BIS terms: non-commercial download, display and redistribution allowed with attribution</p> <p>支持论点：用于核对“稳定币、托管与链上结算风险”涉及的定义、制度、统计口径或产品条款；正文不把来源未写的内容当作事实，具体数字与日期以来源原文为准。</p> </div> </section> </aside> </div> </article><script type="module">var e=document.querySelector(`[data-reading-progress] span`),t=document.querySelector(`article`);if(e&&t){let n=()=>{let n=t.offsetTop,r=t.offsetHeight-window.innerHeight,i=r>0?(window.scrollY-n)/r:0;e.style.width=`${Math.min(1,Math.max(0,i))*100}%`};window.addEventListener(`scroll`,n,{passive:!0}),window.addEventListener(`resize`,n),n()}</script>  </main> <footer class="site-footer"> <div class="container footer-inner"> <div class="footer-brand"> <span class="footer-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="28" height="28" alt class="mascot" loading="lazy" decoding="async"></span> <div> <strong>巫妖投资 51Invest</strong> <p class="footer-note">非商业免费知识站。每篇标出来源与口径；这里没有投资建议。</p> </div> </div> <nav class="footer-links" aria-label="知识分站"> <a href="https://51invest.com/" data-main-home>首页</a> <a href="https://51invest.com/contents/">内容地图</a> <a href="/glossary/">术语表</a> <a href="/search/">搜索</a> <a href="https://51invest.com/charts/" data-main-link>图表</a> <a href="https://51invest.com/sources/" data-main-link>数据与许可</a> <a href="/">分站首页</a> </nav> </div> </footer> <nav class="mobile-nav" aria-label="知识分站"> <a class="mobile-link" href="https://51invest.com/" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>    <path d="m3 10 9-7 9 7"></path><path d="M5 9v11h14V9"></path><path d="M9 20v-6h6v6"></path>     </svg> <span>首页</span> </a> <a class="mobile-link" href="https://51invest.com/#stations" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>   <rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect>      </svg> <span>知识分站</span> </a> <a class="mobile-link active" href="/" aria-current="page"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>  <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v18H6.5A2.5 2.5 0 0 1 4 18.5z"></path><path d="M4 18.5A2.5 2.5 0 0 1 6.5 16H20"></path>       </svg> <span>分站首页</span> </a> <a class="mobile-link" href="/en/learn/stablecoins-custody-and-onchain-settlement/" data-language-link="en"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>English</span> </a> </nav><script type="module">var e=document.documentElement,t=[`auto`,`light`,`dark`],n=matchMedia(`(prefers-color-scheme: dark)`),r=()=>{let t=e.dataset.themeMode;return t===`light`||t===`dark`?t:`auto`},i=e=>{try{localStorage.setItem(`51invest-theme`,e)}catch{}try{let t=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-theme=${e}; Path=/; Max-Age=31536000; SameSite=Lax${t}`}catch{}},a=e=>{document.querySelectorAll(`[data-theme-toggle]`).forEach(t=>{let n=t.dataset[`label${e[0].toUpperCase()}${e.slice(1)}`];n&&(t.setAttribute(`aria-label`,n),t.setAttribute(`title`,n))})},o=t=>{e.dataset.themeMode=t,e.dataset.theme=t===`auto`?n.matches?`dark`:`light`:t,i(t),a(t)};a(r()),document.querySelectorAll(`[data-theme-toggle]`).forEach(e=>{e.addEventListener(`click`,()=>{let e=t[(t.indexOf(r())+1)%t.length];o(e)})}),n.addEventListener(`change`,()=>{r()===`auto`&&(e.dataset.theme=n.matches?`dark`:`light`)}),document.querySelectorAll(`[data-language-link]`).forEach(e=>{e.addEventListener(`click`,()=>{let t=e.dataset.languageLink;if(t===`zh`||t===`en`){try{localStorage.setItem(`51invest-language`,JSON.stringify(t))}catch{}try{let e=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-language=${t}; Path=/; Max-Age=31536000; SameSite=Lax${e}`}catch{}}})});</script> </body> </html>

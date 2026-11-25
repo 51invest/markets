@@ -1,0 +1,313 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light" data-theme-mode="auto"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark"><title>股权融资、治理与股东权利 · 巫妖投资</title><meta name="description" content="股权融资用所有权换资金，稀释、投票权、优先权和治理条款决定老股东实际让出了什么。"><link rel="canonical" href="https://markets.51invest.com/learn/equity-financing-governance-and-shareholder-rights/"><link rel="alternate" hreflang="zh-CN" href="https://markets.51invest.com/learn/equity-financing-governance-and-shareholder-rights/"><link rel="alternate" hreflang="en" href="https://markets.51invest.com/en/learn/equity-financing-governance-and-shareholder-rights/"><link rel="alternate" hreflang="x-default" href="https://markets.51invest.com/learn/equity-financing-governance-and-shareholder-rights/"><link rel="icon" type="image/png" href="/_astro/neutral.Dr5C2SoA.png"><script>
+  (() => {
+    const root = document.documentElement;
+    const readCookie = key => {
+      try {
+        return document.cookie.split('; ').find(value => value.startsWith(`51invest-${key}=`))?.split('=').slice(1).join('=') ?? null;
+      } catch {
+        return null;
+      }
+    };
+    const readLocal = key => {
+      try {
+        return localStorage.getItem(`51invest-${key}`);
+      } catch {
+        return null;
+      }
+    };
+    const storedTheme = readCookie('theme') || readLocal('theme');
+    const mode = ['light', 'dark', 'auto'].includes(storedTheme) ? storedTheme : 'auto';
+    const media = matchMedia('(prefers-color-scheme: dark)');
+    const apply = () => {
+      root.dataset.theme = mode === 'auto' ? (media.matches ? 'dark' : 'light') : mode;
+      root.dataset.themeMode = mode;
+    };
+    apply();
+    media.addEventListener('change', () => {
+      if (root.dataset.themeMode === 'auto') apply();
+    });
+  })();
+</script><link rel="stylesheet" href="/_astro/Base.CocbJOeh.css"></head> <body>  <a class="skip-link" href="#main">跳到正文</a> <header class="site-header"> <div class="container header-inner"> <a class="brand" href="https://51invest.com/" data-main-home aria-label="巫妖投资"> <span class="brand-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="36" height="36" alt class="mascot" loading="lazy" decoding="async"></span> <span class="brand-copy"> <span class="brand-name">巫妖投资</span> <span class="brand-caption">51INVEST</span> </span> </a> <nav class="desktop-nav" aria-label="知识分站"> <a class="nav-link" href="https://51invest.com/" data-main-home> 首页 </a> <a class="nav-link" href="https://economics.51invest.com/"> 经济学 </a><a class="nav-link" href="https://finance.51invest.com/"> 金融基础 </a><a class="nav-link active" href="/" aria-current="page"> 市场与产品 </a><a class="nav-link" href="https://invest.51invest.com/"> 投资方法 </a><a class="nav-link" href="https://history.51invest.com/"> 经济与金融史 </a><a class="nav-link" href="https://research.51invest.com/"> 研究方法 </a> <a class="nav-link" href="https://51invest.com/contents/"> 内容地图 </a> </nav> <div class="header-tools"> <a class="icon-button language-button" href="/en/learn/equity-financing-governance-and-shareholder-rights/" hreflang="en" lang="en" data-language-link="en" aria-label="切换为英文" title="切换为英文"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>English</span> </a> <button class="icon-button theme-button" type="button" data-theme-toggle aria-label="主题: 跟随系统" title="主题: 跟随系统" data-label-auto="主题: 跟随系统" data-label-light="主题: 浅色" data-label-dark="主题: 深色"> <span class="theme-icon" data-theme-icon="auto"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>        <circle cx="12" cy="12" r="8.5"></circle><path d="M12 3.5v17"></path><path d="M12 7a5 5 0 0 1 0 10" fill="currentColor" stroke="none"></path> </svg></span> <span class="theme-icon" data-theme-icon="light"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>       <circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>  </svg></span> <span class="theme-icon" data-theme-icon="dark"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>      <path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"></path>   </svg></span> <span class="theme-text" data-theme-text="auto">跟随系统</span> <span class="theme-text" data-theme-text="light">浅色</span> <span class="theme-text" data-theme-text="dark">深色</span> </button> </div> </div> </header> <main id="main" class="site-main" data-pagefind-body>  <div class="reading-progress" data-reading-progress aria-hidden="true"><span></span></div> <div class="container"> <nav class="breadcrumbs" aria-label="Breadcrumb"> <a href="https://51invest.com/" data-main-home>首页</a> <span class="sep">/</span> <a href="/">市场与产品</a> <span class="sep">/</span> <span aria-current="page">股权融资、治理与股东权利</span> </nav> </div> <article> <header class="article-header"> <div class="container"> <span class="article-type">产品与品种</span> <h1 class="article-title">股权融资、治理与股东权利</h1> <p class="article-summary">股权融资用所有权换资金，稀释、投票权、优先权和治理条款决定老股东实际让出了什么。</p>  <div class="meta-grid"> <div class="meta-item"><span>模块</span><strong>MKT-M02 · 股票与股权</strong></div> <div class="meta-item"><span>层级</span><strong>入门</strong></div> <div class="meta-item"><span>阅读</span><strong>17 分钟 · 19 节</strong></div> </div> <p class="demo-jump"> <a href="#demo-check"> 这篇有一个可以动手操作的演示 <span aria-hidden="true">↓</span> </a> </p> </div> </header> <div class="container article-layout"> <div class="article-body"> <h2>定义</h2>
+<p><strong>股权融资</strong>是企业发行新股换取资金，属于一级市场；老股东在二级市场买卖不改变公司股本。<strong>稀释</strong>指新股发行后老股东持股比例和每股收益下降。<strong>普通股</strong>通常有投票权和剩余索取权，<strong>优先股</strong>在分红和清偿顺序上优先但投票权受限；公司还可以设置不同投票权的类别股，具体权利以章程和发行文件为准[3]。</p>
+<h2>直觉</h2>
+<p>把公司想成一栋楼，股东按份额拥有楼里的现金流和投票权。普通股是剩余的、没有上限的权利：分红排在其他索取权之后，但上涨时没有天花板；优先股像一张有固定分红的“高级欠条”，先拿钱、通常没有投票权，也可能在公司赎回时被买回。股权融资不是“白拿钱”：发新股会稀释老股东的份额，引入新股东会改变董事会和治理结构。治理规则决定谁能在什么时候卖资产、借债、分红和关联交易，这些权利与现金流同样重要。</p>
+<h2>机制</h2>
+<p>融资方式包括增发、配股、可转债和 IPO。增发若面向外部投资者，老股东持股比例下降；配股给老股东优先认购权，可减少稀释但需要出资。投票权决定董事选举和重大事项，董事会又决定预算、并购和高管薪酬。优先股、否决权、反稀释条款和双层股权会把现金流权与控制权分离。少数股东保护包括独立董事、关联交易审批、信息披露和集体诉讼；这些条款的实际效力取决于执行，而不只是文本。</p>
+<h2>例子与计算</h2>
+<p>假设公司原有 100 股，净利润 100 元，EPS 为 1 元。若增发 20 股、募资 1,600 元，投产后净利润增至 130 元，新股本 120 股，EPS 为 1.083 元；老股东持股从 100% 降到 83.3%。若发行价只有 50 元/股、募资 1,000 元，净利润增至 120 元，EPS 为 1 元，老股东没有获得每股增厚，却让出了 16.7% 所有权。若老股东按比例配股，可维持 83.3% 的持股并分摊出资。以上为教学假设，不含税和发行费用。</p>
+<h2>第二个算例：配股稀释与除权价</h2>
+<p>假设公司有 100 股，股价 100 元，市值 10,000 元。公司按 1:5 配股，每 5 股可认购 1 股，认购价 80 元，共发行 20 股，募集 1,600 元。发行后理论除权价 = (100 × 100 + 20 × 80) / 120 = 96.67 元。老股东若全额认购，持有 6 股，成本 100 × 5 + 80 = 580 元，市值 6 × 96.67 = 580 元，不赚不亏；若不认购，持有 5 股，市值 483.33 元，比原来的 500 元少 16.67 元，这就是稀释损失。配股价格越低、发行比例越大，不认购的稀释越明显。以上为教学假设，不含费用、税和认购不足的情形。</p>
+<h2>边界与误区</h2>
+<p>第一，融资额大不等于每股增厚，关键看发行价、募投回报和股本增加。第二，优先股的“优先”只限于分红和清偿，不保证固定收益，也不一定参与剩余利润。第三，双层股权可以在控制权稳定时提高决策效率，也会削弱一股一票的约束。第四，章程和注册地法律决定股东权利，跨辖区不能直接类比。第五，回购和分红可以提升 EPS，但不创造经营价值，不能与真实增长混淆。</p>
+<h2>失败模式</h2>
+<p>第一种失败是把“控制权”与“经济所有权”混为一谈。双重股权结构下，少数股东可能只拿到经济份额，投票权集中在创始人手里；持股 51% 也不保证对重大事项的控制，章程、董事会和债权人契约都会限制。第二种失败是忽略关联交易和资金占用：大股东可以通过关联采购、借款和担保把价值转移出去，少数股东未必能阻止。第三种失败是把回购当成永久利好：回购提高每股收益，但也可能只是用低价债务替换股权，杠杆上升后风险更大。第四种失败是只看稀释比例，不看募集资金的用途和回报；低价发行用于高回报项目可能增值，高价发行用于低回报项目可能毁值。</p>
+<h2>三问自检</h2>
+<p>第一，融资方式是什么：普通股、优先股、配股、可转债还是债务，稀释和索取权顺序如何？第二，募集资金的用途和预期回报是否可核，是否有明确的投资回收期？第三，治理结构是否保护少数股东：投票权、关联交易审批、独立董事和退出机制是否有效？三问答不清，“股权融资”就只是资产负债表上的一个科目，不是可判断的价值创造。</p>
+<h2>相邻概念与反例</h2>
+<p>普通股容易和优先股、可转债、债务混淆。普通股是剩余索取权，分红不固定，投票权通常按股计算；优先股有优先分红和清偿顺序，但通常没有投票权，可能被赎回；可转债是债，附带转股权，转股会稀释；债务有固定利息和到期日，违约时先于股权受偿。四者的现金流、风险和治理权不同。反例是“持股 51% 就有绝对控制”：章程、董事会席位、类别股投票权和债权人契约都可能限制控制；反过来，持股不足 50% 也可能通过双重股权结构控制公司。另一个反例是“回购一定增加股东价值”：如果回购用高价债务融资，杠杆上升和利息支出可能抵消每股收益提升。比较融资方案，应同时看稀释、控制权、现金流和契约约束。</p>
+<h2>适用边界</h2>
+<p>本文的融资与控制权框架适用于有清晰章程、类别股披露、董事会席位和债权人契约的公司。若公司章程允许董事会增发、类别股投票权不透明，或大股东通过一致行动协议控制，简单按持股比例判断控制会出错。它不适用于把投票权等同于经济收益，也不适用于忽略可转债转股稀释的静态分析。使用时先读章程和股东协议，再做稀释、控制权和现金流三张表；51% 不是控制的充分条件。</p>
+<h2>股东权利的生命周期：类别、ADR、增发、回购、并购与退市</h2>
+<p>股东权利不是一张静止的权利清单；从发行类别、跨境存托、再融资、现金分配、控制权交易到退市，每一站都会改变现金流、投票权和退出方式。以下六节按生命周期排列。</p>
+<h3>不同投票权：双层股权、转换与日落</h3>
+<p><strong>定义。</strong> 不同投票权（dual-class）让同一公司的不同类别股份拥有不同票数，常见是一股一票的公开类别与每股多票的内部人类别。权利来自章程与发行文件，不是“创始人天然拥有”[3][4]。</p>
+<p><strong>机制。</strong> 内部人用较少经济份额取得较多投票权，从而控制董事选举与重大事项；超级投票股通常在转让时转换为低投票权类别，部分结构设日落条款。控制权与经济所有权的差额就是“楔子”，它可能放大关联交易、并购阻挠和治理僵局的风险[4]。</p>
+<p><strong>例子。</strong> 教学假设：公司有 20 股内部人 B 类（每股 10 票）和 80 股公开 A 类（每股 1 票），总票数 280，内部人以 20% 经济份额持有 71.4% 投票权。若 B 类按条款在转让时转为 A 类，20 股变成 20 票，总票数 100，内部人只剩 20% 投票权。数字只说明分离，不代表任何公司。</p>
+<p><strong>边界。</strong> 双层股权不是所有市场都允许，具体上市规则与指数政策不同；它不自动等于“坏治理”，也不保证控制权永久，章程修改、类别投票、董事会和债权人契约都能改变实际控制。把经济份额当投票权，或把投票权当现金流，都会误判[4]。</p>
+<h3>存托凭证：ADR、ADS 的比例、托管与权利</h3>
+<p><strong>定义。</strong> ADR 是在美国市场交易、代表境外公司股份的存托凭证；它证明对 ADS 的所有权，ADS 再代表托管银行持有的境外股份。ADR 以美元交易和结算，比例可以是 1:1、分数或倍数[5]。</p>
+<p><strong>机制。</strong> 境外公司或持有人把股份交给托管银行，托管银行发行 ADS；注销时把股份取回。发起型（sponsored）由公司与存托银行签存托协议，通常承担部分服务并转发股东通讯；非发起型（unsponsored）由经纪商设立，公司不参与，持有人权利与费用安排更弱。在存托结构下，ADR 持有人通常不是境外公司的直接登记股东，投票和分红要通过存托机构与存托协议实现[5]。</p>
+<p><strong>例子。</strong> 教学假设：1 ADS = 8 股普通股，存入 800 股可发行 100 ADS；若每股普通股折合 2.50 美元，忽略费用与汇率，1 ADS 的理论价值是 20 美元。普通股涨 10% 到 2.75 美元，ADS 理论价值 22 美元；若本币贬值 5%，美元价值会被抵消一部分。费用、汇率和税会改变实际到手收益。</p>
+<p><strong>边界。</strong> ADR 不是直接持有境外股票，也不是基金；一级 ADR 只能场外交易且不能融资，二级可上市但不能融资，三级可融资，具体以发行文件为准[5]。非发起型 ADR 可能不转发投票资料；存托比例可调整；跨境披露、预扣税、外汇和流动性风险仍在。把 ADR 价格当成境外股价的完全等价，会忽略比例与费用。</p>
+<h3>发行与增发：公开发行、配股、定向增发与可转债</h3>
+<p><strong>定义。</strong> 增发是已上市公司再次发行新股，属于一级市场；配股向现有股东按比例给认购权；定向增发向特定投资者发行；可转债在转股时增加股份。二级市场买卖不改变股本[3][6]。</p>
+<p><strong>机制。</strong> 新股发行增加股份数，老股东持股比例按“原股份 / 新总股份”下降；EPS 按“净利润 / 新总股份”变化。配股让老股东按比例认购，全额认购可维持比例，但需要出资；不认购则被稀释。定向增发可能引入锁定期、投票权或董事会席位；可转债的转股权是延迟稀释[6]。</p>
+<p><strong>例子。</strong> 教学假设：原 100 股、净利润 100 元，EPS 1 元；增发 20 股、净利润升到 130 元，EPS 1.083 元，老股东 83.3%。若增发价只有 50 元、净利润只升到 120 元，EPS 仍为 1 元，老股东让出 16.7% 却没有每股增厚。配股 1:5、认购价 80 元时，除权价 96.67 元；全额认购不赚不亏，不认购的 100 股少 333.33 元（每股原股份少 3.33 元）。均为教学假设，不含费用与税。</p>
+<p><strong>边界。</strong> 增发不等于稀释一定有害：低价发行投高回报项目可能增厚，高价发行投低回报项目可能毁值。二级市场老股东卖出不稀释公司；只有公司发行新股才增加股本。跨市场“增发”含义不同，中国的定向增发、配股与美国的 follow-on、rights offering 不能只按名称对应[6]。</p>
+<h3>分红与回购：现金分配、注销与杠杆边界</h3>
+<p><strong>定义。</strong> 分红是公司按股支付现金或股票；回购是公司用现金买回自己的股份。两者都是现金分配，但分红直接给股东现金，回购减少股份数、把现金给卖出者[6][7]。</p>
+<p><strong>机制。</strong> 分红有宣布日、登记日、除息日与支付日；除息日股价通常按股息下调。回购可通过公开市场（可能依赖 Rule 10b-18 的 manner、timing、price、volume 安全港）或要约进行；回购后每股收益机械上升，但公司现金减少，若用债务融资还会增加利息与杠杆[7][8]。</p>
+<p><strong>例子。</strong> 教学假设：净利润 100 元、100 股，EPS 1 元；回购 20 股花 1,000 元，净利润仍 100 元，80 股，EPS 1.25 元。若花掉的现金本来能赚 5%，少赚 50 元，净利润变 95 元，EPS 1.1875 元；EPS 提升从 25% 降到 18.75%。回购价高于内在价值时，留下的股东承担价值转移。</p>
+<p><strong>边界。</strong> 回购公告不等于完成，可能因价格、流动性或要约条件终止；回购不创造经营现金流，不能把 EPS 提升当成增长。分红与回购的税务、法律与契约限制因辖区而异；公司也可能用回购抵消股权激励稀释。把“回购=利好”或“分红=安全”当成规则，都会忽略价格与杠杆[8]。</p>
+<h3>并购与拆分：现金、换股、控制权与分拆</h3>
+<p><strong>定义。</strong> 并购是两家公司合并或一方取得另一方控制权；对价可以是现金、股票或混合。拆分（spin-off）是把子公司股份按比例分给母公司股东，形成独立上市实体；出售（sell-off）是把子公司卖给第三方；分拆上市（carve-out）是卖出部分股份并保留控制[6][9][11]。</p>
+<p><strong>机制。</strong> 现金对价不增加买方股份，但消耗现金与举债能力；股票对价发行新股，按换股比例稀释老股东。控制权交易可能通过要约或法定合并完成；在美国，法定合并本身通常不按要约收购规则处理，现金要约与换股要约则受不同披露与程序约束[9]。拆分不改变股东按比例拥有的资产，但改变治理、资本结构与估值口径；分拆上市引入新资金与新少数股东[6]。</p>
+<p><strong>例子。</strong> 教学假设：买方 100 股、净利润 100 元；目标 50 股、净利润 20 元；协同净利润 10 元。换股比例 0.5 时发行 25 股，总 125 股，净利润 130 元，EPS 1.04 元，高于 1.00 元；换股比例 0.8 时发行 40 股，总 140 股，EPS 0.929 元，低于 1.00 元。协同未实现时，EPS 会更低。数字只说明增厚/稀释，不含费用与税。</p>
+<p><strong>边界。</strong> 并购不保证协同；股票对价在买方股价高时更“便宜”，但会稀释；现金对价在利率高时更贵。拆分不自动创造价值，母公司股东拿到子公司股份后仍承担该子公司的风险；分拆上市可能保留控制，也可能失去控制。监管审批、股东投票、评估权和税务因辖区而异[9]。</p>
+<h3>退市与股东权利：交易所程序、场外交易与清偿边界</h3>
+<p><strong>定义。</strong> 退市是交易所停止某证券的上市交易，可能是自愿，也可能是交易所因不符合持续上市标准而启动。退市不等于公司清算，也不等于股东权利自动消失[10]。</p>
+<p><strong>机制。</strong> 以纳斯达克规则为例：交易所发现缺陷后通知公司；部分缺陷给合规期或允许提交合规计划；仍未解决则发 Staff Delisting Determination；公司可请求听证并向听证小组上诉，及时请求通常暂缓停牌；最终维持后退市生效。退市后股份可能转到场外市场报价，也可能没有活跃市场[10]。</p>
+<p><strong>例子。</strong> 规则示例：某股连续 30 个交易日收盘价低于 1 美元，触发最低买价缺陷；公司获 180 天合规期，期间仍未达标，交易所发退市决定；公司请求听证，停牌暂缓；听证维持后，股票转场外报价。具体天数、费用与上诉层级按交易所规则，不能把示例当成所有案例。</p>
+<p><strong>边界。</strong> 退市后股东仍可能拥有投票、分红与清算权利，但这些权利受公司章程、州法和破产程序约束；场外报价不等于可随时卖出，流动性与信息披露更弱。把退市写成“公司倒闭”或“股份归零”是错的；反过来，把退市后的场外交易当成原交易所流动性也是错的。跨境退市规则不同，不能直接套用[10]。</p>
+<h2>关联</h2>
+<ul>
+<li>MKT-003 普通股与优先股：本文的相邻主文，先读它再读本补篇。</li>
+<li>MKT-004 债券的权利与现金流：本文的相邻主文，先读它再读本补篇。</li>
+<li>MKT-006 基金的基本结构：本文的相邻主文，先读它再读本补篇。</li>
+<li>INV-002 收益风险与成本的取舍：本文的相邻主文，先读它再读本补篇。</li>
+</ul>
+<h2>资料说明</h2>
+<p>本文用 Investor.gov、FINRA、Delaware Code Online 核对定义、制度或统计口径；具体条款、数字与日期以来源原文为准[1][2][3]。</p>
+<h2>产品定义、权利与现金流结构</h2>
+<p>股票是公司剩余索取权的凭证：股东在公司清偿债务后取得剩余现金流，并通过投票参与治理。股权融资包括首次公开发行、增发、配股和可转股工具，本质是用未来现金流和部分控制权换取今天的资金。</p>
+<p>普通股通常拥有投票权、分红权和剩余财产分配权；优先股在分红和清偿顺序上优先，但投票权可能受限。股东还拥有知情权、提案权、异议权和对关联交易的审查权，具体以公司章程和证券法为准。</p>
+<table>
+<thead>
+<tr>
+<th>日期/条件</th>
+<th>现金流/收付</th>
+<th align="right">金额</th>
+<th>币种</th>
+<th>不确定性</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>发行</td>
+<td>公司收到认购资金</td>
+<td align="right">+ 发行价 × 新股份数</td>
+<td>CNY</td>
+<td>发行折价与承销费</td>
+</tr>
+<tr>
+<td>分红</td>
+<td>公司向股东支付现金</td>
+<td align="right">− 每股分红 × 股份数</td>
+<td>CNY</td>
+<td>可分配利润与董事会决议</td>
+</tr>
+<tr>
+<td>回购或增发</td>
+<td>现金流出或股份增加</td>
+<td align="right">正负不定</td>
+<td>CNY</td>
+<td>稀释与市场影响</td>
+</tr>
+</tbody></table>
+<h2>参与者、交易、持有与退出</h2>
+<p>参与者包括公司董事会与管理层、现有股东、承销商、交易所、监管机构、机构投资者和散户。承销商定价与配售，交易所提供交易场所，监管机构审核披露与治理规则。</p>
+<p>股票在发行、二级交易、增发、配股、回购和退市中流转。持有期要关注投票、分红、稀释和锁定期；退出可以卖出、转让或等待回购，控制权交易还涉及要约与董事会程序。</p>
+<h2>成本、风险与条款文件</h2>
+<p>成本：承销费、律师与审计费、发行折价、交易佣金、印花税、托管费和治理成本。增发的显性费用之外，老股东的稀释也是一种成本。</p>
+<p>风险：稀释风险、治理风险、控制权风险、信息不对称、锁定期与流动性风险、诉讼与监管风险。股东权利不是无条件执行，章程、持股比例和司法辖区会限制实际影响力。</p>
+<p>条款：主要文件是公司章程、招股说明书、认购协议、股东协议、董事会决议和证券监管披露。要核对股份类别、投票权、分红顺序、反稀释条款和锁定期。</p>
+<h2>图解</h2>
+<p>下面四张图分别检查本文的机制、边界与对照；图内文字取自本文小节，不是新数据。</p>
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-chain-title fig-batch-chain-desc" viewBox="0 0 340 304" width="100%">
+    <title id="fig-batch-chain-title">股权融资、治理与股东权利：机制链</title>
+    <desc id="fig-batch-chain-desc">股权融资、治理与股东权利 的三段结构：问题、机制、判断。图内文字取自本文小节，不是新的数据估计。</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">股权融资、治理与股东权利：机制链</text>
+    <text x="14" y="38" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">图内文字取自本文小节；三段缺一不可。</text>
+    <line x1="14" y1="46" x2="326" y2="46" stroke="var(--border)" stroke-width="1"/>
+    <g>
+      <rect x="14" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="22" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">问题</text>
+      <text x="22" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">股权融资用所有权换资</text>
+      <text x="22" y="102" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">金，稀释、投票权、优…</text>
+      <text x="22" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">股权融资用所有权换</text>
+      <text x="22" y="141" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">资金，稀释、投票权</text>
+      <text x="22" y="158" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">、优先权和治理条款</text>
+      <text x="22" y="175" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">决定老股东实际让出</text>
+      <text x="22" y="192" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">了什么。</text>
+    </g>
+      <g>
+      <rect x="123" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="131" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">定义</text>
+      <text x="131" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">定义：股权融资是企业</text>
+      <text x="131" y="102" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">发行新股换取资金，属…</text>
+      <text x="131" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">定义：股权融资是企</text>
+      <text x="131" y="141" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">业发行新股换取资金</text>
+      <text x="131" y="158" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">，属于一级市场；老</text>
+      <text x="131" y="175" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">股东在二级市场买卖</text>
+      <text x="131" y="192" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">不改变公司股本。稀…</text>
+    </g>
+      <g>
+      <rect x="232" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="240" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">例子与计算</text>
+      <text x="240" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">假设公司原有 100</text>
+      <text x="240" y="102" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">股，净利润 100…</text>
+      <text x="240" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">假设公司原有 100</text>
+      <text x="240" y="141" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">股，净利润 100</text>
+      <text x="240" y="158" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">元，EPS 为 1</text>
+      <text x="240" y="175" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">元。若增发 20</text>
+      <text x="240" y="192" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">股、募资 1,600…</text>
+    </g>
+    <line x1="108" y1="144" x2="123" y2="144" stroke="var(--border)" stroke-width="1.1"/>
+    <path d="M120 140 L125 144 L120 148" fill="none" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="217" y1="144" x2="232" y2="144" stroke="var(--border)" stroke-width="1.1"/>
+    <path d="M229 140 L234 144 L229 148" fill="none" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="14" y1="250" x2="326" y2="250" stroke="var(--border)" stroke-width="1"/>
+    <text x="14" y="266" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">读法：先看问题能否成立，再看机制能否连通，最后看判断会不会越界。</text>
+    <text x="14" y="280" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">若中间一步缺证据，后面的结论只能当假设，不能当事实。</text>
+    <text x="14" y="294" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">图为结构示意，不是新的数据图；样本为本文论证。</text>
+  </svg>
+  <figcaption>图 1：股权融资、治理与股东权利的机制链：从问题、机制到判断。样本为本文论证，单位为文中标注。</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-boundary-title fig-batch-boundary-desc" viewBox="0 0 340 244" width="100%">
+    <title id="fig-batch-boundary-title">股权融资、治理与股东权利：适用边界</title>
+    <desc id="fig-batch-boundary-desc">把成立条件与失效条件分开；局部例子不能自动推广到所有情形。</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">股权融资、治理与股东权利：什么情况下成立？</text>
+    <line x1="14" y1="34" x2="326" y2="34" stroke="var(--border)" stroke-width="1"/>
+    <rect x="14" y="44" width="312" height="38" rx="7" fill="var(--surface-2)" stroke="var(--border)"/>
+    <text x="170" y="62" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="middle">先检查条件，再看结论</text>
+    <text x="170" y="75" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="middle">条件、口径或样本一变，结论可能要重算</text>
+    <line x1="170" y1="82" x2="90" y2="104" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="170" y1="82" x2="250" y2="104" stroke="var(--border)" stroke-width="1.1"/>
+    <rect x="14" y="104" width="148" height="100" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+    <text x="24" y="122" font-size="8.6" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">成立</text>
+    <text x="24" y="138" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">第一，融资额大不等于每股增厚，关</text>
+      <text x="24" y="154" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">键看发行价、募投回报和股本增加。</text>
+      <text x="24" y="170" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">第二，优先股的“优先”只限于分红和</text>
+      <text x="24" y="186" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">清偿，不保证固定收益，也不一定参…</text>
+    <rect x="178" y="104" width="148" height="100" rx="8" fill="var(--gold)" opacity="0.18" stroke="var(--border)"/>
+    <text x="188" y="122" font-size="8.6" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">不成立 / 需改写</text>
+    <text x="188" y="138" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">第一，融资额大不等于每股增厚，关</text>
+      <text x="188" y="154" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">键看发行价、募投回报和股本增加。</text>
+      <text x="188" y="170" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">第二，优先股的“优先”只限于分红和</text>
+      <text x="188" y="186" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">清偿，不保证固定收益，也不一定参…</text>
+    <line x1="14" y1="216" x2="326" y2="216" stroke="var(--border)" stroke-width="1"/>
+    <text x="14" y="232" font-size="8.3" fill="var(--muted)" font-family="inherit" text-anchor="start">图为边界示意；样本为本文论证，单位为文中标注。</text>
+  </svg>
+  <figcaption>图 2：股权融资、治理与股东权利的边界：哪些条件成立，哪些条件失效。样本为本文论证，单位为文中标注。</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-compare-title fig-batch-compare-desc" viewBox="0 0 340 252" width="100%">
+    <title id="fig-batch-compare-title">股权融资、治理与股东权利：对象、前提与常见误区</title>
+    <desc id="fig-batch-compare-desc">三行比较本文概念、成立条件与常见误区；比较不等于等价，也不能替代定义。</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">股权融资、治理与股东权利：一张表看对象、前提与误区</text>
+    <line x1="14" y1="34" x2="326" y2="34" stroke="var(--border)" stroke-width="1"/>
+    <text x="82" y="46" font-size="8.4" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">本篇</text>
+    <text x="200" y="46" font-size="8.4" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">容易混淆</text>
+    <g>
+      <rect x="14" y="52" width="312" height="58" fill="transparent" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="72" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">对象</text>
+      <text x="82" y="72" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">股权融资用所有权换资金，</text>
+      <text x="82" y="88" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">稀释、投票权、优先权和治…</text>
+      <text x="200" y="72" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">相邻概念/常见说法</text>
+    </g>
+    <g>
+      <rect x="14" y="110" width="312" height="58" fill="var(--surface-2)" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="130" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">前提</text>
+      <text x="82" y="130" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">第一，融资额大不等于每股</text>
+      <text x="82" y="146" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">增厚，关键看发行价、募投…</text>
+      <text x="200" y="130" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">第一，融资额大不等于每股增厚，关键看</text>
+      <text x="200" y="146" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">发行价、募投回报和股本增加。第二，优…</text>
+    </g>
+    <g>
+      <rect x="14" y="168" width="312" height="58" fill="transparent" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="188" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">检查</text>
+      <text x="82" y="188" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">先定义，再比较；不能只看</text>
+      <text x="82" y="204" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">名称</text>
+      <text x="200" y="188" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">相关不等于因果，局部不等于普遍</text>
+    </g>
+    <text x="14" y="244" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">图为比较示意；样本为本文论证，单位为文中标注。</text>
+  </svg>
+  <figcaption>图 3：股权融资、治理与股东权利的对象、前提与常见误区比较。样本为本文论证，单位为文中标注。</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-036-equity-financing-governance-and-shareholder-rights-example-title fig-036-equity-financing-governance-and-shareholder-rights-example-desc" viewBox="0 0 460 290" width="100%">
+    <title id="fig-036-equity-financing-governance-and-shareholder-rights-example-title">算例三行卡：增发与配股：EPS、持股与除权</title>
+    <desc id="fig-036-equity-financing-governance-and-shareholder-rights-example-desc">读图路径：三行分别给出关键数字、单位和算例条件；不是市场数据。</desc>
+    <text x="16" y="24" font-size="12.2" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">算例三行卡</text>
+    <text x="16" y="40" font-size="9.2" fill="var(--muted)" font-family="inherit" text-anchor="start">单位为文中标注；样本为本文教学假设</text>
+    <line x1="12" y1="48" x2="448" y2="48" stroke="var(--border)" stroke-width="1"/>
+    <g>
+      <rect x="12" y="58" width="436" height="58" rx="9" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="24" y="76" font-size="10.2" fill="var(--muted)" font-family="inherit" text-anchor="start">发行前 EPS</text>
+      <text x="448" y="80" font-size="17" font-weight="700" fill="var(--accent)" font-family="inherit" text-anchor="end">1.00 元</text>
+      <text x="24" y="96" font-size="9.3" fill="var(--text)" font-family="inherit" text-anchor="start">100 元净利 / 100 股</text>
+    </g>
+    <g>
+      <rect x="12" y="128" width="436" height="58" rx="9" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="24" y="146" font-size="10.2" fill="var(--muted)" font-family="inherit" text-anchor="start">增发后 EPS</text>
+      <text x="448" y="150" font-size="17" font-weight="700" fill="var(--accent)" font-family="inherit" text-anchor="end">1.083 元</text>
+      <text x="24" y="166" font-size="9.3" fill="var(--text)" font-family="inherit" text-anchor="start">130 元净利 / 120 股</text>
+    </g>
+    <g>
+      <rect x="12" y="198" width="436" height="58" rx="9" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="24" y="216" font-size="10.2" fill="var(--muted)" font-family="inherit" text-anchor="start">老股东持股</text>
+      <text x="448" y="220" font-size="17" font-weight="700" fill="var(--accent)" font-family="inherit" text-anchor="end">83.3%</text>
+      <text x="24" y="236" font-size="9.3" fill="var(--text)" font-family="inherit" text-anchor="start">100 / 120</text>
+    </g>
+    <line x1="12" y1="266" x2="448" y2="266" stroke="var(--border)" stroke-width="1"/>
+    <text x="16" y="280" font-size="8.8" fill="var(--muted)" font-family="inherit" text-anchor="start">只看数量关系，不构成预测或投资建议</text>
+  </svg>
+  <figcaption>图 4：增发不一定增厚每股收益，稀释要看发行价和募资用途。单位为文中标注；样本为本文教学假设，不是市场或统计数据；只用于展示数量关系。</figcaption>
+</figure>
+
+<h2>练习</h2>
+<ol>
+<li><strong>概念辨别：</strong> 概念辨别：二级市场买入股票会稀释老股东吗？为什么？</li>
+<li><strong>计算或推理：</strong> 计算：100 股、净利润 100 元，增发 25 股后净利润 125 元，EPS 是多少？老股东持股比例降到多少？</li>
+<li><strong>适用条件：</strong> 适用条件：优先股的优先权通常覆盖哪些事项，又不覆盖哪些事项？</li>
+</ol>
+<details>
+<summary>参考答案</summary>
+
+<ol>
+<li>不会。二级市场交易只改变股东之间的持股，不增加公司股本；稀释来自公司发行新股。</li>
+<li>EPS = 125/125 = 1 元；老股东持股 100/125 = 80%。</li>
+<li>优先覆盖分红和清算顺序；不保证固定收益，也不一定参与剩余利润或拥有完整投票权。</li>
+</ol>
+</details>
+
+<h2>来源</h2>
+<ol>
+<li>U.S. Securities and Exchange Commission, Investor.gov. <em>Stocks - FAQs</em>. Investor.gov. FINRA-operated site for the SEC; © FINRA — cite and link only, no reproduction. <a href="https://www.investor.gov/introduction-investing/investing-basics/investment-products/stocks">https://www.investor.gov/introduction-investing/investing-basics/investment-products/stocks</a>（访问日期：2026-10-30）</li>
+<li>FINRA. <em>Stocks</em>. FINRA. Copyrighted; reproduction prohibited, linking permitted (cite-only). <a href="https://www.finra.org/investors/investing/investment-products/stocks">https://www.finra.org/investors/investing/investment-products/stocks</a>（访问日期：2026-10-30）</li>
+<li>State of Delaware. <em>Title 8, Chapter 1, Subchapter V, § 151. Classes and series of stock; redemption; rights</em>. Delaware Code Online. Delaware Code public record; cite and link only. <a href="https://delcode.delaware.gov/title8/c001/sc05/index.html">https://delcode.delaware.gov/title8/c001/sc05/index.html</a>（访问日期：2026-11-23）</li>
+<li>U.S. Securities and Exchange Commission, Office of Investor Education and Advocacy. <em>Updated Investor Bulletin: Investing in an IPO</em>. <a href="https://www.sec.gov/oiea/investor-alerts-and-bulletins/updated-investor-bulletin-investing-ipo">https://www.sec.gov/oiea/investor-alerts-and-bulletins/updated-investor-bulletin-investing-ipo</a>（访问日期：2026-11-24）</li>
+<li>U.S. Securities and Exchange Commission, Office of Investor Education and Advocacy. <em>Investor Bulletin: American Depositary Receipts</em>. <a href="https://www.sec.gov/investor/alerts/adr-bulletin.pdf">https://www.sec.gov/investor/alerts/adr-bulletin.pdf</a>（访问日期：2026-11-24）</li>
+<li>FINRA. <em>Corporate Actions by Public Companies—What You Should Know</em>. Copyrighted; cite and link only. <a href="https://www.finra.org/investors/insights/corporate-actions-public-companies-what-you-should-know">https://www.finra.org/investors/insights/corporate-actions-public-companies-what-you-should-know</a>（访问日期：2026-11-24）</li>
+<li>U.S. Securities and Exchange Commission, Division of Trading and Markets. <em>Answers to Frequently Asked Questions Concerning Rule 10b-18</em>. <a href="https://www.sec.gov/divisions/marketreg/r10b18faq0504.htm">https://www.sec.gov/divisions/marketreg/r10b18faq0504.htm</a>（访问日期：2026-11-24）</li>
+<li>U.S. Securities and Exchange Commission. <em>SEC Adopts Amendments to Modernize Share Repurchase Disclosure</em>. <a href="https://www.sec.gov/newsroom/press-releases/2023-85">https://www.sec.gov/newsroom/press-releases/2023-85</a>（访问日期：2026-11-24）</li>
+<li>U.S. Securities and Exchange Commission, Division of Corporation Finance. <em>Tender Offer Rules and Schedules</em>. <a href="https://www.sec.gov/rules-regulations/staff-guidance/corporation-finance-interpretations/tender-offer-rules-schedules">https://www.sec.gov/rules-regulations/staff-guidance/corporation-finance-interpretations/tender-offer-rules-schedules</a>（访问日期：2026-11-24）</li>
+<li>Nasdaq. <em>Rule 5800 Series: Preamble to the Rules and Procedures Applicable When a Company Fails to Meet a Listing Standard</em>. Copyrighted; cite and link only. <a href="https://listingcenter.nasdaq.com/rulebook/nasdaq/rules/nasdaq-5800%20series">https://listingcenter.nasdaq.com/rulebook/nasdaq/rules/nasdaq-5800%20series</a>（访问日期：2026-11-24）</li>
+<li>3M Company. <em>Information Statement: 3M Health Care Company Spin-Off</em>. SEC EDGAR, 2023. <a href="https://www.sec.gov/Archives/edgar/data/1964738/000162827923000448/filename2.htm">https://www.sec.gov/Archives/edgar/data/1964738/000162827923000448/filename2.htm</a>（访问日期：2026-11-24）</li>
+</ol>
+  <section class="article-demo" id="demo-check" data-demo="check" data-lang="zh" aria-labelledby="demo-check-title" data-check-done="三项都能说清：这篇的核心已经过关。" data-check-pending="还差一项：回到正文对应小节，找一个反例或数字再讲一遍。" data-check-count="已勾选"> <header class="demo-head"> <div class="demo-head-top"> <p class="demo-eyebrow">动手演示</p> <button class="demo-reset" type="button" data-demo-reset>恢复默认</button> </div> <h2 id="demo-check-title">读完自检：三句话能不能说清</h2> <p class="demo-intro">不用背定义。把下面三句逐个勾上，看自己能不能用自己的话讲清机制、算例和边界。</p> </header>          <div class="demo-check"> <ul class="demo-check-list"> <li> <label> <input type="checkbox" data-check-index="0"> <span>区分一级发行与二级交易，计算新股发行对老股东的持股和每股收益稀释。</span> </label> </li><li> <label> <input type="checkbox" data-check-index="1"> <span>说明普通股、优先股和双层股权在投票、分红与清偿顺序上的差异。</span> </label> </li><li> <label> <input type="checkbox" data-check-index="2"> <span>能说出一个本文结论不适用的条件</span> </label> </li> </ul> <p class="demo-check-status" data-out="checkStatus" role="status"> 已勾选 0 / 3
+</p> </div> <p class="demo-footnote">数字为教学假设，用来展示关系，不构成预测或投资建议。</p> </section><script type="module" src="/_astro/ArticleDemo.astro_astro_type_script_index_0_lang.C9VQAsQ0.js"></script> <p class="notice"> 本文已通过当前发布门槛；事实、计算与译文如有修订，会同步更新两个语言版本。 </p> <p> <a class="button secondary" href="/"> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class> <path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path>        </svg>返回分站 </a> </p> </div> <aside class="article-aside" aria-label="文章信息"> <section class="aside-card"> <h2>学习目标</h2> <ul> <li>区分一级发行与二级交易，计算新股发行对老股东的持股和每股收益稀释。</li><li>说明普通股、优先股和双层股权在投票、分红与清偿顺序上的差异。</li><li>识别董事会、章程和少数股东保护条款如何改变控制权。</li><li>用存托凭证比例、增发稀释、回购现金占用、并购换股和退市程序解释股东权利的变化。</li> </ul> </section> <section class="aside-card"> <h2>必需先修</h2> <ul> <li> <a href="/learn/common-and-preferred-shares/">MKT-003 · 普通股与优先股</a> </li> </ul> </section> <section class="aside-card"> <h2>建议阅读</h2> <ul> <li> <a href="/learn/bond-rights-and-cash-flows/">MKT-004 · 债券的权利与现金流</a> </li><li> <a href="/learn/fund-structures/">MKT-006 · 基金的基本结构</a> </li><li> <a href="https://invest.51invest.com/learn/return-risk-and-cost-tradeoffs/">INV-002 · 收益风险与成本的取舍</a> </li> </ul> </section> <section class="aside-card"> <h2>AI 复核记录</h2> <p class="muted"> 本项目没有真人签字；下列状态来自 AI-only 编辑复核。 </p> <ul> <li> 事实与计算 ：AI 复核通过 </li><li> 学科 ：AI 复核通过 </li><li> 英文 ：AI 复核通过 </li><li> 页面 ：AI 复核通过 </li> </ul> </section> <section class="aside-card"> <h2>来源</h2> <div class="source"> <a href="https://www.investor.gov/introduction-investing/investing-basics/investment-products/stocks" rel="noopener noreferrer" target="_blank">Stocks - FAQs</a> <p>U.S. Securities and Exchange Commission, Investor.gov · Investor.gov</p> <p>访问：2026-10-30 · 许可：FINRA-operated site for the SEC; © FINRA — cite and link only, no reproduction</p> <p>支持论点：用于核对“股权融资、治理与股东权利”涉及的定义、制度、统计口径或产品条款；正文不把来源未写的内容当作事实，具体数字与日期以来源原文为准。</p> </div><div class="source"> <a href="https://www.finra.org/investors/investing/investment-products/stocks" rel="noopener noreferrer" target="_blank">Stocks</a> <p>FINRA · FINRA</p> <p>访问：2026-10-30 · 许可：Copyrighted; reproduction prohibited, linking permitted (cite-only)</p> <p>支持论点：用于核对“股权融资、治理与股东权利”涉及的定义、制度、统计口径或产品条款；正文不把来源未写的内容当作事实，具体数字与日期以来源原文为准。</p> </div><div class="source"> <a href="https://delcode.delaware.gov/title8/c001/sc05/index.html" rel="noopener noreferrer" target="_blank">Title 8, Chapter 1, Subchapter V, § 151. Classes and series of stock; redemption; rights</a> <p>State of Delaware · Delaware Code Online</p> <p>访问：2026-11-23 · 许可：Delaware Code public record; cite and link only</p> <p>支持论点：用于核对“股权融资、治理与股东权利”涉及的定义、制度、统计口径或产品条款；正文不把来源未写的内容当作事实，具体数字与日期以来源原文为准。</p> </div><div class="source"> <a href="https://www.sec.gov/oiea/investor-alerts-and-bulletins/updated-investor-bulletin-investing-ipo" rel="noopener noreferrer" target="_blank">Updated Investor Bulletin: Investing in an IPO</a> <p>U.S. Securities and Exchange Commission, Office of Investor Education and Advocacy · SEC</p> <p>访问：2026-11-24 · 许可：U.S. Government work (public domain), 17 U.S.C. §105</p> <p>支持论点：IPO 投资者公告说明：部分公司采用多类别股份结构，内部人持超级投票权股份，可在持有较少经济份额时取得较多投票权；超级投票权股份在转让时可能转换为低投票权类别，部分结构设日落条款；这种结构可能使外部股东更难影响治理。</p> </div><div class="source"> <a href="https://www.sec.gov/investor/alerts/adr-bulletin.pdf" rel="noopener noreferrer" target="_blank">Investor Bulletin: American Depositary Receipts</a> <p>U.S. Securities and Exchange Commission, Office of Investor Education and Advocacy · SEC</p> <p>访问：2026-11-24 · 许可：U.S. Government work (public domain), 17 U.S.C. §105</p> <p>支持论点：ADR 公告说明：ADR 是在美国交易、代表非美国公司股份的证券，证明对 ADS 的所有权，ADS 再代表存放于美国存托银行的境外股份；ADR 以美元交易和结算，比例可以是一比一、分数或倍数；ADR 可由公司参与的发起型安排或由经纪商设立的非发起型安排；一级只能场外交易且不能融资，二级可上市但不能融资，三级可融资。</p> </div><div class="source"> <a href="https://www.finra.org/investors/insights/corporate-actions-public-companies-what-you-should-know" rel="noopener noreferrer" target="_blank">Corporate Actions by Public Companies—What You Should Know</a> <p>FINRA · FINRA</p> <p>访问：2026-11-24 · 许可：© 2026 FINRA. All rights reserved. Linked summary only.</p> <p>支持论点：FINRA 公司行动页列出并解释现金股息、股票股息、股票拆分、反向拆分、供股、并购、收购、解散与破产等公司行动；并购是两家公司合并，收购是一方取得另一方控制权；这些行动会改变股份数、价格、权利或发行人状态。</p> </div><div class="source"> <a href="https://www.sec.gov/divisions/marketreg/r10b18faq0504.htm" rel="noopener noreferrer" target="_blank">Answers to Frequently Asked Questions Concerning Rule 10b-18</a> <p>U.S. Securities and Exchange Commission, Division of Trading and Markets · SEC</p> <p>访问：2026-11-24 · 许可：U.S. Government work (public domain), 17 U.S.C. §105</p> <p>支持论点：Rule 10b-18 问答说明：该规则为发行人回购自身普通股提供一种安全港，条件涉及单一经纪商、交易方式、时间、价格和每日成交量；符合条件不保证回购合法或不存在操纵，也不要求发行人必须回购。</p> </div><div class="source"> <a href="https://www.sec.gov/newsroom/press-releases/2023-85" rel="noopener noreferrer" target="_blank">SEC Adopts Amendments to Modernize Share Repurchase Disclosure</a> <p>U.S. Securities and Exchange Commission · SEC</p> <p>访问：2026-11-24 · 许可：U.S. Government work (public domain), 17 U.S.C. §105</p> <p>支持论点：SEC 新闻稿说明：股份回购是发行人向股东返还资本的一种方式；新规要求发行人更及时、更详细地披露回购及后续注销安排，以帮助投资者判断回购对发行人及证券价格的影响。</p> </div><div class="source"> <a href="https://www.sec.gov/rules-regulations/staff-guidance/corporation-finance-interpretations/tender-offer-rules-schedules" rel="noopener noreferrer" target="_blank">Tender Offer Rules and Schedules</a> <p>U.S. Securities and Exchange Commission, Division of Corporation Finance · SEC</p> <p>访问：2026-11-24 · 许可：U.S. Government work (public domain), 17 U.S.C. §105</p> <p>支持论点：SEC 公司金融部指引说明：现金或证券的要约收购受《Williams Act》及 Regulation 14D/14E 的披露、程序和撤回规则约束；法定合并（statutory merger）本身通常不按要约收购规则处理，但相关交易仍可能触及披露或其他规则。</p> </div><div class="source"> <a href="https://listingcenter.nasdaq.com/rulebook/nasdaq/rules/nasdaq-5800%20series" rel="noopener noreferrer" target="_blank">Rule 5800 Series: Preamble to the Rules and Procedures Applicable When a Company Fails to Meet a Listing Standard</a> <p>Nasdaq · Nasdaq Listing Center</p> <p>访问：2026-11-24 · 许可：© Nasdaq. All rights reserved. Linked summary only.</p> <p>支持论点：纳斯达克 5800 系列规则说明：公司未满足持续上市标准时，交易所可发缺陷通知、给合规期或接受合规计划；仍未解决则发 Staff Delisting Determination；公司可请求听证并向听证小组上诉，及时请求通常暂缓停牌；最终维持后退市生效。</p> </div><div class="source"> <a href="https://www.sec.gov/Archives/edgar/data/1964738/000162827923000448/filename2.htm" rel="noopener noreferrer" target="_blank">Information Statement: 3M Health Care Company Spin-Off</a> <p>3M Company · SEC EDGAR</p> <p>访问：2026-11-24 · 许可：Issuer filing; cite and link only</p> <p>支持论点：3M 的拆分信息说明展示：拆分通过按比例向母公司股东分配子公司股份完成，股东按持有股份获得子公司股份，无需支付对价或交回母公司股份；该交易拟保持税务中性，母公司可保留至多 19.9% 的子公司股份。</p> </div> </section> </aside> </div> </article><script type="module">var e=document.querySelector(`[data-reading-progress] span`),t=document.querySelector(`article`);if(e&&t){let n=()=>{let n=t.offsetTop,r=t.offsetHeight-window.innerHeight,i=r>0?(window.scrollY-n)/r:0;e.style.width=`${Math.min(1,Math.max(0,i))*100}%`};window.addEventListener(`scroll`,n,{passive:!0}),window.addEventListener(`resize`,n),n()}</script>  </main> <footer class="site-footer"> <div class="container footer-inner"> <div class="footer-brand"> <span class="footer-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="28" height="28" alt class="mascot" loading="lazy" decoding="async"></span> <div> <strong>巫妖投资 51Invest</strong> <p class="footer-note">非商业免费知识站。每篇标出来源与口径；这里没有投资建议。</p> </div> </div> <nav class="footer-links" aria-label="知识分站"> <a href="https://51invest.com/" data-main-home>首页</a> <a href="https://51invest.com/contents/">内容地图</a> <a href="/glossary/">术语表</a> <a href="/search/">搜索</a> <a href="https://51invest.com/charts/" data-main-link>图表</a> <a href="https://51invest.com/sources/" data-main-link>数据与许可</a> <a href="/">分站首页</a> </nav> </div> </footer> <nav class="mobile-nav" aria-label="知识分站"> <a class="mobile-link" href="https://51invest.com/" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>    <path d="m3 10 9-7 9 7"></path><path d="M5 9v11h14V9"></path><path d="M9 20v-6h6v6"></path>     </svg> <span>首页</span> </a> <a class="mobile-link" href="https://51invest.com/#stations" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>   <rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect>      </svg> <span>知识分站</span> </a> <a class="mobile-link active" href="/" aria-current="page"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>  <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v18H6.5A2.5 2.5 0 0 1 4 18.5z"></path><path d="M4 18.5A2.5 2.5 0 0 1 6.5 16H20"></path>       </svg> <span>分站首页</span> </a> <a class="mobile-link" href="/en/learn/equity-financing-governance-and-shareholder-rights/" data-language-link="en"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>English</span> </a> </nav><script type="module">var e=document.documentElement,t=[`auto`,`light`,`dark`],n=matchMedia(`(prefers-color-scheme: dark)`),r=()=>{let t=e.dataset.themeMode;return t===`light`||t===`dark`?t:`auto`},i=e=>{try{localStorage.setItem(`51invest-theme`,e)}catch{}try{let t=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-theme=${e}; Path=/; Max-Age=31536000; SameSite=Lax${t}`}catch{}},a=e=>{document.querySelectorAll(`[data-theme-toggle]`).forEach(t=>{let n=t.dataset[`label${e[0].toUpperCase()}${e.slice(1)}`];n&&(t.setAttribute(`aria-label`,n),t.setAttribute(`title`,n))})},o=t=>{e.dataset.themeMode=t,e.dataset.theme=t===`auto`?n.matches?`dark`:`light`:t,i(t),a(t)};a(r()),document.querySelectorAll(`[data-theme-toggle]`).forEach(e=>{e.addEventListener(`click`,()=>{let e=t[(t.indexOf(r())+1)%t.length];o(e)})}),n.addEventListener(`change`,()=>{r()===`auto`&&(e.dataset.theme=n.matches?`dark`:`light`)}),document.querySelectorAll(`[data-language-link]`).forEach(e=>{e.addEventListener(`click`,()=>{let t=e.dataset.languageLink;if(t===`zh`||t===`en`){try{localStorage.setItem(`51invest-language`,JSON.stringify(t))}catch{}try{let e=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-language=${t}; Path=/; Max-Age=31536000; SameSite=Lax${e}`}catch{}}})});</script> </body> </html>

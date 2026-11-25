@@ -1,0 +1,280 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light" data-theme-mode="auto"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark"><title>信用利差、久期与违约回收 · 巫妖投资</title><meta name="description" content="信用债的收益率高出无风险利率，补偿违约、回收不确定、流动性和条款；久期放大利率与利差变动。"><link rel="canonical" href="https://markets.51invest.com/learn/credit-spreads-duration-and-recovery/"><link rel="alternate" hreflang="zh-CN" href="https://markets.51invest.com/learn/credit-spreads-duration-and-recovery/"><link rel="alternate" hreflang="en" href="https://markets.51invest.com/en/learn/credit-spreads-duration-and-recovery/"><link rel="alternate" hreflang="x-default" href="https://markets.51invest.com/learn/credit-spreads-duration-and-recovery/"><link rel="icon" type="image/png" href="/_astro/neutral.Dr5C2SoA.png"><script>
+  (() => {
+    const root = document.documentElement;
+    const readCookie = key => {
+      try {
+        return document.cookie.split('; ').find(value => value.startsWith(`51invest-${key}=`))?.split('=').slice(1).join('=') ?? null;
+      } catch {
+        return null;
+      }
+    };
+    const readLocal = key => {
+      try {
+        return localStorage.getItem(`51invest-${key}`);
+      } catch {
+        return null;
+      }
+    };
+    const storedTheme = readCookie('theme') || readLocal('theme');
+    const mode = ['light', 'dark', 'auto'].includes(storedTheme) ? storedTheme : 'auto';
+    const media = matchMedia('(prefers-color-scheme: dark)');
+    const apply = () => {
+      root.dataset.theme = mode === 'auto' ? (media.matches ? 'dark' : 'light') : mode;
+      root.dataset.themeMode = mode;
+    };
+    apply();
+    media.addEventListener('change', () => {
+      if (root.dataset.themeMode === 'auto') apply();
+    });
+  })();
+</script><link rel="stylesheet" href="/_astro/Base.CocbJOeh.css"></head> <body>  <a class="skip-link" href="#main">跳到正文</a> <header class="site-header"> <div class="container header-inner"> <a class="brand" href="https://51invest.com/" data-main-home aria-label="巫妖投资"> <span class="brand-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="36" height="36" alt class="mascot" loading="lazy" decoding="async"></span> <span class="brand-copy"> <span class="brand-name">巫妖投资</span> <span class="brand-caption">51INVEST</span> </span> </a> <nav class="desktop-nav" aria-label="知识分站"> <a class="nav-link" href="https://51invest.com/" data-main-home> 首页 </a> <a class="nav-link" href="https://economics.51invest.com/"> 经济学 </a><a class="nav-link" href="https://finance.51invest.com/"> 金融基础 </a><a class="nav-link active" href="/" aria-current="page"> 市场与产品 </a><a class="nav-link" href="https://invest.51invest.com/"> 投资方法 </a><a class="nav-link" href="https://history.51invest.com/"> 经济与金融史 </a><a class="nav-link" href="https://research.51invest.com/"> 研究方法 </a> <a class="nav-link" href="https://51invest.com/contents/"> 内容地图 </a> </nav> <div class="header-tools"> <a class="icon-button language-button" href="/en/learn/credit-spreads-duration-and-recovery/" hreflang="en" lang="en" data-language-link="en" aria-label="切换为英文" title="切换为英文"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>English</span> </a> <button class="icon-button theme-button" type="button" data-theme-toggle aria-label="主题: 跟随系统" title="主题: 跟随系统" data-label-auto="主题: 跟随系统" data-label-light="主题: 浅色" data-label-dark="主题: 深色"> <span class="theme-icon" data-theme-icon="auto"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>        <circle cx="12" cy="12" r="8.5"></circle><path d="M12 3.5v17"></path><path d="M12 7a5 5 0 0 1 0 10" fill="currentColor" stroke="none"></path> </svg></span> <span class="theme-icon" data-theme-icon="light"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>       <circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>  </svg></span> <span class="theme-icon" data-theme-icon="dark"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>      <path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"></path>   </svg></span> <span class="theme-text" data-theme-text="auto">跟随系统</span> <span class="theme-text" data-theme-text="light">浅色</span> <span class="theme-text" data-theme-text="dark">深色</span> </button> </div> </div> </header> <main id="main" class="site-main" data-pagefind-body>  <div class="reading-progress" data-reading-progress aria-hidden="true"><span></span></div> <div class="container"> <nav class="breadcrumbs" aria-label="Breadcrumb"> <a href="https://51invest.com/" data-main-home>首页</a> <span class="sep">/</span> <a href="/">市场与产品</a> <span class="sep">/</span> <span aria-current="page">信用利差、久期与违约回收</span> </nav> </div> <article> <header class="article-header"> <div class="container"> <span class="article-type">产品与品种</span> <h1 class="article-title">信用利差、久期与违约回收</h1> <p class="article-summary">信用债的收益率高出无风险利率，补偿违约、回收不确定、流动性和条款；久期放大利率与利差变动。</p>  <div class="meta-grid"> <div class="meta-item"><span>模块</span><strong>MKT-M04 · 债券与信用</strong></div> <div class="meta-item"><span>层级</span><strong>入门</strong></div> <div class="meta-item"><span>阅读</span><strong>10 分钟 · 19 节</strong></div> </div> <p class="demo-jump"> <a href="#demo-check"> 这篇有一个可以动手操作的演示 <span aria-hidden="true">↓</span> </a> </p> </div> </header> <div class="container article-layout"> <div class="article-body"> <h2>定义</h2>
+<p><strong>信用利差</strong>是信用债到期收益率减同期限无风险利率，常见拆分为预期违约损失、流动性溢价、税收和条款补偿。<strong>修正久期</strong>衡量收益率上升 1 个百分点时价格下跌的百分比；<strong>凸性</strong>描述价格-收益率曲线的弯曲，利率大幅变动时久期近似会低估价格回升。<strong>回收率</strong>是违约后债权人实际收回的比例，取决于抵押、清偿顺序和破产程序。</p>
+<h2>直觉</h2>
+<p>信用利差像给一笔借款加的“风险附加费”：你借钱给一家公司，除了无风险利率，还要为违约可能、回收不确定、流动性差和税收承担额外补偿。久期则是价格对利率变化的敏感度：同样的利差变化，久期越长，价格跌得越多。违约回收是“如果公司倒下，债券还能拿回多少”：有抵押、优先级高、资产变现好的债，回收率高；无抵押、次级、资产难卖的债，回收率低。把利差、久期和回收分开看，才能判断一笔信用债的收益是补偿风险，还是补偿不足。</p>
+<h2>机制</h2>
+<p>若一年违约概率为 p、违约损失率为 LGD，则预期信用损失约为 p × LGD；利差至少要覆盖这一损失，再加上流动性、税收和风险溢价。信用恶化会同时推高利差和降低回收预期，价格下跌可能先于违约发生。利率上升对长久期债券影响更大；信用利差扩大则压缩价格，即使无风险利率不变。清偿顺序决定回收：有抵押、优先级、次级和股权依次承担损失。条款如交叉违约、控制权变更和回售权会改变现金流时点[1][2][3]。</p>
+<h2>例子与计算</h2>
+<p>假设 5 年期债券票息 5%、面值 100、价格 95，到期收益率约 6.2%；同期限国债 4.0%，信用利差约 220bp。若每年违约概率 2%、LGD 60%，预期损失约 1.2%，剩余约 100bp 补偿流动性和风险溢价。若修正久期 4.5，无风险利率上升 100bp，价格约跌 4.5%，从 95 到 90.7；利差再扩大 100bp，价格再跌约 4.5%。若违约后回收 40%，债权人每 100 元本金收回 40 元，损失 60 元。以上为教学假设，不含税和应计利息。</p>
+<h2>第二个算例：利差走阔与预期损失</h2>
+<p>假设某 5 年期债券面值 100 元、票息 5%、到期收益率 7%，修正久期约 4.3。若信用利差走阔 100 个基点、无风险利率不变，价格大约下跌 4.3%，从 100 元附近跌到约 95.7 元。若发行人 5 年内违约概率 20%、违约后回收率 40%，则违约损失率为 60%，预期信用损失 = 20% × 60% = 12 元/100 元面值。把 12 元摊到 5 年，每年约 2.4 元，即 2.4% 的利差才能覆盖预期损失；若当前利差只有 1.5%，则还没有覆盖预期损失，更不用说风险溢价和流动性补偿。以上为教学假设，实际应使用风险中性或历史条件概率。</p>
+<h2>边界与误区</h2>
+<p>第一，票息不是安全收益：价格下跌和违约损失可能超过多年票息。第二，利差宽不一定是便宜，可能是违约概率或回收率恶化。第三，久期假设现金流不变，含权债、浮息债和提前偿还的久期不同。第四，回收率是违约后的结果，不是当前价格的保证。第五，信用评级是意见，不是违约概率的精确度量，且可能滞后。</p>
+<h2>失败模式</h2>
+<p>第一种失败是把利差当成违约概率：利差还包含流动性、税收、赎回条款和风险溢价，同一利差可能对应完全不同的损失分布。第二种失败是只看收益率、不看久期：利差走阔 50 个基点，久期 2 年的债跌 1%，久期 8 年的债跌 4%，风险相差四倍。第三种失败是假设回收率固定：回收率取决于抵押品、债权优先级、司法辖区和变现时间，压力时资产价格下跌会同时压低回收率。第四种失败是忽略可赎回条款：利率下降时发行人可能提前赎回，投资者拿到本金却失去高票息。第五种失败是把历史平均利差当成未来中枢，信用周期和货币政策会改变利差分布。</p>
+<h2>三问自检</h2>
+<p>第一，利差里有多少是预期损失、多少是风险溢价和流动性补偿？第二，久期和凸性是否与你的持有期匹配，利差走阔 100 个基点会亏多少？第三，违约后的回收路径是什么：抵押品、优先级、司法辖区和变现时间是否支持你的回收假设？三问决定你买的是“高收益”，还是“高风险的低估”。</p>
+<h2>相邻概念与反例</h2>
+<p>信用利差容易和到期收益率、违约概率混淆。到期收益率是全部现金流的折现率，包含无风险利率、信用利差、流动性溢价和税收；信用利差只是其中与信用风险相关的部分；违约概率是发行人违约的可能性，不等于利差。反例是“利差宽就是价值”：利差宽可能补偿更高的预期损失，也可能只是流动性差、条款差或税收不利；如果预期损失超过利差，价格仍可能高估。另一个反例是“久期短就安全”：久期短降低利率风险，但信用利差走阔、违约跳空和回收率下降仍会造成损失；低评级短债的尾部风险可能比长久期高评级债更大。比较信用债，应把利差拆成预期损失、风险溢价和流动性补偿，再看久期与回收。</p>
+<h2>适用边界</h2>
+<p>本文的信用利差框架适用于有公开报价、可识别发行人和清偿顺序、且回收率可估计的信用债。若债券流动性极差、条款含复杂担保，或发行人信息不透明，利差会被流动性溢价和会计处理主导。它不适用于把利差宽度直接当违约概率，也不适用于忽略久期和税收的跨债比较。使用时先拆利差、再看久期和回收，并用违约、降级和流动性三种情景复算；单点利差不是完整的价格。</p>
+<p>最后，跨币种信用债还要统一汇率对冲口径。</p>
+<h2>违约、重组与回收路径</h2>
+<p>违约是一个事件，重组是一个过程，回收率是结果，三者不能混用。违约可以是非支付、破产、交叉违约或困境交换；重组则可能通过削减本金（haircut）、延长期限、降低票息、债转股或交换新债完成。对债券持有人，经济损失取决于重组后现金流的现值，而不是“是否违约”这个标签[4]。</p>
+<p>机制上，重组要把旧债的现金流改成新债的现金流，并用市场收益率折现。若本金从 100 降到 70、票息从 5% 降到 3%、期限延长 3 年，账面本金削减 30%，但真实损失还要看新债票息、期限、担保和折现率；若新债价格低于面值，持有人还可能立即确认市值损失。集体行动条款（CAC）允许合格多数持有人把重组条件约束到少数持有人，降低“钉子户”阻挠，但不同司法辖区和债券条款的阈值不同[4]。</p>
+<p>例子：面值 100 元的债券违约后回收 40 元，损失 60 元；若重组方案是“本金削 30% + 期限延长 3 年 + 票息降到 3%”，持有人拿到 70 元新本金和更低票息，表面回收 70%，但按 8% 折现后的现值可能只有 60 多元，经济回收低于账面数字。以上为教学假设。</p>
+<p>边界：违约不等于零回收，重组也不一定等于违约；困境交换可能被评级机构视为违约，也可能不被视为；主权债没有统一破产程序，重组依赖谈判和条款[4]；公司破产有法定清偿顺序，但回收仍受担保、司法辖区和变现时间影响。不要把“重组成功”当成“本金安全”，也不要把“没违约”当成“没损失”。</p>
+<h2>关联</h2>
+<ul>
+<li>MKT-004 债券的权利与现金流：本文的相邻主文，先读它再读本补篇。</li>
+<li>FIN-009 货币的时间价值：本文的相邻主文，先读它再读本补篇。</li>
+<li>FIN-011 现值与现金流贴现：本文的相邻主文，先读它再读本补篇。</li>
+<li>MKT-001 资产与工具的区别：本文的相邻主文，先读它再读本补篇。</li>
+</ul>
+<h2>资料说明</h2>
+<p>本文用 FINRA、TreasuryDirect、TreasuryDirect 核对定义、制度或统计口径；具体条款、数字与日期以来源原文为准[1][2][3]。</p>
+<h2>产品定义、权利与现金流结构</h2>
+<p>信用债的价格可以拆成无风险利率、信用利差、流动性和条款差异：信用利差是投资者为承担违约与回收不确定性要求的额外补偿。久期衡量利率变动对价格的一阶影响，回收率则决定违约后能拿回多少。</p>
+<p>债券持有人拥有按约定收取票息和本金的权利，违约时按清偿顺序参与分配；发行人拥有提前赎回、再融资和重组的选择。信用保护买方则通过 CDS 获得违约赔付。</p>
+<table>
+<thead>
+<tr>
+<th>日期/条件</th>
+<th>现金流/收付</th>
+<th align="right">金额</th>
+<th>币种</th>
+<th>不确定性</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>买入</td>
+<td>支付债券价格</td>
+<td align="right">− 净价 − 应计利息</td>
+<td>CNY</td>
+<td>利差与流动性</td>
+</tr>
+<tr>
+<td>持有</td>
+<td>收取票息</td>
+<td align="right">+ 票息</td>
+<td>CNY</td>
+<td>发行人违约与提前赎回</td>
+</tr>
+<tr>
+<td>违约或到期</td>
+<td>回收或偿还本金</td>
+<td align="right">回收率 × 面值</td>
+<td>CNY</td>
+<td>回收率与清偿顺序</td>
+</tr>
+</tbody></table>
+<h2>参与者、交易、持有与退出</h2>
+<p>参与者包括发行人、债券投资者、交易商、评级机构、托管行、CDS 对手方和清算所。交易商做市，评级机构提供信用意见，托管行持有债券，CDS 市场提供另一种信用暴露。</p>
+<p>信用债可以通过现券、回购、CDS 和基金份额交易。持有期要关注票息、利差、久期和信用事件；退出可以卖出、等待到期或对冲，违约时进入重组或清算程序。</p>
+<h2>成本、风险与条款文件</h2>
+<p>成本：买卖价差、交易佣金、回购融资成本、托管费、评级费、CDS 保费和违约处置成本。流动性差的信用债，账面利差高但实际卖出成本也高。</p>
+<p>风险：违约风险、利差走阔风险、久期风险、回收率不确定性、流动性风险、评级迁移风险、条款风险和法律重组风险。信用利差不是安全垫的保证，违约损失可能远超票息。</p>
+<p>条款：主要文件是债券募集说明书、契约条款、清偿顺序、CDS 确认书和托管协议。要核对担保、抵押、交叉违约、提前赎回和回收率假设。</p>
+<h2>图解</h2>
+<p>下面四张图分别检查本文的机制、边界与对照；图内文字取自本文小节，不是新数据。</p>
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-chain-title fig-batch-chain-desc" viewBox="0 0 340 304" width="100%">
+    <title id="fig-batch-chain-title">信用利差、久期与违约回收：机制链</title>
+    <desc id="fig-batch-chain-desc">信用利差、久期与违约回收 的三段结构：问题、机制、判断。图内文字取自本文小节，不是新的数据估计。</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">信用利差、久期与违约回收：机制链</text>
+    <text x="14" y="38" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">图内文字取自本文小节；三段缺一不可。</text>
+    <line x1="14" y1="46" x2="326" y2="46" stroke="var(--border)" stroke-width="1"/>
+    <g>
+      <rect x="14" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="22" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">问题</text>
+      <text x="22" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">信用债的收益率高出无</text>
+      <text x="22" y="102" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">风险利率，补偿违约、…</text>
+      <text x="22" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">信用债的收益率高出</text>
+      <text x="22" y="141" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">无风险利率，补偿违</text>
+      <text x="22" y="158" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">约、回收不确定、流</text>
+      <text x="22" y="175" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">动性和条款；久期放</text>
+      <text x="22" y="192" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">大利率与利差变动。</text>
+    </g>
+      <g>
+      <rect x="123" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="131" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">定义</text>
+      <text x="131" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">定义：信用利差是信用</text>
+      <text x="131" y="102" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">债到期收益率减同期限…</text>
+      <text x="131" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">定义：信用利差是信</text>
+      <text x="131" y="141" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">用债到期收益率减同</text>
+      <text x="131" y="158" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">期限无风险利率，常</text>
+      <text x="131" y="175" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">见拆分为预期违约损</text>
+      <text x="131" y="192" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">失、流动性溢价、税…</text>
+    </g>
+      <g>
+      <rect x="232" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="240" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">例子与计算</text>
+      <text x="240" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">假设 5 年期债券票息</text>
+      <text x="240" y="102" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start"> 5%、面值 100、价格…</text>
+      <text x="240" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">假设 5 年期债券票</text>
+      <text x="240" y="141" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">息 5%、面值</text>
+      <text x="240" y="158" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">100、价格 95，到期</text>
+      <text x="240" y="175" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">收益率约 6.2%；同</text>
+      <text x="240" y="192" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">期限国债 4.0%，信…</text>
+    </g>
+    <line x1="108" y1="144" x2="123" y2="144" stroke="var(--border)" stroke-width="1.1"/>
+    <path d="M120 140 L125 144 L120 148" fill="none" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="217" y1="144" x2="232" y2="144" stroke="var(--border)" stroke-width="1.1"/>
+    <path d="M229 140 L234 144 L229 148" fill="none" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="14" y1="250" x2="326" y2="250" stroke="var(--border)" stroke-width="1"/>
+    <text x="14" y="266" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">读法：先看问题能否成立，再看机制能否连通，最后看判断会不会越界。</text>
+    <text x="14" y="280" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">若中间一步缺证据，后面的结论只能当假设，不能当事实。</text>
+    <text x="14" y="294" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">图为结构示意，不是新的数据图；样本为本文论证。</text>
+  </svg>
+  <figcaption>图 1：信用利差、久期与违约回收的机制链：从问题、机制到判断。样本为本文论证，单位为文中标注。</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-boundary-title fig-batch-boundary-desc" viewBox="0 0 340 244" width="100%">
+    <title id="fig-batch-boundary-title">信用利差、久期与违约回收：适用边界</title>
+    <desc id="fig-batch-boundary-desc">把成立条件与失效条件分开；局部例子不能自动推广到所有情形。</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">信用利差、久期与违约回收：什么情况下成立？</text>
+    <line x1="14" y1="34" x2="326" y2="34" stroke="var(--border)" stroke-width="1"/>
+    <rect x="14" y="44" width="312" height="38" rx="7" fill="var(--surface-2)" stroke="var(--border)"/>
+    <text x="170" y="62" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="middle">先检查条件，再看结论</text>
+    <text x="170" y="75" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="middle">条件、口径或样本一变，结论可能要重算</text>
+    <line x1="170" y1="82" x2="90" y2="104" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="170" y1="82" x2="250" y2="104" stroke="var(--border)" stroke-width="1.1"/>
+    <rect x="14" y="104" width="148" height="100" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+    <text x="24" y="122" font-size="8.6" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">成立</text>
+    <text x="24" y="138" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">第一，票息不是安全收益：价格下跌</text>
+      <text x="24" y="154" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">和违约损失可能超过多年票息。第二</text>
+      <text x="24" y="170" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">，利差宽不一定是便宜，可能是违约</text>
+      <text x="24" y="186" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">概率或回收率恶化。第三，久期假设…</text>
+    <rect x="178" y="104" width="148" height="100" rx="8" fill="var(--gold)" opacity="0.18" stroke="var(--border)"/>
+    <text x="188" y="122" font-size="8.6" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">不成立 / 需改写</text>
+    <text x="188" y="138" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">第一，票息不是安全收益：价格下跌</text>
+      <text x="188" y="154" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">和违约损失可能超过多年票息。第二</text>
+      <text x="188" y="170" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">，利差宽不一定是便宜，可能是违约</text>
+      <text x="188" y="186" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">概率或回收率恶化。第三，久期假设…</text>
+    <line x1="14" y1="216" x2="326" y2="216" stroke="var(--border)" stroke-width="1"/>
+    <text x="14" y="232" font-size="8.3" fill="var(--muted)" font-family="inherit" text-anchor="start">图为边界示意；样本为本文论证，单位为文中标注。</text>
+  </svg>
+  <figcaption>图 2：信用利差、久期与违约回收的边界：哪些条件成立，哪些条件失效。样本为本文论证，单位为文中标注。</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-compare-title fig-batch-compare-desc" viewBox="0 0 340 252" width="100%">
+    <title id="fig-batch-compare-title">信用利差、久期与违约回收：对象、前提与常见误区</title>
+    <desc id="fig-batch-compare-desc">三行比较本文概念、成立条件与常见误区；比较不等于等价，也不能替代定义。</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">信用利差、久期与违约回收：一张表看对象、前提与误区</text>
+    <line x1="14" y1="34" x2="326" y2="34" stroke="var(--border)" stroke-width="1"/>
+    <text x="82" y="46" font-size="8.4" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">本篇</text>
+    <text x="200" y="46" font-size="8.4" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">容易混淆</text>
+    <g>
+      <rect x="14" y="52" width="312" height="58" fill="transparent" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="72" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">对象</text>
+      <text x="82" y="72" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">信用债的收益率高出无风险</text>
+      <text x="82" y="88" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">利率，补偿违约、回收不确…</text>
+      <text x="200" y="72" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">相邻概念/常见说法</text>
+    </g>
+    <g>
+      <rect x="14" y="110" width="312" height="58" fill="var(--surface-2)" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="130" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">前提</text>
+      <text x="82" y="130" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">第一，票息不是安全收益：</text>
+      <text x="82" y="146" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">价格下跌和违约损失可能超…</text>
+      <text x="200" y="130" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">第一，票息不是安全收益：价格下跌和违</text>
+      <text x="200" y="146" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">约损失可能超过多年票息。第二，利差宽…</text>
+    </g>
+    <g>
+      <rect x="14" y="168" width="312" height="58" fill="transparent" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="188" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">检查</text>
+      <text x="82" y="188" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">先定义，再比较；不能只看</text>
+      <text x="82" y="204" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">名称</text>
+      <text x="200" y="188" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">相关不等于因果，局部不等于普遍</text>
+    </g>
+    <text x="14" y="244" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">图为比较示意；样本为本文论证，单位为文中标注。</text>
+  </svg>
+  <figcaption>图 3：信用利差、久期与违约回收的对象、前提与常见误区比较。样本为本文论证，单位为文中标注。</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-038-credit-spreads-duration-and-recovery-example-title fig-038-credit-spreads-duration-and-recovery-example-desc" viewBox="0 0 460 290" width="100%">
+    <title id="fig-038-credit-spreads-duration-and-recovery-example-title">算例三行卡：信用债：票息、利差与预期损失</title>
+    <desc id="fig-038-credit-spreads-duration-and-recovery-example-desc">读图路径：三行分别给出关键数字、单位和算例条件；不是市场数据。</desc>
+    <text x="16" y="24" font-size="12.2" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">算例三行卡</text>
+    <text x="16" y="40" font-size="9.2" fill="var(--muted)" font-family="inherit" text-anchor="start">单位为文中标注；样本为本文教学假设</text>
+    <line x1="12" y1="48" x2="448" y2="48" stroke="var(--border)" stroke-width="1"/>
+    <g>
+      <rect x="12" y="58" width="436" height="58" rx="9" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="24" y="76" font-size="10.2" fill="var(--muted)" font-family="inherit" text-anchor="start">票息</text>
+      <text x="448" y="80" font-size="17" font-weight="700" fill="var(--accent)" font-family="inherit" text-anchor="end">5 元/100 面值</text>
+      <text x="24" y="96" font-size="9.3" fill="var(--text)" font-family="inherit" text-anchor="start">5% 票息</text>
+    </g>
+    <g>
+      <rect x="12" y="128" width="436" height="58" rx="9" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="24" y="146" font-size="10.2" fill="var(--muted)" font-family="inherit" text-anchor="start">信用利差</text>
+      <text x="448" y="150" font-size="17" font-weight="700" fill="var(--accent)" font-family="inherit" text-anchor="end">220bp</text>
+      <text x="24" y="166" font-size="9.3" fill="var(--text)" font-family="inherit" text-anchor="start">到期 6.2% − 国债 4.0%</text>
+    </g>
+    <g>
+      <rect x="12" y="198" width="436" height="58" rx="9" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="24" y="216" font-size="10.2" fill="var(--muted)" font-family="inherit" text-anchor="start">预期损失</text>
+      <text x="448" y="220" font-size="17" font-weight="700" fill="var(--accent)" font-family="inherit" text-anchor="end">1.2%</text>
+      <text x="24" y="236" font-size="9.3" fill="var(--text)" font-family="inherit" text-anchor="start">2% 违约率 × 60% LGD</text>
+    </g>
+    <line x1="12" y1="266" x2="448" y2="266" stroke="var(--border)" stroke-width="1"/>
+    <text x="16" y="280" font-size="8.8" fill="var(--muted)" font-family="inherit" text-anchor="start">只看数量关系，不构成预测或投资建议</text>
+  </svg>
+  <figcaption>图 4：信用利差要先覆盖预期损失，再谈风险溢价。单位为文中标注；样本为本文教学假设，不是市场或统计数据；只用于展示数量关系。</figcaption>
+</figure>
+
+<h2>练习</h2>
+<ol>
+<li><strong>概念辨别：</strong> 概念辨别：信用利差扩大一定意味着债券更便宜吗？</li>
+<li><strong>计算或推理：</strong> 计算：修正久期 4.5，收益率上升 100bp，价格大致跌多少？</li>
+<li><strong>适用条件：</strong> 适用条件：为什么含权债的久期不能用普通债券公式直接套用？</li>
+</ol>
+<details>
+<summary>参考答案</summary>
+
+<ol>
+<li>不一定。利差扩大可能反映违约概率上升、回收率下降或流动性恶化，价格下跌后未必补偿足够风险。</li>
+<li>约 4.5%。</li>
+<li>含权债的现金流会被赎回、回售或提前偿还改变，利率变动也改变行权概率，久期需按期权调整。</li>
+</ol>
+</details>
+
+<h2>来源</h2>
+<ol>
+<li>FINRA. <em>Bonds</em>. FINRA. © 2026 FINRA. All rights reserved. Linked summary only.. <a href="https://www.finra.org/investors/investing/investment-products/bonds">https://www.finra.org/investors/investing/investment-products/bonds</a>（访问日期：2026-10-30）</li>
+<li>U.S. Department of the Treasury. <em>Treasury Notes</em>. TreasuryDirect. U.S. Government work (public domain), 17 U.S.C. §105. <a href="https://www.treasurydirect.gov/marketable-securities/treasury-notes/">https://www.treasurydirect.gov/marketable-securities/treasury-notes/</a>（访问日期：2026-11-04）</li>
+<li>U.S. Department of the Treasury. <em>Treasury Bonds</em>. TreasuryDirect. U.S. Government work (public domain), 17 U.S.C. §105. <a href="https://www.treasurydirect.gov/marketable-securities/treasury-bonds/">https://www.treasurydirect.gov/marketable-securities/treasury-bonds/</a>（访问日期：2026-11-04）</li>
+<li>International Monetary Fund. <em>A Stocktaking of the Current International Architecture for Resolving Sovereign Debt Involving Private Sector Creditors</em>. 2025. <a href="https://www.imf.org/-/media/Files/Publications/PP/2025/English/PPEA2025034.ashx">https://www.imf.org/-/media/Files/Publications/PP/2025/English/PPEA2025034.ashx</a>（访问日期：2026-11-24）</li>
+</ol>
+  <section class="article-demo" id="demo-check" data-demo="check" data-lang="zh" aria-labelledby="demo-check-title" data-check-done="三项都能说清：这篇的核心已经过关。" data-check-pending="还差一项：回到正文对应小节，找一个反例或数字再讲一遍。" data-check-count="已勾选"> <header class="demo-head"> <div class="demo-head-top"> <p class="demo-eyebrow">动手演示</p> <button class="demo-reset" type="button" data-demo-reset>恢复默认</button> </div> <h2 id="demo-check-title">读完自检：三句话能不能说清</h2> <p class="demo-intro">不用背定义。把下面三句逐个勾上，看自己能不能用自己的话讲清机制、算例和边界。</p> </header>          <div class="demo-check"> <ul class="demo-check-list"> <li> <label> <input type="checkbox" data-check-index="0"> <span>把信用利差拆成预期违约损失、流动性溢价和条款补偿。</span> </label> </li><li> <label> <input type="checkbox" data-check-index="1"> <span>用修正久期估算利率变动对债券价格的影响，并说明凸性修正。</span> </label> </li><li> <label> <input type="checkbox" data-check-index="2"> <span>能说出一个本文结论不适用的条件</span> </label> </li> </ul> <p class="demo-check-status" data-out="checkStatus" role="status"> 已勾选 0 / 3
+</p> </div> <p class="demo-footnote">数字为教学假设，用来展示关系，不构成预测或投资建议。</p> </section><script type="module" src="/_astro/ArticleDemo.astro_astro_type_script_index_0_lang.C9VQAsQ0.js"></script> <p class="notice"> 本文已通过当前发布门槛；事实、计算与译文如有修订，会同步更新两个语言版本。 </p> <p> <a class="button secondary" href="/"> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class> <path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path>        </svg>返回分站 </a> </p> </div> <aside class="article-aside" aria-label="文章信息"> <section class="aside-card"> <h2>学习目标</h2> <ul> <li>把信用利差拆成预期违约损失、流动性溢价和条款补偿。</li><li>用修正久期估算利率变动对债券价格的影响，并说明凸性修正。</li><li>区分违约回收、清偿顺序和市值损失，不把票息当成安全收益。</li> </ul> </section> <section class="aside-card"> <h2>必需先修</h2> <ul> <li> <a href="/learn/bond-rights-and-cash-flows/">MKT-004 · 债券的权利与现金流</a> </li> </ul> </section> <section class="aside-card"> <h2>建议阅读</h2> <ul> <li> <a href="https://finance.51invest.com/learn/time-value-of-money/">FIN-009 · 货币的时间价值</a> </li><li> <a href="https://finance.51invest.com/learn/present-value-and-discounted-cash-flows/">FIN-011 · 现值与现金流贴现</a> </li><li> <a href="/learn/assets-vs-instruments/">MKT-001 · 资产与工具的区别</a> </li> </ul> </section> <section class="aside-card"> <h2>AI 复核记录</h2> <p class="muted"> 本项目没有真人签字；下列状态来自 AI-only 编辑复核。 </p> <ul> <li> 事实与计算 ：AI 复核通过 </li><li> 学科 ：AI 复核通过 </li><li> 英文 ：AI 复核通过 </li><li> 页面 ：AI 复核通过 </li> </ul> </section> <section class="aside-card"> <h2>来源</h2> <div class="source"> <a href="https://www.finra.org/investors/investing/investment-products/bonds" rel="noopener noreferrer" target="_blank">Bonds</a> <p>FINRA · FINRA</p> <p>访问：2026-10-30 · 许可：© 2026 FINRA. All rights reserved. Linked summary only.</p> <p>支持论点：用于核对“信用利差、久期与违约回收”涉及的定义、制度、统计口径或产品条款；正文不把来源未写的内容当作事实，具体数字与日期以来源原文为准。</p> </div><div class="source"> <a href="https://www.treasurydirect.gov/marketable-securities/treasury-notes/" rel="noopener noreferrer" target="_blank">Treasury Notes</a> <p>U.S. Department of the Treasury · TreasuryDirect</p> <p>访问：2026-11-04 · 许可：U.S. Government work (public domain), 17 U.S.C. §105</p> <p>支持论点：用于核对“信用利差、久期与违约回收”涉及的定义、制度、统计口径或产品条款；正文不把来源未写的内容当作事实，具体数字与日期以来源原文为准。</p> </div><div class="source"> <a href="https://www.treasurydirect.gov/marketable-securities/treasury-bonds/" rel="noopener noreferrer" target="_blank">Treasury Bonds</a> <p>U.S. Department of the Treasury · TreasuryDirect</p> <p>访问：2026-11-04 · 许可：U.S. Government work (public domain), 17 U.S.C. §105</p> <p>支持论点：用于核对“信用利差、久期与违约回收”涉及的定义、制度、统计口径或产品条款；正文不把来源未写的内容当作事实，具体数字与日期以来源原文为准。</p> </div><div class="source"> <a href="https://www.imf.org/-/media/Files/Publications/PP/2025/English/PPEA2025034.ashx" rel="noopener noreferrer" target="_blank">A Stocktaking of the Current International Architecture for Resolving Sovereign Debt Involving Private Sector Creditors</a> <p>International Monetary Fund · IMF</p> <p>访问：2026-11-24 · 许可：© International Monetary Fund. All rights reserved. Linked summary only.</p> <p>支持论点：主权债没有统一的破产机制；集体行动条款（CAC）允许合格多数持有人把重组条件约束到少数持有人，降低 holdout 阻挠，不同司法辖区与条款的投票阈值不同。</p> </div> </section> </aside> </div> </article><script type="module">var e=document.querySelector(`[data-reading-progress] span`),t=document.querySelector(`article`);if(e&&t){let n=()=>{let n=t.offsetTop,r=t.offsetHeight-window.innerHeight,i=r>0?(window.scrollY-n)/r:0;e.style.width=`${Math.min(1,Math.max(0,i))*100}%`};window.addEventListener(`scroll`,n,{passive:!0}),window.addEventListener(`resize`,n),n()}</script>  </main> <footer class="site-footer"> <div class="container footer-inner"> <div class="footer-brand"> <span class="footer-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="28" height="28" alt class="mascot" loading="lazy" decoding="async"></span> <div> <strong>巫妖投资 51Invest</strong> <p class="footer-note">非商业免费知识站。每篇标出来源与口径；这里没有投资建议。</p> </div> </div> <nav class="footer-links" aria-label="知识分站"> <a href="https://51invest.com/" data-main-home>首页</a> <a href="https://51invest.com/contents/">内容地图</a> <a href="/glossary/">术语表</a> <a href="/search/">搜索</a> <a href="https://51invest.com/charts/" data-main-link>图表</a> <a href="https://51invest.com/sources/" data-main-link>数据与许可</a> <a href="/">分站首页</a> </nav> </div> </footer> <nav class="mobile-nav" aria-label="知识分站"> <a class="mobile-link" href="https://51invest.com/" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>    <path d="m3 10 9-7 9 7"></path><path d="M5 9v11h14V9"></path><path d="M9 20v-6h6v6"></path>     </svg> <span>首页</span> </a> <a class="mobile-link" href="https://51invest.com/#stations" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>   <rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect>      </svg> <span>知识分站</span> </a> <a class="mobile-link active" href="/" aria-current="page"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>  <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v18H6.5A2.5 2.5 0 0 1 4 18.5z"></path><path d="M4 18.5A2.5 2.5 0 0 1 6.5 16H20"></path>       </svg> <span>分站首页</span> </a> <a class="mobile-link" href="/en/learn/credit-spreads-duration-and-recovery/" data-language-link="en"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>English</span> </a> </nav><script type="module">var e=document.documentElement,t=[`auto`,`light`,`dark`],n=matchMedia(`(prefers-color-scheme: dark)`),r=()=>{let t=e.dataset.themeMode;return t===`light`||t===`dark`?t:`auto`},i=e=>{try{localStorage.setItem(`51invest-theme`,e)}catch{}try{let t=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-theme=${e}; Path=/; Max-Age=31536000; SameSite=Lax${t}`}catch{}},a=e=>{document.querySelectorAll(`[data-theme-toggle]`).forEach(t=>{let n=t.dataset[`label${e[0].toUpperCase()}${e.slice(1)}`];n&&(t.setAttribute(`aria-label`,n),t.setAttribute(`title`,n))})},o=t=>{e.dataset.themeMode=t,e.dataset.theme=t===`auto`?n.matches?`dark`:`light`:t,i(t),a(t)};a(r()),document.querySelectorAll(`[data-theme-toggle]`).forEach(e=>{e.addEventListener(`click`,()=>{let e=t[(t.indexOf(r())+1)%t.length];o(e)})}),n.addEventListener(`change`,()=>{r()===`auto`&&(e.dataset.theme=n.matches?`dark`:`light`)}),document.querySelectorAll(`[data-language-link]`).forEach(e=>{e.addEventListener(`click`,()=>{let t=e.dataset.languageLink;if(t===`zh`||t===`en`){try{localStorage.setItem(`51invest-language`,JSON.stringify(t))}catch{}try{let e=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-language=${t}; Path=/; Max-Age=31536000; SameSite=Lax${e}`}catch{}}})});</script> </body> </html>

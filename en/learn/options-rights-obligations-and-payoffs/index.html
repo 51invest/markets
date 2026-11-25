@@ -1,0 +1,439 @@
+<!DOCTYPE html><html lang="en" data-theme="light" data-theme-mode="auto"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark"><title>Options: Rights, Obligations and Payoffs · 51Invest</title><meta name="description" content="An option buyer pays a premium for a right, while the writer receives the premium and owes performance; strike, premium and expiry price determine the payoff."><link rel="canonical" href="https://markets.51invest.com/en/learn/options-rights-obligations-and-payoffs/"><link rel="alternate" hreflang="en" href="https://markets.51invest.com/en/learn/options-rights-obligations-and-payoffs/"><link rel="alternate" hreflang="zh-CN" href="https://markets.51invest.com/learn/options-rights-obligations-and-payoffs/"><link rel="alternate" hreflang="x-default" href="https://markets.51invest.com/learn/options-rights-obligations-and-payoffs/"><link rel="icon" type="image/png" href="/_astro/neutral.Dr5C2SoA.png"><script>
+  (() => {
+    const root = document.documentElement;
+    const readCookie = key => {
+      try {
+        return document.cookie.split('; ').find(value => value.startsWith(`51invest-${key}=`))?.split('=').slice(1).join('=') ?? null;
+      } catch {
+        return null;
+      }
+    };
+    const readLocal = key => {
+      try {
+        return localStorage.getItem(`51invest-${key}`);
+      } catch {
+        return null;
+      }
+    };
+    const storedTheme = readCookie('theme') || readLocal('theme');
+    const mode = ['light', 'dark', 'auto'].includes(storedTheme) ? storedTheme : 'auto';
+    const media = matchMedia('(prefers-color-scheme: dark)');
+    const apply = () => {
+      root.dataset.theme = mode === 'auto' ? (media.matches ? 'dark' : 'light') : mode;
+      root.dataset.themeMode = mode;
+    };
+    apply();
+    media.addEventListener('change', () => {
+      if (root.dataset.themeMode === 'auto') apply();
+    });
+  })();
+</script><link rel="stylesheet" href="/_astro/Base.CocbJOeh.css"></head> <body>  <a class="skip-link" href="#main">Skip to content</a> <header class="site-header"> <div class="container header-inner"> <a class="brand" href="https://51invest.com/en/" data-main-home aria-label="51Invest"> <span class="brand-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="36" height="36" alt class="mascot" loading="lazy" decoding="async"></span> <span class="brand-copy"> <span class="brand-name">51Invest</span> <span class="brand-caption">WUYAO INVEST</span> </span> </a> <nav class="desktop-nav" aria-label="Knowledge stations"> <a class="nav-link" href="https://51invest.com/en/" data-main-home> Home </a> <a class="nav-link" href="https://economics.51invest.com/en/"> Economics </a><a class="nav-link" href="https://finance.51invest.com/en/"> Finance </a><a class="nav-link active" href="/en/" aria-current="page"> Markets </a><a class="nav-link" href="https://invest.51invest.com/en/"> Investing </a><a class="nav-link" href="https://history.51invest.com/en/"> History </a><a class="nav-link" href="https://research.51invest.com/en/"> Research </a> <a class="nav-link" href="https://51invest.com/en/contents/"> Content map </a> </nav> <div class="header-tools"> <a class="icon-button language-button" href="/learn/options-rights-obligations-and-payoffs/" hreflang="zh-CN" lang="zh-CN" data-language-link="zh" aria-label="Switch to Chinese" title="Switch to Chinese"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>中文</span> </a> <button class="icon-button theme-button" type="button" data-theme-toggle aria-label="Theme: System" title="Theme: System" data-label-auto="Theme: System" data-label-light="Theme: Light" data-label-dark="Theme: Dark"> <span class="theme-icon" data-theme-icon="auto"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>        <circle cx="12" cy="12" r="8.5"></circle><path d="M12 3.5v17"></path><path d="M12 7a5 5 0 0 1 0 10" fill="currentColor" stroke="none"></path> </svg></span> <span class="theme-icon" data-theme-icon="light"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>       <circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>  </svg></span> <span class="theme-icon" data-theme-icon="dark"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>      <path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"></path>   </svg></span> <span class="theme-text" data-theme-text="auto">System</span> <span class="theme-text" data-theme-text="light">Light</span> <span class="theme-text" data-theme-text="dark">Dark</span> </button> </div> </div> </header> <main id="main" class="site-main" data-pagefind-body>  <div class="reading-progress" data-reading-progress aria-hidden="true"><span></span></div> <div class="container"> <nav class="breadcrumbs" aria-label="Breadcrumb"> <a href="https://51invest.com/en/" data-main-home>Home</a> <span class="sep">/</span> <a href="/en/">Markets</a> <span class="sep">/</span> <span aria-current="page">Options: Rights, Obligations and Payoffs</span> </nav> </div> <article> <header class="article-header"> <div class="container"> <span class="article-type">Product</span> <h1 class="article-title">Options: Rights, Obligations and Payoffs</h1> <p class="article-summary">An option buyer pays a premium for a right, while the writer receives the premium and owes performance; strike, premium and expiry price determine the payoff.</p>  <div class="meta-grid"> <div class="meta-item"><span>Module</span><strong>MKT-M14 · 期权权证与波动率</strong></div> <div class="meta-item"><span>Level</span><strong>Foundation</strong></div> <div class="meta-item"><span>Read</span><strong>17 min · 15 sections</strong></div> </div> <p class="demo-jump"> <a href="#demo-option"> This article has an interactive demo <span aria-hidden="true">↓</span> </a> </p> </div> </header> <div class="container article-layout"> <div class="article-body"> <h2>What the product is</h2>
+<p>An option buyer pays a premium for the right, but not the obligation, to buy (a call) or sell (a put) the underlying at the strike price on or before expiry. The writer receives the premium and must perform on exercise. Contract specifications set multiplier, expiry, strike, exercise style and settlement. A standard equity option usually represents 100 shares and expires on the third Friday of the month [1]; index options of this kind are usually settled in cash for the difference (the cash-settlement mechanism is from [2]; grouping it under index options is this article&#39;s own generalisation).</p>
+<h2>Rights, obligations and cash flows</h2>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Right or obligation</th>
+<th>Maximum gain</th>
+<th>Maximum loss</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Call buyer</td>
+<td>Right to buy at the strike</td>
+<td>Theoretically unlimited</td>
+<td>Premium</td>
+</tr>
+<tr>
+<td>Naked call writer</td>
+<td>Obligation to sell at the strike</td>
+<td>Premium</td>
+<td>Theoretically unlimited</td>
+</tr>
+<tr>
+<td>Put buyer</td>
+<td>Right to sell at the strike</td>
+<td>Strike minus premium</td>
+<td>Premium</td>
+</tr>
+<tr>
+<td>Put writer</td>
+<td>Obligation to buy at the strike</td>
+<td>Premium</td>
+<td>Strike minus premium</td>
+</tr>
+</tbody></table>
+<p>The table sets out the same arrangements as flows over time; the amount column uses expressions or document terms, not market data:</p>
+<table>
+<thead>
+<tr>
+<th>Time or condition</th>
+<th>Cash flow</th>
+<th>Amount</th>
+<th>Currency</th>
+<th>Uncertainty</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Buy a call</td>
+<td>Pay premium for the right to buy at the strike</td>
+<td>Premium; on exercise buy the underlying at the strike</td>
+<td>Underlying pricing currency</td>
+<td>No exercise unless the underlying clears strike plus premium; maximum loss is the premium</td>
+</tr>
+<tr>
+<td>Buy a put</td>
+<td>Pay premium for the right to sell at the strike</td>
+<td>Premium; on exercise sell the underlying at the strike</td>
+<td>Underlying pricing currency</td>
+<td>The option expires worthless if the underlying does not fall through the strike</td>
+</tr>
+<tr>
+<td>Exercise or expiry</td>
+<td>Settle in cash or deliver the underlying</td>
+<td>Intrinsic value; or expire worthless</td>
+<td>Contract settlement currency</td>
+<td>American styles can exercise early, European only at expiry; automatic-exercise thresholds follow the exchange</td>
+</tr>
+<tr>
+<td>Sell an option uncovered</td>
+<td>Receive premium and take the obligation</td>
+<td>Premium received; perform at the strike if assigned</td>
+<td>Underlying pricing currency</td>
+<td>Loss can far exceed the premium and margin is required</td>
+</tr>
+<tr>
+<td>Carrying exchange-traded options</td>
+<td>Post margin and mark to market daily</td>
+<td>Notional × margin rate; profit or loss = change × multiplier</td>
+<td>Contract settlement currency</td>
+<td>Margin calls and liquidation; liquidity and spreads widen the further out of the money</td>
+</tr>
+</tbody></table>
+<p>Figures in this table are per share; a standard contract of 100 shares multiplies them by 100. The buyer pays the premium, posts no margin, but can lose it all. The writer receives the premium, posts margin and is marked to market daily. On exercise, the clearinghouse assigns writers under its rules, so a written option may be called. FINRA notes the buyer&#39;s maximum loss is the premium paid and the writer&#39;s maximum profit is the premium received; a broker may liquidate without notice if margin is insufficient [1].</p>
+<p>Exchange-traded options are guaranteed by a clearinghouse, in-the-money positions may be exercised automatically under the rules of the exchange and the clearinghouse, and a writer is marked to market daily with margin called under those rules - these three points are this article&#39;s description of market structure: the three registered sources do not state them sentence by sentence, and the clearinghouse whose rules govern this market returned HTTP 403 to this environment, so they are not presented as quotations. Specific rules follow the exchange rules, the clearing rules and the options disclosure document. Separately, as this article&#39;s definitions and derivation: a premium C splits into intrinsic value and time value, where a call&#39;s intrinsic value is max(S − K, 0), so with S=103, K=100 and C=5 the intrinsic value is 3 and the time value is 2; for European call and put options on the same underlying, strike and expiry, ignoring dividends and discounting, C − P = S − K, which gives P = 5 − (103 − 100) = 2. This is a teaching derivation and uses no market data; real pricing also reflects dividends, rates, volatility and early exercise.</p>
+<p>The structure follows CME: an option gives the holder the right to buy or sell the asset at a fixed price on or before a specified date, the holder has the right but not the obligation, and a European option may be exercised only at expiry [2].</p>
+<h2>Payoff structure</h2>
+<p>Assume a strike of $100, a premium of $5 and an expiry price S in dollars per share; the table is per share:</p>
+<table>
+<thead>
+<tr>
+<th>S</th>
+<th>Call buyer profit</th>
+<th>Put buyer profit</th>
+<th>Call writer profit</th>
+<th>Put writer profit</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>80</td>
+<td>-5</td>
+<td>15</td>
+<td>5</td>
+<td>-15</td>
+</tr>
+<tr>
+<td>100</td>
+<td>-5</td>
+<td>-5</td>
+<td>5</td>
+<td>5</td>
+</tr>
+<tr>
+<td>120</td>
+<td>15</td>
+<td>-5</td>
+<td>-15</td>
+<td>5</td>
+</tr>
+</tbody></table>
+<p>Call buyer profit = max(S - 100, 0) - 5; put buyer profit = max(100 - S, 0) - 5; the writer&#39;s profit is the mirror image of the buyer&#39;s. Break-even is S = 105 for the call and S = 95 for the put, that is the strike plus or minus the premium. These are profits and losses at expiry, net of the premium, which distinguishes them from the gross expiry payoff; they exclude fees, margin and taxes, and a contract of 100 shares multiplies them by 100.</p>
+<h2>Participants and venues</h2>
+<p>Exchanges, clearinghouses, brokers, market makers, buyers and writers. Exchange options are clearinghouse-guaranteed; OTC options leave counterparty risk with the parties.</p>
+<h2>Trading, holding and exit</h2>
+<p>Positions can be opened by buying or selling, closed by an offsetting trade, exercised or left to expire. American options can be exercised before expiry, European only at expiry; index options are often cash settled. In-the-money options may be auto-exercised at expiry under exchange rules.</p>
+<p>For commodity futures options the CFTC definition applies: the buyer obtains the right, not the obligation, to buy or sell a specific futures contract at a set price on a future date, with a futures contract — not the physical commodity — as the underlying [3].</p>
+<h2>Costs and risks</h2>
+<p>&quot;Theoretically unlimited&quot; describes the bound of the payoff structure, not an amount a position will lose. Because the underlying has no upper price bound, an uncovered call writer has no theoretical cap on loss; but a live position is first constrained by margin, additional-margin calls and forced liquidation, and most are closed or rolled before assignment. So the phrase characterises the range of outcomes rather than a computed loss, and it does not mean the loss must approach infinity. The same caution applies to the other risk items here: what can be verified is the contract and the account rules, not a theoretical extreme.</p>
+<p>Costs include the premium, bid-ask spread, commissions, margin funding, early exercise, taxes and opportunity cost. Risks include losing the entire premium, unlimited writer loss, leverage, volatility changes, time decay, illiquidity, assignment and counterparty risk. A naked call writer can lose more than the premium if the underlying rises.</p>
+<h2>Terms and documents</h2>
+<p>Check contract specifications, strike, expiry, exercise style, settlement, adjustments and margin. Exchange options follow clearing rules and the options disclosure document; OTC options follow the master agreement and confirmation.</p>
+<h2>Comparison and boundaries</h2>
+<table>
+<thead>
+<tr>
+<th>Instrument</th>
+<th>Buyer&#39;s right</th>
+<th>Obligation</th>
+<th>Cash flow</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Option</td>
+<td>Right to exercise</td>
+<td>Buyer has none; writer is obligated</td>
+<td>Premium</td>
+</tr>
+<tr>
+<td>Futures</td>
+<td>No choice</td>
+<td>Both sides must perform</td>
+<td>Margin, mark-to-market</td>
+</tr>
+<tr>
+<td>Warrant</td>
+<td>Right to buy at the agreed price</td>
+<td>Usually issued by the company, which must perform</td>
+<td>Premium</td>
+</tr>
+</tbody></table>
+<p>An option is not a futures contract: the buyer&#39;s risk is limited to the premium paid, but that premium can be lost in full, while the writer&#39;s gain is limited and the risk can be large. A covered call and a naked call differ in margin and risk.</p>
+<h2>Figure</h2>
+<figure>
+  <svg role="img" aria-labelledby="fig-options-rights-obligations-and-payoffs-title fig-options-rights-obligations-and-payoffs-desc" viewBox="0 0 470 300" width="100%">
+<title id="fig-options-rights-obligations-and-payoffs-title">Option payoff at expiry: strike 100, premium 5</title>
+<desc id="fig-options-rights-obligations-and-payoffs-desc">A long call profits above 105; a long put profits below 95; both lines deduct a premium of 5 per share.</desc>
+<rect x="0.5" y="0.5" width="469" height="299" rx="12" fill="var(--surface)" stroke="var(--border)"/>
+  <rect x="20" y="14" width="9" height="9" rx="2" fill="var(--accent)"/><text x="35" y="22" font-size="10" fill="var(--secondary)" font-family="inherit">Long call</text>
+  <rect x="105" y="14" width="9" height="9" rx="2" fill="var(--gold)"/><text x="120" y="22" font-size="10" fill="var(--secondary)" font-family="inherit">Long put</text>
+  <line x1="82" y1="48" x2="82" y2="242" stroke="var(--border)" stroke-dasharray="2 4"/><text x="82" y="258" font-size="9" fill="var(--muted)" text-anchor="middle" font-family="inherit">70</text><line x1="171" y1="48" x2="171" y2="242" stroke="var(--border)" stroke-dasharray="2 4"/><text x="171" y="258" font-size="9" fill="var(--muted)" text-anchor="middle" font-family="inherit">85</text><line x1="260" y1="48" x2="260" y2="242" stroke="var(--border)" stroke-dasharray="2 4"/><text x="260" y="258" font-size="9" fill="var(--muted)" text-anchor="middle" font-family="inherit">100</text><line x1="349" y1="48" x2="349" y2="242" stroke="var(--border)" stroke-dasharray="2 4"/><text x="349" y="258" font-size="9" fill="var(--muted)" text-anchor="middle" font-family="inherit">115</text><line x1="438" y1="48" x2="438" y2="242" stroke="var(--border)" stroke-dasharray="2 4"/><text x="438" y="258" font-size="9" fill="var(--muted)" text-anchor="middle" font-family="inherit">130</text><line x1="82" y1="224.36363636363637" x2="438" y2="224.36363636363637" stroke="var(--border)" stroke-dasharray="2 4"/><text x="74" y="227.36363636363637" font-size="9" fill="var(--muted)" text-anchor="end" font-family="inherit">-5</text><line x1="82" y1="194.96969696969697" x2="438" y2="194.96969696969697" stroke="var(--border)" stroke-dasharray="2 4"/><text x="74" y="197.96969696969697" font-size="9" fill="var(--muted)" text-anchor="end" font-family="inherit">0</text><line x1="82" y1="165.57575757575756" x2="438" y2="165.57575757575756" stroke="var(--border)" stroke-dasharray="2 4"/><text x="74" y="168.57575757575756" font-size="9" fill="var(--muted)" text-anchor="end" font-family="inherit">5</text><line x1="82" y1="136.1818181818182" x2="438" y2="136.1818181818182" stroke="var(--border)" stroke-dasharray="2 4"/><text x="74" y="139.1818181818182" font-size="9" fill="var(--muted)" text-anchor="end" font-family="inherit">10</text><line x1="82" y1="106.78787878787878" x2="438" y2="106.78787878787878" stroke="var(--border)" stroke-dasharray="2 4"/><text x="74" y="109.78787878787878" font-size="9" fill="var(--muted)" text-anchor="end" font-family="inherit">15</text><line x1="82" y1="77.39393939393938" x2="438" y2="77.39393939393938" stroke="var(--border)" stroke-dasharray="2 4"/><text x="74" y="80.39393939393938" font-size="9" fill="var(--muted)" text-anchor="end" font-family="inherit">20</text>
+  <line x1="82" y1="194.96969696969697" x2="438" y2="194.96969696969697" stroke="var(--muted)" stroke-width="1.2"/>
+  <line x1="260" y1="48" x2="260" y2="242" stroke="var(--muted)" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="265" y="60" font-size="9" fill="var(--muted)" font-family="inherit">K=100</text>
+  <polyline points="82,224.36363636363637 260,224.36363636363637 438,48" fill="none" stroke="var(--accent)" stroke-width="2.6" stroke-linejoin="round"/><polyline points="82,48 260,224.36363636363637 438,224.36363636363637" fill="none" stroke="var(--gold)" stroke-width="2.6" stroke-linejoin="round"/>
+  <text x="260" y="288" font-size="9.5" fill="var(--muted)" text-anchor="middle" font-family="inherit">Price at expiry (per share)</text>
+  <text x="30" y="145" font-size="9.5" fill="var(--muted)" text-anchor="middle" transform="rotate(-90 30 145)" font-family="inherit">P&amp;L per share</text>
+  <text x="331.2" y="106.78787878787878" font-size="9.5" fill="var(--accent)" font-family="inherit">Call</text>
+  <text x="129.46666666666667" y="106.78787878787878" font-size="9.5" fill="var(--gold)" font-family="inherit">Put</text>
+</svg>
+  <figcaption>Figure 1: Expiry payoff diagram with strike 100 and premium 5 per share, before fees, margin and tax.; sample: the article’s own argument; units as stated in the text.</figcaption>
+</figure>
+
+<!-- kp-supplement:start -->
+<h2>Knowledge-point review</h2>
+<h3>option underlyings</h3>
+<p><strong>Definition</strong>: Options are classified by underlying: equity, index, FX, commodity, rate and futures options, which set contract size, settlement and risk.</p>
+<p><strong>Mechanism</strong>: Equity options reflect single-stock volatility and events, index options are cash-settled and diversified but correlated, commodity options are seasonal and inventory-driven, and rate options follow the curve.</p>
+<p><strong>Example</strong>: For example, index options hedge portfolio tails, and commodity options lock a producer&#39;s price floor.</p>
+<p><strong>Boundary</strong>: Underlying categories are not labels; liquidity, exercise style and margin differ across underlyings, and OTC options add counterparty and term risk.</p>
+<h3>calls and puts</h3>
+<p><strong>Definition</strong>: A call gives the buyer the right to buy at the strike, and a put the right to sell, with the buyer paying a premium.</p>
+<p><strong>Mechanism</strong>: Buyers have rights without obligations, sellers receive premium and bear obligations; expiry payoff depends on the underlying versus strike, and seller risk can be large.</p>
+<p><strong>Example</strong>: For example, a call bets on gains, a put hedges declines, and a seller collects premium while bearing tail risk.</p>
+<p><strong>Boundary</strong>: Calls and puts are not direction guarantees; premium, time decay and volatility consume returns, sellers look high-probability but face large tails, and early exercise can occur.</p>
+<h3>strikes and exercise</h3>
+<p><strong>Definition</strong>: The strike is the agreed exercise price, and exercise is the buyer using the right, under European, American or Bermudan styles.</p>
+<p><strong>Mechanism</strong>: In-, at- and out-of-the-money describe the underlying relative to strike; style, expiry and settlement determine value and early-exercise risk.</p>
+<p><strong>Example</strong>: For example, a call with strike 100 on a 110 stock is 10 in the money, and American options can be exercised early.</p>
+<p><strong>Boundary</strong>: Exercise is not automatic profit; strike, premium and costs determine net gain, deep in-the-money options can be exercised early, cash and physical settlement differ, and unused options expire worthless.</p>
+<h3>time value</h3>
+<p><strong>Definition</strong>: Time value is the part of an option price above intrinsic value, reflecting potential gains before expiry.</p>
+<p><strong>Mechanism</strong>: Time value decays with time (theta) and depends on volatility, rates and distance from strike; at-the-money and high-volatility options carry more.</p>
+<p><strong>Example</strong>: For example, an at-the-money option three months out has more time value and decays fast near expiry.</p>
+<p><strong>Boundary</strong>: Time value is not free return; buyers lose theta daily, falling volatility pressures price, deep in-the-money options have little time value, and sellers earn theta but bear tails.</p>
+<h3>option Greeks</h3>
+<p><strong>Definition</strong>: Greeks measure option sensitivity to underlying price, volatility, time and rates.</p>
+<p><strong>Mechanism</strong>: Delta measures price change, gamma the change in delta, theta time decay, vega volatility and rho rates; portfolio Greeks guide hedging.</p>
+<p><strong>Example</strong>: For example, delta 0.5 means a 1 yuan underlying move changes the option about 0.5, and high gamma makes delta shift fast.</p>
+<p><strong>Boundary</strong>: Greeks are not precise forecasts; they are local, instantaneous sensitivities, large moves, volatility surfaces and path dependence break hedges, and short options carry negative gamma.</p>
+<h3>volatility surface</h3>
+<p><strong>Definition</strong>: The volatility surface maps implied volatility across strikes and expiries, reflecting market pricing of uncertainty.</p>
+<p><strong>Mechanism</strong>: It has smile, skew and term structure; differences across strikes reflect tail risk and supply-demand, and surface changes alter relative option value.</p>
+<p><strong>Example</strong>: For example, fear of declines makes low-strike puts carry higher implied volatility than at-the-money, creating skew.</p>
+<p><strong>Boundary</strong>: The surface is not one volatility number; implied volatility is market pricing, not a forecast, surfaces deform with flows and events, and models and liquidity complicate arbitrage.</p>
+<h3>basic option combinations</h3>
+<p><strong>Definition</strong>: Basic option combinations combine legs into specific risk-return profiles, such as spreads, straddles, strangles, covered calls, protective puts and collars.</p>
+<p><strong>Mechanism</strong>: Combinations use strikes and expiries to cut premium, cap risk or enhance income; payoff diagrams and Greeks define use cases.</p>
+<p><strong>Example</strong>: For example, a covered call earns premium but caps upside, and a protective put pays premium for downside protection.</p>
+<p><strong>Boundary</strong>: Combinations are not risk-free; leg basis, liquidity and early exercise add cost, short legs can carry large tails, and volatility changes can cause losses.</p>
+<h3>exotic option terms</h3>
+<p><strong>Definition</strong>: Exotic options have non-standard terms such as barriers, Asian, digital, lookback, autocall and path-dependent payoffs.</p>
+<p><strong>Mechanism</strong>: Payoffs depend on paths, averages, barrier triggers or events; terms lower premium but add model, hedging and counterparty risk.</p>
+<p><strong>Example</strong>: For example, a knock-out barrier option expires if the underlying touches a barrier, and an Asian option settles on an average price.</p>
+<p><strong>Boundary</strong>: Exotic is not sophisticated safety; terms are complex, liquidity thin, model assumptions strong, barriers and autocalls cause sudden losses, and OTC counterparty risk is high.</p>
+<h3>warrants and callable bull-bear contracts</h3>
+<p><strong>Definition</strong>: Warrants are issuer-created tradable rights, and callable bull-bear contracts are leveraged products with mandatory redemption, unlike exchange-traded options.</p>
+<p><strong>Mechanism</strong>: Warrants carry dilution and issuer credit risk; CBBCs have a call price and are redeemed if touched, with leverage and funding cost.</p>
+<p><strong>Example</strong>: For example, a call warrant bets on gains, and a bull contract is terminated if the underlying falls to the call price.</p>
+<p><strong>Boundary</strong>: Warrants are not standard exchange options; issuer credit, terms and liquidity risk are high, CBBCs can lose all principal after recall, and time decay and leverage are path-dependent.</p>
+<!-- kp-supplement:end -->
+
+<h2>Related</h2>
+<ul>
+<li>Required prerequisite: Futures Contracts and Margin (MKT-018).</li>
+<li>Related reading: Futures Contracts and Margin (MKT-018), Swaps and Structured Products (MKT-020).</li>
+</ul>
+<h2>Figures in plain language</h2>
+<p>The three figures below check the mechanism, boundary and comparison in this article; labels come from its own sections, not new data.</p>
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-chain-title fig-batch-chain-desc" viewBox="0 0 340 304" width="100%">
+    <title id="fig-batch-chain-title">Options: Rights, Obligations and Payoffs: mechanism chain</title>
+    <desc id="fig-batch-chain-desc">Options: Rights, Obligations and Payoffs — three-step structure: problem, mechanism, judgment. Labels come from the article's sections, not new data.</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">Options: Rights, Obligations and Payoffs: mechanism chain</text>
+    <text x="14" y="38" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">Labels come from the article's sections; all three steps matter.</text>
+    <line x1="14" y1="46" x2="326" y2="46" stroke="var(--border)" stroke-width="1"/>
+    <g>
+      <rect x="14" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="22" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">Problem</text>
+      <text x="22" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">An option buyer</text>
+      <text x="22" y="102" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">pays a premium…</text>
+      <text x="22" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">An option buyer</text>
+      <text x="22" y="141" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">pays a premium</text>
+      <text x="22" y="158" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">for a right,</text>
+      <text x="22" y="175" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">while the</text>
+      <text x="22" y="192" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">writer receives…</text>
+    </g>
+      <g>
+      <rect x="123" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="131" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">What the product is</text>
+      <text x="131" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">What the product</text>
+      <text x="131" y="102" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">is: An option…</text>
+      <text x="131" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">What the product</text>
+      <text x="131" y="141" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start"> is: An option</text>
+      <text x="131" y="158" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">buyer pays a</text>
+      <text x="131" y="175" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">premium for the</text>
+      <text x="131" y="192" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">right, but not…</text>
+    </g>
+      <g>
+      <rect x="232" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="240" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">Costs and risks</text>
+      <text x="240" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">&quot;Theoretically</text>
+      <text x="240" y="102" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">unlimited&quot;…</text>
+      <text x="240" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">&quot;Theoretically</text>
+      <text x="240" y="141" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">unlimited&quot;</text>
+      <text x="240" y="158" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">describes the</text>
+      <text x="240" y="175" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">bound of the</text>
+      <text x="240" y="192" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">payoff structure…</text>
+    </g>
+    <line x1="108" y1="144" x2="123" y2="144" stroke="var(--border)" stroke-width="1.1"/>
+    <path d="M120 140 L125 144 L120 148" fill="none" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="217" y1="144" x2="232" y2="144" stroke="var(--border)" stroke-width="1.1"/>
+    <path d="M229 140 L234 144 L229 148" fill="none" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="14" y1="250" x2="326" y2="250" stroke="var(--border)" stroke-width="1"/>
+    <text x="14" y="266" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">Reading order: test the problem, then the mechanism, then whether the judgment overreaches.</text>
+    <text x="14" y="280" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">If a middle step lacks evidence, later conclusions are hypotheses, not facts.</text>
+    <text x="14" y="294" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">Structural illustration, not a new data chart; sample is the article's own argument.</text>
+  </svg>
+  <figcaption>Figure 2: Options: Rights, Obligations and Payoffs — mechanism chain: problem, mechanism, judgment. Sample: the article's own argument; units as stated in the text.</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-boundary-title fig-batch-boundary-desc" viewBox="0 0 340 244" width="100%">
+    <title id="fig-batch-boundary-title">Options: Rights, Obligations and Payoffs: boundary</title>
+    <desc id="fig-batch-boundary-desc">Separates conditions where the claim holds from those where it fails; a local example is not universal.</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">Options: Rights, Obligations and Payoffs: when does it hold?</text>
+    <line x1="14" y1="34" x2="326" y2="34" stroke="var(--border)" stroke-width="1"/>
+    <rect x="14" y="44" width="312" height="38" rx="7" fill="var(--surface-2)" stroke="var(--border)"/>
+    <text x="170" y="62" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="middle">Check the conditions before the conclusion</text>
+    <text x="170" y="75" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="middle">If conditions, definitions or samples change, recompute the conclusion</text>
+    <line x1="170" y1="82" x2="90" y2="104" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="170" y1="82" x2="250" y2="104" stroke="var(--border)" stroke-width="1.1"/>
+    <rect x="14" y="104" width="148" height="100" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+    <text x="24" y="122" font-size="8.6" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">Holds</text>
+    <text x="24" y="138" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">&quot;Theoretically unlimited&quot;</text>
+      <text x="24" y="154" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">describes the bound of the</text>
+      <text x="24" y="170" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">payoff structure, not an</text>
+      <text x="24" y="186" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">amount a position will lose.…</text>
+    <rect x="178" y="104" width="148" height="100" rx="8" fill="var(--gold)" opacity="0.18" stroke="var(--border)"/>
+    <text x="188" y="122" font-size="8.6" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">Fails / rewrite</text>
+    <text x="188" y="138" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">| Instrument | Buyer's</text>
+      <text x="188" y="154" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">right | Obligation | Cash</text>
+      <text x="188" y="170" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">flow | | --- | --- | --- |</text>
+      <text x="188" y="186" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">--- | | Option | Right to…</text>
+    <line x1="14" y1="216" x2="326" y2="216" stroke="var(--border)" stroke-width="1"/>
+    <text x="14" y="232" font-size="8.3" fill="var(--muted)" font-family="inherit" text-anchor="start">Boundary illustration; sample is the article's own argument; units as stated in the text.</text>
+  </svg>
+  <figcaption>Figure 3: Options: Rights, Obligations and Payoffs — boundary: when the claim holds, and when it fails. Sample: the article's own argument; units as stated in the text.</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-compare-title fig-batch-compare-desc" viewBox="0 0 340 252" width="100%">
+    <title id="fig-batch-compare-title">Options: Rights, Obligations and Payoffs: object, conditions and common mistakes</title>
+    <desc id="fig-batch-compare-desc">Three rows compare the concept, its conditions and common mistakes; comparison is not equivalence and does not replace a definition.</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">Options: Rights, Obligations and Payoffs: object, conditions and common mistakes at a glance</text>
+    <line x1="14" y1="34" x2="326" y2="34" stroke="var(--border)" stroke-width="1"/>
+    <text x="82" y="46" font-size="8.4" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">This article</text>
+    <text x="200" y="46" font-size="8.4" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">Commonly confused</text>
+    <g>
+      <rect x="14" y="52" width="312" height="58" fill="transparent" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="72" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">Object</text>
+      <text x="82" y="72" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">An option buyer pays</text>
+      <text x="82" y="88" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">a premium for a…</text>
+      <text x="200" y="72" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">Adjacent concepts / common claims</text>
+    </g>
+    <g>
+      <rect x="14" y="110" width="312" height="58" fill="var(--surface-2)" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="130" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">Conditions</text>
+      <text x="82" y="130" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">&quot;Theoretically</text>
+      <text x="82" y="146" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">unlimited&quot; describes…</text>
+      <text x="200" y="130" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">| Instrument | Buyer's right |</text>
+      <text x="200" y="146" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">Obligation | Cash flow | | ---…</text>
+    </g>
+    <g>
+      <rect x="14" y="168" width="312" height="58" fill="transparent" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="188" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">Check</text>
+      <text x="82" y="188" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">Define first, then compare; never judge</text>
+      <text x="82" y="204" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">labels only</text>
+      <text x="200" y="188" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">Correlation is not causation; a local case is not universal</text>
+    </g>
+    <text x="14" y="244" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">Comparison illustration; sample is the article's own argument; units as stated in the text.</text>
+  </svg>
+  <figcaption>Figure 4: Options: Rights, Obligations and Payoffs — comparison of object, conditions and common mistakes. Sample: the article's own argument; units as stated in the text.</figcaption>
+</figure>
+
+<h2>Exercises</h2>
+<ol>
+<li><strong>Call payoff.</strong> With a strike of $100 and a premium of $5, both per share, what are the buyer&#39;s expiry payoff and profit at an expiry price of $120?</li>
+<li><strong>Put payoff.</strong> With a strike of $100 and a premium of $5, both per share, what are the buyer&#39;s expiry payoff and profit at an expiry price of $80?</li>
+<li><strong>Writer risk.</strong> What are a naked call writer&#39;s maximum gain and maximum loss, and why does a covered call differ?</li>
+</ol>
+<details>
+<summary>Suggested answers</summary>
+
+<ol>
+<li>Payoff is max(120 - 100, 0) = $20 per share; profit is 20 - 5 = $15 per share. Per share, before fees; a contract of 100 shares gives a payoff of $2,000 and a profit of $1,500.</li>
+<li>Payoff is max(100 - 80, 0) = $20 per share; profit is 20 - 5 = $15 per share, again per share and before fees.</li>
+<li>Maximum gain is the $5 premium per share; maximum loss is theoretically unlimited because the underlying can rise without limit. Margin and forced liquidation affect the actual result. A covered call is delivered out of shares already held, so its risk and margin differ from those of a naked writer.</li>
+</ol>
+</details>
+
+<h2>The option family: underlyings, exercise, combinations, exotics and listed warrants</h2>
+<p>The word &quot;option&quot; covers very different contracts: the underlying, exercise style, payoff combination and issuer structure all change the risk. The next six sections separate that family; pricing, Greeks and the volatility surface are in MKT-034.</p>
+<h3>Underlying types: equity, index, ETF, FX, rates and commodities</h3>
+<p><strong>Definition.</strong> The underlying determines what is delivered or settled at expiry, not the name of the contract. Equity and ETF options normally deliver 100 shares; index options normally settle in cash against the index settlement value; an option on a futures contract delivers one futures contract, not the physical commodity; FX, interest-rate and commodity OTC options settle in cash or deliver according to the contract terms.</p>
+<p><strong>Mechanism and example.</strong> Assume a stock at USD 100 and one equity option representing 100 shares, so the notional is USD 10,000; an index at 4,000 points with a USD 100 multiplier has a notional of USD 400,000 and settles in cash for the difference between the index settlement value and the strike; exercising an option on a commodity future creates a long or short futures position, which then follows futures margin and delivery rules. Classify the underlying by multiplier, deliverable, settlement method and expiry, not by the word &quot;stock&quot; or &quot;index&quot;.</p>
+<p><strong>Boundary.</strong> Options with the same name can differ by exchange, multiplier, settlement and adjustment terms; ETF options are often American-style and physically settled, while index options are often European-style and cash settled, so their exercise and margin rules cannot be swapped. Trading halts, corporate actions, index changes and FX moves also change the actual exposure[4][6].</p>
+<h3>Calls and puts: rights, obligations and expiry payoffs</h3>
+<p><strong>Definition.</strong> A call gives the buyer the right to buy the underlying at the strike; a put gives the buyer the right to sell at the strike. The buyer pays the premium; the seller receives it and takes the obligation to perform if assigned.</p>
+<p><strong>Mechanism and example.</strong> Strike 100, premium 5. At expiry with the underlying at 120, the call has intrinsic value 20 and the buyer gains 15; the put expires worthless and the buyer loses 5. At 80, the put has intrinsic value 20 and the buyer gains 15; the call expires worthless and the buyer loses 5. The seller&#39;s cash flow mirrors the buyer: when the buyer gains 15 the seller loses 15, and when the buyer loses 5 the seller gains 5. The buyer&#39;s maximum loss is the premium; the seller&#39;s maximum gain is the premium, but the seller&#39;s potential loss can be far larger.</p>
+<p><strong>Boundary.</strong> Buying a call is not buying the stock, and buying a put is not shorting it; a correct directional view can still lose money through premium, time decay and volatility changes. Selling options for premium is not &quot;stable rent&quot;; margin, gaps and assignment risk must be assessed separately[4][6].</p>
+<h3>Exercise: American, European, Bermudan and moneyness</h3>
+<p><strong>Definition.</strong> An American option can be exercised on any trading day before expiry; a European option only on the expiry date; a Bermudan option on specified dates. Exercise converts the option right into physical, futures or cash settlement; the strike, settlement price and cut-off time come from the contract.</p>
+<p><strong>Mechanism and example.</strong> A call with strike 100 and premium 5, with the underlying at 103 at expiry, has intrinsic value 3. Exercising requires paying USD 10,000 for 100 shares worth USD 10,300, a gross gain of USD 300; after the USD 500 premium already paid, the net result is a loss of USD 200. Not exercising loses USD 500. In-the-money does not mean profitable; treat the premium as sunk and then check delivery, fees, tax and liquidity.</p>
+<p><strong>Boundary.</strong> In-the-money (ITM) means a call&#39;s underlying is above the strike or a put&#39;s underlying is below it; at-the-money (ATM) means the underlying equals the strike; out-of-the-money (OTM) is the opposite. Automatic-exercise thresholds, exercise cut-off times, physical-delivery fees, dividends, borrow costs and tax rates all change the result; early exercise of an American option is only potentially better around dividends, rates or deep in-the-money levels, and should not be the default[5].</p>
+<h3>Basic combinations: covered calls, protective puts, spreads and straddles</h3>
+<p><strong>Definition.</strong> A combination uses several legs to reshape the payoff; it does not automatically reduce risk. Common structures include the covered call, protective put, bull call spread, straddle and collar.</p>
+<p><strong>Mechanism and example.</strong> Own the stock at USD 100 and sell the 105 call for 3: at 110 the stock gains 10, the short call loses 5 and the premium adds 3, for a net +8 per share; at 90 the stock is −10 and the premium +3, for a net −7 per share. Own at 100 and buy the 95 put for 4: at 80 the stock is −20, the put +15 and the premium −4, for a net −9 per share; at 120 the result is +20−4=+16. Buy the 100 call for 5 and sell the 110 call for 2, for a net debit of 3: at 115 the legs total +10, a net +7; the maximum loss is 3. Buy the 100 call for 5 and the 100 put for 4, paying 9 in total: at 115 or 85 the result is +6, with breakevens at 91 and 109 and a maximum loss of 9. Own the stock, buy the 95 put for 4 and sell the 105 call for 3, for a net cost of 1: the expiry payoff range is about −6 to +4, or 94 to 104.</p>
+<p><strong>Boundary.</strong> Multi-leg structures add margin, assignment, bid-ask and tax complexity; a covered call gives up large upside, a protective put costs premium, a straddle needs a move large enough to cover the 9 premium, and a collar caps both sides. A combination changes the payoff distribution; it does not remove risk[9].</p>
+<h3>Exotic terms: barriers, Asians, digitals, lookbacks and compounds</h3>
+<p><strong>Definition.</strong> An exotic option writes the payoff as a path, an average, a barrier or a binary event instead of looking only at the expiry price. Common terms include knock-in/knock-out barriers, Asian averaging, binary (digital) payouts, lookback highs or lows and compound options.</p>
+<p><strong>Mechanism and example.</strong> A knock-out call with strike 100, barrier 120 and premium 3 expires worthless if the underlying touches 120, even if it later finishes at 130; if the barrier is never touched, a finish at 130 pays 30, for a net gain of 27. An Asian call with strike 100 and a three-month average of 105 pays 5; even if the final price is 130 but the average is 102, it pays only 2. A binary option pays 10 if the underlying is above 100 and 0 otherwise, with premium 6; at 101 the net gain is 4, and at 99 the loss is 6. Lookback and compound options depend on the path or on a later option and are harder to price.</p>
+<p><strong>Boundary.</strong> Path dependence means the option can be knocked out, knocked in or terminated before expiry; OTC exotics carry wider spreads, model risk and counterparty risk, and a flat Black-Scholes formula should not be applied mechanically. Barriers, observation windows, settlement prices and termination terms must be read from the contract[5].</p>
+<h3>Warrants and callable bull/bear contracts: issuer credit, callability and residual value</h3>
+<p><strong>Definition.</strong> A warrant is a call or put security issued by an issuer; the buyer has a right and the issuer is the obligor. A callable bull/bear contract (CBBC) is a leveraged contract with a mandatory call feature that terminates early when the underlying reaches the call price.</p>
+<p><strong>Mechanism and example.</strong> A warrant with strike 100 and premium 5, with the underlying at 120, has intrinsic value 20 and a gross gain of 15; issuer default, term adjustments or a liquidity provider&#39;s exit can change the result. A bull CBBC with call price 95 and strike 92 is called when the underlying falls to 95, and the residual value is calculated as 95−92=3 before costs; after the call, even a 15% rebound happens after the investor has left.</p>
+<p><strong>Boundary.</strong> Warrants carry issuer credit risk, an expiry date, adjustment terms and liquidity risk; CBBCs can be called immediately, residual value can be zero, and funding cost decays toward expiry. Neither is a stock or a long-term holding; exchange rules, the listing document and guarantee arrangements must be checked line by line[7][8].</p>
+<h2>Sources</h2>
+<ol>
+<li>Financial Industry Regulatory Authority. “Options.” <a href="https://www.finra.org/investors/investing/investment-products/options">https://www.finra.org/investors/investing/investment-products/options</a> (accessed 2026-10-30)</li>
+<li>CME Group. “期权是什么意思 (What Is an Option).” <a href="https://www.cmegroup.cn/knowledge/12439.htm">https://www.cmegroup.cn/knowledge/12439.htm</a> (accessed 2026-10-30)</li>
+<li>U.S. Commodity Futures Trading Commission. “Basics of Futures Trading.” <a href="https://www.cftc.gov/LearnAndProtect/AdvisoriesAndArticles/FuturesMarketBasics/index.htm">https://www.cftc.gov/LearnAndProtect/AdvisoriesAndArticles/FuturesMarketBasics/index.htm</a> (accessed 2026-10-30)</li>
+<li>U.S. Securities and Exchange Commission. “Investor Bulletin: An Introduction to Options.” <a href="https://www.sec.gov/resources-for-investors/investor-alerts-bulletins/ib_introductionoptions">https://www.sec.gov/resources-for-investors/investor-alerts-bulletins/ib_introductionoptions</a> (accessed 2026-11-24)</li>
+<li>The Options Clearing Corporation. “Characteristics and Risks of Standardized Options.” <a href="https://www.theocc.com/company-information/documents-and-archives/options-disclosure-document">https://www.theocc.com/company-information/documents-and-archives/options-disclosure-document</a> (accessed 2026-11-24)</li>
+<li>CME Group. “Fundamentals of Options on Futures.” <a href="https://www.cmegroup.com/education/whitepapers/fundamentals-of-options-on-futures.html">https://www.cmegroup.com/education/whitepapers/fundamentals-of-options-on-futures.html</a> (accessed 2026-11-24)</li>
+<li>Hong Kong Exchanges and Clearing Limited. “Derivative Warrants.” <a href="https://www.hkex.com.hk/Global/Exchange/FAQ/Products/Securities/DW?sc_lang=en">https://www.hkex.com.hk/Global/Exchange/FAQ/Products/Securities/DW?sc_lang=en</a> (accessed 2026-11-24)</li>
+<li>Hong Kong Exchanges and Clearing Limited. “Callable Bull/Bear Contracts.” <a href="https://www.hkex.com.hk/Global/Exchange/FAQ/Products/Securities/CBBC?sc_lang=en">https://www.hkex.com.hk/Global/Exchange/FAQ/Products/Securities/CBBC?sc_lang=en</a> (accessed 2026-11-24)</li>
+<li>Cboe Global Markets. “The Options Institute.” <a href="https://www.cboe.com/optionsinstitute/">https://www.cboe.com/optionsinstitute/</a> (accessed 2026-11-24)</li>
+</ol>
+  <section class="article-demo" id="demo-option" data-demo="option" data-lang="en" aria-labelledby="demo-option-title" data-check-done="All three are covered: the core of this article is in place." data-check-pending="One item is still open: go back to the matching section and retell it with a number or counterexample." data-check-count="Ticked"> <header class="demo-head"> <div class="demo-head-top"> <p class="demo-eyebrow">Worked demo</p> <button class="demo-reset" type="button" data-demo-reset>Reset</button> </div> <h2 id="demo-option-title">Option payoff: move the strike and premium</h2> <p class="demo-intro">Long-call and long-put payoffs shift with the strike and premium. Find the break-even first, then read the result at different expiry prices.</p> </header>   <div class="demo-grid"> <div class="demo-controls"> <div class="demo-field"> <label for="option-strike"><span>Strike</span><output data-for="strike">100</output></label> <input id="option-strike" data-role="strike" data-default="100" type="range" min="80" max="120" step="1" value="100"> </div> <div class="demo-field"> <label for="option-premium"><span>Premium / share</span><output data-for="premium">5.0</output></label> <input id="option-premium" data-role="premium" data-default="5" type="range" min="1" max="15" step="0.5" value="5"> </div> <div class="demo-field"> <label for="option-spot"><span>Price at expiry</span><output data-for="spot">100</output></label> <input id="option-spot" data-role="spot" data-default="100" type="range" min="70" max="130" step="1" value="100"> </div> </div> <div class="demo-output"> <div class="demo-stats"> <div class="demo-stat"><span>Long call P&amp;L</span><strong data-out="call">—</strong></div> <div class="demo-stat"><span>Long put P&amp;L</span><strong data-out="put">—</strong></div> <div class="demo-stat"><span>Call break-even</span><strong data-out="breakEven">—</strong></div> </div> <div class="demo-chart"> <p class="demo-chart-label">Payoff at expiry</p> <svg class="demo-payoff" data-chart="option" viewBox="0 0 440 220" role="img" aria-label="Payoff at expiry"></svg> </div> </div> </div>        <p class="demo-footnote">The numbers are teaching assumptions that show relationships, not forecasts or investment advice.</p> </section><script type="module" src="/_astro/ArticleDemo.astro_astro_type_script_index_0_lang.C9VQAsQ0.js"></script> <p class="notice"> This article has passed the current publication gate. Factual, calculation and translation revisions update both language versions together. </p> <p> <a class="button secondary" href="/en/"> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class> <path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path>        </svg>Back to station </a> </p> </div> <aside class="article-aside" aria-label="Article information"> <section class="aside-card"> <h2>Learning objectives</h2> <ul> <li>Separate the buyer right from the seller obligation, and recompute expiry payoff from strike, premium and final price</li><li>Draw a payoff structure and show how maximum loss and break-even follow from it</li><li>Distinguish equity, ETF, index, futures, FX and rate options by underlying, multiplier, settlement and exercise style.</li><li>Recompute the expiry payoff of covered calls, protective puts, bull call spreads, straddles and collars, and explain why combinations do not remove risk.</li> </ul> </section> <section class="aside-card"> <h2>Required prerequisites</h2> <ul> <li> <a href="/en/learn/futures-contracts-and-margin/">MKT-018 · Futures Contracts and Margin</a> </li> </ul> </section> <section class="aside-card"> <h2>Recommended reading</h2> <ul> <li> <a href="/en/learn/futures-contracts-and-margin/">MKT-018 · Futures Contracts and Margin</a> </li><li> <a href="/en/learn/swaps-and-structured-products/">MKT-020 · Swaps and Structured Products</a> </li> </ul> </section> <section class="aside-card"> <h2>AI review record</h2> <p class="muted"> There is no human sign-off; these states come from the AI-only editorial review. </p> <ul> <li> Facts and calculations : AI review passed </li><li> Subject : AI review passed </li><li> English : AI review passed </li><li> Page : AI review passed </li> </ul> </section> <section class="aside-card"> <h2>Sources</h2> <div class="source"> <a href="https://www.finra.org/investors/investing/investment-products/options" rel="noopener noreferrer" target="_blank">Options</a> <p>Financial Industry Regulatory Authority · Financial Industry Regulatory Authority</p> <p>Accessed: 2026-10-30 · License: Copyrighted; reproduction prohibited, linking permitted (cite-only)</p> <p>Supports: A standard equity option contract represents 100 shares and expires on the third Friday of each month; a call gives the buyer the right to buy and a put the right to sell at the strike; the buyer has a right but not an obligation while the seller accepts the obligation; the premium paid is the buyer&#39;s maximum loss and the premium received is the writer&#39;s maximum profit; a firm may liquidate a position without notice if margin is insufficient.</p> </div><div class="source"> <a href="https://www.cmegroup.cn/knowledge/12439.htm" rel="noopener noreferrer" target="_blank">期权是什么意思 (What Is an Option)</a> <p>CME Group · CME Group</p> <p>Accessed: 2026-10-30 · License: 版权所有、保留所有权利；未见允许转载条款（cite-only）</p> <p>Supports: An option gives the holder the right, but not the obligation, to buy or sell an asset at a fixed price on or before a specified date; a European option can be exercised only at expiry while an American option can be exercised at or before expiry; the exercise price is the fixed contract price; settlement at expiry may be in cash for the difference. Coverage note (2026-11-05, page re-fetched, HTTP 200, 57,796 bytes, cached at docs/data-evidence/m019-cme-12439.html): the page states settlement at expiry may be in cash for the difference, but it does not address index options as a class, a clearinghouse guarantee, or automatic-exercise thresholds; those points are therefore not attributed to it in the article.</p> </div><div class="source"> <a href="https://www.cftc.gov/LearnAndProtect/AdvisoriesAndArticles/FuturesMarketBasics/index.htm" rel="noopener noreferrer" target="_blank">Basics of Futures Trading</a> <p>U.S. Commodity Futures Trading Commission · U.S. Commodity Futures Trading Commission</p> <p>Accessed: 2026-10-30 · License: U.S. Government work (public domain), 17 U.S.C. §105</p> <p>Supports: A commodity futures option gives the purchaser the right to buy or sell a particular futures contract at a future date for a particular price; speculation in commodity futures and options is volatile, complex and risky, and is rarely suitable for individual or retail customers.</p> </div><div class="source"> <a href="https://www.sec.gov/resources-for-investors/investor-alerts-bulletins/ib_introductionoptions" rel="noopener noreferrer" target="_blank">Investor Bulletin: An Introduction to Options</a> <p>U.S. Securities and Exchange Commission · U.S. Securities and Exchange Commission</p> <p>Accessed: 2026-11-24 · License: U.S. Government work (public domain), 17 U.S.C. §105</p> <p>Supports: Options are contracts giving the owner the right to buy or sell an underlying asset at a fixed price on or before a specified date; underlyings can include stocks, indexes, ETFs, fixed-income products, currencies and commodities; the buyer pays a premium and the seller takes an obligation; the buyer can lose the entire premium and the seller can face losses far larger than the premium.</p> </div><div class="source"> <a href="https://www.theocc.com/company-information/documents-and-archives/options-disclosure-document" rel="noopener noreferrer" target="_blank">Characteristics and Risks of Standardized Options</a> <p>The Options Clearing Corporation · The Options Clearing Corporation</p> <p>Accessed: 2026-11-24 · License: Copyrighted; reproduction prohibited, linking permitted (cite-only)</p> <p>Supports: Exchange-listed standardized options are governed by the options disclosure document; American-style options can be exercised before expiry while European-style options only at expiry; index options are generally cash settled while equity and ETF options deliver the underlying; exercise, assignment and settlement follow clearing rules.</p> </div><div class="source"> <a href="https://www.cmegroup.com/education/whitepapers/fundamentals-of-options-on-futures.html" rel="noopener noreferrer" target="_blank">Fundamentals of Options on Futures</a> <p>CME Group · CME Group</p> <p>Accessed: 2026-11-24 · License: Copyrighted; reproduction prohibited, linking permitted (cite-only)</p> <p>Supports: An option on a futures contract gives the buyer the right to buy or sell a specific futures contract; exercise creates a futures position rather than delivering the physical commodity; American-style options can be exercised before expiry while European-style options only at expiry; the seller carries the obligation.</p> </div><div class="source"> <a href="https://www.hkex.com.hk/Global/Exchange/FAQ/Products/Securities/DW?sc_lang=en" rel="noopener noreferrer" target="_blank">Derivative Warrants</a> <p>Hong Kong Exchanges and Clearing Limited · Hong Kong Exchanges and Clearing Limited</p> <p>Accessed: 2026-11-24 · License: Copyrighted; reproduction prohibited, linking permitted (cite-only)</p> <p>Supports: A derivative warrant is issued by a third-party issuer and gives the holder the right to buy or sell at the exercise price; Hong Kong listed derivative warrants are cash settled at expiry, the holder can only take a long position, and the maximum loss is limited to the warrant price plus transaction costs; issuer credit and expiry affect the result.</p> </div><div class="source"> <a href="https://www.hkex.com.hk/Global/Exchange/FAQ/Products/Securities/CBBC?sc_lang=en" rel="noopener noreferrer" target="_blank">Callable Bull/Bear Contracts</a> <p>Hong Kong Exchanges and Clearing Limited · Hong Kong Exchanges and Clearing Limited</p> <p>Accessed: 2026-11-24 · License: Copyrighted; reproduction prohibited, linking permitted (cite-only)</p> <p>Supports: A CBBC tracks an underlying and carries a mandatory call feature; when the underlying reaches the call price the contract terminates early and trading stops; residual value is calculated under the listing document and can be zero; a bull CBBC is called when the underlying falls to the call price and a bear CBBC when it rises to it; the third-party issuer creates credit risk.</p> </div><div class="source"> <a href="https://www.cboe.com/optionsinstitute/" rel="noopener noreferrer" target="_blank">The Options Institute</a> <p>Cboe Global Markets · Cboe Global Markets</p> <p>Accessed: 2026-11-24 · License: Copyrighted; reproduction prohibited, linking permitted (cite-only)</p> <p>Supports: Options education covers calls, puts, strikes and premiums; advanced material covers multi-leg combinations, hedging and risk management; combinations reshape the payoff distribution but do not remove risk.</p> </div> </section> </aside> </div> </article><script type="module">var e=document.querySelector(`[data-reading-progress] span`),t=document.querySelector(`article`);if(e&&t){let n=()=>{let n=t.offsetTop,r=t.offsetHeight-window.innerHeight,i=r>0?(window.scrollY-n)/r:0;e.style.width=`${Math.min(1,Math.max(0,i))*100}%`};window.addEventListener(`scroll`,n,{passive:!0}),window.addEventListener(`resize`,n),n()}</script>  </main> <footer class="site-footer"> <div class="container footer-inner"> <div class="footer-brand"> <span class="footer-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="28" height="28" alt class="mascot" loading="lazy" decoding="async"></span> <div> <strong>巫妖投资 51Invest</strong> <p class="footer-note">A free, non-commercial knowledge site. Sources and definitions are labelled; nothing here is investment advice.</p> </div> </div> <nav class="footer-links" aria-label="Knowledge stations"> <a href="https://51invest.com/en/" data-main-home>Home</a> <a href="https://51invest.com/en/contents/">Content map</a> <a href="/en/glossary/">Glossary</a> <a href="/en/search/">Search</a> <a href="https://51invest.com/en/charts/" data-main-link>Charts</a> <a href="https://51invest.com/en/sources/" data-main-link>Data &amp; licences</a> <a href="/en/">Station home</a> </nav> </div> </footer> <nav class="mobile-nav" aria-label="Knowledge stations"> <a class="mobile-link" href="https://51invest.com/en/" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>    <path d="m3 10 9-7 9 7"></path><path d="M5 9v11h14V9"></path><path d="M9 20v-6h6v6"></path>     </svg> <span>Home</span> </a> <a class="mobile-link" href="https://51invest.com/en/#stations" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>   <rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect>      </svg> <span>Knowledge stations</span> </a> <a class="mobile-link active" href="/en/" aria-current="page"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>  <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v18H6.5A2.5 2.5 0 0 1 4 18.5z"></path><path d="M4 18.5A2.5 2.5 0 0 1 6.5 16H20"></path>       </svg> <span>Station home</span> </a> <a class="mobile-link" href="/learn/options-rights-obligations-and-payoffs/" data-language-link="zh"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>中文</span> </a> </nav><script type="module">var e=document.documentElement,t=[`auto`,`light`,`dark`],n=matchMedia(`(prefers-color-scheme: dark)`),r=()=>{let t=e.dataset.themeMode;return t===`light`||t===`dark`?t:`auto`},i=e=>{try{localStorage.setItem(`51invest-theme`,e)}catch{}try{let t=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-theme=${e}; Path=/; Max-Age=31536000; SameSite=Lax${t}`}catch{}},a=e=>{document.querySelectorAll(`[data-theme-toggle]`).forEach(t=>{let n=t.dataset[`label${e[0].toUpperCase()}${e.slice(1)}`];n&&(t.setAttribute(`aria-label`,n),t.setAttribute(`title`,n))})},o=t=>{e.dataset.themeMode=t,e.dataset.theme=t===`auto`?n.matches?`dark`:`light`:t,i(t),a(t)};a(r()),document.querySelectorAll(`[data-theme-toggle]`).forEach(e=>{e.addEventListener(`click`,()=>{let e=t[(t.indexOf(r())+1)%t.length];o(e)})}),n.addEventListener(`change`,()=>{r()===`auto`&&(e.dataset.theme=n.matches?`dark`:`light`)}),document.querySelectorAll(`[data-language-link]`).forEach(e=>{e.addEventListener(`click`,()=>{let t=e.dataset.languageLink;if(t===`zh`||t===`en`){try{localStorage.setItem(`51invest-language`,JSON.stringify(t))}catch{}try{let e=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-language=${t}; Path=/; Max-Age=31536000; SameSite=Lax${e}`}catch{}}})});</script> </body> </html>

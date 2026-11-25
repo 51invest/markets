@@ -1,0 +1,290 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light" data-theme-mode="auto"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark"><title>期权定价与波动率曲面 · 巫妖投资</title><meta name="description" content="期权价格把方向、时间、波动率和利率分开报价；不同行权价与到期日的隐含波动率构成曲面。"><link rel="canonical" href="https://markets.51invest.com/learn/option-pricing-and-volatility-surface/"><link rel="alternate" hreflang="zh-CN" href="https://markets.51invest.com/learn/option-pricing-and-volatility-surface/"><link rel="alternate" hreflang="en" href="https://markets.51invest.com/en/learn/option-pricing-and-volatility-surface/"><link rel="alternate" hreflang="x-default" href="https://markets.51invest.com/learn/option-pricing-and-volatility-surface/"><link rel="icon" type="image/png" href="/_astro/neutral.Dr5C2SoA.png"><script>
+  (() => {
+    const root = document.documentElement;
+    const readCookie = key => {
+      try {
+        return document.cookie.split('; ').find(value => value.startsWith(`51invest-${key}=`))?.split('=').slice(1).join('=') ?? null;
+      } catch {
+        return null;
+      }
+    };
+    const readLocal = key => {
+      try {
+        return localStorage.getItem(`51invest-${key}`);
+      } catch {
+        return null;
+      }
+    };
+    const storedTheme = readCookie('theme') || readLocal('theme');
+    const mode = ['light', 'dark', 'auto'].includes(storedTheme) ? storedTheme : 'auto';
+    const media = matchMedia('(prefers-color-scheme: dark)');
+    const apply = () => {
+      root.dataset.theme = mode === 'auto' ? (media.matches ? 'dark' : 'light') : mode;
+      root.dataset.themeMode = mode;
+    };
+    apply();
+    media.addEventListener('change', () => {
+      if (root.dataset.themeMode === 'auto') apply();
+    });
+  })();
+</script><link rel="stylesheet" href="/_astro/Base.CocbJOeh.css"></head> <body>  <a class="skip-link" href="#main">跳到正文</a> <header class="site-header"> <div class="container header-inner"> <a class="brand" href="https://51invest.com/" data-main-home aria-label="巫妖投资"> <span class="brand-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="36" height="36" alt class="mascot" loading="lazy" decoding="async"></span> <span class="brand-copy"> <span class="brand-name">巫妖投资</span> <span class="brand-caption">51INVEST</span> </span> </a> <nav class="desktop-nav" aria-label="知识分站"> <a class="nav-link" href="https://51invest.com/" data-main-home> 首页 </a> <a class="nav-link" href="https://economics.51invest.com/"> 经济学 </a><a class="nav-link" href="https://finance.51invest.com/"> 金融基础 </a><a class="nav-link active" href="/" aria-current="page"> 市场与产品 </a><a class="nav-link" href="https://invest.51invest.com/"> 投资方法 </a><a class="nav-link" href="https://history.51invest.com/"> 经济与金融史 </a><a class="nav-link" href="https://research.51invest.com/"> 研究方法 </a> <a class="nav-link" href="https://51invest.com/contents/"> 内容地图 </a> </nav> <div class="header-tools"> <a class="icon-button language-button" href="/en/learn/option-pricing-and-volatility-surface/" hreflang="en" lang="en" data-language-link="en" aria-label="切换为英文" title="切换为英文"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>English</span> </a> <button class="icon-button theme-button" type="button" data-theme-toggle aria-label="主题: 跟随系统" title="主题: 跟随系统" data-label-auto="主题: 跟随系统" data-label-light="主题: 浅色" data-label-dark="主题: 深色"> <span class="theme-icon" data-theme-icon="auto"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>        <circle cx="12" cy="12" r="8.5"></circle><path d="M12 3.5v17"></path><path d="M12 7a5 5 0 0 1 0 10" fill="currentColor" stroke="none"></path> </svg></span> <span class="theme-icon" data-theme-icon="light"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>       <circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>  </svg></span> <span class="theme-icon" data-theme-icon="dark"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>      <path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"></path>   </svg></span> <span class="theme-text" data-theme-text="auto">跟随系统</span> <span class="theme-text" data-theme-text="light">浅色</span> <span class="theme-text" data-theme-text="dark">深色</span> </button> </div> </div> </header> <main id="main" class="site-main" data-pagefind-body>  <div class="reading-progress" data-reading-progress aria-hidden="true"><span></span></div> <div class="container"> <nav class="breadcrumbs" aria-label="Breadcrumb"> <a href="https://51invest.com/" data-main-home>首页</a> <span class="sep">/</span> <a href="/">市场与产品</a> <span class="sep">/</span> <span aria-current="page">期权定价与波动率曲面</span> </nav> </div> <article> <header class="article-header"> <div class="container"> <span class="article-type">产品与品种</span> <h1 class="article-title">期权定价与波动率曲面</h1> <p class="article-summary">期权价格把方向、时间、波动率和利率分开报价；不同行权价与到期日的隐含波动率构成曲面。</p>  <div class="meta-grid"> <div class="meta-item"><span>模块</span><strong>MKT-M14 · 期权权证与波动率</strong></div> <div class="meta-item"><span>层级</span><strong>入门</strong></div> <div class="meta-item"><span>阅读</span><strong>12 分钟 · 19 节</strong></div> </div> <p class="demo-jump"> <a href="#demo-option"> 这篇有一个可以动手操作的演示 <span aria-hidden="true">↓</span> </a> </p> </div> </header> <div class="container article-layout"> <div class="article-body"> <h2>定义</h2>
+<p><strong>期权</strong>（option）给买方在约定日期或之前按行权价买入（看涨）或卖出（看跌）标的的权利，买方支付权利金，卖方收取权利金并承担履约义务。期权价格由内在价值和时间价值组成；时间价值受剩余期限、波动率、利率和股息影响。<strong>隐含波动率</strong>（implied volatility）是把市场价格反解进模型得到的波动率参数，不是对未来波动的直接预测。</p>
+<h2>直觉</h2>
+<p>期权像一份有期限的保险：你付保费，买到在某个价格买入或卖出标的的权利，但不承担必须交易的义务。保费由两部分组成：内在价值（现在立刻行权能拿到的差价）和时间价值（未来还可能变得更有价值）。波动率曲面则像保险公司按“标的、行权价、到期日”列出的费率表：同样到期的期权，深度虚值和深度实值的保费并不相同，因为市场对尾部风险和方向的需求不同。看期权报价，不要只问“贵不贵”，先问“保的是什么、保到什么时候、在什么行权价”。</p>
+<h2>机制</h2>
+<p>看涨期权到期盈亏为 max(现货 − 行权价, 0) − 权利金；看跌为 max(行权价 − 现货, 0) − 权利金。盈亏平衡点把权利金加回行权价。不同行权价的隐含波动率通常不相等：深度虚值看跌更贵，反映尾部风险；短期与长期波动率预期不同，形成期限结构。做市商通过 delta 和 gamma 管理方向与凸性风险，流动性和对冲成本再反馈到报价[1][2]。</p>
+<h2>例子与计算</h2>
+<p>假设现货 100 元，3 个月看涨期权行权价 105 元，权利金 3 元。到期现货 112 元时，内在价值 7 元，净赚 4 元；到期 103 元时，内在价值 0，亏 3 元；盈亏平衡点为 108 元。若隐含波动率从 20% 升到 25%，同一合约的模型价值会上升，但实际成交还受买卖价差和流动性影响。若需求集中在虚值看涨，波动率曲面会出现偏斜；不能只用平值波动率给所有行权价定价。以上为教学假设，不含费用和税。</p>
+<h2>第二个算例：盈亏平衡与波动率微笑</h2>
+<p>假设股票现价 100 元，买入 3 个月、行权价 100 元的看涨期权，权利金 8 元。到期时，股价 90 元，期权作废，亏损 8 元；股价 110 元，内在价值 10 元，净赚 2 元；盈亏平衡点为 108 元。若同一到期的 80 元看跌期权权利金 12 元，而 120 元看涨期权权利金只有 6 元，用同一个平值波动率给两者定价就会失真：市场对下跌保护的需求更高，低行权价看跌的隐含波动率通常高于高行权价看涨。把不同行权价的隐含波动率连起来，得到“微笑”或“偏斜”曲线；它不是常数，而是供需、尾部风险和对冲需求的映射。以上为教学假设，不含费用、分红和融资。</p>
+<h2>边界与误区</h2>
+<p>第一，期权价格不是保险精算的“公平价”，它包含做市商库存、对冲和资金成本。第二，隐含波动率不是预测，曲面形状会随供需变化。第三，美式与欧式、分红、早行权和交割规则会改变价值，不能把同一模型套到所有合约。第四，深度虚值期权价格低但胜率也低，不能把低权利金当成低风险。第五，卖方收取权利金但承担尾部义务，保证金和跳空风险必须单独评估。</p>
+<h2>失败模式</h2>
+<p>第一种失败是用一个平值波动率给所有行权价定价，忽略偏斜和尾部风险。第二种失败是把模型价格当成可成交价：买卖价差、流动性、分红、利率和借券成本都会改变实际成本。第三种失败是忽略美式期权的提前行权：分红前或深度实值时，提前行权可能更优，欧式模型会低估这一权利。第四种失败是把历史波动率当成未来波动率，波动率有聚集和均值回归，过去一年不等于未来三个月。第五种失败是卖出期权收取权利金却不计尾部风险：一次跳空可能吞掉多年权利金收入。</p>
+<h2>三问自检</h2>
+<p>第一，权利金里有多少是内在价值、多少是时间价值，盈亏平衡点在哪里？第二，报价用的是哪个行权价和到期日的隐含波动率，曲面在该点是否陡峭？第三，最坏情景下亏损是否可承受，保证金和流动性是否足够？三问答不清，期权价格就只是一个数字，不是可管理的风险。</p>
+<h2>相邻概念与反例</h2>
+<p>期权容易和期货、权证混淆。期货是双方义务，保证金每日结算，损益线性；期权是买方权利、卖方义务，权利金一次性支付，损益非线性；权证是发行人发行的证券，带有发行人信用风险，条款可能被调整。三者的对手方、流动性和行权机制不同。反例是“隐含波动率低就是便宜”：低隐含波动率可能反映市场预期未来波动低，也可能反映该行权价流动性差、买卖价差宽；买入后波动率不变，价差成本也可能吃掉收益。另一个反例是“卖出期权稳定收租”：卖出虚值期权在多数时间收权利金，但尾部一次跳空可能吞掉多年收入。比较期权报价，应同时看曲面位置、价差、保证金和尾部损失。</p>
+<h2>适用边界</h2>
+<p>本文的期权定价框架适用于有连续报价、可对冲标的、且行权与结算规则清楚的场内或成熟场外期权。若标的流动性差、波动率曲面断裂，或期权条款含复杂障碍和信用触发，Black-Scholes 式的直觉只能当起点。它不适用于把模型价当作可成交价，也不适用于忽略保证金和对手方风险的卖方策略。使用时先看曲面、价差、隐含分红和保证金，再用情景复算尾部损失；模型输出不是报价承诺。</p>
+<h2>关联</h2>
+<ul>
+<li>MKT-019 期权的权利义务与收益结构：本文的相邻主文，先读它再读本补篇。</li>
+<li>MKT-018 期货合约与保证金：本文的相邻主文，先读它再读本补篇。</li>
+<li>MKT-020 互换与结构化产品：本文的相邻主文，先读它再读本补篇。</li>
+</ul>
+<h2>资料说明</h2>
+<p>本文用 Financial Industry Regulatory Authority、CME Group、U.S. Commodity Futures Trading Commission 核对定义、制度或统计口径；具体条款、数字与日期以来源原文为准[1][2][3]。</p>
+<h2>产品定义、权利与现金流结构</h2>
+<p>期权是一份“权利而非义务”的合约：看涨期权给买方按行权价买入标的的权利，看跌期权给买方按行权价卖出的权利；卖方收取权利金并承担被行权的义务。定价的核心不是预测方向，而是标的价格、行权价、时间、波动率、利率和分红共同决定的赔付分布。</p>
+<p>买方支付权利金，获得行权或不行的选择权；卖方收取权利金，承担被行权时的交割或现金结算义务。保证金、行权方式和到期结算规则决定同一张合约的实际风险。</p>
+<table>
+<thead>
+<tr>
+<th>日期/条件</th>
+<th>现金流/收付</th>
+<th align="right">金额</th>
+<th>币种</th>
+<th>不确定性</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>T0 买入</td>
+<td>支付权利金</td>
+<td align="right">−5 元/股</td>
+<td>CNY</td>
+<td>隐含波动率与流动性</td>
+</tr>
+<tr>
+<td>到期行权</td>
+<td>按行权价交割或现金结算</td>
+<td align="right">（到期价 − 行权价）</td>
+<td>CNY</td>
+<td>行权价与结算价口径</td>
+</tr>
+<tr>
+<td>到期净损益</td>
+<td>权利金与赔付相抵</td>
+<td align="right">正负不定</td>
+<td>CNY</td>
+<td>时间价值归零</td>
+</tr>
+</tbody></table>
+<h2>参与者、交易、持有与退出</h2>
+<p>参与者包括期权买方、卖方、做市商、交易所与清算所、经纪商和波动率交易者。做市商报价并管理希腊字母风险，清算所担保履约，经纪商处理保证金与行权指令。</p>
+<p>交易包括开仓、平仓、行权、被指派和到期结算。持有期要管理 delta、gamma、vega、theta 和保证金；退出时可以平仓，也可以持有到行权或被指派。</p>
+<h2>成本、风险与条款文件</h2>
+<p>成本：权利金、买卖价差、佣金、保证金占用、行权与交割费用、借券成本和滑点。隐含波动率越高，期权越贵，但高波动率不等于高预期收益。</p>
+<p>风险：方向风险、波动率风险、时间衰减、gamma 与 pin risk、流动性风险、对手方与清算风险、行权指派风险和条款误解。卖方尤其要关注尾部损失和保证金追缴。</p>
+<p>条款：主要文件是期权合约规格、行权与结算规则、保证金规则、交易所风险提示和产品条款。要核对行权价、到期日、行权方式、结算价来源和分红调整。</p>
+<h2>图解</h2>
+<p>下面四张图分别检查本文的机制、边界与对照；图内文字取自本文小节，不是新数据。</p>
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-chain-title fig-batch-chain-desc" viewBox="0 0 340 304" width="100%">
+    <title id="fig-batch-chain-title">期权定价与波动率曲面：机制链</title>
+    <desc id="fig-batch-chain-desc">期权定价与波动率曲面 的三段结构：问题、机制、判断。图内文字取自本文小节，不是新的数据估计。</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">期权定价与波动率曲面：机制链</text>
+    <text x="14" y="38" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">图内文字取自本文小节；三段缺一不可。</text>
+    <line x1="14" y1="46" x2="326" y2="46" stroke="var(--border)" stroke-width="1"/>
+    <g>
+      <rect x="14" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="22" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">问题</text>
+      <text x="22" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">期权价格把方向、时间</text>
+      <text x="22" y="102" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">、波动率和利率分开报…</text>
+      <text x="22" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">期权价格把方向、时</text>
+      <text x="22" y="141" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">间、波动率和利率分</text>
+      <text x="22" y="158" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">开报价；不同行权价</text>
+      <text x="22" y="175" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">与到期日的隐含波动</text>
+      <text x="22" y="192" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">率构成曲面。</text>
+    </g>
+      <g>
+      <rect x="123" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="131" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">定义</text>
+      <text x="131" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">定义：期权（option）</text>
+      <text x="131" y="102" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">给买方在约定阶段或之…</text>
+      <text x="131" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">定义：期权（option</text>
+      <text x="131" y="141" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">）给买方在约定阶段</text>
+      <text x="131" y="158" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">或之前按行权价买入</text>
+      <text x="131" y="175" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">（看涨）或卖出（看跌</text>
+      <text x="131" y="192" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">）标的的权利，买方…</text>
+    </g>
+      <g>
+      <rect x="232" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="240" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">例子与计算</text>
+      <text x="240" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">假设现货 100 元，3</text>
+      <text x="240" y="102" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">个月看涨期权行权价…</text>
+      <text x="240" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">假设现货 100</text>
+      <text x="240" y="141" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">元，3 个月看涨期权</text>
+      <text x="240" y="158" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">行权价 105</text>
+      <text x="240" y="175" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">元，权利金 3</text>
+      <text x="240" y="192" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">元。到期现货 112…</text>
+    </g>
+    <line x1="108" y1="144" x2="123" y2="144" stroke="var(--border)" stroke-width="1.1"/>
+    <path d="M120 140 L125 144 L120 148" fill="none" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="217" y1="144" x2="232" y2="144" stroke="var(--border)" stroke-width="1.1"/>
+    <path d="M229 140 L234 144 L229 148" fill="none" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="14" y1="250" x2="326" y2="250" stroke="var(--border)" stroke-width="1"/>
+    <text x="14" y="266" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">读法：先看问题能否成立，再看机制能否连通，最后看判断会不会越界。</text>
+    <text x="14" y="280" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">若中间一步缺证据，后面的结论只能当假设，不能当事实。</text>
+    <text x="14" y="294" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">图为结构示意，不是新的数据图；样本为本文论证。</text>
+  </svg>
+  <figcaption>图 1：期权定价与波动率曲面的机制链：从问题、机制到判断。样本为本文论证，单位为文中标注。</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-boundary-title fig-batch-boundary-desc" viewBox="0 0 340 244" width="100%">
+    <title id="fig-batch-boundary-title">期权定价与波动率曲面：适用边界</title>
+    <desc id="fig-batch-boundary-desc">把成立条件与失效条件分开；局部例子不能自动推广到所有情形。</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">期权定价与波动率曲面：什么情况下成立？</text>
+    <line x1="14" y1="34" x2="326" y2="34" stroke="var(--border)" stroke-width="1"/>
+    <rect x="14" y="44" width="312" height="38" rx="7" fill="var(--surface-2)" stroke="var(--border)"/>
+    <text x="170" y="62" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="middle">先检查条件，再看结论</text>
+    <text x="170" y="75" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="middle">条件、口径或样本一变，结论可能要重算</text>
+    <line x1="170" y1="82" x2="90" y2="104" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="170" y1="82" x2="250" y2="104" stroke="var(--border)" stroke-width="1.1"/>
+    <rect x="14" y="104" width="148" height="100" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+    <text x="24" y="122" font-size="8.6" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">成立</text>
+    <text x="24" y="138" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">第一，期权价格不是保险精算的“公</text>
+      <text x="24" y="154" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">平价”，它包含做市商库存、对冲和</text>
+      <text x="24" y="170" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">资金成本。第二，隐含波动率不是预</text>
+      <text x="24" y="186" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">测，曲面形状会随供需变化。第三…</text>
+    <rect x="178" y="104" width="148" height="100" rx="8" fill="var(--gold)" opacity="0.18" stroke="var(--border)"/>
+    <text x="188" y="122" font-size="8.6" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">不成立 / 需改写</text>
+    <text x="188" y="138" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">第一，期权价格不是保险精算的“公</text>
+      <text x="188" y="154" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">平价”，它包含做市商库存、对冲和</text>
+      <text x="188" y="170" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">资金成本。第二，隐含波动率不是预</text>
+      <text x="188" y="186" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">测，曲面形状会随供需变化。第三…</text>
+    <line x1="14" y1="216" x2="326" y2="216" stroke="var(--border)" stroke-width="1"/>
+    <text x="14" y="232" font-size="8.3" fill="var(--muted)" font-family="inherit" text-anchor="start">图为边界示意；样本为本文论证，单位为文中标注。</text>
+  </svg>
+  <figcaption>图 2：期权定价与波动率曲面的边界：哪些条件成立，哪些条件失效。样本为本文论证，单位为文中标注。</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-compare-title fig-batch-compare-desc" viewBox="0 0 340 252" width="100%">
+    <title id="fig-batch-compare-title">期权定价与波动率曲面：对象、前提与常见误区</title>
+    <desc id="fig-batch-compare-desc">三行比较本文概念、成立条件与常见误区；比较不等于等价，也不能替代定义。</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">期权定价与波动率曲面：一张表看对象、前提与误区</text>
+    <line x1="14" y1="34" x2="326" y2="34" stroke="var(--border)" stroke-width="1"/>
+    <text x="82" y="46" font-size="8.4" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">本篇</text>
+    <text x="200" y="46" font-size="8.4" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">容易混淆</text>
+    <g>
+      <rect x="14" y="52" width="312" height="58" fill="transparent" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="72" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">对象</text>
+      <text x="82" y="72" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">期权价格把方向、时间、波</text>
+      <text x="82" y="88" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">动率和利率分开报价；不同…</text>
+      <text x="200" y="72" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">相邻概念/常见说法</text>
+    </g>
+    <g>
+      <rect x="14" y="110" width="312" height="58" fill="var(--surface-2)" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="130" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">前提</text>
+      <text x="82" y="130" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">第一，期权价格不是保险精</text>
+      <text x="82" y="146" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">算的“公平价”，它包含做市…</text>
+      <text x="200" y="130" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">第一，期权价格不是保险精算的“公平价”</text>
+      <text x="200" y="146" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">，它包含做市商库存、对冲和资金成本。…</text>
+    </g>
+    <g>
+      <rect x="14" y="168" width="312" height="58" fill="transparent" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="188" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">检查</text>
+      <text x="82" y="188" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">先定义，再比较；不能只看</text>
+      <text x="82" y="204" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">名称</text>
+      <text x="200" y="188" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">相关不等于因果，局部不等于普遍</text>
+    </g>
+    <text x="14" y="244" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">图为比较示意；样本为本文论证，单位为文中标注。</text>
+  </svg>
+  <figcaption>图 3：期权定价与波动率曲面的对象、前提与常见误区比较。样本为本文论证，单位为文中标注。</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-034-option-pricing-and-volatility-surface-example-title fig-034-option-pricing-and-volatility-surface-example-desc" viewBox="0 0 460 290" width="100%">
+    <title id="fig-034-option-pricing-and-volatility-surface-example-title">算例三行卡：看涨期权：权利金、盈亏平衡与到期损益</title>
+    <desc id="fig-034-option-pricing-and-volatility-surface-example-desc">读图路径：三行分别给出关键数字、单位和算例条件；不是市场数据。</desc>
+    <text x="16" y="24" font-size="12.2" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">算例三行卡</text>
+    <text x="16" y="40" font-size="9.2" fill="var(--muted)" font-family="inherit" text-anchor="start">单位为文中标注；样本为本文教学假设</text>
+    <line x1="12" y1="48" x2="448" y2="48" stroke="var(--border)" stroke-width="1"/>
+    <g>
+      <rect x="12" y="58" width="436" height="58" rx="9" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="24" y="76" font-size="10.2" fill="var(--muted)" font-family="inherit" text-anchor="start">权利金</text>
+      <text x="448" y="80" font-size="17" font-weight="700" fill="var(--accent)" font-family="inherit" text-anchor="end">3 元/股</text>
+      <text x="24" y="96" font-size="9.3" fill="var(--text)" font-family="inherit" text-anchor="start">3 个月看涨、行权价 105 元</text>
+    </g>
+    <g>
+      <rect x="12" y="128" width="436" height="58" rx="9" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="24" y="146" font-size="10.2" fill="var(--muted)" font-family="inherit" text-anchor="start">盈亏平衡</text>
+      <text x="448" y="150" font-size="17" font-weight="700" fill="var(--accent)" font-family="inherit" text-anchor="end">108 元</text>
+      <text x="24" y="166" font-size="9.3" fill="var(--text)" font-family="inherit" text-anchor="start">105 + 3</text>
+    </g>
+    <g>
+      <rect x="12" y="198" width="436" height="58" rx="9" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="24" y="216" font-size="10.2" fill="var(--muted)" font-family="inherit" text-anchor="start">到期 112 元净赚</text>
+      <text x="448" y="220" font-size="17" font-weight="700" fill="var(--accent)" font-family="inherit" text-anchor="end">4 元</text>
+      <text x="24" y="236" font-size="9.3" fill="var(--text)" font-family="inherit" text-anchor="start">内在价值 7 − 权利金 3</text>
+    </g>
+    <line x1="12" y1="266" x2="448" y2="266" stroke="var(--border)" stroke-width="1"/>
+    <text x="16" y="280" font-size="8.8" fill="var(--muted)" font-family="inherit" text-anchor="start">只看数量关系，不构成预测或投资建议</text>
+  </svg>
+  <figcaption>图 4：期权买方先付权利金，再看到期赔付能否覆盖。单位为文中标注；样本为本文教学假设，不是市场或统计数据；只用于展示数量关系。</figcaption>
+</figure>
+
+<h2>练习</h2>
+<ol>
+<li><strong>概念辨别：</strong> 概念辨别：为什么深度虚值期权的隐含波动率可能高于平值期权？</li>
+<li><strong>计算或推理：</strong> 计算：现货 100、行权价 105、权利金 3 的看涨期权，到期现货 110 时净盈亏是多少？</li>
+<li><strong>适用条件：</strong> 适用条件：哪些条款会让美式期权与欧式期权价值不同？</li>
+</ol>
+<details>
+<summary>参考答案</summary>
+
+<ol>
+<li>深度虚值期权对尾部事件更敏感，买方愿意为保护付费；做市商对冲和流动性成本也更高。</li>
+<li>内在价值 5 元，净盈亏 5 − 3 = 2 元。</li>
+<li>分红、早行权、利率、交割规则和流动性都会造成差异；美式期权可在到期前行权，欧式只能在到期日行权。</li>
+</ol>
+</details>
+
+<h2>期权定价的三条横截面：时间价值、希腊字母与波动曲面</h2>
+<p>权利金可以拆成内在价值和时间价值；希腊字母把价格对标的、波动率、时间和利率的敏感度分开；波动率曲面把不同行权价和到期日的隐含波动率连起来。三条横截面共同回答“这个权利金贵在哪里、风险藏在哪”。</p>
+<h3>时间价值：内在价值之外还剩什么</h3>
+<p><strong>定义。</strong> 看涨内在价值为 max(标的 − 行权价, 0)，看跌为 max(行权价 − 标的, 0)；时间价值是权利金减去内在价值，到期时归零。时间价值来自未来价格、波动率和等待的权利，不是“市场多收的钱”。</p>
+<p><strong>机制与例子。</strong> 标的 103、行权价 100 的看涨权利金 5：内在价值 3，时间价值 2。若 30 天到期权利金 5、5 天到期权利金 3.4，时间价值从 2 降到 0.4；25 天衰减 1.6，平均约 0.06 元/天。标的 95、行权价 100 的看涨权利金 1.2，内在价值 0，时间价值 1.2。平值附近时间价值最大，深度价内和深度价外较小。</p>
+<p><strong>边界。</strong> 时间价值不是线性衰减；临近到期、平值和波动率高时 theta 更明显；波动率上升可能抵消 theta，深度价内期权的时间价值可能很小但 delta 接近 1。不能把“时间价值每天都在减少”当成每天固定减少[4][8]。</p>
+<h3>希腊字母：delta、gamma、vega、theta 与 rho</h3>
+<p><strong>定义。</strong> delta 是权利金对标的价格的一阶敏感度，gamma 是 delta 对标的的变化率，vega 是对 1 个百分点隐含波动率的变化，theta 是对 1 天时间的变化，rho 是对 1 个百分点利率的变化。</p>
+<p><strong>机制与例子。</strong> 看涨 delta 0.55：标的涨 1 元，期权约涨 0.55 元；看跌 delta −0.45：标的涨 1 元，看跌约跌 0.45 元。10 张合约代表 1,000 股，delta 等值 550 股；gamma 0.04 表示标的涨 1 元，delta 增加 0.04，持仓 delta 增加 40 股；vega 0.12 表示波动率升 1 个百分点，期权升 0.12 元/股，持仓升 120 美元；theta −0.03 表示每天亏 0.03 元/股，持仓每天亏 30 美元；rho 0.05 表示利率升 1 个百分点，期权升 0.05 元/股。</p>
+<p><strong>边界。</strong> 希腊字母是局部线性近似，标的大幅变动、临近到期和波动率跳变会让 gamma、vega 甚至 delta 改变；卖方 short gamma 在跳空行情中风险最大。组合要把每个合约的乘数、方向和希腊字母加总，不能只看单张期权[5]。</p>
+<h3>波动曲面：微笑、偏斜与期限结构</h3>
+<p><strong>定义。</strong> 隐含波动率是把市场权利金反解进定价模型得到的波动率参数；波动率曲面是不同行权价和到期日的隐含波动率组成的三维曲面，固定到期日的切片叫微笑或偏斜，固定行权价的切片叫期限结构。</p>
+<p><strong>机制与例子。</strong> 同一 30 天到期，行权价 80 的看跌隐含波动率 24%、行权价 100 的平值 18%、行权价 120 的看涨 16%，形成向下偏斜；90 天平值 20%、1 年 21%，期限结构向上。若 30 天 18%、90 天 20%，是 contango；若短期高于长期，是倒挂。25-delta 看跌 22%、平值 18%、25-delta 看涨 20% 是常见的偏斜报价。</p>
+<p><strong>边界。</strong> 隐含波动率不是预测，曲面由供需、对冲、流动性和事件风险决定；不同模型、利率和分红假设会给出不同隐含波动率，深度虚值报价可能不可成交。曲面还要检查套利约束、买卖价差和流动性缺口，不能把一条平滑曲线当成可交易价格[6][7]。</p>
+<h2>来源</h2>
+<ol>
+<li>Financial Industry Regulatory Authority. <em>Options</em>. Financial Industry Regulatory Authority. Copyrighted; reproduction prohibited, linking permitted (cite-only). <a href="https://www.finra.org/investors/investing/investment-products/options">https://www.finra.org/investors/investing/investment-products/options</a>（访问日期：2026-10-30）</li>
+<li>CME Group. <em>期权是什么意思 (What Is an Option)</em>. CME Group. 版权所有、保留所有权利；未见允许转载条款（cite-only）. <a href="https://www.cmegroup.cn/knowledge/12439.htm">https://www.cmegroup.cn/knowledge/12439.htm</a>（访问日期：2026-10-30）</li>
+<li>U.S. Commodity Futures Trading Commission. <em>Basics of Futures Trading</em>. U.S. Commodity Futures Trading Commission. U.S. Government work (public domain), 17 U.S.C. §105. <a href="https://www.cftc.gov/LearnAndProtect/AdvisoriesAndArticles/FuturesMarketBasics/index.htm">https://www.cftc.gov/LearnAndProtect/AdvisoriesAndArticles/FuturesMarketBasics/index.htm</a>（访问日期：2026-10-30）</li>
+<li>The Options Clearing Corporation. <em>Characteristics and Risks of Standardized Options</em>. The Options Clearing Corporation. Copyrighted; reproduction prohibited, linking permitted (cite-only). <a href="https://www.theocc.com/company-information/documents-and-archives/options-disclosure-document">https://www.theocc.com/company-information/documents-and-archives/options-disclosure-document</a>（访问日期：2026-11-24）</li>
+<li>Cboe Global Markets. <em>Learning the Greeks: An Expert&#39;s Perspective</em>. Cboe Global Markets. Copyrighted; reproduction prohibited, linking permitted (cite-only). <a href="https://www.cboe.com/insights/posts/learning-the-greeks-an-experts-perspective/">https://www.cboe.com/insights/posts/learning-the-greeks-an-experts-perspective/</a>（访问日期：2026-11-24）</li>
+<li>Cboe Global Markets. <em>Cboe European-Style Options Implied Volatility Calculation Methodology</em>. Cboe Global Markets. Copyrighted; reproduction prohibited, linking permitted (cite-only). <a href="https://cdn.cboe.com/api/global/us_indices/governance/Cboe_European-Style_Option_%20Implied_Volatility_Calculation_%20Methodology.pdf">https://cdn.cboe.com/api/global/us_indices/governance/Cboe_European-Style_Option_%20Implied_Volatility_Calculation_%20Methodology.pdf</a>（访问日期：2026-11-24）</li>
+<li>Cboe Global Markets. <em>Visualization: Mosaic</em>. Cboe Global Markets. Copyrighted; reproduction prohibited, linking permitted (cite-only). <a href="https://www.cboe.com/solutions/portfolio-analytics/solutions/visualization">https://www.cboe.com/solutions/portfolio-analytics/solutions/visualization</a>（访问日期：2026-11-24）</li>
+<li>U.S. Securities and Exchange Commission. <em>Investor Bulletin: An Introduction to Options</em>. U.S. Securities and Exchange Commission. U.S. Government work (public domain), 17 U.S.C. §105. <a href="https://www.sec.gov/resources-for-investors/investor-alerts-bulletins/ib_introductionoptions">https://www.sec.gov/resources-for-investors/investor-alerts-bulletins/ib_introductionoptions</a>（访问日期：2026-11-24）</li>
+</ol>
+  <section class="article-demo" id="demo-option" data-demo="option" data-lang="zh" aria-labelledby="demo-option-title" data-check-done="三项都能说清：这篇的核心已经过关。" data-check-pending="还差一项：回到正文对应小节，找一个反例或数字再讲一遍。" data-check-count="已勾选"> <header class="demo-head"> <div class="demo-head-top"> <p class="demo-eyebrow">动手演示</p> <button class="demo-reset" type="button" data-demo-reset>恢复默认</button> </div> <h2 id="demo-option-title">期权损益：把行权价和权利金调一调</h2> <p class="demo-intro">看涨与看跌的到期损益会随行权价、权利金移动。先看盈亏平衡点，再看不同到期价格下的结果。</p> </header>   <div class="demo-grid"> <div class="demo-controls"> <div class="demo-field"> <label for="option-strike"><span>行权价</span><output data-for="strike">100</output></label> <input id="option-strike" data-role="strike" data-default="100" type="range" min="80" max="120" step="1" value="100"> </div> <div class="demo-field"> <label for="option-premium"><span>权利金／股</span><output data-for="premium">5.0</output></label> <input id="option-premium" data-role="premium" data-default="5" type="range" min="1" max="15" step="0.5" value="5"> </div> <div class="demo-field"> <label for="option-spot"><span>到期价格</span><output data-for="spot">100</output></label> <input id="option-spot" data-role="spot" data-default="100" type="range" min="70" max="130" step="1" value="100"> </div> </div> <div class="demo-output"> <div class="demo-stats"> <div class="demo-stat"><span>看涨买方盈亏</span><strong data-out="call">—</strong></div> <div class="demo-stat"><span>看跌买方盈亏</span><strong data-out="put">—</strong></div> <div class="demo-stat"><span>看涨盈亏平衡</span><strong data-out="breakEven">—</strong></div> </div> <div class="demo-chart"> <p class="demo-chart-label">到期损益曲线</p> <svg class="demo-payoff" data-chart="option" viewBox="0 0 440 220" role="img" aria-label="到期损益曲线"></svg> </div> </div> </div>        <p class="demo-footnote">数字为教学假设，用来展示关系，不构成预测或投资建议。</p> </section><script type="module" src="/_astro/ArticleDemo.astro_astro_type_script_index_0_lang.C9VQAsQ0.js"></script> <p class="notice"> 本文已通过当前发布门槛；事实、计算与译文如有修订，会同步更新两个语言版本。 </p> <p> <a class="button secondary" href="/"> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class> <path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path>        </svg>返回分站 </a> </p> </div> <aside class="article-aside" aria-label="文章信息"> <section class="aside-card"> <h2>学习目标</h2> <ul> <li>用行权价、到期日、权利金和盈亏平衡点读出期权的风险结构。</li><li>说明隐含波动率为什么按行权价和期限变化，并识别偏斜与期限结构。</li><li>区分模型价格、市场价格与可交割条款，避免把理论价值当成成交价。</li><li>能把权利金拆成内在价值和时间价值，并用剩余期限解释 theta 的非线性衰减。</li><li>能按行权价和到期日读出波动率偏斜与期限结构，并说明隐含波动率不是预测。</li> </ul> </section> <section class="aside-card"> <h2>必需先修</h2> <ul> <li> <a href="/learn/options-rights-obligations-and-payoffs/">MKT-019 · 期权的权利义务与收益结构</a> </li> </ul> </section> <section class="aside-card"> <h2>建议阅读</h2> <ul> <li> <a href="/learn/futures-contracts-and-margin/">MKT-018 · 期货合约与保证金</a> </li><li> <a href="/learn/swaps-and-structured-products/">MKT-020 · 互换与结构化产品</a> </li> </ul> </section> <section class="aside-card"> <h2>AI 复核记录</h2> <p class="muted"> 本项目没有真人签字；下列状态来自 AI-only 编辑复核。 </p> <ul> <li> 事实与计算 ：AI 复核通过 </li><li> 学科 ：AI 复核通过 </li><li> 英文 ：AI 复核通过 </li><li> 页面 ：AI 复核通过 </li> </ul> </section> <section class="aside-card"> <h2>来源</h2> <div class="source"> <a href="https://www.finra.org/investors/investing/investment-products/options" rel="noopener noreferrer" target="_blank">Options</a> <p>Financial Industry Regulatory Authority · Financial Industry Regulatory Authority</p> <p>访问：2026-10-30 · 许可：Copyrighted; reproduction prohibited, linking permitted (cite-only)</p> <p>支持论点：用于核对“期权定价与波动率曲面”涉及的定义、制度、统计口径或产品条款；正文不把来源未写的内容当作事实，具体数字与日期以来源原文为准。</p> </div><div class="source"> <a href="https://www.cmegroup.cn/knowledge/12439.htm" rel="noopener noreferrer" target="_blank">期权是什么意思 (What Is an Option)</a> <p>CME Group · CME Group</p> <p>访问：2026-10-30 · 许可：版权所有、保留所有权利；未见允许转载条款（cite-only）</p> <p>支持论点：用于核对“期权定价与波动率曲面”涉及的定义、制度、统计口径或产品条款；正文不把来源未写的内容当作事实，具体数字与日期以来源原文为准。</p> </div><div class="source"> <a href="https://www.cftc.gov/LearnAndProtect/AdvisoriesAndArticles/FuturesMarketBasics/index.htm" rel="noopener noreferrer" target="_blank">Basics of Futures Trading</a> <p>U.S. Commodity Futures Trading Commission · U.S. Commodity Futures Trading Commission</p> <p>访问：2026-10-30 · 许可：U.S. Government work (public domain), 17 U.S.C. §105</p> <p>支持论点：用于核对“期权定价与波动率曲面”涉及的定义、制度、统计口径或产品条款；正文不把来源未写的内容当作事实，具体数字与日期以来源原文为准。</p> </div><div class="source"> <a href="https://www.theocc.com/company-information/documents-and-archives/options-disclosure-document" rel="noopener noreferrer" target="_blank">Characteristics and Risks of Standardized Options</a> <p>The Options Clearing Corporation · The Options Clearing Corporation</p> <p>访问：2026-11-24 · 许可：Copyrighted; reproduction prohibited, linking permitted (cite-only)</p> <p>支持论点：期权价格由内在价值和时间价值构成；行权价、到期时间、标的波动率和利率影响价格；美式与欧式行权规则不同；标准化期权受披露文件约束。</p> </div><div class="source"> <a href="https://www.cboe.com/insights/posts/learning-the-greeks-an-experts-perspective/" rel="noopener noreferrer" target="_blank">Learning the Greeks: An Expert&#39;s Perspective</a> <p>Cboe Global Markets · Cboe Global Markets</p> <p>访问：2026-11-24 · 许可：Copyrighted; reproduction prohibited, linking permitted (cite-only)</p> <p>支持论点：期权希腊字母是敏感度指标：delta 衡量标的价格变化、gamma 衡量 delta 的变化、theta 衡量到期时间变化、vega 衡量隐含波动率变化、rho 衡量无风险利率变化。</p> </div><div class="source"> <a href="https://cdn.cboe.com/api/global/us_indices/governance/Cboe_European-Style_Option_%20Implied_Volatility_Calculation_%20Methodology.pdf" rel="noopener noreferrer" target="_blank">Cboe European-Style Options Implied Volatility Calculation Methodology</a> <p>Cboe Global Markets · Cboe Global Markets</p> <p>访问：2026-11-24 · 许可：Copyrighted; reproduction prohibited, linking permitted (cite-only)</p> <p>支持论点：隐含波动率通过把市场期权价格代入定价模型反解得到；波动率曲面按到期日和行权价构造；不同行权价和到期日的隐含波动率不相等。</p> </div><div class="source"> <a href="https://www.cboe.com/solutions/portfolio-analytics/solutions/visualization" rel="noopener noreferrer" target="_blank">Visualization: Mosaic</a> <p>Cboe Global Markets · Cboe Global Markets</p> <p>访问：2026-11-24 · 许可：Copyrighted; reproduction prohibited, linking permitted (cite-only)</p> <p>支持论点：期权分析工具可查看同一标的的期权链、波动率曲面和期限结构；曲面与期限结构用于比较不同行权价和到期日的隐含波动率。</p> </div><div class="source"> <a href="https://www.sec.gov/resources-for-investors/investor-alerts-bulletins/ib_introductionoptions" rel="noopener noreferrer" target="_blank">Investor Bulletin: An Introduction to Options</a> <p>U.S. Securities and Exchange Commission · U.S. Securities and Exchange Commission</p> <p>访问：2026-11-24 · 许可：U.S. Government work (public domain), 17 U.S.C. §105</p> <p>支持论点：期权买方支付权利金，可能损失全部权利金；期权价格受标的、行权价、到期时间和波动率影响；期权交易涉及市场风险、标的资产风险和杠杆风险。</p> </div> </section> </aside> </div> </article><script type="module">var e=document.querySelector(`[data-reading-progress] span`),t=document.querySelector(`article`);if(e&&t){let n=()=>{let n=t.offsetTop,r=t.offsetHeight-window.innerHeight,i=r>0?(window.scrollY-n)/r:0;e.style.width=`${Math.min(1,Math.max(0,i))*100}%`};window.addEventListener(`scroll`,n,{passive:!0}),window.addEventListener(`resize`,n),n()}</script>  </main> <footer class="site-footer"> <div class="container footer-inner"> <div class="footer-brand"> <span class="footer-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="28" height="28" alt class="mascot" loading="lazy" decoding="async"></span> <div> <strong>巫妖投资 51Invest</strong> <p class="footer-note">非商业免费知识站。每篇标出来源与口径；这里没有投资建议。</p> </div> </div> <nav class="footer-links" aria-label="知识分站"> <a href="https://51invest.com/" data-main-home>首页</a> <a href="https://51invest.com/contents/">内容地图</a> <a href="/glossary/">术语表</a> <a href="/search/">搜索</a> <a href="https://51invest.com/charts/" data-main-link>图表</a> <a href="https://51invest.com/sources/" data-main-link>数据与许可</a> <a href="/">分站首页</a> </nav> </div> </footer> <nav class="mobile-nav" aria-label="知识分站"> <a class="mobile-link" href="https://51invest.com/" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>    <path d="m3 10 9-7 9 7"></path><path d="M5 9v11h14V9"></path><path d="M9 20v-6h6v6"></path>     </svg> <span>首页</span> </a> <a class="mobile-link" href="https://51invest.com/#stations" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>   <rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect>      </svg> <span>知识分站</span> </a> <a class="mobile-link active" href="/" aria-current="page"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>  <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v18H6.5A2.5 2.5 0 0 1 4 18.5z"></path><path d="M4 18.5A2.5 2.5 0 0 1 6.5 16H20"></path>       </svg> <span>分站首页</span> </a> <a class="mobile-link" href="/en/learn/option-pricing-and-volatility-surface/" data-language-link="en"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>English</span> </a> </nav><script type="module">var e=document.documentElement,t=[`auto`,`light`,`dark`],n=matchMedia(`(prefers-color-scheme: dark)`),r=()=>{let t=e.dataset.themeMode;return t===`light`||t===`dark`?t:`auto`},i=e=>{try{localStorage.setItem(`51invest-theme`,e)}catch{}try{let t=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-theme=${e}; Path=/; Max-Age=31536000; SameSite=Lax${t}`}catch{}},a=e=>{document.querySelectorAll(`[data-theme-toggle]`).forEach(t=>{let n=t.dataset[`label${e[0].toUpperCase()}${e.slice(1)}`];n&&(t.setAttribute(`aria-label`,n),t.setAttribute(`title`,n))})},o=t=>{e.dataset.themeMode=t,e.dataset.theme=t===`auto`?n.matches?`dark`:`light`:t,i(t),a(t)};a(r()),document.querySelectorAll(`[data-theme-toggle]`).forEach(e=>{e.addEventListener(`click`,()=>{let e=t[(t.indexOf(r())+1)%t.length];o(e)})}),n.addEventListener(`change`,()=>{r()===`auto`&&(e.dataset.theme=n.matches?`dark`:`light`)}),document.querySelectorAll(`[data-language-link]`).forEach(e=>{e.addEventListener(`click`,()=>{let t=e.dataset.languageLink;if(t===`zh`||t===`en`){try{localStorage.setItem(`51invest-language`,JSON.stringify(t))}catch{}try{let e=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-language=${t}; Path=/; Max-Age=31536000; SameSite=Lax${e}`}catch{}}})});</script> </body> </html>

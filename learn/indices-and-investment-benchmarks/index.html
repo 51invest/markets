@@ -1,0 +1,338 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light" data-theme-mode="auto"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark"><title>指数与投资基准 · 巫妖投资</title><meta name="description" content="指数是按公开规则计算的市场表现，不是可直接持有的产品；基准用于评价组合，二者都须核对方法与口径。"><link rel="canonical" href="https://markets.51invest.com/learn/indices-and-investment-benchmarks/"><link rel="alternate" hreflang="zh-CN" href="https://markets.51invest.com/learn/indices-and-investment-benchmarks/"><link rel="alternate" hreflang="en" href="https://markets.51invest.com/en/learn/indices-and-investment-benchmarks/"><link rel="alternate" hreflang="x-default" href="https://markets.51invest.com/learn/indices-and-investment-benchmarks/"><link rel="icon" type="image/png" href="/_astro/neutral.Dr5C2SoA.png"><script>
+  (() => {
+    const root = document.documentElement;
+    const readCookie = key => {
+      try {
+        return document.cookie.split('; ').find(value => value.startsWith(`51invest-${key}=`))?.split('=').slice(1).join('=') ?? null;
+      } catch {
+        return null;
+      }
+    };
+    const readLocal = key => {
+      try {
+        return localStorage.getItem(`51invest-${key}`);
+      } catch {
+        return null;
+      }
+    };
+    const storedTheme = readCookie('theme') || readLocal('theme');
+    const mode = ['light', 'dark', 'auto'].includes(storedTheme) ? storedTheme : 'auto';
+    const media = matchMedia('(prefers-color-scheme: dark)');
+    const apply = () => {
+      root.dataset.theme = mode === 'auto' ? (media.matches ? 'dark' : 'light') : mode;
+      root.dataset.themeMode = mode;
+    };
+    apply();
+    media.addEventListener('change', () => {
+      if (root.dataset.themeMode === 'auto') apply();
+    });
+  })();
+</script><link rel="stylesheet" href="/_astro/Base.CocbJOeh.css"></head> <body>  <a class="skip-link" href="#main">跳到正文</a> <header class="site-header"> <div class="container header-inner"> <a class="brand" href="https://51invest.com/" data-main-home aria-label="巫妖投资"> <span class="brand-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="36" height="36" alt class="mascot" loading="lazy" decoding="async"></span> <span class="brand-copy"> <span class="brand-name">巫妖投资</span> <span class="brand-caption">51INVEST</span> </span> </a> <nav class="desktop-nav" aria-label="知识分站"> <a class="nav-link" href="https://51invest.com/" data-main-home> 首页 </a> <a class="nav-link" href="https://economics.51invest.com/"> 经济学 </a><a class="nav-link" href="https://finance.51invest.com/"> 金融基础 </a><a class="nav-link active" href="/" aria-current="page"> 市场与产品 </a><a class="nav-link" href="https://invest.51invest.com/"> 投资方法 </a><a class="nav-link" href="https://history.51invest.com/"> 经济与金融史 </a><a class="nav-link" href="https://research.51invest.com/"> 研究方法 </a> <a class="nav-link" href="https://51invest.com/contents/"> 内容地图 </a> </nav> <div class="header-tools"> <a class="icon-button language-button" href="/en/learn/indices-and-investment-benchmarks/" hreflang="en" lang="en" data-language-link="en" aria-label="切换为英文" title="切换为英文"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>English</span> </a> <button class="icon-button theme-button" type="button" data-theme-toggle aria-label="主题: 跟随系统" title="主题: 跟随系统" data-label-auto="主题: 跟随系统" data-label-light="主题: 浅色" data-label-dark="主题: 深色"> <span class="theme-icon" data-theme-icon="auto"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>        <circle cx="12" cy="12" r="8.5"></circle><path d="M12 3.5v17"></path><path d="M12 7a5 5 0 0 1 0 10" fill="currentColor" stroke="none"></path> </svg></span> <span class="theme-icon" data-theme-icon="light"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>       <circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>  </svg></span> <span class="theme-icon" data-theme-icon="dark"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>      <path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"></path>   </svg></span> <span class="theme-text" data-theme-text="auto">跟随系统</span> <span class="theme-text" data-theme-text="light">浅色</span> <span class="theme-text" data-theme-text="dark">深色</span> </button> </div> </div> </header> <main id="main" class="site-main" data-pagefind-body>  <div class="reading-progress" data-reading-progress aria-hidden="true"><span></span></div> <div class="container"> <nav class="breadcrumbs" aria-label="Breadcrumb"> <a href="https://51invest.com/" data-main-home>首页</a> <span class="sep">/</span> <a href="/">市场与产品</a> <span class="sep">/</span> <span aria-current="page">指数与投资基准</span> </nav> </div> <article> <header class="article-header"> <div class="container"> <span class="article-type">产品与品种</span> <h1 class="article-title">指数与投资基准</h1> <p class="article-summary">指数是按公开规则计算的市场表现，不是可直接持有的产品；基准用于评价组合，二者都须核对方法与口径。</p>  <div class="meta-grid"> <div class="meta-item"><span>模块</span><strong>MKT-M03 · 指数与基准</strong></div> <div class="meta-item"><span>层级</span><strong>入门</strong></div> <div class="meta-item"><span>阅读</span><strong>10 分钟 · 14 节</strong></div> </div> <p class="demo-jump"> <a href="#demo-check"> 这篇有一个可以动手操作的演示 <span aria-hidden="true">↓</span> </a> </p> </div> </header> <div class="container article-layout"> <div class="article-body"> <h2>产品定义</h2>
+<p>指数由指数提供商按既定方法计算，用一篮子证券的价格或总回报衡量某个市场、行业或风格[1]。指数本身不能直接投资，投资者通过指数基金、ETF 或期货获得敞口[1]。基准是评价组合表现的参照，可以是指数，也可以是其他明确规则；选择基准等于选择比较范围。</p>
+<h2>权利、义务与现金流</h2>
+<table>
+<thead>
+<tr>
+<th>形式</th>
+<th>持有人拥有什么</th>
+<th>现金流</th>
+<th>退出</th>
+<th>主要风险</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>指数</td>
+<td>无持有人权利，只有使用与引用许可</td>
+<td>无</td>
+<td>不可交易</td>
+<td>方法变更、许可终止</td>
+</tr>
+<tr>
+<td>指数基金</td>
+<td>基金份额，按净值计算</td>
+<td>成分股股息扣除费用后，按基金规定分配或再投资</td>
+<td>向基金申赎</td>
+<td>跟踪误差、费用</td>
+</tr>
+<tr>
+<td>ETF</td>
+<td>交易所上市份额</td>
+<td>按基金规定分配或再投资，可在二级市场买卖</td>
+<td>交易所卖出，授权参与者申赎[6]</td>
+<td>折溢价、流动性[6]</td>
+</tr>
+<tr>
+<td>股指期货</td>
+<td>合约权利与义务</td>
+<td>保证金、每日结算，到期按合约规定结算[7]</td>
+<td>平仓或到期</td>
+<td>杠杆、基差[7][8]</td>
+</tr>
+</tbody></table>
+<p>下表把该篇的持有与交易安排按时间排开，金额栏用表达式或文件约定表示，不引用真实行情：</p>
+<table>
+<thead>
+<tr>
+<th>时间</th>
+<th>现金流</th>
+<th>金额</th>
+<th>币种</th>
+<th>不确定性</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>编制或使用指数</td>
+<td>无现金流：指数本身不可直接投资</td>
+<td>不适用</td>
+<td>不适用</td>
+<td>方法变更与许可终止会影响可用性</td>
+</tr>
+<tr>
+<td>买入 ETF 份额</td>
+<td>支付二级市场价格</td>
+<td>份额 × 市价</td>
+<td>基金计价币种</td>
+<td>市价可能偏离净值；流动性随品种变化</td>
+</tr>
+<tr>
+<td>持有 ETF</td>
+<td>收到分配或自动再投资</td>
+<td>按基金规定</td>
+<td>基金计价币种</td>
+<td>分配取决于成分证券的现金流与基金政策</td>
+</tr>
+<tr>
+<td>授权参与者申赎</td>
+<td>以一篮子证券或现金按净值申赎</td>
+<td>份额 × 净值 ± 费用</td>
+<td>基金计价币种</td>
+<td>门槛、开放日与暂停按文件</td>
+</tr>
+<tr>
+<td>交易指数期货</td>
+<td>缴保证金并每日盯市</td>
+<td>名义 × 保证金比例；盈亏＝价格变动 × 合约乘数</td>
+<td>合约结算币种</td>
+<td>杠杆、追保与展期成本；敞口不等于持有指数</td>
+</tr>
+</tbody></table>
+<p>指数提供商通常只负责方法、计算与许可，不对跟踪产品的投资业绩作保证；具体责任划分以指数许可与产品文件为准。以 MSCI 的公开说明为例，指数信息不构成对未来表现的预测或保证，也不构成对挂钩产品的发起、背书或推荐[5]。</p>
+<h2>参与者与场所</h2>
+<p>指数提供商制定并复核规则，计算机构发布点位，授权方向产品提供方收取许可费。基金由管理人运作、托管人保管资产；ETF 还有授权参与者和做市商[6]；期货涉及经纪商与清算所。投资者要区分指数、产品与合约三个层次。</p>
+<h2>交易、持有与退出</h2>
+<p>指数不能买卖；基金按净值申赎，ETF 在交易所按市价买卖，期货到期或平仓。指数会按方法文件定期调整成分与权重[2][3]，基金随之调仓并产生交易成本。基金通常无到期日，期货有到期日与展期成本；ETF 价格可能高于或低于净值[6]。</p>
+<h2>成本</h2>
+<p>成本包括基金费率、托管费、买卖价差、调仓交易与冲击成本、指数许可费和税费；许可费由谁承担以基金文件为准。期货还有保证金占用、展期与基差成本[7][8]。费率低不代表总成本低：费用、交易成本和跟踪误差都会使基金落后于指数[1]，税务处理也要计入。</p>
+<h2>风险</h2>
+<p>指数随市场下跌；市值加权会使大市值公司占比较高，集中度上升——这是本文由加权规则推出的结构特征[1]。方法变更、成分调整和回测口径会使历史表现难以直接复制（本文判断）。基金有跟踪误差和流动性风险，ETF 有折溢价[6]，期货有杠杆和基差风险[7][8]。用不匹配的指数评价策略，会把基准错配误当成投资能力。</p>
+<h2>条款与文件</h2>
+<p>阅读指数方法文件：样本空间、筛选条件、权重方式、调整频率、缓冲规则和计算口径。举例来说，常见的权重方式有价格加权与市值加权[1]，其中 MSCI 全球可投资市场指数按自由流通市值加权[2]，纳斯达克 100 采用修正市值加权[3]；调整频率也不同：MSCI 的方法文件把定期复核分为半年度复核（5 月与 11 月）与季度复核（2 月与 8 月），变更在 2、5、8、11 月的月末生效[4]；纳斯达克 100 的重组每年一次并在 12 月第三个星期五生效，再平衡按季度进行，生效日为 2、5、8、11 月各自最后一个交易日[3]。再读基金招募说明书、ETF 申赎规则和期货合约规格。比较前确认是价格指数还是总回报指数、币种与税务假设，以及数据发布时点。</p>
+<h2>比较与边界</h2>
+<p>指数是计算规则，基金和 ETF 是可投资载体，期货是合约，三者不能混为一谈。价格指数只反映价格变动，总回报指数还计入股息再投资，二者不能直接比较（这是本文对常见口径的说明）。基准应与策略的地区、市值、币种和风格一致；“跑赢指数”只有在口径一致时才有意义。本主文只讲指数编制与基准属性：基金与 ETF 的结构和申赎折溢价见 MKT-006、MKT-007，期货合约规格见 MKT-018，为策略挑选基准见 INV-004。</p>
+<h2>图表</h2>
+<figure>
+  <svg role="img" aria-labelledby="fig-indices-and-investment-benchmarks-title fig-indices-and-investment-benchmarks-desc" viewBox="0 0 470 224" width="100%">
+<title id="fig-indices-and-investment-benchmarks-title">指数与投资基准：概念对照</title>
+<desc id="fig-indices-and-investment-benchmarks-desc">指数: 按既定规则计算; 不能直接投资; 方法变更与成分风险 | 基准: 评价组合的尺子; 按目标与范围选定; 更换条件须事前写清</desc>
+<rect x="0.5" y="0.5" width="469" height="223" rx="12" fill="var(--surface)" stroke="var(--border)"/>
+      <rect x="20" y="18" width="430" height="89" rx="9" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="32" y="38" font-size="13" font-weight="650" fill="var(--accent)" font-family="inherit">指数</text>
+      <circle cx="32" cy="51" r="2.4" fill="var(--accent)"/><text x="42" y="54" font-size="10.6" font-weight="400" fill="var(--secondary)" text-anchor="start" font-family="inherit"><tspan x="42" dy="0">按公开规则计算</tspan></text><circle cx="32" cy="66" r="2.4" fill="var(--accent)"/><text x="42" y="69" font-size="10.6" font-weight="400" fill="var(--secondary)" text-anchor="start" font-family="inherit"><tspan x="42" dy="0">不能直接投资</tspan></text><circle cx="32" cy="81" r="2.4" fill="var(--accent)"/><text x="42" y="84" font-size="10.6" font-weight="400" fill="var(--secondary)" text-anchor="start" font-family="inherit"><tspan x="42" dy="0">方法变更与成分风险</tspan></text>
+      <rect x="20" y="117" width="430" height="89" rx="9" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="32" y="137" font-size="13" font-weight="650" fill="var(--accent)" font-family="inherit">基准</text>
+      <circle cx="32" cy="150" r="2.4" fill="var(--accent)"/><text x="42" y="153" font-size="10.6" font-weight="400" fill="var(--secondary)" text-anchor="start" font-family="inherit"><tspan x="42" dy="0">评价组合的尺子</tspan></text><circle cx="32" cy="165" r="2.4" fill="var(--accent)"/><text x="42" y="168" font-size="10.6" font-weight="400" fill="var(--secondary)" text-anchor="start" font-family="inherit"><tspan x="42" dy="0">按目标与范围选定</tspan></text><circle cx="32" cy="180" r="2.4" fill="var(--accent)"/><text x="42" y="183" font-size="10.6" font-weight="400" fill="var(--secondary)" text-anchor="start" font-family="inherit"><tspan x="42" dy="0">更换条件须事前写清</tspan></text>
+</svg>
+  <figcaption>图 1：“指数与投资基准”的权利与风险对照。图为概念示意，具体条款以正文引用的文件为准。</figcaption>
+</figure>
+
+<!-- kp-supplement:start -->
+<h2>知识点精读</h2>
+<h3>宽基</h3>
+<p><strong>定义</strong>：宽基指数覆盖多个行业和大量成分股，用于衡量整体市场或大中盘表现。</p>
+<p><strong>机制</strong>：成分选择、权重方法和调整规则决定代表性；市值加权、等权和基本面加权暴露不同风险。</p>
+<p><strong>例子</strong>：例如沪深 300 覆盖多个行业，单只股票权重有限，适合作为市场基准。</p>
+<p><strong>边界</strong>：宽基不是无风险；市场集中、行业权重和本地偏差会使“整体市场”只代表一部分，指数也可能被少数大公司主导。</p>
+<h3>行业</h3>
+<p><strong>定义</strong>：行业指数集中追踪同一行业或主题的公司，反映该行业的盈利、估值和政策暴露。</p>
+<p><strong>机制</strong>：行业分类、成分范围和权重决定表现；周期、监管和技术变化会造成大幅轮动。</p>
+<p><strong>例子</strong>：例如半导体指数集中在芯片设计、制造和设备公司，受资本开支和出口管制影响大。</p>
+<p><strong>边界</strong>：行业指数不是分散化工具；单一行业冲击、分类边界和中小成分流动性会造成高波动和跟踪误差。</p>
+<h3>风格</h3>
+<p><strong>定义</strong>：风格指数按价值、成长、质量、红利或规模等特征选股，用于追踪因子收益。</p>
+<p><strong>机制</strong>：风格定义、排序指标和中性化方法决定暴露；风格会周期性切换，成分也可能重叠。</p>
+<p><strong>例子</strong>：例如价值指数偏向低估值高账面比公司，成长指数偏向高增长高估值公司。</p>
+<p><strong>边界</strong>：风格不是永久标签；估值和增长会变化，定义差异导致同类指数表现分化，风格也可能只是行业或利率暴露的代理。</p>
+<h3>地区</h3>
+<p><strong>定义</strong>：地区指数按国家、区域或发展阶段选股，反映本地市场、汇率和制度风险。</p>
+<p><strong>机制</strong>：覆盖范围、自由流通调整和汇率处理决定国际比较；发达、新兴和前沿市场的风险不同。</p>
+<p><strong>例子</strong>：例如欧洲指数覆盖多国，但汇率、监管和行业结构使各国表现差异很大。</p>
+<p><strong>边界</strong>：地区指数不是纯粹地理暴露；公司收入全球化、ADR 和税收 domicile 会使风险来源偏离上市地，汇率也会改变本币回报。</p>
+<h3>债券和商品指数；编制</h3>
+<p><strong>定义</strong>：债券指数按期限、信用、发行人和权重编制，商品指数按品种、合约和展期规则编制。</p>
+<p><strong>机制</strong>：债券指数受久期、信用和估值影响，商品指数受期货曲线和展期收益影响；编制方法决定可投资性。</p>
+<p><strong>例子</strong>：例如国债指数按市值加权，商品指数按产量或流动性加权并每月展期。</p>
+<p><strong>边界</strong>：指数不是市场本身；债券流动性、商品合约选择和展期规则会造成跟踪差异，市值加权也可能集中于高负债发行人。</p>
+<h3>调整</h3>
+<p><strong>定义</strong>：指数调整是按规则定期或事件驱动地增删成分、更新权重和重构组合。</p>
+<p><strong>机制</strong>：调整减少漂移、维持代表性，但会产生预告效应、交易成本和流动性冲击；缓冲区与banding规则可降低换手。</p>
+<p><strong>例子</strong>：例如季度审查把市值上升的公司纳入指数，基金需在生效前买入。</p>
+<p><strong>边界</strong>：调整不是无成本；提前交易、指数套利和流动性差会造成价格冲击，规则变化也会改变历史可比性。</p>
+<h3>价格与总回报</h3>
+<p><strong>定义</strong>：价格指数只反映成分价格变化，总回报指数还把分红或利息再投资计入。</p>
+<p><strong>机制</strong>：总回报更接近持有收益，价格指数更常用于行情；税收、预扣和再投资时点造成差异。</p>
+<p><strong>例子</strong>：例如同一股票组合价格指数一年涨 5%，加上 2% 分红再投资，总回报约 7%。</p>
+<p><strong>边界</strong>：总回报不是投资者实际收益；税费、交易成本和现金拖累会降低，价格指数也不等于资本利得。</p>
+<!-- kp-supplement:end -->
+
+<h2>关联</h2>
+<ul>
+<li>必需先修：资产与工具的区别（MKT-001）。</li>
+<li>相关与推荐阅读：基金的基本结构（MKT-006）、ETF 的申赎与折溢价（MKT-007）、收益风险与成本的取舍（INV-002）。</li>
+</ul>
+<h2>图解</h2>
+<p>下面三张图分别检查本文的机制、边界与对照；图内文字取自本文小节，不是新数据。</p>
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-chain-title fig-batch-chain-desc" viewBox="0 0 340 304" width="100%">
+    <title id="fig-batch-chain-title">指数与投资基准：机制链</title>
+    <desc id="fig-batch-chain-desc">指数与投资基准 的三段结构：问题、机制、判断。图内文字取自本文小节，不是新的数据估计。</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">指数与投资基准：机制链</text>
+    <text x="14" y="38" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">图内文字取自本文小节；三段缺一不可。</text>
+    <line x1="14" y1="46" x2="326" y2="46" stroke="var(--border)" stroke-width="1"/>
+    <g>
+      <rect x="14" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="22" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">问题</text>
+      <text x="22" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">指数是按公开规则计算</text>
+      <text x="22" y="102" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">的市场表现，不是可直…</text>
+      <text x="22" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">指数是按公开规则计</text>
+      <text x="22" y="141" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">算的市场表现，不是</text>
+      <text x="22" y="158" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">可直接持有的产品；</text>
+      <text x="22" y="175" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">基准用于评价组合，</text>
+      <text x="22" y="192" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">二者都须核对方法与…</text>
+    </g>
+      <g>
+      <rect x="123" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="131" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">产品定义</text>
+      <text x="131" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">产品定义：指数由指数</text>
+      <text x="131" y="102" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">提供商按既定方法计算…</text>
+      <text x="131" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">产品定义：指数由指</text>
+      <text x="131" y="141" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">数提供商按既定方法</text>
+      <text x="131" y="158" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">计算，用一篮子证券</text>
+      <text x="131" y="175" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">的价格或总回报衡量</text>
+      <text x="131" y="192" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">某个市场、行业或风…</text>
+    </g>
+      <g>
+      <rect x="232" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="240" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">成本</text>
+      <text x="240" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">成本包括基金费率、托</text>
+      <text x="240" y="102" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">管费、买卖价差、调仓…</text>
+      <text x="240" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">成本包括基金费率、</text>
+      <text x="240" y="141" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">托管费、买卖价差、</text>
+      <text x="240" y="158" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">调仓交易与冲击成本</text>
+      <text x="240" y="175" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">、指数许可费和税费</text>
+      <text x="240" y="192" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">；许可费由谁承担以…</text>
+    </g>
+    <line x1="108" y1="144" x2="123" y2="144" stroke="var(--border)" stroke-width="1.1"/>
+    <path d="M120 140 L125 144 L120 148" fill="none" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="217" y1="144" x2="232" y2="144" stroke="var(--border)" stroke-width="1.1"/>
+    <path d="M229 140 L234 144 L229 148" fill="none" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="14" y1="250" x2="326" y2="250" stroke="var(--border)" stroke-width="1"/>
+    <text x="14" y="266" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">读法：先看问题能否成立，再看机制能否连通，最后看判断会不会越界。</text>
+    <text x="14" y="280" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">若中间一步缺证据，后面的结论只能当假设，不能当事实。</text>
+    <text x="14" y="294" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">图为结构示意，不是新的数据图；样本为本文论证。</text>
+  </svg>
+  <figcaption>图 2：指数与投资基准的机制链：从问题、机制到判断。样本为本文论证，单位为文中标注。</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-boundary-title fig-batch-boundary-desc" viewBox="0 0 340 244" width="100%">
+    <title id="fig-batch-boundary-title">指数与投资基准：适用边界</title>
+    <desc id="fig-batch-boundary-desc">把成立条件与失效条件分开；局部例子不能自动推广到所有情形。</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">指数与投资基准：什么情况下成立？</text>
+    <line x1="14" y1="34" x2="326" y2="34" stroke="var(--border)" stroke-width="1"/>
+    <rect x="14" y="44" width="312" height="38" rx="7" fill="var(--surface-2)" stroke="var(--border)"/>
+    <text x="170" y="62" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="middle">先检查条件，再看结论</text>
+    <text x="170" y="75" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="middle">条件、口径或样本一变，结论可能要重算</text>
+    <line x1="170" y1="82" x2="90" y2="104" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="170" y1="82" x2="250" y2="104" stroke="var(--border)" stroke-width="1.1"/>
+    <rect x="14" y="104" width="148" height="100" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+    <text x="24" y="122" font-size="8.6" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">成立</text>
+    <text x="24" y="138" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">指数随市场下跌；市值加权会使大市</text>
+      <text x="24" y="154" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">值公司占比较高，集中度上升——这是</text>
+      <text x="24" y="170" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">本文由加权规则推出的结构特征。方</text>
+      <text x="24" y="186" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">法变更、成分调整和回测口径会使历…</text>
+    <rect x="178" y="104" width="148" height="100" rx="8" fill="var(--gold)" opacity="0.18" stroke="var(--border)"/>
+    <text x="188" y="122" font-size="8.6" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">不成立 / 需改写</text>
+    <text x="188" y="138" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">指数是计算规则，基金和 ETF</text>
+      <text x="188" y="154" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">是可投资载体，期货是合约，三者不</text>
+      <text x="188" y="170" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">能混为一谈。价格指数只反映价格变</text>
+      <text x="188" y="186" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">动，总回报指数还计入股息再投资…</text>
+    <line x1="14" y1="216" x2="326" y2="216" stroke="var(--border)" stroke-width="1"/>
+    <text x="14" y="232" font-size="8.3" fill="var(--muted)" font-family="inherit" text-anchor="start">图为边界示意；样本为本文论证，单位为文中标注。</text>
+  </svg>
+  <figcaption>图 3：指数与投资基准的边界：哪些条件成立，哪些条件失效。样本为本文论证，单位为文中标注。</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-compare-title fig-batch-compare-desc" viewBox="0 0 340 252" width="100%">
+    <title id="fig-batch-compare-title">指数与投资基准：对象、前提与常见误区</title>
+    <desc id="fig-batch-compare-desc">三行比较本文概念、成立条件与常见误区；比较不等于等价，也不能替代定义。</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">指数与投资基准：一张表看对象、前提与误区</text>
+    <line x1="14" y1="34" x2="326" y2="34" stroke="var(--border)" stroke-width="1"/>
+    <text x="82" y="46" font-size="8.4" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">本篇</text>
+    <text x="200" y="46" font-size="8.4" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">容易混淆</text>
+    <g>
+      <rect x="14" y="52" width="312" height="58" fill="transparent" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="72" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">对象</text>
+      <text x="82" y="72" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">指数是按公开规则计算的市</text>
+      <text x="82" y="88" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">场表现，不是可直接持有的…</text>
+      <text x="200" y="72" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">相邻概念/常见说法</text>
+    </g>
+    <g>
+      <rect x="14" y="110" width="312" height="58" fill="var(--surface-2)" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="130" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">前提</text>
+      <text x="82" y="130" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">指数随市场下跌；市值加权</text>
+      <text x="82" y="146" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">会使大市值公司占比较高…</text>
+      <text x="200" y="130" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">指数是计算规则，基金和 ETF</text>
+      <text x="200" y="146" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">是可投资载体，期货是合约，三者不能混…</text>
+    </g>
+    <g>
+      <rect x="14" y="168" width="312" height="58" fill="transparent" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="188" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">检查</text>
+      <text x="82" y="188" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">先定义，再比较；不能只看</text>
+      <text x="82" y="204" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">名称</text>
+      <text x="200" y="188" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">相关不等于因果，局部不等于普遍</text>
+    </g>
+    <text x="14" y="244" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">图为比较示意；样本为本文论证，单位为文中标注。</text>
+  </svg>
+  <figcaption>图 4：指数与投资基准的对象、前提与常见误区比较。样本为本文论证，单位为文中标注。</figcaption>
+</figure>
+
+<h2>练习</h2>
+<ol>
+<li><strong>概念。</strong> 投资者能直接买“指数”吗？指数基金与指数是什么关系？</li>
+<li><strong>计算。</strong> 教学假设：某价格指数从 1000 点升至 1100 点；一只跟踪它的指数基金每份净值从 100 元升至 109.4 元，年化费率 0.50%，假设持有期正好一年。指数回报、基金回报和差距各是多少？差距中费率解释多少？</li>
+<li><strong>条件。</strong> 用大盘股指数评价小盘股基金是否合适？应检查哪些口径？</li>
+</ol>
+<details>
+<summary>参考答案</summary>
+
+<ol>
+<li>不能。指数只是计算值；指数基金持有成分证券，按净值申赎，可能抽样复制并产生跟踪误差。</li>
+<li>指数回报 = (1100 - 1000) ÷ 1000 = 10.0%；基金回报 = (109.4 - 100) ÷ 100 = 9.4%；差距 = 10.0% - 9.4% = 0.60 个百分点（以百分点计，不是百分比）。按简化口径，一年 0.50% 的费率约解释 0.50 个百分点，其余约 0.10 个百分点来自抽样、交易、税费等跟踪差异。此为教学假设，不含申购赎回费。</li>
+<li>不合适，除非基金的投资范围本就是大盘股。应核对地区、市值、币种、分红口径（价格或总回报）和调整时间。</li>
+</ol>
+</details>
+
+<h2>来源</h2>
+<ol>
+<li>U.S. Securities and Exchange Commission, Investor.gov. “Index Funds.” <a href="https://www.investor.gov/introduction-investing/investing-basics/investment-products/mutual-funds-and-exchange-traded-4">https://www.investor.gov/introduction-investing/investing-basics/investment-products/mutual-funds-and-exchange-traded-4</a>（访问日期：2026-10-30）</li>
+<li>MSCI. “MSCI Global Investable Market Indexes Methodology (October 2026).” <a href="https://www.msci.com/index/methodology/latest/GIMI">https://www.msci.com/index/methodology/latest/GIMI</a>（访问日期：2026-10-30）</li>
+<li>Nasdaq. “Nasdaq-100 Index Methodology.” <a href="https://indexes.nasdaqomx.com/docs/Methodology_NDX.pdf">https://indexes.nasdaqomx.com/docs/Methodology_NDX.pdf</a>（访问日期：2026-11-05）</li>
+<li>MSCI. “MSCI Mexico ESG Select Focus Index Methodology.” November 2024. <a href="https://www.msci.com/documents/10199/8fc10905-d2e0-ccf7-f1fc-f024120e1951">https://www.msci.com/documents/10199/8fc10905-d2e0-ccf7-f1fc-f024120e1951</a>（访问日期：2026-11-05）</li>
+<li>MSCI. “MSCI Equity Indexes August 2026 Index Review.” 2026-08-12. <a href="https://ir.msci.com/news-releases/news-release-details/msci-equity-indexes-august-2026-index-review">https://ir.msci.com/news-releases/news-release-details/msci-equity-indexes-august-2026-index-review</a>（访问日期：2026-11-21）</li>
+<li>U.S. Securities and Exchange Commission, Office of Investor Education and Advocacy. “Investor Bulletin: Exchange-Traded Funds (ETFs).” <a href="https://www.sec.gov/investor/alerts/etfs.pdf">https://www.sec.gov/investor/alerts/etfs.pdf</a>（访问日期：2026-11-21）</li>
+<li>CME Group. “Mark-to-Market.” <a href="https://www.cmegroup.com/education/courses/introduction-to-futures/mark-to-market.html">https://www.cmegroup.com/education/courses/introduction-to-futures/mark-to-market.html</a>（访问日期：2026-11-21）</li>
+<li>CME Group. “Learn about Basis: Grains.” <a href="https://www.cmegroup.com/education/courses/introduction-to-grains-and-oilseeds/learn-about-basis-grains.html">https://www.cmegroup.com/education/courses/introduction-to-grains-and-oilseeds/learn-about-basis-grains.html</a>（访问日期：2026-11-21）</li>
+</ol>
+  <section class="article-demo" id="demo-check" data-demo="check" data-lang="zh" aria-labelledby="demo-check-title" data-check-done="三项都能说清：这篇的核心已经过关。" data-check-pending="还差一项：回到正文对应小节，找一个反例或数字再讲一遍。" data-check-count="已勾选"> <header class="demo-head"> <div class="demo-head-top"> <p class="demo-eyebrow">动手演示</p> <button class="demo-reset" type="button" data-demo-reset>恢复默认</button> </div> <h2 id="demo-check-title">读完自检：三句话能不能说清</h2> <p class="demo-intro">不用背定义。把下面三句逐个勾上，看自己能不能用自己的话讲清机制、算例和边界。</p> </header>          <div class="demo-check"> <ul class="demo-check-list"> <li> <label> <input type="checkbox" data-check-index="0"> <span>能说明指数的计算规则如何决定其表现，并解释为何指数不等于可持有产品</span> </label> </li><li> <label> <input type="checkbox" data-check-index="1"> <span>能为一个组合挑选基准并写出需要核对的方法与口径项</span> </label> </li><li> <label> <input type="checkbox" data-check-index="2"> <span>能说出一个本文结论不适用的条件</span> </label> </li> </ul> <p class="demo-check-status" data-out="checkStatus" role="status"> 已勾选 0 / 3
+</p> </div> <p class="demo-footnote">数字为教学假设，用来展示关系，不构成预测或投资建议。</p> </section><script type="module" src="/_astro/ArticleDemo.astro_astro_type_script_index_0_lang.C9VQAsQ0.js"></script> <p class="notice"> 本文已通过当前发布门槛；事实、计算与译文如有修订，会同步更新两个语言版本。 </p> <p> <a class="button secondary" href="/"> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class> <path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path>        </svg>返回分站 </a> </p> </div> <aside class="article-aside" aria-label="文章信息"> <section class="aside-card"> <h2>学习目标</h2> <ul> <li>能说明指数的计算规则如何决定其表现，并解释为何指数不等于可持有产品</li><li>能为一个组合挑选基准并写出需要核对的方法与口径项</li> </ul> </section> <section class="aside-card"> <h2>必需先修</h2> <ul> <li> <a href="/learn/assets-vs-instruments/">MKT-001 · 资产与工具的区别</a> </li> </ul> </section> <section class="aside-card"> <h2>建议阅读</h2> <ul> <li> <a href="/learn/fund-structures/">MKT-006 · 基金的基本结构</a> </li><li> <a href="/learn/etf-creation-redemption-and-premiums/">MKT-007 · ETF 的申赎与折溢价</a> </li><li> <a href="https://invest.51invest.com/learn/return-risk-and-cost-tradeoffs/">INV-002 · 收益风险与成本的取舍</a> </li> </ul> </section> <section class="aside-card"> <h2>AI 复核记录</h2> <p class="muted"> 本项目没有真人签字；下列状态来自 AI-only 编辑复核。 </p> <ul> <li> 事实与计算 ：AI 复核通过 </li><li> 学科 ：AI 复核通过 </li><li> 英文 ：AI 复核通过 </li><li> 页面 ：AI 复核通过 </li> </ul> </section> <section class="aside-card"> <h2>来源</h2> <div class="source"> <a href="https://www.investor.gov/introduction-investing/investing-basics/investment-products/mutual-funds-and-exchange-traded-4" rel="noopener noreferrer" target="_blank">Index Funds</a> <p>U.S. Securities and Exchange Commission, Investor.gov · Investor.gov</p> <p>访问：2026-10-30 · 许可：FINRA-operated site for the SEC; © FINRA — cite and link only, no reproduction</p> <p>支持论点：指数基金寻求跟踪市场指数回报；市场指数衡量一篮子证券的表现，投资者不能直接投资指数；指数可按市值或价格加权；费用、交易成本和跟踪误差会使基金落后于指数。</p> </div><div class="source"> <a href="https://www.msci.com/index/methodology/latest/GIMI" rel="noopener noreferrer" target="_blank">MSCI Global Investable Market Indexes Methodology (October 2026)</a> <p>MSCI · MSCI</p> <p>访问：2026-10-30 · 许可：Copyrighted; all rights reserved, site terms apply (cite-only)</p> <p>支持论点：指数方法规定样本空间、规模与流动性筛选、自由流通市值加权，并在 2 月、5 月、8 月和 11 月的季度指数复核中调整。</p> </div><div class="source"> <a href="https://indexes.nasdaqomx.com/docs/Methodology_NDX.pdf" rel="noopener noreferrer" target="_blank">Nasdaq-100 Index Methodology</a> <p>Nasdaq · Nasdaq</p> <p>访问：2026-11-05 · 许可：Nasdaq methodology PDF: copyright reserved, no reuse grant</p> <p>支持论点：逐字（PDF 于 2026-11-05 重新取回，HTTP 200，422,314 字节，MD5 92fa80c072d54b2499af3495f27ba3b4 与 2026-11-03 的缓存一致；文本层缓存在 docs/data-evidence/Methodology_NDX.txt，下列片段各出现 1 次）：“An Annual Reconstitution &amp; Rebalance is conducted in December, during which all eligible companies are ranked based on Full Market Capitalization, as of the Reconstitution Reference Date.”（每年 12 月进行一次年度重组与再平衡，届时按重组参考日的总市值为全部合资格公司排序）；指数日历列有“Reconstitution Frequency Annually”（重组每年一次）与“Rebalance Frequency Quarterly”（再平衡每季度一次），重组生效日为“the third Friday in December”（12 月第三个星期五），再平衡生效日为“Last trading day of February, May, August, and November, respectively”（2、5、8、11 月各自最后一个交易日）；权重口径为“For the purpose of weight calculations, Modified Market Capitalization will be utilized”。本条登记原先的转述句已由以上原句取代；“衡量 100 家最大的纳斯达克上市非金融公司”仍按同一文件的概括表述保留，未当作逐字引文。</p> </div><div class="source"> <a href="https://www.msci.com/documents/10199/8fc10905-d2e0-ccf7-f1fc-f024120e1951" rel="noopener noreferrer" target="_blank">MSCI Mexico ESG Select Focus Index Methodology (November 2024)</a> <p>MSCI · MSCI</p> <p>访问：2026-11-05 · 许可：© 2024 MSCI Inc. All rights reserved; linked document, cite-only</p> <p>支持论点：MSCI 的方法文件把 GIMI 的定期复核分为半年度复核（5 月与 11 月）与季度复核（2 月与 8 月），变更在 2 月、5 月、8 月、11 月的月末生效。 逐字（PDF 于 2026-11-05 由登记 URL 取回，HTTP 200，283,665 字节；pdftotext -layout 文本层缓存在 docs/data-evidence/m005-msci-mexico.txt；下列片段各出现 1 次）：“Index Reviews in May and November and Quarterly Index Reviews in February and August of the MSCI Global Investable Market Indexes”、“Changes are implemented at the end of February, May, August and November.”、“August and November. The pro forma indexes are in general announced nine business days before the effective date.”。Quarterly Index Review 在该文本层出现 6 次、MSCI Global Investable Market Indexes 2 次。该文档是 MSCI Mexico ESG Select Focus Index Methodology（2024 年 11 月版），其对复核节奏的描述指向 GIMI；GIMI 主方法文件页在本环境仍是脚本壳，所以这份文档只用于复核日历这一条，自由流通市值加权一句仍按第 177 轮的转述记录挂在另一条 MSCI 来源上。</p> </div><div class="source"> <a href="https://www.sec.gov/investor/alerts/etfs.pdf" rel="noopener noreferrer" target="_blank">Investor Bulletin: Exchange-Traded Funds (ETFs)</a> <p>U.S. Securities and Exchange Commission, Office of Investor Education and Advocacy · U.S. Securities and Exchange Commission</p> <p>访问：2026-11-21 · 许可：U.S. Government work; public domain</p> <p>支持论点：ETF 像股票一样在交易所交易；授权参与者可申购和赎回创设单位；ETF 市价可能高于或低于其净资产值，形成溢价或折价；投资者应阅读招募说明书并了解交易成本。</p> </div><div class="source"> <a href="https://ir.msci.com/news-releases/news-release-details/msci-equity-indexes-august-2026-index-review" rel="noopener noreferrer" target="_blank">MSCI Equity Indexes August 2026 Index Review</a> <p>MSCI Inc. · MSCI Inc.</p> <p>访问：2026-11-21 · 许可：© MSCI Inc.; cite-only</p> <p>支持论点：MSCI 在指数评审公告中说明：指数信息不构成对未来表现的预测或保证，也不构成对任何挂钩产品的发起、背书或推荐；指数提供商不对产品投资业绩作保证。</p> </div><div class="source"> <a href="https://www.cmegroup.com/education/courses/introduction-to-futures/mark-to-market.html" rel="noopener noreferrer" target="_blank">Mark-to-Market</a> <p>CME Group · CME Group</p> <p>访问：2026-11-21 · 许可：© CME Group; cite-only</p> <p>支持论点：期货账户每日按结算价盯市，盈余记入、亏损扣减；保证金是履约保证，不是购买合约的全部价款；每日结算把累计盈亏转化为现金收付。</p> </div><div class="source"> <a href="https://www.cmegroup.com/education/courses/introduction-to-grains-and-oilseeds/learn-about-basis-grains.html" rel="noopener noreferrer" target="_blank">Learn about Basis: Grains</a> <p>CME Group · CME Group</p> <p>访问：2026-11-21 · 许可：© CME Group; cite-only</p> <p>支持论点：基差是现货价格与期货价格之差；基差可为正或负，受运输、仓储、品质与当地供需影响；套期保值者承担基差风险，基差与期货价格共同决定最终成交价。</p> </div> </section> </aside> </div> </article><script type="module">var e=document.querySelector(`[data-reading-progress] span`),t=document.querySelector(`article`);if(e&&t){let n=()=>{let n=t.offsetTop,r=t.offsetHeight-window.innerHeight,i=r>0?(window.scrollY-n)/r:0;e.style.width=`${Math.min(1,Math.max(0,i))*100}%`};window.addEventListener(`scroll`,n,{passive:!0}),window.addEventListener(`resize`,n),n()}</script>  </main> <footer class="site-footer"> <div class="container footer-inner"> <div class="footer-brand"> <span class="footer-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="28" height="28" alt class="mascot" loading="lazy" decoding="async"></span> <div> <strong>巫妖投资 51Invest</strong> <p class="footer-note">非商业免费知识站。每篇标出来源与口径；这里没有投资建议。</p> </div> </div> <nav class="footer-links" aria-label="知识分站"> <a href="https://51invest.com/" data-main-home>首页</a> <a href="https://51invest.com/contents/">内容地图</a> <a href="/glossary/">术语表</a> <a href="/search/">搜索</a> <a href="https://51invest.com/charts/" data-main-link>图表</a> <a href="https://51invest.com/sources/" data-main-link>数据与许可</a> <a href="/">分站首页</a> </nav> </div> </footer> <nav class="mobile-nav" aria-label="知识分站"> <a class="mobile-link" href="https://51invest.com/" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>    <path d="m3 10 9-7 9 7"></path><path d="M5 9v11h14V9"></path><path d="M9 20v-6h6v6"></path>     </svg> <span>首页</span> </a> <a class="mobile-link" href="https://51invest.com/#stations" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>   <rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect>      </svg> <span>知识分站</span> </a> <a class="mobile-link active" href="/" aria-current="page"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>  <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v18H6.5A2.5 2.5 0 0 1 4 18.5z"></path><path d="M4 18.5A2.5 2.5 0 0 1 6.5 16H20"></path>       </svg> <span>分站首页</span> </a> <a class="mobile-link" href="/en/learn/indices-and-investment-benchmarks/" data-language-link="en"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>English</span> </a> </nav><script type="module">var e=document.documentElement,t=[`auto`,`light`,`dark`],n=matchMedia(`(prefers-color-scheme: dark)`),r=()=>{let t=e.dataset.themeMode;return t===`light`||t===`dark`?t:`auto`},i=e=>{try{localStorage.setItem(`51invest-theme`,e)}catch{}try{let t=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-theme=${e}; Path=/; Max-Age=31536000; SameSite=Lax${t}`}catch{}},a=e=>{document.querySelectorAll(`[data-theme-toggle]`).forEach(t=>{let n=t.dataset[`label${e[0].toUpperCase()}${e.slice(1)}`];n&&(t.setAttribute(`aria-label`,n),t.setAttribute(`title`,n))})},o=t=>{e.dataset.themeMode=t,e.dataset.theme=t===`auto`?n.matches?`dark`:`light`:t,i(t),a(t)};a(r()),document.querySelectorAll(`[data-theme-toggle]`).forEach(e=>{e.addEventListener(`click`,()=>{let e=t[(t.indexOf(r())+1)%t.length];o(e)})}),n.addEventListener(`change`,()=>{r()===`auto`&&(e.dataset.theme=n.matches?`dark`:`light`)}),document.querySelectorAll(`[data-language-link]`).forEach(e=>{e.addEventListener(`click`,()=>{let t=e.dataset.languageLink;if(t===`zh`||t===`en`){try{localStorage.setItem(`51invest-language`,JSON.stringify(t))}catch{}try{let e=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-language=${t}; Path=/; Max-Age=31536000; SameSite=Lax${e}`}catch{}}})});</script> </body> </html>

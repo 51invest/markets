@@ -1,0 +1,211 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light" data-theme-mode="auto"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark"><title>REITs 与基础设施：现金流、杠杆与估值 · 巫妖投资</title><meta name="description" content="REITs 把不动产的租金现金流装进可交易份额；基础设施基金把收费权、管网和电站的长期现金流装进类似结构。两者都靠稳定现金流吸引投资者，也都受利率、杠杆和资产质量约束。"><link rel="canonical" href="https://markets.51invest.com/learn/reits-and-infrastructure-cash-flow-leverage-valuation/"><link rel="alternate" hreflang="zh-CN" href="https://markets.51invest.com/learn/reits-and-infrastructure-cash-flow-leverage-valuation/"><link rel="alternate" hreflang="en" href="https://markets.51invest.com/en/learn/reits-and-infrastructure-cash-flow-leverage-valuation/"><link rel="alternate" hreflang="x-default" href="https://markets.51invest.com/learn/reits-and-infrastructure-cash-flow-leverage-valuation/"><link rel="icon" type="image/png" href="/_astro/neutral.Dr5C2SoA.png"><script>
+  (() => {
+    const root = document.documentElement;
+    const readCookie = key => {
+      try {
+        return document.cookie.split('; ').find(value => value.startsWith(`51invest-${key}=`))?.split('=').slice(1).join('=') ?? null;
+      } catch {
+        return null;
+      }
+    };
+    const readLocal = key => {
+      try {
+        return localStorage.getItem(`51invest-${key}`);
+      } catch {
+        return null;
+      }
+    };
+    const storedTheme = readCookie('theme') || readLocal('theme');
+    const mode = ['light', 'dark', 'auto'].includes(storedTheme) ? storedTheme : 'auto';
+    const media = matchMedia('(prefers-color-scheme: dark)');
+    const apply = () => {
+      root.dataset.theme = mode === 'auto' ? (media.matches ? 'dark' : 'light') : mode;
+      root.dataset.themeMode = mode;
+    };
+    apply();
+    media.addEventListener('change', () => {
+      if (root.dataset.themeMode === 'auto') apply();
+    });
+  })();
+</script><link rel="stylesheet" href="/_astro/Base.CocbJOeh.css"></head> <body>  <a class="skip-link" href="#main">跳到正文</a> <header class="site-header"> <div class="container header-inner"> <a class="brand" href="https://51invest.com/" data-main-home aria-label="巫妖投资"> <span class="brand-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="36" height="36" alt class="mascot" loading="lazy" decoding="async"></span> <span class="brand-copy"> <span class="brand-name">巫妖投资</span> <span class="brand-caption">51INVEST</span> </span> </a> <nav class="desktop-nav" aria-label="知识分站"> <a class="nav-link" href="https://51invest.com/" data-main-home> 首页 </a> <a class="nav-link" href="https://economics.51invest.com/"> 经济学 </a><a class="nav-link" href="https://finance.51invest.com/"> 金融基础 </a><a class="nav-link active" href="/" aria-current="page"> 市场与产品 </a><a class="nav-link" href="https://invest.51invest.com/"> 投资方法 </a><a class="nav-link" href="https://history.51invest.com/"> 经济与金融史 </a><a class="nav-link" href="https://research.51invest.com/"> 研究方法 </a> <a class="nav-link" href="https://51invest.com/contents/"> 内容地图 </a> </nav> <div class="header-tools"> <a class="icon-button language-button" href="/en/learn/reits-and-infrastructure-cash-flow-leverage-valuation/" hreflang="en" lang="en" data-language-link="en" aria-label="切换为英文" title="切换为英文"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>English</span> </a> <button class="icon-button theme-button" type="button" data-theme-toggle aria-label="主题: 跟随系统" title="主题: 跟随系统" data-label-auto="主题: 跟随系统" data-label-light="主题: 浅色" data-label-dark="主题: 深色"> <span class="theme-icon" data-theme-icon="auto"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>        <circle cx="12" cy="12" r="8.5"></circle><path d="M12 3.5v17"></path><path d="M12 7a5 5 0 0 1 0 10" fill="currentColor" stroke="none"></path> </svg></span> <span class="theme-icon" data-theme-icon="light"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>       <circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>  </svg></span> <span class="theme-icon" data-theme-icon="dark"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>      <path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"></path>   </svg></span> <span class="theme-text" data-theme-text="auto">跟随系统</span> <span class="theme-text" data-theme-text="light">浅色</span> <span class="theme-text" data-theme-text="dark">深色</span> </button> </div> </div> </header> <main id="main" class="site-main" data-pagefind-body>  <div class="reading-progress" data-reading-progress aria-hidden="true"><span></span></div> <div class="container"> <nav class="breadcrumbs" aria-label="Breadcrumb"> <a href="https://51invest.com/" data-main-home>首页</a> <span class="sep">/</span> <a href="/">市场与产品</a> <span class="sep">/</span> <span aria-current="page">REITs 与基础设施：现金流、杠杆与估值</span> </nav> </div> <article> <header class="article-header"> <div class="container"> <span class="article-type">产品与品种</span> <h1 class="article-title">REITs 与基础设施：现金流、杠杆与估值</h1> <p class="article-summary">REITs 把不动产的租金现金流装进可交易份额；基础设施基金把收费权、管网和电站的长期现金流装进类似结构。两者都靠稳定现金流吸引投资者，也都受利率、杠杆和资产质量约束。</p>  <div class="meta-grid"> <div class="meta-item"><span>模块</span><strong>MKT-M16 · 房地产与基础设施</strong></div> <div class="meta-item"><span>层级</span><strong>入门</strong></div> <div class="meta-item"><span>阅读</span><strong>3 分钟 · 11 节</strong></div> </div> <p class="demo-jump"> <a href="#demo-check"> 这篇有一个可以动手操作的演示 <span aria-hidden="true">↓</span> </a> </p> </div> </header> <div class="container article-layout"> <div class="article-body"> <h2>产品定义</h2>
+<p><strong>REIT</strong>（real estate investment trust）是把不动产组合装进公司或信托、以份额交易的产品。美国 REIT 需满足收入、资产和分配测试，通常把大部分应税收入分配给股东。<strong>基础设施基金</strong>持有收费公路、机场、管网、电站等资产，靠长期收费或合约现金流分配[1]。</p>
+<h2>权利与现金流</h2>
+<p>REIT 份额持有人拥有分红权和剩余价值，但不直接处置底层物业；基础设施份额持有人按合约获得收费现金流，受特许经营期和监管定价约束。现金流表如下：</p>
+<table>
+<thead>
+<tr>
+<th>日期/条件</th>
+<th>现金流</th>
+<th>金额</th>
+<th>币种</th>
+<th>不确定性</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>每季度</td>
+<td>租金分红</td>
+<td>每份 0.9 元</td>
+<td>人民币</td>
+<td>出租率与租金</td>
+</tr>
+<tr>
+<td>每年</td>
+<td>基础设施分配</td>
+<td>每份 1.2 元</td>
+<td>人民币</td>
+<td>收费量与费率</td>
+</tr>
+<tr>
+<td>到期/退出</td>
+<td>资产处置</td>
+<td>按净值</td>
+<td>人民币</td>
+<td>估值与流动性</td>
+</tr>
+</tbody></table>
+<p>数字为教学假设，不是产品报价。分配不是保证，可能受现金流、债务契约和监管限制[2]。</p>
+<h2>参与者</h2>
+<p>发行人（REIT 或基础设施基金）、底层资产运营方、做市商、托管机构、评级机构、监管者与投资者。REITs 的估值常看 P/FFO；基础设施常看现金流收益率与特许经营期。</p>
+<h2>交易、持有与退出</h2>
+<p>REITs 在交易所交易，流动性较好但有折溢价；基础设施基金可能上市或私募，锁定期更长。退出方式包括二级市场卖出、到期处置或赎回，具体看产品条款。</p>
+<h2>成本</h2>
+<p>管理费、托管费、交易佣金、融资成本、维护资本开支和税务。REITs 的资本开支与租户改善会侵蚀可分配现金流；基础设施的维护与重置成本同样重要。</p>
+<h2>风险</h2>
+<p>第一，利率上升压低估值；第二，出租率或收费量下降；第三，杠杆与再融资风险；第四，监管定价或特许权变化；第五，资产集中；第六，流动性折价。稳定现金流不等于无风险。</p>
+<h2>条款与文件</h2>
+<p>招募说明书、信托契约、特许经营协议、分配政策、债务契约和税务文件。要核对分配覆盖率、贷款到期结构和资产集中度[3]。</p>
+<h2>图表</h2>
+<figure>
+  <svg role="img" aria-labelledby="fig-mkt-041-1-title fig-mkt-041-1-desc" viewBox="0 0 460 300" width="100%">
+    <title id="fig-mkt-041-1-title">租金到 REIT 分配的机制链</title>
+    <desc id="fig-mkt-041-1-desc">租金收入 现金流，运营与资本开支 FFO，分配 0.9。FFO 5、价格 100 时 P/FFO 20；分配 0.9、FFO 1.2 时覆盖率 75%。单位：元与倍数，数字为教学假设。 教学机制图。</desc>
+    <rect x="14" y="38" width="432" height="32" rx="7" fill="var(--surface-2)" stroke="var(--border)"></rect>
+    <text x="28" y="59" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit">P/FFO=100/5=20</text>
+    <rect x="14" y="82" width="132" height="92" rx="8" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="26" y="104" font-size="10.2" font-weight="650" fill="var(--text)" font-family="inherit">租金收入</text>
+    <text x="26" y="128" font-size="12" font-weight="700" fill="var(--accent)" font-family="inherit">现金流</text>
+    <text x="26" y="148" font-size="9.2" fill="var(--muted)" font-family="inherit">出租率</text>
+    <text x="26" y="164" font-size="9.2" fill="var(--muted)" font-family="inherit">租金</text>
+    <rect x="164" y="82" width="132" height="92" rx="8" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="176" y="104" font-size="10.2" font-weight="650" fill="var(--text)" font-family="inherit">运营与资本开支</text>
+    <text x="176" y="128" font-size="12" font-weight="700" fill="var(--accent)" font-family="inherit">FFO</text>
+    <text x="176" y="148" font-size="9.2" fill="var(--muted)" font-family="inherit">维护</text>
+    <text x="176" y="164" font-size="9.2" fill="var(--muted)" font-family="inherit">租户改善</text>
+    <rect x="314" y="82" width="132" height="92" rx="8" fill="var(--accent-soft)" stroke="var(--accent)"></rect>
+    <text x="326" y="104" font-size="10.2" font-weight="650" fill="var(--text)" font-family="inherit">分配</text>
+    <text x="326" y="128" font-size="12" font-weight="700" fill="var(--accent)" font-family="inherit">0.9</text>
+    <text x="326" y="148" font-size="9.2" fill="var(--muted)" font-family="inherit">覆盖率</text>
+    <text x="326" y="164" font-size="9.2" fill="var(--muted)" font-family="inherit">契约</text>
+    <line x1="146" y1="128" x2="164" y2="128" stroke="var(--border)" stroke-width="1.5"></line>
+    <line x1="296" y1="128" x2="314" y2="128" stroke="var(--border)" stroke-width="1.5"></line>
+    <rect x="14" y="190" width="432" height="82" rx="8" fill="var(--surface-2)" stroke="var(--border)"></rect>
+    <text x="28" y="214" font-size="10" font-weight="650" fill="var(--text)" font-family="inherit">可分配现金流不是租金总额</text>
+    <text x="28" y="236" font-size="9.6" fill="var(--muted)" font-family="inherit">FFO 5、价格 100 时 P/FFO 20；分配 0.9、FFO 1.2 时覆盖率 75%</text>
+    <text x="28" y="256" font-size="9.6" fill="var(--muted)" font-family="inherit">单位：元与倍数，数字为教学假设</text>
+  </svg>
+  <figcaption>图 1：租金收入 现金流，运营与资本开支 FFO，分配 0.9。FFO 5、价格 100 时 P/FFO 20；分配 0.9、FFO 1.2 时覆盖率 75%。单位：元与倍数，数字为教学假设。 教学机制图。</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-mkt-041-2-title fig-mkt-041-2-desc" viewBox="0 0 460 300" width="100%">
+    <title id="fig-mkt-041-2-title">REIT 估值算例</title>
+    <desc id="fig-mkt-041-2-desc">REIT 估值算例。P/FFO 法：输入 FFO 5，倍数/率 20 倍，结论 价格 100；资本化率法：Input NOI 5，Multiple/rate 5%，Result 价值 100。两种口径都应回到现金流与资产质量；利率上升会压低倍数。单位：元、倍数与百分比，数字为教学假设。 数字为教学假设。</desc>
+    <rect x="14" y="36" width="432" height="34" rx="7" fill="var(--surface-2)" stroke="var(--border)"></rect>
+    <text x="28" y="57" font-size="10" font-weight="650" fill="var(--text)" font-family="inherit">P/FFO=20；cap rate=5%</text>
+    <rect x="14" y="86" width="204" height="132" rx="8" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="28" y="109" font-size="10.2" font-weight="650" fill="var(--text)" font-family="inherit">P/FFO 法</text>
+    <text x="26" y="135" font-size="9.4" fill="var(--muted)" font-family="inherit">输入</text>
+    <text x="206" y="135" text-anchor="end" font-size="9.6" font-weight="650" fill="var(--text)" font-family="inherit">FFO 5</text>
+    <text x="26" y="163" font-size="9.4" fill="var(--muted)" font-family="inherit">倍数/率</text>
+    <text x="206" y="163" text-anchor="end" font-size="9.6" font-weight="650" fill="var(--text)" font-family="inherit">20 倍</text>
+    <text x="26" y="191" font-size="9.4" fill="var(--muted)" font-family="inherit">结论</text>
+    <text x="206" y="191" text-anchor="end" font-size="9.6" font-weight="650" fill="var(--text)" font-family="inherit">价格 100</text>
+    <rect x="242" y="86" width="204" height="132" rx="8" fill="var(--accent-soft)" stroke="var(--accent)"></rect>
+    <text x="256" y="109" font-size="10.2" font-weight="650" fill="var(--text)" font-family="inherit">资本化率法</text>
+    <text x="254" y="135" font-size="9.4" fill="var(--muted)" font-family="inherit">输入</text>
+    <text x="434" y="135" text-anchor="end" font-size="9.6" font-weight="650" fill="var(--text)" font-family="inherit">NOI 5</text>
+    <text x="254" y="163" font-size="9.4" fill="var(--muted)" font-family="inherit">倍数/率</text>
+    <text x="434" y="163" text-anchor="end" font-size="9.6" font-weight="650" fill="var(--text)" font-family="inherit">5%</text>
+    <text x="254" y="191" font-size="9.4" fill="var(--muted)" font-family="inherit">结论</text>
+    <text x="434" y="191" text-anchor="end" font-size="9.6" font-weight="650" fill="var(--text)" font-family="inherit">价值 100</text>
+    <text x="28" y="240" font-size="9.6" fill="var(--muted)" font-family="inherit">两种口径都应回到现金流与资产质量；利率上升会压低倍数</text>
+    <text x="28" y="262" font-size="9.6" fill="var(--muted)" font-family="inherit">单位：元、倍数与百分比，数字为教学假设</text>
+  </svg>
+  <figcaption>图 2：REIT 估值算例。P/FFO 法：输入 FFO 5，倍数/率 20 倍，结论 价格 100；资本化率法：Input NOI 5，Multiple/rate 5%，Result 价值 100。两种口径都应回到现金流与资产质量；利率上升会压低倍数。单位：元、倍数与百分比，数字为教学假设。 数字为教学假设。</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-mkt-041-3-title fig-mkt-041-3-desc" viewBox="0 0 460 300" width="100%">
+    <title id="fig-mkt-041-3-title">REITs 与基础设施的风险对比</title>
+    <desc id="fig-mkt-041-3-desc">REITs 与基础设施的风险对比。REITs：现金流 租金，监管 城市规划，流动性 交易所；基础设施：现金流 收费权，监管 定价监管，流动性 上市/私募。REITs 更受租金与利率影响，基础设施更受监管与特许期影响。单位：定性对比，数字为教学假设。 教学对比图。</desc>
+    <rect x="14" y="38" width="204" height="172" rx="8" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="28" y="61" font-size="10.2" font-weight="650" fill="var(--text)" font-family="inherit">REITs</text>
+    <text x="26" y="88" font-size="9.4" fill="var(--muted)" font-family="inherit">现金流</text>
+    <text x="206" y="88" text-anchor="end" font-size="9.6" font-weight="650" fill="var(--text)" font-family="inherit">租金</text>
+    <text x="26" y="116" font-size="9.4" fill="var(--muted)" font-family="inherit">监管</text>
+    <text x="206" y="116" text-anchor="end" font-size="9.6" font-weight="650" fill="var(--text)" font-family="inherit">城市规划</text>
+    <text x="26" y="144" font-size="9.4" fill="var(--muted)" font-family="inherit">流动性</text>
+    <text x="206" y="144" text-anchor="end" font-size="9.6" font-weight="650" fill="var(--text)" font-family="inherit">交易所</text>
+    <rect x="242" y="38" width="204" height="172" rx="8" fill="var(--accent-soft)" stroke="var(--accent)"></rect>
+    <text x="256" y="61" font-size="10.2" font-weight="650" fill="var(--text)" font-family="inherit">基础设施</text>
+    <text x="254" y="88" font-size="9.4" fill="var(--muted)" font-family="inherit">现金流</text>
+    <text x="434" y="88" text-anchor="end" font-size="9.6" font-weight="650" fill="var(--text)" font-family="inherit">收费权</text>
+    <text x="254" y="116" font-size="9.4" fill="var(--muted)" font-family="inherit">监管</text>
+    <text x="434" y="116" text-anchor="end" font-size="9.6" font-weight="650" fill="var(--text)" font-family="inherit">定价监管</text>
+    <text x="254" y="144" font-size="9.4" fill="var(--muted)" font-family="inherit">流动性</text>
+    <text x="434" y="144" text-anchor="end" font-size="9.6" font-weight="650" fill="var(--text)" font-family="inherit">上市/私募</text>
+    <text x="28" y="240" font-size="9.6" fill="var(--muted)" font-family="inherit">REITs 更受租金与利率影响，基础设施更受监管与特许期影响</text>
+    <text x="28" y="262" font-size="9.6" fill="var(--muted)" font-family="inherit">单位：定性对比，数字为教学假设</text>
+  </svg>
+  <figcaption>图 3：REITs 与基础设施的风险对比。REITs：现金流 租金，监管 城市规划，流动性 交易所；基础设施：现金流 收费权，监管 定价监管，流动性 上市/私募。REITs 更受租金与利率影响，基础设施更受监管与特许期影响。单位：定性对比，数字为教学假设。 教学对比图。</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-mkt-041-4-title fig-mkt-041-4-desc" viewBox="0 0 460 300" width="100%">
+    <title id="fig-mkt-041-4-title">REITs 与基础设施投资的 6 个风险条件</title>
+    <desc id="fig-mkt-041-4-desc">REITs 与基础设施投资的 6 个风险条件。利率敏感；杠杆可控；现金流覆盖；资产集中；监管稳定；流动性足够。6 项缺一，稳定现金流也可能变成分配削减；是否安全取决于这些条件。单位：条件清单，数字为教学假设。 这些条件决定方法是否适用。</desc>
+    <text x="28" y="36" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit">先核对利率、杠杆、集中与监管</text>
+    <rect x="14" y="52" width="204" height="52" rx="7" fill="var(--accent-soft)" stroke="var(--accent)"></rect>
+    <text x="24" y="72" font-size="9.8" font-weight="650" fill="var(--text)" font-family="inherit">利率敏感</text>
+    <text x="24" y="89" font-size="9.2" fill="var(--muted)" font-family="inherit">估值倍数</text>
+    <rect x="242" y="52" width="204" height="52" rx="7" fill="var(--accent-soft)" stroke="var(--accent)"></rect>
+    <text x="252" y="72" font-size="9.8" font-weight="650" fill="var(--text)" font-family="inherit">杠杆可控</text>
+    <text x="252" y="89" font-size="9.2" fill="var(--muted)" font-family="inherit">贷款到期</text>
+    <rect x="14" y="110" width="204" height="52" rx="7" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="24" y="130" font-size="9.8" font-weight="650" fill="var(--text)" font-family="inherit">现金流覆盖</text>
+    <text x="24" y="147" font-size="9.2" fill="var(--muted)" font-family="inherit">分配/利息</text>
+    <rect x="242" y="110" width="204" height="52" rx="7" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="252" y="130" font-size="9.8" font-weight="650" fill="var(--text)" font-family="inherit">资产集中</text>
+    <text x="252" y="147" font-size="9.2" fill="var(--muted)" font-family="inherit">区域/租户</text>
+    <rect x="14" y="168" width="204" height="52" rx="7" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="24" y="188" font-size="9.8" font-weight="650" fill="var(--text)" font-family="inherit">监管稳定</text>
+    <text x="24" y="205" font-size="9.2" fill="var(--muted)" font-family="inherit">定价/特许</text>
+    <rect x="242" y="168" width="204" height="52" rx="7" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="252" y="188" font-size="9.8" font-weight="650" fill="var(--text)" font-family="inherit">流动性足够</text>
+    <text x="252" y="205" font-size="9.2" fill="var(--muted)" font-family="inherit">折溢价</text>
+    <text x="28" y="248" font-size="9.6" fill="var(--muted)" font-family="inherit">6 项缺一，稳定现金流也可能变成分配削减；是否安全取决于这些条件</text>
+    <text x="28" y="270" font-size="9.6" fill="var(--muted)" font-family="inherit">单位：条件清单，数字为教学假设</text>
+  </svg>
+  <figcaption>图 4：REITs 与基础设施投资的 6 个风险条件。利率敏感；杠杆可控；现金流覆盖；资产集中；监管稳定；流动性足够。6 项缺一，稳定现金流也可能变成分配削减；是否安全取决于这些条件。单位：条件清单，数字为教学假设。 这些条件决定方法是否适用。</figcaption>
+</figure>
+
+<h2>关联</h2>
+<ul>
+<li>与 <strong>MKT-021 房地产与 REITs</strong> 的关系：母文给出模块总框架；本文把「租金与收费权如何变成可交易现金流，以及估值与杠杆约束」单独拆开，落到可计算的例子和适用条件上。</li>
+<li>与 <strong>MKT-022 私募股权信贷与对冲基金</strong> 的关系：同站相邻主题，提供背景或对照；本文不重复它的重点，而聚焦「租金与收费权如何变成可交易现金流，以及估值与杠杆约束」。</li>
+<li>与 <strong>MKT-027 养老产品与账户</strong> 的关系：同站相邻主题，提供背景或对照；本文不重复它的重点，而聚焦「租金与收费权如何变成可交易现金流，以及估值与杠杆约束」。</li>
+</ul>
+<h2>练习</h2>
+<ol>
+<li>估值题：FFO 每份 5 元、价格 100 元，P/FFO 是多少？若资本化率 5%，隐含资产价值如何？</li>
+<li>现金流题：REIT 每份分配 0.9 元、FFO 1.2 元，分配覆盖率是多少？</li>
+<li>风险题：列出利率、杠杆和租户集中三项风险，并说明每项如何影响分配。</li>
+</ol>
+<h2>来源</h2>
+<ol>
+<li>U.S. Securities and Exchange Commission, Office of Investor Education and Advocacy, <em>Investor Bulletin: Real Estate Investment Trusts (REITs)</em>, U.S. Securities and Exchange Commission. <a href="https://www.sec.gov/files/reits.pdf">https://www.sec.gov/files/reits.pdf</a></li>
+<li>Internal Revenue Service, <em>Instructions for Form 1120-REIT (2025)</em>, Internal Revenue Service. <a href="https://www.irs.gov/pub/irs-pdf/i1120rei.pdf">https://www.irs.gov/pub/irs-pdf/i1120rei.pdf</a></li>
+<li>Nareit, <em>What is a REIT?</em>, Nareit. <a href="https://www.reit.com/what-reit">https://www.reit.com/what-reit</a></li>
+</ol>
+  <section class="article-demo" id="demo-check" data-demo="check" data-lang="zh" aria-labelledby="demo-check-title" data-check-done="三项都能说清：这篇的核心已经过关。" data-check-pending="还差一项：回到正文对应小节，找一个反例或数字再讲一遍。" data-check-count="已勾选"> <header class="demo-head"> <div class="demo-head-top"> <p class="demo-eyebrow">动手演示</p> <button class="demo-reset" type="button" data-demo-reset>恢复默认</button> </div> <h2 id="demo-check-title">读完自检：三句话能不能说清</h2> <p class="demo-intro">不用背定义。把下面三句逐个勾上，看自己能不能用自己的话讲清机制、算例和边界。</p> </header>          <div class="demo-check"> <ul class="demo-check-list"> <li> <label> <input type="checkbox" data-check-index="0"> <span>说明 REITs 与基础设施产品的权利、现金流和估值口径。</span> </label> </li><li> <label> <input type="checkbox" data-check-index="1"> <span>用 P/FFO 与资本化率比较两类资产的定价。</span> </label> </li><li> <label> <input type="checkbox" data-check-index="2"> <span>能说出一个本文结论不适用的条件</span> </label> </li> </ul> <p class="demo-check-status" data-out="checkStatus" role="status"> 已勾选 0 / 3
+</p> </div> <p class="demo-footnote">数字为教学假设，用来展示关系，不构成预测或投资建议。</p> </section><script type="module" src="/_astro/ArticleDemo.astro_astro_type_script_index_0_lang.C9VQAsQ0.js"></script> <p class="notice"> 本文已通过当前发布门槛；事实、计算与译文如有修订，会同步更新两个语言版本。 </p> <p> <a class="button secondary" href="/"> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class> <path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path>        </svg>返回分站 </a> </p> </div> <aside class="article-aside" aria-label="文章信息"> <section class="aside-card"> <h2>学习目标</h2> <ul> <li>说明 REITs 与基础设施产品的权利、现金流和估值口径。</li><li>用 P/FFO 与资本化率比较两类资产的定价。</li><li>列出 REITs 与基础设施投资的 6 个风险条件，避免把稳定现金流当成无风险。</li> </ul> </section> <section class="aside-card"> <h2>必需先修</h2> <ul> <li> <a href="/learn/real-estate-and-reits/">MKT-021 · 房地产与 REITs</a> </li> </ul> </section> <section class="aside-card"> <h2>建议阅读</h2> <ul> <li> <a href="/learn/real-estate-and-reits/">MKT-021 · 房地产与 REITs</a> </li><li> <a href="/learn/private-equity-private-credit-and-hedge-funds/">MKT-022 · 私募股权信贷与对冲基金</a> </li><li> <a href="/learn/retirement-products-and-accounts/">MKT-027 · 养老产品与账户</a> </li> </ul> </section> <section class="aside-card"> <h2>AI 复核记录</h2> <p class="muted"> 本项目没有真人签字；下列状态来自 AI-only 编辑复核。 </p> <ul> <li> 事实与计算 ：AI 复核通过 </li><li> 学科 ：AI 复核通过 </li><li> 英文 ：AI 复核通过 </li><li> 页面 ：AI 复核通过 </li> </ul> </section> <section class="aside-card"> <h2>来源</h2> <div class="source"> <a href="https://www.sec.gov/files/reits.pdf" rel="noopener noreferrer" target="_blank">Investor Bulletin: Real Estate Investment Trusts (REITs)</a> <p>U.S. Securities and Exchange Commission, Office of Investor Education and Advocacy · U.S. Securities and Exchange Commission</p> <p>访问：2026-11-24 · 许可：U.S. public information; copying and further distribution allowed</p> <p>支持论点：用于核对本文关于「REITs 与基础设施」的公开概念、制度或历史背景；正文数字与算例为教学假设，不写成统计。</p> </div><div class="source"> <a href="https://www.irs.gov/pub/irs-pdf/i1120rei.pdf" rel="noopener noreferrer" target="_blank">Instructions for Form 1120-REIT (2025)</a> <p>Internal Revenue Service · Internal Revenue Service</p> <p>访问：2026-11-24 · 许可：U.S. Government work (public domain), 17 U.S.C. §105</p> <p>支持论点：用于核对本文关于「REITs 与基础设施」的公开概念、制度或历史背景；正文数字与算例为教学假设，不写成统计。</p> </div><div class="source"> <a href="https://www.reit.com/what-reit" rel="noopener noreferrer" target="_blank">What is a REIT?</a> <p>Nareit · Nareit</p> <p>访问：2026-11-24 · 许可：© Nareit; linked summary only</p> <p>支持论点：用于核对本文关于「REITs 与基础设施」的公开概念、制度或历史背景；正文数字与算例为教学假设，不写成统计。</p> </div> </section> </aside> </div> </article><script type="module">var e=document.querySelector(`[data-reading-progress] span`),t=document.querySelector(`article`);if(e&&t){let n=()=>{let n=t.offsetTop,r=t.offsetHeight-window.innerHeight,i=r>0?(window.scrollY-n)/r:0;e.style.width=`${Math.min(1,Math.max(0,i))*100}%`};window.addEventListener(`scroll`,n,{passive:!0}),window.addEventListener(`resize`,n),n()}</script>  </main> <footer class="site-footer"> <div class="container footer-inner"> <div class="footer-brand"> <span class="footer-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="28" height="28" alt class="mascot" loading="lazy" decoding="async"></span> <div> <strong>巫妖投资 51Invest</strong> <p class="footer-note">非商业免费知识站。每篇标出来源与口径；这里没有投资建议。</p> </div> </div> <nav class="footer-links" aria-label="知识分站"> <a href="https://51invest.com/" data-main-home>首页</a> <a href="https://51invest.com/contents/">内容地图</a> <a href="/glossary/">术语表</a> <a href="/search/">搜索</a> <a href="https://51invest.com/charts/" data-main-link>图表</a> <a href="https://51invest.com/sources/" data-main-link>数据与许可</a> <a href="/">分站首页</a> </nav> </div> </footer> <nav class="mobile-nav" aria-label="知识分站"> <a class="mobile-link" href="https://51invest.com/" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>    <path d="m3 10 9-7 9 7"></path><path d="M5 9v11h14V9"></path><path d="M9 20v-6h6v6"></path>     </svg> <span>首页</span> </a> <a class="mobile-link" href="https://51invest.com/#stations" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>   <rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect>      </svg> <span>知识分站</span> </a> <a class="mobile-link active" href="/" aria-current="page"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>  <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v18H6.5A2.5 2.5 0 0 1 4 18.5z"></path><path d="M4 18.5A2.5 2.5 0 0 1 6.5 16H20"></path>       </svg> <span>分站首页</span> </a> <a class="mobile-link" href="/en/learn/reits-and-infrastructure-cash-flow-leverage-valuation/" data-language-link="en"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>English</span> </a> </nav><script type="module">var e=document.documentElement,t=[`auto`,`light`,`dark`],n=matchMedia(`(prefers-color-scheme: dark)`),r=()=>{let t=e.dataset.themeMode;return t===`light`||t===`dark`?t:`auto`},i=e=>{try{localStorage.setItem(`51invest-theme`,e)}catch{}try{let t=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-theme=${e}; Path=/; Max-Age=31536000; SameSite=Lax${t}`}catch{}},a=e=>{document.querySelectorAll(`[data-theme-toggle]`).forEach(t=>{let n=t.dataset[`label${e[0].toUpperCase()}${e.slice(1)}`];n&&(t.setAttribute(`aria-label`,n),t.setAttribute(`title`,n))})},o=t=>{e.dataset.themeMode=t,e.dataset.theme=t===`auto`?n.matches?`dark`:`light`:t,i(t),a(t)};a(r()),document.querySelectorAll(`[data-theme-toggle]`).forEach(e=>{e.addEventListener(`click`,()=>{let e=t[(t.indexOf(r())+1)%t.length];o(e)})}),n.addEventListener(`change`,()=>{r()===`auto`&&(e.dataset.theme=n.matches?`dark`:`light`)}),document.querySelectorAll(`[data-language-link]`).forEach(e=>{e.addEventListener(`click`,()=>{let t=e.dataset.languageLink;if(t===`zh`||t===`en`){try{localStorage.setItem(`51invest-language`,JSON.stringify(t))}catch{}try{let e=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-language=${t}; Path=/; Max-Age=31536000; SameSite=Lax${e}`}catch{}}})});</script> </body> </html>

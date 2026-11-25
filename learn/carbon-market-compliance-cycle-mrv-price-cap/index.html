@@ -1,0 +1,211 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light" data-theme-mode="auto"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark"><title>碳市场的履约周期：配额、MRV 与价格上限 · 巫妖投资</title><meta name="description" content="碳市场不是单纯的“排放权交易”，而是一套履约周期：配额发放、排放监测、核查、交割和惩罚。价格上限、配额储备和市场稳定机制决定碳价在压力下会不会失灵。"><link rel="canonical" href="https://markets.51invest.com/learn/carbon-market-compliance-cycle-mrv-price-cap/"><link rel="alternate" hreflang="zh-CN" href="https://markets.51invest.com/learn/carbon-market-compliance-cycle-mrv-price-cap/"><link rel="alternate" hreflang="en" href="https://markets.51invest.com/en/learn/carbon-market-compliance-cycle-mrv-price-cap/"><link rel="alternate" hreflang="x-default" href="https://markets.51invest.com/learn/carbon-market-compliance-cycle-mrv-price-cap/"><link rel="icon" type="image/png" href="/_astro/neutral.Dr5C2SoA.png"><script>
+  (() => {
+    const root = document.documentElement;
+    const readCookie = key => {
+      try {
+        return document.cookie.split('; ').find(value => value.startsWith(`51invest-${key}=`))?.split('=').slice(1).join('=') ?? null;
+      } catch {
+        return null;
+      }
+    };
+    const readLocal = key => {
+      try {
+        return localStorage.getItem(`51invest-${key}`);
+      } catch {
+        return null;
+      }
+    };
+    const storedTheme = readCookie('theme') || readLocal('theme');
+    const mode = ['light', 'dark', 'auto'].includes(storedTheme) ? storedTheme : 'auto';
+    const media = matchMedia('(prefers-color-scheme: dark)');
+    const apply = () => {
+      root.dataset.theme = mode === 'auto' ? (media.matches ? 'dark' : 'light') : mode;
+      root.dataset.themeMode = mode;
+    };
+    apply();
+    media.addEventListener('change', () => {
+      if (root.dataset.themeMode === 'auto') apply();
+    });
+  })();
+</script><link rel="stylesheet" href="/_astro/Base.CocbJOeh.css"></head> <body>  <a class="skip-link" href="#main">跳到正文</a> <header class="site-header"> <div class="container header-inner"> <a class="brand" href="https://51invest.com/" data-main-home aria-label="巫妖投资"> <span class="brand-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="36" height="36" alt class="mascot" loading="lazy" decoding="async"></span> <span class="brand-copy"> <span class="brand-name">巫妖投资</span> <span class="brand-caption">51INVEST</span> </span> </a> <nav class="desktop-nav" aria-label="知识分站"> <a class="nav-link" href="https://51invest.com/" data-main-home> 首页 </a> <a class="nav-link" href="https://economics.51invest.com/"> 经济学 </a><a class="nav-link" href="https://finance.51invest.com/"> 金融基础 </a><a class="nav-link active" href="/" aria-current="page"> 市场与产品 </a><a class="nav-link" href="https://invest.51invest.com/"> 投资方法 </a><a class="nav-link" href="https://history.51invest.com/"> 经济与金融史 </a><a class="nav-link" href="https://research.51invest.com/"> 研究方法 </a> <a class="nav-link" href="https://51invest.com/contents/"> 内容地图 </a> </nav> <div class="header-tools"> <a class="icon-button language-button" href="/en/learn/carbon-market-compliance-cycle-mrv-price-cap/" hreflang="en" lang="en" data-language-link="en" aria-label="切换为英文" title="切换为英文"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>English</span> </a> <button class="icon-button theme-button" type="button" data-theme-toggle aria-label="主题: 跟随系统" title="主题: 跟随系统" data-label-auto="主题: 跟随系统" data-label-light="主题: 浅色" data-label-dark="主题: 深色"> <span class="theme-icon" data-theme-icon="auto"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>        <circle cx="12" cy="12" r="8.5"></circle><path d="M12 3.5v17"></path><path d="M12 7a5 5 0 0 1 0 10" fill="currentColor" stroke="none"></path> </svg></span> <span class="theme-icon" data-theme-icon="light"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>       <circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>  </svg></span> <span class="theme-icon" data-theme-icon="dark"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>      <path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"></path>   </svg></span> <span class="theme-text" data-theme-text="auto">跟随系统</span> <span class="theme-text" data-theme-text="light">浅色</span> <span class="theme-text" data-theme-text="dark">深色</span> </button> </div> </div> </header> <main id="main" class="site-main" data-pagefind-body>  <div class="reading-progress" data-reading-progress aria-hidden="true"><span></span></div> <div class="container"> <nav class="breadcrumbs" aria-label="Breadcrumb"> <a href="https://51invest.com/" data-main-home>首页</a> <span class="sep">/</span> <a href="/">市场与产品</a> <span class="sep">/</span> <span aria-current="page">碳市场的履约周期：配额、MRV 与价格上限</span> </nav> </div> <article> <header class="article-header"> <div class="container"> <span class="article-type">概念</span> <h1 class="article-title">碳市场的履约周期：配额、MRV 与价格上限</h1> <p class="article-summary">碳市场不是单纯的“排放权交易”，而是一套履约周期：配额发放、排放监测、核查、交割和惩罚。价格上限、配额储备和市场稳定机制决定碳价在压力下会不会失灵。</p>  <div class="meta-grid"> <div class="meta-item"><span>模块</span><strong>MKT-M11 · 环境运力与专业市场</strong></div> <div class="meta-item"><span>层级</span><strong>系统</strong></div> <div class="meta-item"><span>阅读</span><strong>8 分钟 · 12 节</strong></div> </div> <p class="demo-jump"> <a href="#demo-check"> 这篇有一个可以动手操作的演示 <span aria-hidden="true">↓</span> </a> </p> </div> </header> <div class="container article-layout"> <div class="article-body"> <h2>定义与直觉</h2>
+<p><strong>碳市场</strong>是政府设定排放总量或强度目标，把配额分配给受管制企业，允许企业交易配额的市场。它的价格不是“环保税”，而是配额稀缺程度的信号。</p>
+<p><strong>履约周期</strong>包括五步：<strong>配额发放</strong>（免费或有偿）、<strong>排放监测</strong>（MRV：监测、报告、核查）、<strong>配额交割</strong>（企业上缴配额）、<strong>缺口处理</strong>（买配额或使用抵消）、<strong>惩罚与披露</strong>。任何一步执行不到位，碳价都会失真。</p>
+<p>碳市场分两类：<strong>总量管制与交易</strong>（cap-and-trade）设定绝对上限；<strong>基线信用</strong>（baseline-and-credit）设定强度基准，低于基准的项目产生可交易信用。两者价格含义不同[1][2]。</p>
+<h2>正式表达与示例</h2>
+<p>假设某企业排放 120 万吨，免费获得 100 万吨配额，缺口 20 万吨。若碳价 80 元/吨，履约成本 1,600 万元；若企业减排成本 60 元/吨，可减排 10 万吨，剩余 10 万吨买配额，总成本 <code>10×60+10×80=1,400 万元</code>。</p>
+<p>若碳价涨到 120 元/吨，企业更愿意减排；若价格上限 100 元/吨，超过上限时政府投放储备配额，碳价被压住。价格上限保护企业，但削弱减排激励；价格下限保护投资者，但可能造成配额过剩。</p>
+<p>若 MRV 核查发现企业少报 10 万吨，缺口从 20 万吨升到 30 万吨，履约成本增加 800 万元；数据质量直接改变市场供需。以上数字均为教学假设。</p>
+<h2>三个机制</h2>
+<p><strong>机制一：配额储备。</strong> 政府预留一部分配额，在价格过高时投放、过低时回收；储备规模和管理规则决定稳定效果。</p>
+<p><strong>机制二：价格走廊。</strong> 上限防止碳价失控，下限防止投资不足；走廊太窄会削弱价格信号，太宽则形同虚设。</p>
+<p><strong>机制三： offsets 与边界调节。</strong> 抵消信用可以降低成本，但质量和额外性存疑；碳边境调节机制（CBAM）则把碳价延伸到进口品。</p>
+<p>碳市场的有效性取决于覆盖范围、配额总量、MRV 质量和市场稳定机制；单看碳价水平不够[3][4]。</p>
+<h2>图表</h2>
+<figure>
+<svg role="img" aria-labelledby="fig-carbon-market-compliance-cycle-mrv-price-cap-1-title fig-carbon-market-compliance-cycle-mrv-price-cap-1-desc" viewBox="0 0 640 320" xmlns="http://www.w3.org/2000/svg">
+<title id="fig-carbon-market-compliance-cycle-mrv-price-cap-1-title">履约周期的五个环节</title>
+<desc id="fig-carbon-market-compliance-cycle-mrv-price-cap-1-desc">五步：配额发放、排放监测、核查、配额交割、惩罚。</desc>
+<g fill="currentColor">
+<text x="24" y="30" font-size="16" text-anchor="start">碳市场履约链</text>
+<text x="24" y="54" font-size="11" text-anchor="start">配额、排放、核查、交割、惩罚五步。</text>
+<rect x="14" y="116" width="110" height="88" rx="10" fill="currentColor" opacity=".08" stroke="currentColor" stroke-width="1.2"/>
+<text x="69" y="140" font-size="12" text-anchor="middle">配额</text>
+<text x="69" y="184" font-size="12" text-anchor="middle" font-weight="700">100 万吨</text>
+<rect x="136" y="116" width="110" height="88" rx="10" fill="currentColor" opacity=".08" stroke="currentColor" stroke-width="1.2"/>
+<text x="191" y="140" font-size="12" text-anchor="middle">排放</text>
+<text x="191" y="184" font-size="12" text-anchor="middle" font-weight="700">120 万吨</text>
+<rect x="258" y="116" width="110" height="88" rx="10" fill="currentColor" opacity=".08" stroke="currentColor" stroke-width="1.2"/>
+<text x="313" y="140" font-size="12" text-anchor="middle">核查</text>
+<text x="313" y="184" font-size="12" text-anchor="middle" font-weight="700">MRV</text>
+<rect x="380" y="116" width="110" height="88" rx="10" fill="currentColor" opacity=".08" stroke="currentColor" stroke-width="1.2"/>
+<text x="435" y="140" font-size="12" text-anchor="middle">交割</text>
+<text x="435" y="184" font-size="12" text-anchor="middle" font-weight="700">上缴</text>
+<rect x="502" y="116" width="110" height="88" rx="10" fill="currentColor" opacity=".08" stroke="currentColor" stroke-width="1.2"/>
+<text x="557" y="140" font-size="12" text-anchor="middle">惩罚</text>
+<text x="557" y="184" font-size="12" text-anchor="middle" font-weight="700">违规</text>
+<line x1="125" y1="160" x2="135" y2="160" stroke="currentColor" stroke-width="1.4" opacity=".55"/>
+<line x1="247" y1="160" x2="257" y2="160" stroke="currentColor" stroke-width="1.4" opacity=".55"/>
+<line x1="369" y1="160" x2="379" y2="160" stroke="currentColor" stroke-width="1.4" opacity=".55"/>
+<line x1="491" y1="160" x2="501" y2="160" stroke="currentColor" stroke-width="1.4" opacity=".55"/>
+<text x="24" y="246" font-size="11" text-anchor="start">教学示意，不含统计数据。</text>
+</g>
+</svg>
+<figcaption>图 1：履约周期的五个环节；教学示意。</figcaption>
+</figure>
+
+<figure>
+<svg role="img" aria-labelledby="fig-carbon-market-compliance-cycle-mrv-price-cap-2-title fig-carbon-market-compliance-cycle-mrv-price-cap-2-desc" viewBox="0 0 640 320" xmlns="http://www.w3.org/2000/svg">
+<title id="fig-carbon-market-compliance-cycle-mrv-price-cap-2-title">碳价与履约成本</title>
+<desc id="fig-carbon-market-compliance-cycle-mrv-price-cap-2-desc">缺口 20 万吨时两种碳价的成本。</desc>
+<g fill="currentColor">
+<text x="24" y="30" font-size="16" text-anchor="start">不同碳价下的履约成本</text>
+<text x="24" y="54" font-size="11" text-anchor="start">碳价 80 元/吨成本 1,600 万元；120 元/吨成本 2,4</text>
+<text x="24" y="68" font-size="11" text-anchor="start">00 万元。</text>
+<line x1="178" y1="64" x2="178" y2="270" stroke="currentColor" stroke-width="1" opacity=".45"/>
+<text x="20" y="97" font-size="12">80 元</text>
+<rect x="178" y="78" width="240" height="24" rx="5" fill="currentColor" opacity=".22" stroke="currentColor" stroke-width="1"/>
+<text x="554" y="95" font-size="12" font-weight="700">1600</text>
+<text x="20" y="145" font-size="12">120 元</text>
+<rect x="178" y="126" width="360" height="24" rx="5" fill="currentColor" opacity=".22" stroke="currentColor" stroke-width="1"/>
+<text x="554" y="143" font-size="12" font-weight="700">2400</text>
+<text x="24" y="292" font-size="11" text-anchor="start">教学假设；单位：万元。</text>
+</g>
+</svg>
+<figcaption>图 2：碳价与履约成本；教学假设。</figcaption>
+</figure>
+
+<figure>
+<svg role="img" aria-labelledby="fig-carbon-market-compliance-cycle-mrv-price-cap-3-title fig-carbon-market-compliance-cycle-mrv-price-cap-3-desc" viewBox="0 0 640 330" xmlns="http://www.w3.org/2000/svg">
+<title id="fig-carbon-market-compliance-cycle-mrv-price-cap-3-title">碳市场的二维矩阵</title>
+<desc id="fig-carbon-market-compliance-cycle-mrv-price-cap-3-desc">两轴：配额松紧、MRV 质量；四象限对应有效、价格高但失真、过剩和弱市场。</desc>
+<g fill="currentColor">
+<text x="24" y="30" font-size="16" text-anchor="start">配额松紧与 MRV 质量的四类状态</text>
+<text x="24" y="54" font-size="11" text-anchor="start">配额紧、MRV 高最有效；配额松、MRV 低最失真。</text>
+<text x="40" y="68" font-size="11">配额紧</text>
+<text x="40" y="286" font-size="11">配额松</text>
+<text x="110" y="314" font-size="11" text-anchor="middle">MRV 低</text>
+<text x="500" y="314" font-size="11" text-anchor="middle">MRV 高</text>
+<rect x="96" y="76" width="226" height="104" rx="8" fill="currentColor" opacity=".06" stroke="currentColor" stroke-width="1"/>
+<text x="108" y="100" font-size="12" text-anchor="start">价格高但失真</text>
+<text x="108" y="130" font-size="11" text-anchor="start">紧配额、低 MRV</text>
+<text x="108" y="170" font-size="11" font-weight="700">数据风险</text>
+<rect x="338" y="76" width="226" height="104" rx="8" fill="currentColor" opacity=".06" stroke="currentColor" stroke-width="1"/>
+<text x="350" y="100" font-size="12" text-anchor="start">有效</text>
+<text x="350" y="130" font-size="11" text-anchor="start">紧配额、高 MRV</text>
+<text x="350" y="170" font-size="11" font-weight="700">信号强</text>
+<rect x="96" y="190" width="226" height="104" rx="8" fill="currentColor" opacity=".06" stroke="currentColor" stroke-width="1"/>
+<text x="108" y="214" font-size="12" text-anchor="start">弱市场</text>
+<text x="108" y="244" font-size="11" text-anchor="start">松配额、低 MRV</text>
+<text x="108" y="284" font-size="11" font-weight="700">价格低</text>
+<rect x="338" y="190" width="226" height="104" rx="8" fill="currentColor" opacity=".06" stroke="currentColor" stroke-width="1"/>
+<text x="350" y="214" font-size="12" text-anchor="start">过剩</text>
+<text x="350" y="244" font-size="11" text-anchor="start">松配额、高 MRV</text>
+<text x="350" y="284" font-size="11" font-weight="700">配额堆积</text>
+</g>
+</svg>
+<figcaption>图 3：碳市场的二维矩阵；对比分类示意。</figcaption>
+</figure>
+
+<p>图 1 把配额、排放、核查、交割和惩罚串成履约链；图 2 比较不同碳价下的履约成本；图 3 用“配额松紧—MRV 质量”两轴划出四类碳市场状态。图中数字均为教学假设。</p>
+<h2>适用条件、边界与常见误区</h2>
+<p><strong>边界一：碳价不是越高越好。</strong> 过高会推高成本、引发碳泄漏；过低则无法激励减排；关键是覆盖和总量。</p>
+<p><strong>边界二：免费配额不是补贴。</strong> 免费分配考虑了碳泄漏和竞争力，但会降低收入并可能造成 windfall profits；拍卖比例影响财政和效率。</p>
+<p><strong>边界三：抵消信用质量参差。</strong> 林业、甲烷和工业抵消的额外性、持久性和监测标准不同；不能把抵消等同于减排。</p>
+<p><strong>误解一：碳市场就是加税。</strong> 碳市场是配额交易，价格由供需决定；碳税是固定价格，两者机制不同。</p>
+<p><strong>误解二：碳价上涨一定减少排放。</strong> 若配额总量宽松或抵消充足，碳价上涨可能只是成本转嫁，排放未必下降。</p>
+<h2>深化：合规周期、MRV 与价格上限</h2>
+<p><strong>碳市场的价格不是“碳的社会成本”</strong>，而是合规主体在履约周期内的边际减排成本。配额总量、履约期限、借贷规则、抵消项目和市场监管，共同决定价格；同一张配额曲线，规则不同，价格可以差很多。</p>
+<p><strong>合规周期</strong>制造季节性。履约截止前，缺口企业集中买入，价格上升；履约后需求下降，价格回落。若允许跨期存储，价格会平滑；若禁止借贷，短期缺口可能把价格推到上限。</p>
+<p><strong>MRV（监测、报告、核查）</strong> 是市场的基石。排放数据不准，配额就没有意义；核查机构的独立性、数据频次、处罚力度决定合规质量。MRV 成本对小企业更高，可能迫使其退出或合并。</p>
+<p><strong>价格上限/下限</strong>用于防止极端波动。上限保护企业成本，但可能削弱减排激励；下限保护投资，但可能增加企业负担。上限触发时，政府可能释放储备配额或允许更多抵消；下限触发时，可能回购配额。</p>
+<p><strong>抵消项目</strong>（林业、甲烷、工业能效）可以降低合规成本，但质量参差；额外性、永久性和泄漏是关键。低质量抵消会破坏环境完整性，也会压低价格。</p>
+<p><strong>金融化</strong>带来流动性和投机，也带来风险和监管需求。碳期货、期权和基金可以提高价格发现，但可能放大波动；现货与衍生品的监管协调很重要。</p>
+<p><strong>测量</strong>：配额总量、履约缺口、价格、成交量、抵消比例、MRV 覆盖率、违规处罚。单一价格不能说明市场健康。</p>
+<p><strong>常见误用</strong>：把碳价当成万能信号、把抵消当成免费减排、把价格上限当成“安全”、忽略 MRV 和合规成本。</p>
+<p><strong>最后</strong>，碳市场是“规则+数据+金融”的组合；价格只是结果，制度设计决定它能否实现减排目标。</p>
+<h2>碳市场判读清单</h2>
+<p>判断一个碳市场是否有效，不要只看碳价高低，按八项拆：</p>
+<ol>
+<li><strong>总量上限是否与减排目标一致？</strong> 配额总量、拍卖比例和预留储备决定稀缺性；上限松，碳价再高也是纸面。</li>
+<li><strong>MRV 是否独立可核查？</strong> 监测、报告和核查的边界、频率和处罚决定数据质量；自报数据容易低报排放。</li>
+<li><strong>覆盖范围是否漏掉大排放源？</strong> 行业、设施和气体的覆盖决定泄漏风险；只覆盖电力会漏掉工业过程排放。</li>
+<li><strong>配额如何分配？</strong> 免费分配、拍卖和基准法影响机会成本和分配效应；免费配额可能形成暴利。</li>
+<li><strong>价格上下限是否扭曲信号？</strong> 价格上限会削弱稀缺信号，价格下限会抬高 compliance 成本；要写明触发和调整规则。</li>
+<li><strong>跨期机制是否允许存储和借贷？</strong> 存储能平滑价格，借贷可能透支未来减排；规则决定跨期风险。</li>
+<li><strong>抵消信用质量如何？</strong> 林业、CDM 和自愿减排的额外性、永久性和重复计算要单独审计。</li>
+<li><strong>与电力市场、碳税如何互动？</strong> 政策叠加可能重复计价或相互抵消；要算总边际成本。</li>
+</ol>
+<p>碳市场的质量不在“碳价涨了”，而在总量、MRV、覆盖和跨期规则是否形成可信的稀缺信号。</p>
+<p>最后，碳市场的“有效性”要用行为检验：控排企业是否真的改变投资、减排是否发生在覆盖范围内、价格是否传递到电力和工业成本。只有价格变动、没有实体减排，不能算成功。</p>
+<p><strong>最小行动：</strong> 选一个覆盖行业，核对配额总量、MRV 频率和价格上限规则；再用企业投资数据验证价格是否真的改变决策。</p>
+<p><strong>记录：</strong> 配额调整、MRV 处罚和价格干预要留时间戳，才能做政策事件研究。</p>
+<p><strong>一句话：</strong> 没有实体减排的碳价只是数字。</p>
+<p><strong>备注：</strong> 配额和 MRV 规则要按版本留档。</p>
+<h2>反证条件</h2>
+<p>碳市场有效的结论依赖总量、MRV 和价格规则：</p>
+<ol>
+<li><strong>总量上限过松。</strong> 若配额超过实际排放，碳价会跌到下限，减排激励消失。</li>
+<li><strong>MRV 不可信。</strong> 若监测和核查被企业俘获，低报排放和高估抵消会让价格信号失真。</li>
+<li><strong>抵消信用质量差。</strong> 若额外性、永久性和重复计算无法验证，抵消会替代真实减排。</li>
+<li><strong>价格上限过硬。</strong> 若上限长期触发，市场无法传递稀缺信号，投资决策回到行政配给。</li>
+<li><strong>覆盖范围漏掉大源。</strong> 若工业过程和进口隐含碳未被覆盖，泄漏会抵消本地减排。</li>
+</ol>
+<p><strong>实践含义：</strong> 碳市场要看实体减排，不是碳价表演；总量、MRV 和覆盖范围决定价格信号是否可信。</p>
+<h2>练习</h2>
+<ol>
+<li><p>列出碳市场履约周期的五个环节。</p>
+</li>
+<li><p>排放 120 万吨、配额 100 万吨，缺口多少？</p>
+</li>
+<li><p>碳价 80 元/吨，履约成本多少？</p>
+</li>
+<li><p>减排 10 万吨、减排成本 60 元/吨，总成本多少？</p>
+</li>
+<li><p>价格上限如何影响减排激励？</p>
+</li>
+<li><p>MRV 少报 10 万吨会如何改变缺口？</p>
+</li>
+<li><p>判断：碳价越高，减排一定越多吗？说明两个条件。</p>
+</li>
+<li><p>为什么碳价是履约主体的边际减排成本，而不是碳的社会成本？</p>
+</li>
+<li><p>价格上限和下限分别保护谁？各有什么副作用？</p>
+</li>
+</ol>
+<h2>延伸阅读：主要碳市场与实证</h2>
+<p><strong>欧盟 ETS</strong> 是全球最大碳市场，采用总量控制、拍卖和免费配额，设有市场稳定储备（MSR）吸收过剩配额；价格上限通过 MSR 和抵消规则间接实现。</p>
+<p><strong>中国全国碳市场</strong> 2021 年上线，初期以电力行业为主，配额免费分配，MRV 和处罚体系逐步完善；价格发现和流动性仍在发展。</p>
+<p><strong>美国 RGGI</strong> 是区域电力碳市场，采用拍卖和投资回馈；加州 cap-and-trade 与 offsets 结合。</p>
+<p><strong>实证</strong>：碳价与减排、创新和燃料切换的关系受配额松紧、抵消质量和市场设计影响；低价不一定无效，高价也不一定减排。</p>
+<p><strong>阅读建议</strong>：比较 ETS、RGGI 和加州的设计，重点看配额总量、MSR、抵消和 MRV；把价格放在制度背景里读。</p>
+<h2>关联</h2>
+<p>先修 MKT-012；对照 MKT-013；相邻 ECO-056、MKT-031。</p>
+<h2>来源</h2>
+<ol>
+<li>IPCC, <em>AR6 Climate Change 2022: Mitigation of Climate Change, Chapter 13: National and Sub-national Policies and Institutions</em>. Intergovernmental Panel on Climate Change, accessed 2026-11-21. <a href="https://www.ipcc.ch/report/ar6/wg3/chapter/chapter-13/">https://www.ipcc.ch/report/ar6/wg3/chapter/chapter-13/</a></li>
+<li>OECD, <em>Effective Carbon Rates 2023: Pricing Greenhouse Gas Emissions through Taxes and Emissions Trading</em>. OECD Publishing, accessed 2026-11-23. <a href="https://www.oecd.org/en/publications/effective-carbon-rates-2023_b84d5b36-en.html">https://www.oecd.org/en/publications/effective-carbon-rates-2023_b84d5b36-en.html</a></li>
+<li>World Bank, <em>State and Trends of Carbon Pricing 2024</em>. World Bank, accessed 2026-11-23. <a href="https://openknowledge.worldbank.org/bitstreams/d14ff4b1-823f-4d70-927c-456449772089/download">https://openknowledge.worldbank.org/bitstreams/d14ff4b1-823f-4d70-927c-456449772089/download</a></li>
+<li>Steven A. Greenlaw; David Shapiro; Daniel MacDonald, <em>Principles of Economics 3e, 3.1 Demand, Supply, and Equilibrium in Markets for Goods and Services</em>. OpenStax, accessed 2026-10-30. <a href="https://openstax.org/books/principles-economics-3e/pages/3-1-demand-supply-and-equilibrium-in-markets-for-goods-and-services">https://openstax.org/books/principles-economics-3e/pages/3-1-demand-supply-and-equilibrium-in-markets-for-goods-and-services</a></li>
+</ol>
+  <section class="article-demo" id="demo-check" data-demo="check" data-lang="zh" aria-labelledby="demo-check-title" data-check-done="三项都能说清：这篇的核心已经过关。" data-check-pending="还差一项：回到正文对应小节，找一个反例或数字再讲一遍。" data-check-count="已勾选"> <header class="demo-head"> <div class="demo-head-top"> <p class="demo-eyebrow">动手演示</p> <button class="demo-reset" type="button" data-demo-reset>恢复默认</button> </div> <h2 id="demo-check-title">读完自检：三句话能不能说清</h2> <p class="demo-intro">不用背定义。把下面三句逐个勾上，看自己能不能用自己的话讲清机制、算例和边界。</p> </header>          <div class="demo-check"> <ul class="demo-check-list"> <li> <label> <input type="checkbox" data-check-index="0"> <span>说明碳市场履约周期的五个环节。</span> </label> </li><li> <label> <input type="checkbox" data-check-index="1"> <span>用配额缺口算履约成本。</span> </label> </li><li> <label> <input type="checkbox" data-check-index="2"> <span>能说出一个本文结论不适用的条件</span> </label> </li> </ul> <p class="demo-check-status" data-out="checkStatus" role="status"> 已勾选 0 / 3
+</p> </div> <p class="demo-footnote">数字为教学假设，用来展示关系，不构成预测或投资建议。</p> </section><script type="module" src="/_astro/ArticleDemo.astro_astro_type_script_index_0_lang.C9VQAsQ0.js"></script> <p class="notice"> 本文已通过当前发布门槛；事实、计算与译文如有修订，会同步更新两个语言版本。 </p> <p> <a class="button secondary" href="/"> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class> <path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path>        </svg>返回分站 </a> </p> </div> <aside class="article-aside" aria-label="文章信息"> <section class="aside-card"> <h2>学习目标</h2> <ul> <li>说明碳市场履约周期的五个环节。</li><li>用配额缺口算履约成本。</li><li>判断价格上限与市场稳定机制的效果。</li> </ul> </section> <section class="aside-card"> <h2>必需先修</h2> <ul> <li> <a href="/learn/steel-supply-chain/">MKT-012 · 黑色金属产业链</a> </li> </ul> </section> <section class="aside-card"> <h2>建议阅读</h2> <ul> <li> <a href="/learn/crude-oil-and-refined-products/">MKT-013 · 原油与成品油</a> </li><li> <a href="https://economics.51invest.com/learn/energy-transition-system-cost-grid-storage-capacity-markets/">ECO-056 · 能源转型的系统成本：电网、储能与容量市场</a> </li><li> <a href="/learn/futures-basis-roll-and-delivery/">MKT-031 · 基差、展期与交割</a> </li> </ul> </section> <section class="aside-card"> <h2>AI 复核记录</h2> <p class="muted"> 本项目没有真人签字；下列状态来自 AI-only 编辑复核。 </p> <ul> <li> 事实与计算 ：AI 复核通过 </li><li> 学科 ：AI 复核通过 </li><li> 英文 ：AI 复核通过 </li><li> 页面 ：AI 复核通过 </li> </ul> </section> <section class="aside-card"> <h2>来源</h2> <div class="source"> <a href="https://www.ipcc.ch/report/ar6/wg3/chapter/chapter-13/" rel="noopener noreferrer" target="_blank">AR6 Climate Change 2022: Mitigation of Climate Change, Chapter 13: National and Sub-national Policies and Institutions</a> <p>IPCC · Intergovernmental Panel on Climate Change</p> <p>访问：2026-11-21 · 许可：IPCC report; citation only</p> <p>支持论点：支持国家与次国家气候政策的减排工具与碳定价。</p> </div><div class="source"> <a href="https://www.oecd.org/en/publications/effective-carbon-rates-2023_b84d5b36-en.html" rel="noopener noreferrer" target="_blank">Effective Carbon Rates 2023: Pricing Greenhouse Gas Emissions through Taxes and Emissions Trading</a> <p>OECD · OECD Publishing</p> <p>访问：2026-11-23 · 许可：OECD publishing terms; citation only</p> <p>支持论点：支持有效碳税率、排放交易与行业覆盖比较。</p> </div><div class="source"> <a href="https://openknowledge.worldbank.org/bitstreams/d14ff4b1-823f-4d70-927c-456449772089/download" rel="noopener noreferrer" target="_blank">State and Trends of Carbon Pricing 2024</a> <p>World Bank · World Bank</p> <p>访问：2026-11-23 · 许可：CC BY 3.0 IGO</p> <p>支持论点：支持全球碳定价工具、价格水平与收入使用。</p> </div><div class="source"> <a href="https://openstax.org/books/principles-economics-3e/pages/3-1-demand-supply-and-equilibrium-in-markets-for-goods-and-services" rel="noopener noreferrer" target="_blank">Principles of Economics 3e, 3.1 Demand, Supply, and Equilibrium in Markets for Goods and Services</a> <p>Steven A. Greenlaw; David Shapiro; Daniel MacDonald · OpenStax</p> <p>访问：2026-10-30 · 许可：CC BY-NC-SA 4.0</p> <p>支持论点：支持供需均衡、价格上限与短缺分析。</p> </div> </section> </aside> </div> </article><script type="module">var e=document.querySelector(`[data-reading-progress] span`),t=document.querySelector(`article`);if(e&&t){let n=()=>{let n=t.offsetTop,r=t.offsetHeight-window.innerHeight,i=r>0?(window.scrollY-n)/r:0;e.style.width=`${Math.min(1,Math.max(0,i))*100}%`};window.addEventListener(`scroll`,n,{passive:!0}),window.addEventListener(`resize`,n),n()}</script>  </main> <footer class="site-footer"> <div class="container footer-inner"> <div class="footer-brand"> <span class="footer-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="28" height="28" alt class="mascot" loading="lazy" decoding="async"></span> <div> <strong>巫妖投资 51Invest</strong> <p class="footer-note">非商业免费知识站。每篇标出来源与口径；这里没有投资建议。</p> </div> </div> <nav class="footer-links" aria-label="知识分站"> <a href="https://51invest.com/" data-main-home>首页</a> <a href="https://51invest.com/contents/">内容地图</a> <a href="/glossary/">术语表</a> <a href="/search/">搜索</a> <a href="https://51invest.com/charts/" data-main-link>图表</a> <a href="https://51invest.com/sources/" data-main-link>数据与许可</a> <a href="/">分站首页</a> </nav> </div> </footer> <nav class="mobile-nav" aria-label="知识分站"> <a class="mobile-link" href="https://51invest.com/" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>    <path d="m3 10 9-7 9 7"></path><path d="M5 9v11h14V9"></path><path d="M9 20v-6h6v6"></path>     </svg> <span>首页</span> </a> <a class="mobile-link" href="https://51invest.com/#stations" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>   <rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect>      </svg> <span>知识分站</span> </a> <a class="mobile-link active" href="/" aria-current="page"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>  <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v18H6.5A2.5 2.5 0 0 1 4 18.5z"></path><path d="M4 18.5A2.5 2.5 0 0 1 6.5 16H20"></path>       </svg> <span>分站首页</span> </a> <a class="mobile-link" href="/en/learn/carbon-market-compliance-cycle-mrv-price-cap/" data-language-link="en"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>English</span> </a> </nav><script type="module">var e=document.documentElement,t=[`auto`,`light`,`dark`],n=matchMedia(`(prefers-color-scheme: dark)`),r=()=>{let t=e.dataset.themeMode;return t===`light`||t===`dark`?t:`auto`},i=e=>{try{localStorage.setItem(`51invest-theme`,e)}catch{}try{let t=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-theme=${e}; Path=/; Max-Age=31536000; SameSite=Lax${t}`}catch{}},a=e=>{document.querySelectorAll(`[data-theme-toggle]`).forEach(t=>{let n=t.dataset[`label${e[0].toUpperCase()}${e.slice(1)}`];n&&(t.setAttribute(`aria-label`,n),t.setAttribute(`title`,n))})},o=t=>{e.dataset.themeMode=t,e.dataset.theme=t===`auto`?n.matches?`dark`:`light`:t,i(t),a(t)};a(r()),document.querySelectorAll(`[data-theme-toggle]`).forEach(e=>{e.addEventListener(`click`,()=>{let e=t[(t.indexOf(r())+1)%t.length];o(e)})}),n.addEventListener(`change`,()=>{r()===`auto`&&(e.dataset.theme=n.matches?`dark`:`light`)}),document.querySelectorAll(`[data-language-link]`).forEach(e=>{e.addEventListener(`click`,()=>{let t=e.dataset.languageLink;if(t===`zh`||t===`en`){try{localStorage.setItem(`51invest-language`,JSON.stringify(t))}catch{}try{let e=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-language=${t}; Path=/; Max-Age=31536000; SameSite=Lax${e}`}catch{}}})});</script> </body> </html>

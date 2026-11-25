@@ -1,0 +1,303 @@
+<!DOCTYPE html><html lang="en" data-theme="light" data-theme-mode="auto"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark"><title>Futures Contracts and Margin · 51Invest</title><meta name="description" content="Futures are exchange-standardized contracts; both sides post margin and are marked to market daily, so leverage, margin calls and delivery rules shape losses and exits."><link rel="canonical" href="https://markets.51invest.com/en/learn/futures-contracts-and-margin/"><link rel="alternate" hreflang="en" href="https://markets.51invest.com/en/learn/futures-contracts-and-margin/"><link rel="alternate" hreflang="zh-CN" href="https://markets.51invest.com/learn/futures-contracts-and-margin/"><link rel="alternate" hreflang="x-default" href="https://markets.51invest.com/learn/futures-contracts-and-margin/"><link rel="icon" type="image/png" href="/_astro/neutral.Dr5C2SoA.png"><script>
+  (() => {
+    const root = document.documentElement;
+    const readCookie = key => {
+      try {
+        return document.cookie.split('; ').find(value => value.startsWith(`51invest-${key}=`))?.split('=').slice(1).join('=') ?? null;
+      } catch {
+        return null;
+      }
+    };
+    const readLocal = key => {
+      try {
+        return localStorage.getItem(`51invest-${key}`);
+      } catch {
+        return null;
+      }
+    };
+    const storedTheme = readCookie('theme') || readLocal('theme');
+    const mode = ['light', 'dark', 'auto'].includes(storedTheme) ? storedTheme : 'auto';
+    const media = matchMedia('(prefers-color-scheme: dark)');
+    const apply = () => {
+      root.dataset.theme = mode === 'auto' ? (media.matches ? 'dark' : 'light') : mode;
+      root.dataset.themeMode = mode;
+    };
+    apply();
+    media.addEventListener('change', () => {
+      if (root.dataset.themeMode === 'auto') apply();
+    });
+  })();
+</script><link rel="stylesheet" href="/_astro/Base.CocbJOeh.css"></head> <body>  <a class="skip-link" href="#main">Skip to content</a> <header class="site-header"> <div class="container header-inner"> <a class="brand" href="https://51invest.com/en/" data-main-home aria-label="51Invest"> <span class="brand-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="36" height="36" alt class="mascot" loading="lazy" decoding="async"></span> <span class="brand-copy"> <span class="brand-name">51Invest</span> <span class="brand-caption">WUYAO INVEST</span> </span> </a> <nav class="desktop-nav" aria-label="Knowledge stations"> <a class="nav-link" href="https://51invest.com/en/" data-main-home> Home </a> <a class="nav-link" href="https://economics.51invest.com/en/"> Economics </a><a class="nav-link" href="https://finance.51invest.com/en/"> Finance </a><a class="nav-link active" href="/en/" aria-current="page"> Markets </a><a class="nav-link" href="https://invest.51invest.com/en/"> Investing </a><a class="nav-link" href="https://history.51invest.com/en/"> History </a><a class="nav-link" href="https://research.51invest.com/en/"> Research </a> <a class="nav-link" href="https://51invest.com/en/contents/"> Content map </a> </nav> <div class="header-tools"> <a class="icon-button language-button" href="/learn/futures-contracts-and-margin/" hreflang="zh-CN" lang="zh-CN" data-language-link="zh" aria-label="Switch to Chinese" title="Switch to Chinese"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>中文</span> </a> <button class="icon-button theme-button" type="button" data-theme-toggle aria-label="Theme: System" title="Theme: System" data-label-auto="Theme: System" data-label-light="Theme: Light" data-label-dark="Theme: Dark"> <span class="theme-icon" data-theme-icon="auto"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>        <circle cx="12" cy="12" r="8.5"></circle><path d="M12 3.5v17"></path><path d="M12 7a5 5 0 0 1 0 10" fill="currentColor" stroke="none"></path> </svg></span> <span class="theme-icon" data-theme-icon="light"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>       <circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>  </svg></span> <span class="theme-icon" data-theme-icon="dark"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>      <path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"></path>   </svg></span> <span class="theme-text" data-theme-text="auto">System</span> <span class="theme-text" data-theme-text="light">Light</span> <span class="theme-text" data-theme-text="dark">Dark</span> </button> </div> </div> </header> <main id="main" class="site-main" data-pagefind-body>  <div class="reading-progress" data-reading-progress aria-hidden="true"><span></span></div> <div class="container"> <nav class="breadcrumbs" aria-label="Breadcrumb"> <a href="https://51invest.com/en/" data-main-home>Home</a> <span class="sep">/</span> <a href="/en/">Markets</a> <span class="sep">/</span> <span aria-current="page">Futures Contracts and Margin</span> </nav> </div> <article> <header class="article-header"> <div class="container"> <span class="article-type">Product</span> <h1 class="article-title">Futures Contracts and Margin</h1> <p class="article-summary">Futures are exchange-standardized contracts; both sides post margin and are marked to market daily, so leverage, margin calls and delivery rules shape losses and exits.</p>  <div class="meta-grid"> <div class="meta-item"><span>Module</span><strong>MKT-M13 · 远期与期货</strong></div> <div class="meta-item"><span>Level</span><strong>Foundation</strong></div> <div class="meta-item"><span>Read</span><strong>10 min · 15 sections</strong></div> </div> <p class="demo-jump"> <a href="#demo-check"> This article has an interactive demo <span aria-hidden="true">↓</span> </a> </p> </div> </header> <div class="container article-layout"> <div class="article-body"> <blockquote>
+<p>By the end of this article, you can use the contract multiplier, margin lines, and basis to judge a futures position&#39;s profit and loss, when a margin call comes, and what a roll actually costs.</p>
+</blockquote>
+<h2>What the product is</h2>
+<p>A futures contract is an exchange-standardized agreement to buy or sell an underlying on a future date at an agreed price. Price and quantity are fixed at the trade; contracts are written to be fulfilled by actual delivery, some allow cash settlement instead, and most positions are closed before delivery. In exchange-cleared futures the clearinghouse stands between the original counterparties and becomes the central counterparty to both sides (this is this article&#39;s description of market structure; the three registered sources do not state it); both sides post margin and positions are adjusted daily to the closing market value [1][2]. A forward is a customized OTC agreement with a different legal structure and counterparty risk.</p>
+<h2>Rights, obligations and cash flows</h2>
+<table>
+<thead>
+<tr>
+<th>Time or condition</th>
+<th>Cash flow</th>
+<th>Amount</th>
+<th>Currency</th>
+<th>Uncertainty</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Trade</td>
+<td>Initial margin</td>
+<td>A percentage of notional</td>
+<td>Contract settlement currency</td>
+<td>Not a payment for the asset; the exchange and broker can raise the rate</td>
+</tr>
+<tr>
+<td>Daily</td>
+<td>Mark-to-market gain or loss</td>
+<td>Price change × contract multiplier</td>
+<td>Contract settlement currency</td>
+<td>Direction is unknown; gains and losses settle each day</td>
+</tr>
+<tr>
+<td>Below maintenance</td>
+<td>Margin call</td>
+<td>Top up to initial margin</td>
+<td>Contract settlement currency</td>
+<td>If the call is missed, the position may be liquidated</td>
+</tr>
+<tr>
+<td>Close or expiry</td>
+<td>Final profit and margin return</td>
+<td>Realized profit or loss</td>
+<td>Contract settlement currency</td>
+<td>Amount depends on the closing price, net of fees</td>
+</tr>
+<tr>
+<td>Delivery</td>
+<td>Delivery payment</td>
+<td>Per contract</td>
+<td>Currency set by the contract</td>
+<td>Physical or cash settlement per the contract</td>
+</tr>
+</tbody></table>
+<p>The long is obligated to buy and the short to sell; either side can close out. Margin is not a down payment and does not confer ownership. CME notes that futures margin is typically 3–12% of notional, that initial margin is set under CME Clearing requirements and a broker may require more, and that maintenance margin is the account minimum: falling below it can trigger a margin call, which requires adding funds immediately to restore the account to the initial margin level, and possible automatic liquidation [2]. Losses may exceed the initial deposit. The CFTC notes that customer funds must be segregated from the firm&#39;s own funds and that accounts are adjusted to each trading day&#39;s closing value.</p>
+<h2>Margin example</h2>
+<p>Assume a hypothetical equity index futures contract quoted at 4,000 with a $50 multiplier, so notional is 4,000 × 50 = $200,000. Initial margin at 6% is $12,000 and maintenance at 4% is $8,000. A 2% fall (4,000 × 2% = 80 points) produces a loss of 80 × 50 = $4,000, cutting equity to 12,000 - 4,000 = $8,000, which is exactly the maintenance level, the account minimum rather than a breach of it. Once equity falls below $8,000 a margin call follows, and restoring the $12,000 initial margin takes a deposit of at least $4,000. These figures are hypothetical; actual requirements vary by market and broker.</p>
+<h2>Participants and venues</h2>
+<p>Participants include hedgers, speculators, arbitrageurs, producers, consumers, funds, futures commission merchants, exchanges and clearinghouses. Exchanges set contract specifications and the market is regulated [1]; the clearinghouse&#39;s role as central counterparty is this article&#39;s description of market structure, which none of the three registered sources states directly.</p>
+<h2>Trading, holding and exit</h2>
+<p>Positions can be closed, delivered or cash settled, or rolled. For ICE US Dollar Index futures, trading ceases at 10:16 Eastern time two days before settlement, with March, June, September and December contract months [3]. Open positions at expiry follow exchange delivery or settlement rules.</p>
+<p>Basis and rolls: basis = spot price − futures price. The numbers below are a teaching assumption, not a quote from any market. With spot at 4,000 per tonne and the near contract at 4,120, basis = 4,000 − 4,120 = −120 per tonne (the futures trade at a premium). To move a position from the near to the farther month, close the near at 4,120 and buy the farther at 4,240: for the same quantity that costs 4,240 − 4,120 = 120 per tonne for each extra period held, or 1,200 per 10-tonne lot, before commissions and slippage. If the farther month were instead cheaper than the near month, the same roll would earn a positive roll return. Basis and rolls are a price structure, not a fee line, and convergence in either direction is not guaranteed; contract months, last trading days and charges follow the exchange rules.</p>
+<h2>Costs and risks</h2>
+<p>Costs include commissions, exchange and clearing fees, bid-offer spreads, margin funding, rolls, market impact and taxes. Risks include leverage, margin calls and liquidation, price gaps, basis, liquidity, delivery, futures commission merchant credit and operational risk.</p>
+<h2>Terms and documents</h2>
+<p>Check exchange contract specifications, clearing rules, the margin schedule and the customer agreement; confirm the multiplier, tick, last trading day, delivery quality and settlement method. Rules differ by exchange and jurisdiction.</p>
+<h2>Comparison and boundaries</h2>
+<table>
+<thead>
+<tr>
+<th>Instrument</th>
+<th>Structure</th>
+<th>Margin</th>
+<th>Counterparty</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Futures</td>
+<td>Standardized, centrally cleared</td>
+<td>Initial/maintenance margin, daily mark-to-market</td>
+<td>Clearinghouse</td>
+</tr>
+<tr>
+<td>Forward</td>
+<td>Customized OTC</td>
+<td>Collateral or credit line</td>
+<td>Counterparty</td>
+</tr>
+<tr>
+<td>ETF</td>
+<td>Fund shares</td>
+<td>Paid in full in a cash account, or margin posted in a securities account</td>
+<td>Fund and custodian</td>
+</tr>
+</tbody></table>
+<p>Futures are neither spot nor an ETF; margin is not a down payment, and leverage magnifies both gains and losses.</p>
+<h2>Figure</h2>
+<figure>
+  <svg role="img" aria-labelledby="fig-mkt-018-chain-title fig-mkt-018-chain-desc" viewBox="0 0 560 310" width="100%">
+    <title id="fig-mkt-018-chain-title">Futures Contracts and Margin: three-stage chain</title>
+    <desc id="fig-mkt-018-chain-desc">Trade: Price and quantity fixed at execution; Daily mark-to-market: Gains and losses hit equity; calls follow; Close or deliver: Most positions close before expiry</desc>
+    <rect x="0.5" y="0.5" width="559" height="309" rx="12" fill="var(--surface)" stroke="var(--border)"/>
+    <rect x="24" y="16" width="512" height="86" rx="10" fill="var(--surface-2)" stroke="var(--border)" stroke-width="1"/>
+    <rect x="24" y="16" width="5" height="86" rx="2.5" fill="var(--accent)"/>
+    <text x="44" y="35" font-size="9.5" letter-spacing="1.1" fill="var(--accent)" font-family="inherit">START</text>
+    <text x="44" y="56" font-size="13" font-weight="650" fill="var(--text)" font-family="inherit">Trade</text>
+    <text x="44" y="76" font-size="10.5" fill="var(--secondary)" font-family="inherit">Price and quantity fixed at execution</text>
+    <line x1="280" y1="102" x2="280" y2="108" stroke="var(--border)" stroke-width="1.5"/>
+    <path d="M276 106 L280 110 L284 106" fill="none" stroke="var(--border)" stroke-width="1.5"/>
+    <rect x="24" y="112" width="512" height="86" rx="10" fill="var(--surface-2)" stroke="var(--border)" stroke-width="1"/>
+    <rect x="24" y="112" width="5" height="86" rx="2.5" fill="var(--accent)"/>
+    <text x="44" y="131" font-size="9.5" letter-spacing="1.1" fill="var(--accent)" font-family="inherit">MECHANISM</text>
+    <text x="44" y="152" font-size="13" font-weight="650" fill="var(--text)" font-family="inherit">Daily mark-to-market</text>
+    <text x="44" y="172" font-size="10.5" fill="var(--secondary)" font-family="inherit">Gains and losses hit equity; calls follow</text>
+    <line x1="280" y1="198" x2="280" y2="204" stroke="var(--border)" stroke-width="1.5"/>
+    <path d="M276 202 L280 206 L284 202" fill="none" stroke="var(--border)" stroke-width="1.5"/>
+    <rect x="24" y="208" width="512" height="86" rx="10" fill="var(--surface-2)" stroke="var(--border)" stroke-width="1"/>
+    <rect x="24" y="208" width="5" height="86" rx="2.5" fill="var(--accent)"/>
+    <text x="44" y="227" font-size="9.5" letter-spacing="1.1" fill="var(--accent)" font-family="inherit">CHECK</text>
+    <text x="44" y="248" font-size="13" font-weight="650" fill="var(--text)" font-family="inherit">Close or deliver</text>
+    <text x="44" y="268" font-size="10.5" fill="var(--secondary)" font-family="inherit">Most positions close before expiry</text>
+  </svg>
+  <figcaption>Figure 1: a three-stage chain in Futures Contracts and Margin — Trade → Daily mark-to-market → Close or deliver. The three stages form a judgment chain, not the only path; labels come from the article text and carry no statistics. The sample is the article argument and units are marked in the text.</figcaption>
+</figure>
+
+<h2>Diagram: the three margin lines</h2>
+<figure id="figure-margin-ladder">
+  <svg role="img" aria-labelledby="fig-margin-ladder-title-en fig-margin-ladder-desc-en" viewBox="0 0 380 330" width="100%">
+    <title id="fig-margin-ladder-title-en">The three margin lines: 12,000 / 8,000 / 0</title>
+    <desc id="fig-margin-ladder-desc-en">A vertical margin-equity scale: initial margin 12,000 at the top, maintenance margin 8,000 in the middle, zero at the bottom. After a 2% price fall and a 4,000 loss, equity lands exactly on the 8,000 maintenance line.</desc>
+    <text x="20" y="22" font-size="11" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">After a 2% fall, equity hits the maintenance line</text>
+    <text x="20" y="42" font-size="9.5" fill="var(--muted)" font-family="inherit" text-anchor="start">Notional 200,000 | initial 6% = 12,000 | maintenance 4% = 8,000</text>
+    <rect x="70" y="70" width="180" height="70" fill="var(--accent)" opacity="0.14" stroke="var(--border)"/>
+    <rect x="70" y="140" width="180" height="140" fill="var(--gold)" opacity="0.14" stroke="var(--border)"/>
+    <line x1="70" y1="70" x2="250" y2="70" stroke="var(--accent)" stroke-width="1.5"/>
+    <line x1="70" y1="140" x2="250" y2="140" stroke="var(--gold)" stroke-width="1.5"/>
+    <line x1="70" y1="280" x2="250" y2="280" stroke="var(--border)" stroke-width="1.5"/>
+    <text x="160" y="108" font-size="9.5" fill="var(--secondary)" text-anchor="middle" font-family="inherit">Buffer 4,000</text>
+    <text x="160" y="196" font-size="9.5" fill="var(--secondary)" text-anchor="middle" font-family="inherit">Call zone</text>
+    <text x="270" y="74" font-size="10" font-weight="600" fill="var(--text)" font-family="inherit">12,000 (6%)</text>
+    <text x="270" y="144" font-size="10" font-weight="600" fill="var(--text)" font-family="inherit">8,000 (4%)</text>
+    <text x="270" y="284" font-size="10" fill="var(--muted)" font-family="inherit">0</text>
+    <text x="270" y="160" font-size="9.5" fill="var(--gold)" font-family="inherit">8,000 after −2%</text>
+    <line x1="45" y1="82" x2="45" y2="132" stroke="var(--gold)" stroke-width="1.5"/>
+    <path d="M41 128 L45 134 L49 128" fill="none" stroke="var(--gold)" stroke-width="1.5"/>
+    <text x="20" y="58" font-size="9.5" fill="var(--muted)" font-family="inherit" text-anchor="start">Price −2%</text>
+    <text x="20" y="72" font-size="9.5" fill="var(--muted)" font-family="inherit" text-anchor="start">Loss 4,000</text>
+    <text x="20" y="306" font-size="9.5" fill="var(--text)" font-family="inherit" text-anchor="start">A further fall takes equity below 8,000 → call back to 12,000.</text>
+    <text x="20" y="324" font-size="9.2" fill="var(--muted)" font-family="inherit" text-anchor="start">At least 4,000 more; unpaid calls can be closed out. Teaching assumptions.</text>
+  </svg>
+  <figcaption>Figure 2: At 4,000 points and a $50 multiplier, notional value is 200,000; initial margin at 6% is 12,000 and maintenance at 4% is 8,000. A 2% fall (80 points) loses 4,000 and takes equity from 12,000 to 8,000, exactly the maintenance line; below that a call restores 12,000. Fees are ignored and actual requirements vary.</figcaption>
+</figure>
+
+<h2>Figures in plain language</h2>
+<p>The first two figures cover the contract process and the margin ladder; the next two put a number on what a roll costs and how far a price move can eat the margin.</p>
+<figure>
+  <svg role="img" aria-labelledby="fig-basis-roll-title-en fig-basis-roll-desc-en" viewBox="0 0 440 240" width="100%">
+    <title id="fig-basis-roll-title-en">Spot, near-month, and far-month: basis and roll cost</title>
+    <desc id="fig-basis-roll-desc-en">Spot is 4,000 yuan per tonne, near-month futures 4,120, and far-month futures 4,240. The near-month basis is 4,000 − 4,120 = −120 per tonne. Rolling from near to far pays 4,240 − 4,120 = 120 per tonne, or 1,200 per 10-tonne contract.</desc>
+    <text x="20" y="24" font-size="12" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">Futures premium of 120 per tonne; a 10-tonne roll costs 1,200</text>
+    <line x1="40" y1="130" x2="410" y2="130" stroke="var(--border)" stroke-width="1.5"/>
+    <circle cx="80" cy="130" r="5" fill="var(--accent)"/>
+    <circle cx="210" cy="130" r="5" fill="var(--gold)"/>
+    <circle cx="350" cy="130" r="5" fill="var(--accent)"/>
+    <g font-family="inherit" font-size="10" fill="var(--text)" text-anchor="middle">
+      <text x="80" y="108">Spot 4,000</text><text x="210" y="108">Near 4,120</text><text x="350" y="108">Far 4,240</text>
+    </g>
+    <g font-family="inherit" font-size="9" fill="var(--muted)" text-anchor="middle">
+      <text x="80" y="152">Spot price</text><text x="210" y="152">Near futures</text><text x="350" y="152">Far futures</text>
+      <text x="145" y="174">Basis −120</text><text x="280" y="174">Roll +120</text>
+      <text x="80" y="198">Basis = spot − futures</text><text x="350" y="198">10 tonnes/lot → 1,200</text>
+    </g>
+    <text x="20" y="232" font-size="9" fill="var(--muted)" font-family="inherit" text-anchor="start">Unit: yuan per tonne; 4,000, 4,120, 4,240, and 10 tonnes/lot are illustrative, not market quotes.</text>
+  </svg>
+  <figcaption>Figure 3: With spot at 4,000, near futures at 4,120, and far futures at 4,240 yuan per tonne, the near basis is −120 (futures premium); rolling from near to far pays 120 per tonne, or 1,200 per 10-tonne contract. A negative basis means futures trade above spot, so the roll buys the more expensive far contract; that is the mechanism behind the measurable roll cost. Unit: yuan per tonne; figures are illustrative.</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-margin-leverage-title-en fig-margin-leverage-desc-en" viewBox="0 0 440 260" width="100%">
+    <title id="fig-margin-leverage-title-en">At price falls of 2%, 5%, and 6%, how much margin is left</title>
+    <desc id="fig-margin-leverage-desc-en">With notional value of 200,000 dollars and initial margin of 12,000, a 2% fall loses 4,000 or 33.3% of margin; a 5% fall loses 10,000 or 83.3%; a 6% fall loses 12,000 and wipes out the margin. Leverage magnifies the price move onto the margin.</desc>
+    <text x="20" y="24" font-size="12" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">With the same 12,000 dollar margin, a 6% fall wipes it out</text>
+    <line x1="50" y1="200" x2="390" y2="200" stroke="var(--border)" stroke-width="1.5"/>
+    <rect x="80" y="80" width="70" height="120" fill="var(--accent)" opacity="0.7"/>
+    <rect x="190" y="80" width="70" height="120" fill="var(--gold)" opacity="0.55"/>
+    <rect x="300" y="80" width="70" height="120" fill="var(--gold)" opacity="0.9"/>
+    <g font-family="inherit" font-size="10" text-anchor="middle">
+      <text x="115" y="70" fill="var(--text)">−2%</text><text x="225" y="70" fill="var(--text)">−5%</text><text x="335" y="70" fill="var(--text)">−6%</text>
+      <text x="115" y="100" fill="var(--text)">Loss 4,000</text><text x="225" y="100" fill="var(--text)">Loss 10,000</text><text x="335" y="100" fill="var(--text)">Loss 12,000</text>
+    </g>
+    <g font-family="inherit" font-size="9" fill="var(--muted)" text-anchor="middle">
+      <text x="115" y="220">33.3% of margin used</text><text x="225" y="220">83.3% used</text><text x="335" y="220">Margin exhausted</text>
+      <text x="220" y="248">Notional value 200,000 dollars; initial margin 12,000 (6%); fees ignored.</text>
+    </g>
+  </svg>
+  <figcaption>Figure 4: With notional value of 200,000 dollars and initial margin of 12,000, a 2% price fall loses 4,000 or 33.3% of margin; a 5% fall loses 10,000 or 83.3%; a 6% fall loses 12,000 and wipes out the margin. The leverage boundary is that a lower margin rate makes the same price move more likely to trigger a call or liquidation. Margin rate, multiplier, and prices are illustrative.</figcaption>
+</figure>
+
+<!-- kp-supplement:start -->
+<h2>Knowledge-point review</h2>
+<h3>commodity derivatives</h3>
+<p><strong>Definition</strong>: Commodity derivatives use physical crude, metals, crops and power as underlyings for hedging, speculation and price discovery.</p>
+<p><strong>Mechanism</strong>: Prices reflect inventories, transport, seasonality and geopolitics; futures curves, basis and delivery rules determine hedge effectiveness.</p>
+<p><strong>Example</strong>: For example, an airline buys crude futures to lock fuel costs, but fuel differing from the benchmark leaves basis risk.</p>
+<p><strong>Boundary</strong>: Commodities are not one asset class; storability, delivery location, quality and freight make each market distinct, and financialisation changes inventories and volatility.</p>
+<h3>equity index derivatives</h3>
+<p><strong>Definition</strong>: Equity index derivatives use a stock index as underlying, including futures, options and swaps for direction, hedging and enhancement.</p>
+<p><strong>Mechanism</strong>: Prices reflect constituents, dividends, rates and risk premia; futures discounts or premiums reflect carry and dividends.</p>
+<p><strong>Example</strong>: For example, a manager sells index futures to hedge a portfolio, but a different composition leaves tracking error.</p>
+<p><strong>Boundary</strong>: An index is not a single stock; sector weights, size and dividends make hedges imperfect, and leverage, margin and liquidity amplify losses under stress.</p>
+<h3>government bond derivatives</h3>
+<p><strong>Definition</strong>: Government bond derivatives use sovereign bonds or rates as underlyings, including futures, options and total-return swaps for duration management and hedging.</p>
+<p><strong>Mechanism</strong>: Prices reflect duration, the yield curve, policy and deliverable bonds; the cheapest-to-deliver and conversion factors drive futures basis.</p>
+<p><strong>Example</strong>: For example, a bank buys bond futures to hedge portfolio duration, but curve reshaping makes the hedge deviate.</p>
+<p><strong>Boundary</strong>: Bond futures are not cash bonds; deliverable choice, basis and margin create tracking differences, and low sovereign risk is not zero risk.</p>
+<h3>short-rate derivatives</h3>
+<p><strong>Definition</strong>: Short-rate derivatives reference interbank, policy or compounded overnight rates, including rate futures, OIS and interest-rate swaps.</p>
+<p><strong>Mechanism</strong>: Prices reflect the policy path, term premium and basis; the OIS-IBOR spread was a major benchmark risk.</p>
+<p><strong>Example</strong>: For example, a bank uses an OIS swap to hedge floating liabilities, but funding on another benchmark leaves basis.</p>
+<p><strong>Boundary</strong>: Short rates are not risk-free; benchmark reform, collateral and liquidity create basis, and curve expectations can reverse quickly.</p>
+<h3>FX derivatives</h3>
+<p><strong>Definition</strong>: FX derivatives include forwards, swaps, options and cross-currency swaps for hedging, funding and macro views.</p>
+<p><strong>Mechanism</strong>: Prices reflect spot, rate differentials, volatility and credit; delivery, principal exchange and counterparty risk differ.</p>
+<p><strong>Example</strong>: For example, an importer buys euro forwards to lock payment cost, forgoing a cheaper price if the euro falls.</p>
+<p><strong>Boundary</strong>: FX derivatives are not spot substitutes; controls, basis, margin and counterparty default cause losses, and emerging-market liquidity can vanish.</p>
+<h3>volatility, digital assets and margin</h3>
+<p><strong>Definition</strong>: Volatility derivatives trade future volatility rather than direction, digital-asset derivatives use tokens as underlyings, and margin is performance collateral.</p>
+<p><strong>Mechanism</strong>: Volatility indexes, variance swaps and option combinations reflect expectations; crypto&#39;s high volatility, 24-hour trading and custody risk change margin.</p>
+<p><strong>Example</strong>: For example, an investor buys volatility futures to hedge large equity moves, but the curve and roll create decay.</p>
+<p><strong>Boundary</strong>: Volatility is not price direction; crypto regulation, custody and liquidity risk are high, and margin calls and liquidation amplify losses in extremes.</p>
+<h3>derivative settlement</h3>
+<p><strong>Definition</strong>: Derivative settlement includes daily marking, margin transfers, delivery or cash settlement, the final performance of a contract.</p>
+<p><strong>Mechanism</strong>: Central counterparties, clearing members and collateral form the chain; cash, physical and net settlement carry different risks.</p>
+<p><strong>Example</strong>: For example, futures mark to a daily settlement price, profits can be withdrawn and losses topped up, and positions can be closed or delivered.</p>
+<p><strong>Boundary</strong>: Settlement is not back-office detail; margin models, haircuts, default handling and deliverable shortages create contagion, and OTC contracts carry legal and counterparty risk.</p>
+<h3>basis</h3>
+<p><strong>Definition</strong>: Basis is the difference between spot and futures prices, reflecting transport, storage, quality, financing and convenience yield.</p>
+<p><strong>Mechanism</strong>: Basis changes determine hedge effectiveness; contango, backwardation and regional spreads make the same commodity differ by location.</p>
+<p><strong>Example</strong>: For example, a farmer sells corn futures, and a wider local premium means the effective sale price exceeds futures, improving the hedge.</p>
+<p><strong>Boundary</strong>: Basis is not mispricing; storability, delivery months and inventories make it move, hedgers bear basis risk, and futures are not spot.</p>
+<h3>rolls and delivery</h3>
+<p><strong>Definition</strong>: Rolling closes a near contract and moves to a later one, while delivery transfers physical or cash value under contract rules.</p>
+<p><strong>Mechanism</strong>: The futures curve determines roll yield or decay; deliverable grades, warehouses, receipts and notices shape deliverability and cost.</p>
+<p><strong>Example</strong>: For example, crude futures roll monthly, and a contango curve imposes cost on long positions, while expiry allows cash or physical delivery.</p>
+<p><strong>Boundary</strong>: Rolling is not costless; curve shape, liquidity and delivery limits cause decay or squeezes, and ordinary investors should usually avoid delivery.</p>
+<!-- kp-supplement:end -->
+
+<h2>Related</h2>
+<ul>
+<li>Required prerequisite: Assets and Instruments (MKT-001).</li>
+<li>Related reading: Assets and Instruments (MKT-001), FX Quotes and Trading Instruments (MKT-017).</li>
+</ul>
+<h2>Exercises</h2>
+<ol>
+<li><strong>Notional value.</strong> At 4,000 points and a $50 multiplier, what is one contract&#39;s notional value?</li>
+<li><strong>Price fall.</strong> If price falls 2% (80 points), what is the long&#39;s loss?</li>
+<li><strong>Margin call.</strong> With 6% initial and 4% maintenance margin, what is equity after the 2% fall? Is there a call, and how much must be deposited?</li>
+</ol>
+<details>
+<summary>Suggested answers</summary>
+
+<ol>
+<li>4,000 × 50 = $200,000. Hypothetical, excluding fees.</li>
+<li>80 × 50 = $4,000, or 2% of the $200,000 notional.</li>
+<li>Initial margin is $12,000; after the $4,000 loss equity is $8,000, which equals maintenance margin — the account minimum, not yet a breach of it. A further fall below $8,000 triggers a call, and restoring $12,000 takes a deposit of at least $4,000. Hypothetical; actual requirements differ.</li>
+</ol>
+</details>
+
+<h2>Sources</h2>
+<ol>
+<li>U.S. Commodity Futures Trading Commission. “Basics of Futures Trading.” <a href="https://www.cftc.gov/LearnAndProtect/AdvisoriesAndArticles/FuturesMarketBasics/index.htm">https://www.cftc.gov/LearnAndProtect/AdvisoriesAndArticles/FuturesMarketBasics/index.htm</a> (accessed 2026-10-30)</li>
+<li>CME Group. “了解保证金相关要求 (Understanding Margin Requirements).” <a href="https://www.cmegroup.cn/education/4934.htm">https://www.cmegroup.cn/education/4934.htm</a> (accessed 2026-10-30)</li>
+<li>Intercontinental Exchange. “US Dollar Index Futures.” <a href="https://www.ice.com/products/194/US-Dollar-Index-Futures">https://www.ice.com/products/194/US-Dollar-Index-Futures</a> (accessed 2026-10-30)</li>
+</ol>
+  <section class="article-demo" id="demo-check" data-demo="check" data-lang="en" aria-labelledby="demo-check-title" data-check-done="All three are covered: the core of this article is in place." data-check-pending="One item is still open: go back to the matching section and retell it with a number or counterexample." data-check-count="Ticked"> <header class="demo-head"> <div class="demo-head-top"> <p class="demo-eyebrow">Worked demo</p> <button class="demo-reset" type="button" data-demo-reset>Reset</button> </div> <h2 id="demo-check-title">Read-through check: can you say three things?</h2> <p class="demo-intro">No recitation needed. Tick each sentence below and see whether you can explain the mechanism, one worked example and one boundary in your own words.</p> </header>          <div class="demo-check"> <ul class="demo-check-list"> <li> <label> <input type="checkbox" data-check-index="0"> <span>Explain how standardised contracts, margin and daily mark-to-market jointly set leverage and the margin-call path</span> </label> </li><li> <label> <input type="checkbox" data-check-index="1"> <span>Compute margin usage and liquidation risk for one adverse price move</span> </label> </li><li> <label> <input type="checkbox" data-check-index="2"> <span>Name one condition under which the article’s conclusion does not hold</span> </label> </li> </ul> <p class="demo-check-status" data-out="checkStatus" role="status"> Ticked 0 / 3
+</p> </div> <p class="demo-footnote">The numbers are teaching assumptions that show relationships, not forecasts or investment advice.</p> </section><script type="module" src="/_astro/ArticleDemo.astro_astro_type_script_index_0_lang.C9VQAsQ0.js"></script> <p class="notice"> This article has passed the current publication gate. Factual, calculation and translation revisions update both language versions together. </p> <p> <a class="button secondary" href="/en/"> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class> <path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path>        </svg>Back to station </a> </p> </div> <aside class="article-aside" aria-label="Article information"> <section class="aside-card"> <h2>Learning objectives</h2> <ul> <li>Explain how standardised contracts, margin and daily mark-to-market jointly set leverage and the margin-call path</li><li>Compute margin usage and liquidation risk for one adverse price move</li> </ul> </section> <section class="aside-card"> <h2>Required prerequisites</h2> <ul> <li> <a href="/en/learn/assets-vs-instruments/">MKT-001 · Assets and Instruments</a> </li> </ul> </section> <section class="aside-card"> <h2>Recommended reading</h2> <ul> <li> <a href="/en/learn/assets-vs-instruments/">MKT-001 · Assets and Instruments</a> </li><li> <a href="/en/learn/fx-quotes-and-trading-instruments/">MKT-017 · FX Quotes and Trading Instruments</a> </li> </ul> </section> <section class="aside-card"> <h2>AI review record</h2> <p class="muted"> There is no human sign-off; these states come from the AI-only editorial review. </p> <ul> <li> Facts and calculations : AI review passed </li><li> Subject : AI review passed </li><li> English : AI review passed </li><li> Page : AI review passed </li> </ul> </section> <section class="aside-card"> <h2>Sources</h2> <div class="source"> <a href="https://www.cftc.gov/LearnAndProtect/AdvisoriesAndArticles/FuturesMarketBasics/index.htm" rel="noopener noreferrer" target="_blank">Basics of Futures Trading</a> <p>U.S. Commodity Futures Trading Commission · U.S. Commodity Futures Trading Commission</p> <p>Accessed: 2026-10-30 · License: U.S. Government work (public domain), 17 U.S.C. §105</p> <p>Supports: A futures contract is an agreement to buy or sell a commodity at a future date with price and amount fixed at agreement; most contracts contemplate delivery, some allow cash settlement, and most are liquidated before delivery; customer funds are kept separate and accounts are adjusted to each trading day&#39;s closing market value; most participants are hedgers.</p> </div><div class="source"> <a href="https://www.cmegroup.cn/education/4934.htm" rel="noopener noreferrer" target="_blank">了解保证金相关要求 (Understanding Margin Requirements)</a> <p>CME Group · CME Group</p> <p>Accessed: 2026-10-30 · License: 版权所有、保留所有权利；未见允许转载条款（cite-only）</p> <p>Supports: Futures margin is typically 3–12% of contract notional; initial margin is required by CME Clearing to open a position and a broker may require more; maintenance margin is the minimum the account must hold, and falling below it can trigger a margin call and possible automatic liquidation; losses may exceed the amount initially deposited. Verbatim from the Chinese page quoted above, translated: &quot;You may receive a margin call, and you will then need to add funds immediately to bring the account back to the initial margin level.&quot;</p> </div><div class="source"> <a href="https://www.ice.com/products/194/US-Dollar-Index-Futures" rel="noopener noreferrer" target="_blank">US Dollar Index Futures</a> <p>Intercontinental Exchange · ICE Futures U.S.</p> <p>Accessed: 2026-10-30 · License: Copyrighted; all rights reserved, no ownership granted to users (cite-only)</p> <p>Supports: One ICE US Dollar Index futures contract is $1,000 times the index, with a 0.005 tick equal to $5, March/June/September/December contract months, and trading ceasing at 10:16 Eastern time two days before settlement.</p> </div> </section> </aside> </div> </article><script type="module">var e=document.querySelector(`[data-reading-progress] span`),t=document.querySelector(`article`);if(e&&t){let n=()=>{let n=t.offsetTop,r=t.offsetHeight-window.innerHeight,i=r>0?(window.scrollY-n)/r:0;e.style.width=`${Math.min(1,Math.max(0,i))*100}%`};window.addEventListener(`scroll`,n,{passive:!0}),window.addEventListener(`resize`,n),n()}</script>  </main> <footer class="site-footer"> <div class="container footer-inner"> <div class="footer-brand"> <span class="footer-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="28" height="28" alt class="mascot" loading="lazy" decoding="async"></span> <div> <strong>巫妖投资 51Invest</strong> <p class="footer-note">A free, non-commercial knowledge site. Sources and definitions are labelled; nothing here is investment advice.</p> </div> </div> <nav class="footer-links" aria-label="Knowledge stations"> <a href="https://51invest.com/en/" data-main-home>Home</a> <a href="https://51invest.com/en/contents/">Content map</a> <a href="/en/glossary/">Glossary</a> <a href="/en/search/">Search</a> <a href="https://51invest.com/en/charts/" data-main-link>Charts</a> <a href="https://51invest.com/en/sources/" data-main-link>Data &amp; licences</a> <a href="/en/">Station home</a> </nav> </div> </footer> <nav class="mobile-nav" aria-label="Knowledge stations"> <a class="mobile-link" href="https://51invest.com/en/" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>    <path d="m3 10 9-7 9 7"></path><path d="M5 9v11h14V9"></path><path d="M9 20v-6h6v6"></path>     </svg> <span>Home</span> </a> <a class="mobile-link" href="https://51invest.com/en/#stations" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>   <rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect>      </svg> <span>Knowledge stations</span> </a> <a class="mobile-link active" href="/en/" aria-current="page"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>  <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v18H6.5A2.5 2.5 0 0 1 4 18.5z"></path><path d="M4 18.5A2.5 2.5 0 0 1 6.5 16H20"></path>       </svg> <span>Station home</span> </a> <a class="mobile-link" href="/learn/futures-contracts-and-margin/" data-language-link="zh"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>中文</span> </a> </nav><script type="module">var e=document.documentElement,t=[`auto`,`light`,`dark`],n=matchMedia(`(prefers-color-scheme: dark)`),r=()=>{let t=e.dataset.themeMode;return t===`light`||t===`dark`?t:`auto`},i=e=>{try{localStorage.setItem(`51invest-theme`,e)}catch{}try{let t=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-theme=${e}; Path=/; Max-Age=31536000; SameSite=Lax${t}`}catch{}},a=e=>{document.querySelectorAll(`[data-theme-toggle]`).forEach(t=>{let n=t.dataset[`label${e[0].toUpperCase()}${e.slice(1)}`];n&&(t.setAttribute(`aria-label`,n),t.setAttribute(`title`,n))})},o=t=>{e.dataset.themeMode=t,e.dataset.theme=t===`auto`?n.matches?`dark`:`light`:t,i(t),a(t)};a(r()),document.querySelectorAll(`[data-theme-toggle]`).forEach(e=>{e.addEventListener(`click`,()=>{let e=t[(t.indexOf(r())+1)%t.length];o(e)})}),n.addEventListener(`change`,()=>{r()===`auto`&&(e.dataset.theme=n.matches?`dark`:`light`)}),document.querySelectorAll(`[data-language-link]`).forEach(e=>{e.addEventListener(`click`,()=>{let t=e.dataset.languageLink;if(t===`zh`||t===`en`){try{localStorage.setItem(`51invest-language`,JSON.stringify(t))}catch{}try{let e=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-language=${t}; Path=/; Max-Age=31536000; SameSite=Lax${e}`}catch{}}})});</script> </body> </html>

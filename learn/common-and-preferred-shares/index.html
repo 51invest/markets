@@ -1,0 +1,277 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light" data-theme-mode="auto"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark"><title>普通股与优先股 · 巫妖投资</title><meta name="description" content="两类股票都是公司权益，但投票权、股息顺序、清偿顺序与退出条款不同；权利来自公司章程和发行文件。"><link rel="canonical" href="https://markets.51invest.com/learn/common-and-preferred-shares/"><link rel="alternate" hreflang="zh-CN" href="https://markets.51invest.com/learn/common-and-preferred-shares/"><link rel="alternate" hreflang="en" href="https://markets.51invest.com/en/learn/common-and-preferred-shares/"><link rel="alternate" hreflang="x-default" href="https://markets.51invest.com/learn/common-and-preferred-shares/"><link rel="icon" type="image/png" href="/_astro/neutral.Dr5C2SoA.png"><script>
+  (() => {
+    const root = document.documentElement;
+    const readCookie = key => {
+      try {
+        return document.cookie.split('; ').find(value => value.startsWith(`51invest-${key}=`))?.split('=').slice(1).join('=') ?? null;
+      } catch {
+        return null;
+      }
+    };
+    const readLocal = key => {
+      try {
+        return localStorage.getItem(`51invest-${key}`);
+      } catch {
+        return null;
+      }
+    };
+    const storedTheme = readCookie('theme') || readLocal('theme');
+    const mode = ['light', 'dark', 'auto'].includes(storedTheme) ? storedTheme : 'auto';
+    const media = matchMedia('(prefers-color-scheme: dark)');
+    const apply = () => {
+      root.dataset.theme = mode === 'auto' ? (media.matches ? 'dark' : 'light') : mode;
+      root.dataset.themeMode = mode;
+    };
+    apply();
+    media.addEventListener('change', () => {
+      if (root.dataset.themeMode === 'auto') apply();
+    });
+  })();
+</script><link rel="stylesheet" href="/_astro/Base.CocbJOeh.css"></head> <body>  <a class="skip-link" href="#main">跳到正文</a> <header class="site-header"> <div class="container header-inner"> <a class="brand" href="https://51invest.com/" data-main-home aria-label="巫妖投资"> <span class="brand-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="36" height="36" alt class="mascot" loading="lazy" decoding="async"></span> <span class="brand-copy"> <span class="brand-name">巫妖投资</span> <span class="brand-caption">51INVEST</span> </span> </a> <nav class="desktop-nav" aria-label="知识分站"> <a class="nav-link" href="https://51invest.com/" data-main-home> 首页 </a> <a class="nav-link" href="https://economics.51invest.com/"> 经济学 </a><a class="nav-link" href="https://finance.51invest.com/"> 金融基础 </a><a class="nav-link active" href="/" aria-current="page"> 市场与产品 </a><a class="nav-link" href="https://invest.51invest.com/"> 投资方法 </a><a class="nav-link" href="https://history.51invest.com/"> 经济与金融史 </a><a class="nav-link" href="https://research.51invest.com/"> 研究方法 </a> <a class="nav-link" href="https://51invest.com/contents/"> 内容地图 </a> </nav> <div class="header-tools"> <a class="icon-button language-button" href="/en/learn/common-and-preferred-shares/" hreflang="en" lang="en" data-language-link="en" aria-label="切换为英文" title="切换为英文"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>English</span> </a> <button class="icon-button theme-button" type="button" data-theme-toggle aria-label="主题: 跟随系统" title="主题: 跟随系统" data-label-auto="主题: 跟随系统" data-label-light="主题: 浅色" data-label-dark="主题: 深色"> <span class="theme-icon" data-theme-icon="auto"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>        <circle cx="12" cy="12" r="8.5"></circle><path d="M12 3.5v17"></path><path d="M12 7a5 5 0 0 1 0 10" fill="currentColor" stroke="none"></path> </svg></span> <span class="theme-icon" data-theme-icon="light"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>       <circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>  </svg></span> <span class="theme-icon" data-theme-icon="dark"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>      <path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"></path>   </svg></span> <span class="theme-text" data-theme-text="auto">跟随系统</span> <span class="theme-text" data-theme-text="light">浅色</span> <span class="theme-text" data-theme-text="dark">深色</span> </button> </div> </div> </header> <main id="main" class="site-main" data-pagefind-body>  <div class="reading-progress" data-reading-progress aria-hidden="true"><span></span></div> <div class="container"> <nav class="breadcrumbs" aria-label="Breadcrumb"> <a href="https://51invest.com/" data-main-home>首页</a> <span class="sep">/</span> <a href="/">市场与产品</a> <span class="sep">/</span> <span aria-current="page">普通股与优先股</span> </nav> </div> <article> <header class="article-header"> <div class="container"> <span class="article-type">产品与品种</span> <h1 class="article-title">普通股与优先股</h1> <p class="article-summary">两类股票都是公司权益，但投票权、股息顺序、清偿顺序与退出条款不同；权利来自公司章程和发行文件。</p>  <div class="meta-grid"> <div class="meta-item"><span>模块</span><strong>MKT-M02 · 股票与股权</strong></div> <div class="meta-item"><span>层级</span><strong>入门</strong></div> <div class="meta-item"><span>阅读</span><strong>12 分钟 · 15 节</strong></div> </div> <p class="demo-jump"> <a href="#demo-check"> 这篇有一个可以动手操作的演示 <span aria-hidden="true">↓</span> </a> </p> </div> </header> <div class="container article-layout"> <div class="article-body"> <blockquote>
+<p>读完这一篇，你能用投票权、股息顺序、清偿顺序和条款四项，判断一只“优先股”到底优先在哪里，以及高股息率可能掩盖了什么风险。</p>
+</blockquote>
+<h2>产品定义</h2>
+<p>普通股和优先股是同一家公司发行的两类权益证券。普通股代表剩余所有权；优先股在股息和清算分配上享有优先权，通常没有投票权[1]；某些类别可按章程对特定事项投票，这是本文对常见条款的概括。两者都不是存款或债券；普通股股息不保证支付，公司可削减或取消[2]。具体权利由公司章程、优先股指定证书和发行说明书规定，不能只凭名称判断。以美国特拉华州为例，其《普通公司法》第 151 节允许公司发行一个或多个类别或系列股票，并在公司章程或董事会决议中规定各类股票的投票权、股息偏好、清算分配、赎回与转换条款[3]；这是辖区示例，不是所有发行人的统一规则。</p>
+<h2>权利、义务与现金流</h2>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>普通股</th>
+<th>优先股</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>投票</td>
+<td>通常一股一票，可在股东会投票[1]</td>
+<td>通常无投票权[1]；特定事项投票按章程（本文概括）</td>
+</tr>
+<tr>
+<td>股息</td>
+<td>董事会宣布后按股支付，金额不固定，可被削减或停发[1][2]</td>
+<td>按发行文件约定的固定股息率先于普通股支付[2]；宣布与可分配利润要求是本文补充的常见治理安排</td>
+</tr>
+<tr>
+<td>清算</td>
+<td>偿还债务和优先股后取得剩余资产[1]</td>
+<td>先于普通股、后于债券持有人[1][2]</td>
+</tr>
+<tr>
+<td>期限</td>
+<td>无到期日</td>
+<td>通常无到期日，可按条款赎回或转换</td>
+</tr>
+</tbody></table>
+<p>下表把该篇的持有与交易安排按时间排开，金额栏用表达式或文件约定表示，不引用真实行情：</p>
+<table>
+<thead>
+<tr>
+<th>时间</th>
+<th>现金流</th>
+<th>金额</th>
+<th>币种</th>
+<th>不确定性</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>买入普通股</td>
+<td>支付市价</td>
+<td>股数 × 市价 + 费用</td>
+<td>记账币种</td>
+<td>股息不保证，公司可削减或取消</td>
+</tr>
+<tr>
+<td>普通股持有期</td>
+<td>收到已宣布股息（若有）</td>
+<td>每股股息 × 股数</td>
+<td>记账币种</td>
+<td>由董事会宣布，不是合同义务</td>
+</tr>
+<tr>
+<td>买入优先股</td>
+<td>支付发行价或市价</td>
+<td>股数 × 价格</td>
+<td>记账币种</td>
+<td>股息率与是否累积由指定证书规定，通常无投票权或仅受限事项</td>
+</tr>
+<tr>
+<td>公司清算</td>
+<td>按顺位取得剩余资产</td>
+<td>剩余资产按顺位分配</td>
+<td>记账币种</td>
+<td>优先股先于普通股、后于债券持有人；可分配额可能为零</td>
+</tr>
+<tr>
+<td>退出</td>
+<td>卖出变现</td>
+<td>卖出价 × 股数 − 费用</td>
+<td>交易币种</td>
+<td>两者都不是存款或债券，无到期还本安排</td>
+</tr>
+</tbody></table>
+<p>教学假设：某公司有优先股 10 万股，面额 100 元、股息率 5%；普通股 100 万股。若可分配股息为 80 万元，优先股先得 50 万元（10 万 × 100 × 5%），普通股得 30 万元，即每股 0.30 元。若只有 40 万元，优先股先取 40 万元（欠息是否累积看条款），普通股为 0。上述数字只用于说明顺序，金额单位是教学假定的元，不是任何公司的实际分配。</p>
+<h2>参与者与场所</h2>
+<p>发行人及其董事会决定股息与条款；承销商协助发行；交易、登记与托管由交易所、经纪商、过户代理和清算机构完成。优先股常被机构持有，成交可能稀疏——这一句是本文对市场惯例的描述，登记的两条来源都没有写到持有人结构或成交疏密。</p>
+<h2>交易、持有与退出</h2>
+<p>普通股按权益的定义没有到期日，优先股通常也没有；能否被赎回或转换取决于指定证书——这是本文的结构性说明，登记来源没有逐句给出。两类股票一般在二级市场卖出退出。发行人可按文件赎回优先股，持有人也可按条款转换为普通股，这些条款改变实际持有期与收益。普通股股息可被削减或停发[2]；优先股虽优先，仍受可分配利润和条款约束。退出价格取决于市场、流动性与条款，不等于面额。</p>
+<h2>成本</h2>
+<p>成本包括佣金、买卖价差、托管费、税费和流动性折价。赎回与转换可能带来再投资成本；比较时应统一股息、费用和税务口径，税率因辖区和持有人而异。</p>
+<h2>风险</h2>
+<p>普通股承担经营与市场风险，清偿顺序最后，损失可能接近全部本金。优先股的固定股息[2]使其价格对利率敏感，并增加赎回风险。两类股票都有股息停发、流动性、治理和条款风险；高股息率不等于低风险——在本篇的教学例子里，面额 100 元、股息率 6% 的优先股市价跌到 90 元/股时，年股息仍是 6 元，当前股息率却从 6.00% 升到 6.67%，升高的比率标记的是价格下跌，停发与赎回风险并未减少；这层推理由本文的数值算出，登记来源没有这句结论。</p>
+<h2>条款与文件</h2>
+<p>核对公司章程、优先股指定证书和招股说明书：面额、股息率、是否累积、是否参与剩余利润、赎回、转换、投票事项和清算优先额。辖区不同，名称与要求也不同，以当地发行文件为准。</p>
+<h2>比较与边界</h2>
+<p>普通股与优先股都是权益，不是债权；固定股息不会使优先股变成债券或存款。与债券相比，优先股通常没有到期日，股息取决于宣布与可分配利润，清偿顺序更靠后；债券一侧的权利与现金流见 MKT-004。判断风险应看条款、发行人和价格，而不是“优先”二字。</p>
+<h2>普通优先股的细分：累积、参与、可赎回与可转换</h2>
+<p>“普通优先股”不是法律术语，通常指股息率固定、不参与剩余利润的优先股；但同一名称下，四个条款轴会改变实际现金流。</p>
+<p><strong>定义。</strong> 累积条款决定未付股息是否欠着；参与条款决定固定股息之后能否再分剩余利润；赎回条款给发行人按约定价收回的权利；转换条款给持有人换成普通股的权利。四项都以指定证书为准[3]。</p>
+<p><strong>机制。</strong> 累积优先股的欠息通常在普通股分红前补足，非累积欠息不补。参与型在固定股息后按公式分享剩余，非参与型只拿固定股息；可赎回把价格上限压向赎回价，可转换把价值下限连到普通股。条款组合不是“优先程度”的线性排序。</p>
+<p><strong>例子。</strong> 教学假设：面额 100 元、股息率 5%、10 万股，年股息 50 万元。若两年未付，累积优先股欠息 100 万元；第三年先补 100 万元再加当年 50 万元，普通股才可分。非累积只补当年 50 万元。若参与型在普通股分得 30 万元后再按 1:1 分享剩余，优先股还能再拿 15 万元；封顶条款可能使分享额更低。数字只说明顺序，不是任何公司的实际条款。</p>
+<p><strong>边界。</strong> “普通优先股”不能当成债券：股息仍取决于宣布与可分配利润，清偿顺序仍在债券之后[1][2]。可赎回不等于一定赎回；可转换不等于自动转换；参与型也可能有上限。跨辖区名称不同，不能把美国条款直接套到其他市场[3]。</p>
+<h2>图表</h2>
+<figure>
+  <svg role="img" aria-labelledby="fig-common-and-preferred-shares-title fig-common-and-preferred-shares-desc" viewBox="0 0 470 224" width="100%">
+<title id="fig-common-and-preferred-shares-title">普通股与优先股：概念对照</title>
+<desc id="fig-common-and-preferred-shares-desc">普通股: 剩余所有权与投票权; 股息不保证，清偿顺序最后; 经营与市场风险 | 优先股: 股息与清偿优先; 投票权通常受限; 利率、赎回与欠息风险</desc>
+<rect x="0.5" y="0.5" width="469" height="223" rx="12" fill="var(--surface)" stroke="var(--border)"/>
+      <rect x="20" y="18" width="430" height="89" rx="9" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="32" y="38" font-size="13" font-weight="650" fill="var(--accent)" font-family="inherit">普通股</text>
+      <circle cx="32" cy="51" r="2.4" fill="var(--accent)"/><text x="42" y="54" font-size="10.6" font-weight="400" fill="var(--secondary)" text-anchor="start" font-family="inherit"><tspan x="42" dy="0">剩余所有权与投票权</tspan></text><circle cx="32" cy="66" r="2.4" fill="var(--accent)"/><text x="42" y="69" font-size="10.6" font-weight="400" fill="var(--secondary)" text-anchor="start" font-family="inherit"><tspan x="42" dy="0">股息不保证，清偿顺序最后</tspan></text><circle cx="32" cy="81" r="2.4" fill="var(--accent)"/><text x="42" y="84" font-size="10.6" font-weight="400" fill="var(--secondary)" text-anchor="start" font-family="inherit"><tspan x="42" dy="0">经营与市场风险</tspan></text>
+      <rect x="20" y="117" width="430" height="89" rx="9" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="32" y="137" font-size="13" font-weight="650" fill="var(--accent)" font-family="inherit">优先股</text>
+      <circle cx="32" cy="150" r="2.4" fill="var(--accent)"/><text x="42" y="153" font-size="10.6" font-weight="400" fill="var(--secondary)" text-anchor="start" font-family="inherit"><tspan x="42" dy="0">股息与清偿优先</tspan></text><circle cx="32" cy="165" r="2.4" fill="var(--accent)"/><text x="42" y="168" font-size="10.6" font-weight="400" fill="var(--secondary)" text-anchor="start" font-family="inherit"><tspan x="42" dy="0">投票权通常受限</tspan></text><circle cx="32" cy="180" r="2.4" fill="var(--accent)"/><text x="42" y="183" font-size="10.6" font-weight="400" fill="var(--secondary)" text-anchor="start" font-family="inherit"><tspan x="42" dy="0">利率、赎回与欠息风险</tspan></text>
+</svg>
+  <figcaption>图 1：“普通股与优先股”的权利与风险对照。图为概念示意，具体条款以正文引用的文件为准。</figcaption>
+</figure>
+
+<h2>图解：先看顺序，再看股息，最后看价格</h2>
+<p>下面三张图分别回答“清算时谁先拿”“可分配股息怎么分”“高股息率是不是低风险”；金额均为正文教学假设。</p>
+<figure>
+  <svg role="img" aria-labelledby="fig-liquidation-waterfall-title fig-liquidation-waterfall-desc" viewBox="0 0 440 250" width="100%">
+    <title id="fig-liquidation-waterfall-title">清偿后的 600 万元，优先股先拿 500 万元</title>
+    <desc id="fig-liquidation-waterfall-desc">公司清偿全部债务后剩 600 万元；优先股清算优先额 500 万元先拿，普通股剩 100 万元，按 100 万股计算每股 1.00 元。若优先股为参与型，普通股可能低于 1.00 元。</desc>
+    <text x="20" y="24" font-size="12.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">600 万元剩余资产：优先股 500 万，普通股 100 万</text>
+    <line x1="30" y1="198" x2="410" y2="198" stroke="var(--border)" stroke-width="1.5"/>
+    <rect x="70" y="78" width="70" height="120" fill="var(--accent)" opacity="0.75"/>
+    <rect x="190" y="78" width="70" height="100" fill="var(--gold)" opacity="0.7"/>
+    <rect x="310" y="178" width="70" height="20" fill="var(--accent)" opacity="0.85"/>
+    <g font-family="inherit" font-size="10.5" fill="var(--text)" text-anchor="middle">
+      <text x="105" y="70">剩余 600</text><text x="225" y="70">优先股 500</text><text x="345" y="170">普通股 100</text>
+    </g>
+    <g font-family="inherit" font-size="9.5" fill="var(--muted)" text-anchor="middle">
+      <text x="105" y="218">清偿债务后</text><text x="225" y="218">先于普通股</text><text x="345" y="218">100 万股 → 1.00 元/股</text>
+    </g>
+    <text x="20" y="242" font-size="9" fill="var(--muted)" font-family="inherit" text-anchor="start">单位：万元；优先股清算优先额 500 万元、普通股 100 万股为教学假设。</text>
+  </svg>
+  <figcaption>图 2：清偿全部债务后剩 600 万元，优先股按 500 万元清算优先额先拿，普通股剩 100 万元；按 100 万股计算每股 1.00 元。若优先股为参与型，普通股每股会低于 1.00 元。单位万元；数字为教学假设。</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-dividend-split-title fig-dividend-split-desc" viewBox="0 0 440 270" width="100%">
+    <title id="fig-dividend-split-title">可分配股息 80 万与 40 万时的两种分法</title>
+    <desc id="fig-dividend-split-desc">有 80 万元可分配股息时，优先股按 10 万股、面额 100 元、股息率 5% 先得 50 万元，普通股得 30 万元，即每股 0.30 元；只有 40 万元时，优先股先取 40 万元，普通股为 0。欠息是否累积取决于条款。</desc>
+    <text x="20" y="24" font-size="12.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">同样优先，80 万时普通股还有 30 万；40 万时归零</text>
+    <text x="60" y="58" font-size="9.5" fill="var(--muted)" font-family="inherit">情形 A：可分配 800,000 元</text>
+    <rect x="60" y="66" width="250" height="40" fill="var(--gold)" opacity="0.7"/>
+    <rect x="310" y="66" width="90" height="40" fill="var(--accent)" opacity="0.7"/>
+    <text x="185" y="91" font-size="9.5" text-anchor="middle" fill="var(--text)" font-family="inherit">优先股 500,000</text>
+    <text x="355" y="91" font-size="9.5" text-anchor="middle" fill="var(--text)" font-family="inherit">普通 300,000</text>
+    <text x="60" y="124" font-size="9" fill="var(--muted)" font-family="inherit">普通股 100 万股 → 每股 0.30 元</text>
+    <text x="60" y="158" font-size="9.5" fill="var(--muted)" font-family="inherit">情形 B：可分配 400,000 元</text>
+    <rect x="60" y="166" width="340" height="40" fill="var(--gold)" opacity="0.7"/>
+    <text x="230" y="191" font-size="9.5" text-anchor="middle" fill="var(--text)" font-family="inherit">优先股先取 400,000；普通股 0</text>
+    <text x="60" y="226" font-size="9" fill="var(--muted)" font-family="inherit">优先股股息率 5%、面额 100 元、10 万股；欠息是否补付取决于是否累积。</text>
+    <text x="20" y="260" font-size="9" fill="var(--muted)" font-family="inherit" text-anchor="start">单位：元；数字为正文教学假设，不是任何公司的实际分配。</text>
+  </svg>
+  <figcaption>图 3：可分配股息 80 万元时，优先股先得 50 万元，普通股得 30 万元，即每股 0.30 元；只有 40 万元时，优先股先取 40 万元，普通股为 0。优先股股息率 5%、面额 100 元、10 万股；欠息是否累积看条款。单位元；数字为教学假设。</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-yield-risk-title fig-yield-risk-desc" viewBox="0 0 440 240" width="100%">
+    <title id="fig-yield-risk-title">价格从 100 跌到 90，股息率反而从 6.00% 升到 6.67%</title>
+    <desc id="fig-yield-risk-desc">同一只优先股年股息 6 元：价格 100 元时当前股息率 6.00%；价格跌到 90 元时仍是 6 元，股息率升到 6.67%。股息率上升来自价格下跌，停发、赎回和流动性风险并未减少。</desc>
+    <text x="20" y="24" font-size="12.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">股息率变高，可能是价格在跌，不是风险在降</text>
+    <line x1="50" y1="170" x2="390" y2="170" stroke="var(--border)" stroke-width="1.5"/>
+    <rect x="90" y="70" width="90" height="100" fill="var(--accent)" opacity="0.7"/>
+    <rect x="250" y="70" width="90" height="100" fill="var(--gold)" opacity="0.7"/>
+    <text x="135" y="60" font-size="10.5" text-anchor="middle" fill="var(--text)" font-family="inherit">价格 100</text>
+    <text x="295" y="60" font-size="10.5" text-anchor="middle" fill="var(--text)" font-family="inherit">价格 90</text>
+    <text x="135" y="122" font-size="15" text-anchor="middle" fill="var(--text)" font-family="inherit">6.00%</text>
+    <text x="295" y="122" font-size="15" text-anchor="middle" fill="var(--text)" font-family="inherit">6.67%</text>
+    <text x="135" y="194" font-size="9.5" text-anchor="middle" fill="var(--muted)" font-family="inherit">年股息 6 元</text>
+    <text x="295" y="194" font-size="9.5" text-anchor="middle" fill="var(--muted)" font-family="inherit">年股息仍是 6 元</text>
+    <text x="20" y="226" font-size="9" fill="var(--muted)" font-family="inherit" text-anchor="start">单位：元/股、%/年；面额 100 元、股息率 6%、价格 90 元为教学假设，不是市场报价。</text>
+  </svg>
+  <figcaption>图 4：同一只优先股年股息 6 元，价格 100 元时当前股息率 6.00%；价格跌到 90 元时股息率升到 6.67%，但年股息仍是 6 元。股息率上升来自价格下跌，停发、赎回和流动性风险并未减少。单位元/股、%/年；数字为教学假设。</figcaption>
+</figure>
+
+<!-- kp-supplement:start -->
+<h2>知识点精读</h2>
+<h3>普通优先股</h3>
+<p><strong>定义</strong>：普通股是公司剩余索取权和投票权的基本股份，优先股在分红和清算时优先但通常无投票权。</p>
+<p><strong>机制</strong>：普通股收益来自分红、回购和资本增值，承担经营风险；优先股有固定股息、优先受偿和赎回条款，风险收益介于债和股之间。</p>
+<p><strong>例子</strong>：例如公司破产清算时优先股先于普通股受偿，但普通股在公司成长中享有更大上行。</p>
+<p><strong>边界</strong>：优先股不是债券；股息可递延或取消，税务和会计处理不同，普通股也不是无限上行，剩余索取权在债务之后，治理权可能被稀释。</p>
+<h3>不同投票权</h3>
+<p><strong>定义</strong>：不同投票权是公司发行不同投票权的股份，创始人或特定股东以较少资本控制多数投票。</p>
+<p><strong>机制</strong>：双重股权保护长期战略免受短期市场压力，但削弱一股一票和少数股东制衡，代理成本上升。</p>
+<p><strong>例子</strong>：例如科技公司创始人持少数经济权益但控制多数投票，上市后仍主导董事会。</p>
+<p><strong>边界</strong>：双重股权不是必然高效；治理失衡、关联交易和退出困难会损害少数股东，指数排除和估值折价也可能出现，日落条款很重要。</p>
+<h3>存托凭证</h3>
+<p><strong>定义</strong>：存托凭证是在另一市场代表外国公司股份的可交易凭证，常见 ADR、GDR 和 DR。</p>
+<p><strong>机制</strong>：存托银行持有基础股份并发行凭证，投资者获得价格和经济权益但可能没有直接投票权；跨境托管、汇率和转换影响价格。</p>
+<p><strong>例子</strong>：例如中国公司在美国发行 ADR，美国投资者用美元交易其股份权益。</p>
+<p><strong>边界</strong>：DR 不是基础股份；投票、分红、托管和转换机制可能受限，市场分割和汇率会造成价差，退市和监管变化风险高。</p>
+<h3>发行增发</h3>
+<p><strong>定义</strong>：发行是公司新发股份筹资，增发是已上市公司再次发行，包括公开增发、定向增发和配股。</p>
+<p><strong>机制</strong>：发行稀释现有股东、补充资本或收购资产；定价、折价、承销和锁定期影响股价和信号。</p>
+<p><strong>例子</strong>：例如公司定向增发收购资产，股本增加但每股收益取决于资产回报。</p>
+<p><strong>边界</strong>：增发不是必然利好；折价和稀释会压低股价，募资用途低效会毁值，配股可能强迫股东追加资金，信号也可能被市场负面解读。</p>
+<h3>分红回购</h3>
+<p><strong>定义</strong>：分红是把利润以现金或股票分配给股东，回购是公司买回股份，二者都是资本返还方式。</p>
+<p><strong>机制</strong>：分红提供稳定现金但税负和灵活性较低，回购减少股数、提升每股指标但可择时和弹性；信号和治理影响效果。</p>
+<p><strong>例子</strong>：例如成熟公司稳定分红，低估时回购可能提升每股价值。</p>
+<p><strong>边界</strong>：分红回购不是价值创造；若投资回报低于资本成本，返还现金未必坏，但高杠杆回购、高位回购和税负会损害长期股东，信号也可能不可靠。</p>
+<h3>并购拆分</h3>
+<p><strong>定义</strong>：并购是公司合并或收购控制权，拆分是把业务分成分离实体，二者改变边界、治理和资本配置。</p>
+<p><strong>机制</strong>：并购通过协同、市场份额和融资形成价值，拆分通过聚焦、独立估值和减少折价释放价值；控制权溢价和整合成本关键。</p>
+<p><strong>例子</strong>：例如企业收购互补技术并整合渠道，或把高增长部门分拆上市。</p>
+<p><strong>边界</strong>：并购不是必然创造价值；协同高估、文化冲突和过度支付会毁值，拆分也可能失去协同、增加总部成本，税和债务分配很复杂。</p>
+<h3>退市与股东权利</h3>
+<p><strong>定义</strong>：退市是证券从交易所停止交易，股东权利包括投票、分红、知情、优先认购和剩余索取。</p>
+<p><strong>机制</strong>：退市可由合并、破产、违规或主动私有化触发；股东可通过股东大会、集体诉讼和退出机制保护权利。</p>
+<p><strong>例子</strong>：例如公司被私有化收购，少数股东获得现金对价并失去股份；违规退市则可能进入场外市场。</p>
+<p><strong>边界</strong>：退市不是简单摘牌；流动性骤降、估值折价和少数股东被挤压会造成损失，股东权利在不同法域和公司结构下差异大，救济成本高。</p>
+<!-- kp-supplement:end -->
+
+<h2>关联</h2>
+<ul>
+<li>必需先修：资产与工具的区别（MKT-001）。</li>
+<li>相关与推荐阅读：债券的权利与现金流（MKT-004）、基金的基本结构（MKT-006）、收益风险与成本的取舍（INV-002）。</li>
+</ul>
+<h2>练习</h2>
+<ol>
+<li><strong>概念辨别。</strong> 判断下列说法是否正确：A. 优先股因股息固定就是债权工具；B. 清算时优先股先于普通股、后于债券持有人；C. 普通股股东通常在股东会有投票权；D. 股息率越高，风险越低。</li>
+<li><strong>清偿顺序。</strong> 另一教学假设：公司清偿全部债务后剩 600 万元；优先股清算优先额为 500 万元，普通股 100 万股。普通股每股可得多少？若优先股为参与型，答案是否唯一？</li>
+<li><strong>股息分配。</strong> 按上文教学假设，可分配股息为 80 万元和 40 万元时，两类股东各得多少？</li>
+<li><strong>条件。</strong> 某优先股面额 100 元/股、股息率 6%，市价 90 元/股。年股息与当前股息率是多少？若发行人按 100 元赎回，持有人面临什么风险？</li>
+</ol>
+<details>
+<summary>参考答案</summary>
+
+<ol>
+<li>B、C 正确，A、D 错误。固定股息不改变优先股的权益性质[2]；清偿顺序是债券持有人在前、优先股居中、普通股在后[1][2]；普通股股东通常在股东会有投票权[1]；高股息率常反映更高的停发、流动性或条款风险，不等于低风险。</li>
+<li>(600 万元 - 500 万元) ÷ 100 万股 = 1.00 元/股。若为参与型，优先股还可按条款与普通股分享剩余 100 万元，普通股每股低于 1.00 元，具体取决于条款，不能直接假定。</li>
+<li>80 万元时：优先股 50 万元（10 万股 × 100 元 × 5%），普通股 30 万元，即 300,000 ÷ 1,000,000 = 0.30 元/股。40 万元时：优先股 40 万元，普通股 0；欠息是否补付取决于股息是否累积。</li>
+<li>年股息 = 100 元 × 6% = 6 元；当前股息率 = 6 ÷ 90 ≈ 6.67%。按面额赎回意味着高于市价收回，持有人面临再投资风险，重新投资后收益率可能下降。</li>
+</ol>
+</details>
+
+<h2>来源</h2>
+<ol>
+<li>U.S. Securities and Exchange Commission, Investor.gov. “Stocks - FAQs.” <a href="https://www.investor.gov/introduction-investing/investing-basics/investment-products/stocks">https://www.investor.gov/introduction-investing/investing-basics/investment-products/stocks</a>（访问日期：2026-10-30）</li>
+<li>FINRA. “Stocks.” <a href="https://www.finra.org/investors/investing/investment-products/stocks">https://www.finra.org/investors/investing/investment-products/stocks</a>（访问日期：2026-10-30）</li>
+<li>State of Delaware. “Title 8, Chapter 1, Subchapter V, § 151. Classes and series of stock; redemption; rights.” <a href="https://delcode.delaware.gov/title8/c001/sc05/index.html">https://delcode.delaware.gov/title8/c001/sc05/index.html</a>（访问日期：2026-11-23）</li>
+</ol>
+  <section class="article-demo" id="demo-check" data-demo="check" data-lang="zh" aria-labelledby="demo-check-title" data-check-done="三项都能说清：这篇的核心已经过关。" data-check-pending="还差一项：回到正文对应小节，找一个反例或数字再讲一遍。" data-check-count="已勾选"> <header class="demo-head"> <div class="demo-head-top"> <p class="demo-eyebrow">动手演示</p> <button class="demo-reset" type="button" data-demo-reset>恢复默认</button> </div> <h2 id="demo-check-title">读完自检：三句话能不能说清</h2> <p class="demo-intro">不用背定义。把下面三句逐个勾上，看自己能不能用自己的话讲清机制、算例和边界。</p> </header>          <div class="demo-check"> <ul class="demo-check-list"> <li> <label> <input type="checkbox" data-check-index="0"> <span>能从公司章程与发行文件中找出普通股与优先股在投票、股息与清偿顺序上的条款依据</span> </label> </li><li> <label> <input type="checkbox" data-check-index="1"> <span>能用一个退出或转换条款说明两类股票风险差异的实际来源</span> </label> </li><li> <label> <input type="checkbox" data-check-index="2"> <span>能说出一个本文结论不适用的条件</span> </label> </li> </ul> <p class="demo-check-status" data-out="checkStatus" role="status"> 已勾选 0 / 3
+</p> </div> <p class="demo-footnote">数字为教学假设，用来展示关系，不构成预测或投资建议。</p> </section><script type="module" src="/_astro/ArticleDemo.astro_astro_type_script_index_0_lang.C9VQAsQ0.js"></script> <p class="notice"> 本文已通过当前发布门槛；事实、计算与译文如有修订，会同步更新两个语言版本。 </p> <p> <a class="button secondary" href="/"> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class> <path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path>        </svg>返回分站 </a> </p> </div> <aside class="article-aside" aria-label="文章信息"> <section class="aside-card"> <h2>学习目标</h2> <ul> <li>能从公司章程与发行文件中找出普通股与优先股在投票、股息与清偿顺序上的条款依据</li><li>能用一个退出或转换条款说明两类股票风险差异的实际来源</li><li>区分累积、非累积、参与、可赎回与可转换条款，并说明它们如何改变股息与退出现金流。</li> </ul> </section> <section class="aside-card"> <h2>必需先修</h2> <ul> <li> <a href="/learn/assets-vs-instruments/">MKT-001 · 资产与工具的区别</a> </li> </ul> </section> <section class="aside-card"> <h2>建议阅读</h2> <ul> <li> <a href="/learn/bond-rights-and-cash-flows/">MKT-004 · 债券的权利与现金流</a> </li><li> <a href="/learn/fund-structures/">MKT-006 · 基金的基本结构</a> </li><li> <a href="https://invest.51invest.com/learn/return-risk-and-cost-tradeoffs/">INV-002 · 收益风险与成本的取舍</a> </li> </ul> </section> <section class="aside-card"> <h2>AI 复核记录</h2> <p class="muted"> 本项目没有真人签字；下列状态来自 AI-only 编辑复核。 </p> <ul> <li> 事实与计算 ：AI 复核通过 </li><li> 学科 ：AI 复核通过 </li><li> 英文 ：AI 复核通过 </li><li> 页面 ：AI 复核通过 </li> </ul> </section> <section class="aside-card"> <h2>来源</h2> <div class="source"> <a href="https://www.investor.gov/introduction-investing/investing-basics/investment-products/stocks" rel="noopener noreferrer" target="_blank">Stocks - FAQs</a> <p>U.S. Securities and Exchange Commission, Investor.gov · Investor.gov</p> <p>访问：2026-10-30 · 许可：FINRA-operated site for the SEC; © FINRA — cite and link only, no reproduction</p> <p>支持论点：普通股股东通常可在股东会投票并在董事会宣布后获得股息；优先股通常没有投票权，但在股息支付和破产清算分配上先于普通股；普通股在清偿顺序中排在债券持有人和优先股股东之后。</p> </div><div class="source"> <a href="https://www.finra.org/investors/investing/investment-products/stocks" rel="noopener noreferrer" target="_blank">Stocks</a> <p>FINRA · FINRA</p> <p>访问：2026-10-30 · 许可：Copyrighted; reproduction prohibited, linking permitted (cite-only)</p> <p>支持论点：优先股通常支付类似债券票息的固定股息，其股息先于普通股支付；公司倒闭时，优先股股东的受偿顺序先于普通股、后于债券持有人；普通股股息不保证，公司可削减或取消。</p> </div><div class="source"> <a href="https://delcode.delaware.gov/title8/c001/sc05/index.html" rel="noopener noreferrer" target="_blank">Title 8, Chapter 1, Subchapter V, § 151. Classes and series of stock; redemption; rights</a> <p>State of Delaware · Delaware Code Online</p> <p>访问：2026-11-23 · 许可：Delaware Code public record; cite and link only</p> <p>支持论点：该节规定公司可发行一个或多个类别或系列股票，并可在公司章程或董事会决议中规定各类股票的投票权（完整、受限或无）、指定与偏好、相对参与或其他特殊权利，以及资格、限制或约束；优先股或特殊股的股息率、条件、时间及清算分配权利同样由公司章程或董事会决议规定。</p> </div> </section> </aside> </div> </article><script type="module">var e=document.querySelector(`[data-reading-progress] span`),t=document.querySelector(`article`);if(e&&t){let n=()=>{let n=t.offsetTop,r=t.offsetHeight-window.innerHeight,i=r>0?(window.scrollY-n)/r:0;e.style.width=`${Math.min(1,Math.max(0,i))*100}%`};window.addEventListener(`scroll`,n,{passive:!0}),window.addEventListener(`resize`,n),n()}</script>  </main> <footer class="site-footer"> <div class="container footer-inner"> <div class="footer-brand"> <span class="footer-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="28" height="28" alt class="mascot" loading="lazy" decoding="async"></span> <div> <strong>巫妖投资 51Invest</strong> <p class="footer-note">非商业免费知识站。每篇标出来源与口径；这里没有投资建议。</p> </div> </div> <nav class="footer-links" aria-label="知识分站"> <a href="https://51invest.com/" data-main-home>首页</a> <a href="https://51invest.com/contents/">内容地图</a> <a href="/glossary/">术语表</a> <a href="/search/">搜索</a> <a href="https://51invest.com/charts/" data-main-link>图表</a> <a href="https://51invest.com/sources/" data-main-link>数据与许可</a> <a href="/">分站首页</a> </nav> </div> </footer> <nav class="mobile-nav" aria-label="知识分站"> <a class="mobile-link" href="https://51invest.com/" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>    <path d="m3 10 9-7 9 7"></path><path d="M5 9v11h14V9"></path><path d="M9 20v-6h6v6"></path>     </svg> <span>首页</span> </a> <a class="mobile-link" href="https://51invest.com/#stations" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>   <rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect>      </svg> <span>知识分站</span> </a> <a class="mobile-link active" href="/" aria-current="page"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>  <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v18H6.5A2.5 2.5 0 0 1 4 18.5z"></path><path d="M4 18.5A2.5 2.5 0 0 1 6.5 16H20"></path>       </svg> <span>分站首页</span> </a> <a class="mobile-link" href="/en/learn/common-and-preferred-shares/" data-language-link="en"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>English</span> </a> </nav><script type="module">var e=document.documentElement,t=[`auto`,`light`,`dark`],n=matchMedia(`(prefers-color-scheme: dark)`),r=()=>{let t=e.dataset.themeMode;return t===`light`||t===`dark`?t:`auto`},i=e=>{try{localStorage.setItem(`51invest-theme`,e)}catch{}try{let t=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-theme=${e}; Path=/; Max-Age=31536000; SameSite=Lax${t}`}catch{}},a=e=>{document.querySelectorAll(`[data-theme-toggle]`).forEach(t=>{let n=t.dataset[`label${e[0].toUpperCase()}${e.slice(1)}`];n&&(t.setAttribute(`aria-label`,n),t.setAttribute(`title`,n))})},o=t=>{e.dataset.themeMode=t,e.dataset.theme=t===`auto`?n.matches?`dark`:`light`:t,i(t),a(t)};a(r()),document.querySelectorAll(`[data-theme-toggle]`).forEach(e=>{e.addEventListener(`click`,()=>{let e=t[(t.indexOf(r())+1)%t.length];o(e)})}),n.addEventListener(`change`,()=>{r()===`auto`&&(e.dataset.theme=n.matches?`dark`:`light`)}),document.querySelectorAll(`[data-language-link]`).forEach(e=>{e.addEventListener(`click`,()=>{let t=e.dataset.languageLink;if(t===`zh`||t===`en`){try{localStorage.setItem(`51invest-language`,JSON.stringify(t))}catch{}try{let e=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-language=${t}; Path=/; Max-Age=31536000; SameSite=Lax${e}`}catch{}}})});</script> </body> </html>

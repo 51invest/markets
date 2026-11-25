@@ -1,0 +1,275 @@
+<!DOCTYPE html><html lang="en" data-theme="light" data-theme-mode="auto"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark"><title>FX Regimes, NDFs and Cross-Border Hedging · 51Invest</title><meta name="description" content="The exchange-rate regime determines which tools are available; NDFs cash-settle around delivery restrictions, but basis, regulation and counterparty risk remain."><link rel="canonical" href="https://markets.51invest.com/en/learn/fx-regimes-ndf-and-cross-border-hedging/"><link rel="alternate" hreflang="en" href="https://markets.51invest.com/en/learn/fx-regimes-ndf-and-cross-border-hedging/"><link rel="alternate" hreflang="zh-CN" href="https://markets.51invest.com/learn/fx-regimes-ndf-and-cross-border-hedging/"><link rel="alternate" hreflang="x-default" href="https://markets.51invest.com/learn/fx-regimes-ndf-and-cross-border-hedging/"><link rel="icon" type="image/png" href="/_astro/neutral.Dr5C2SoA.png"><script>
+  (() => {
+    const root = document.documentElement;
+    const readCookie = key => {
+      try {
+        return document.cookie.split('; ').find(value => value.startsWith(`51invest-${key}=`))?.split('=').slice(1).join('=') ?? null;
+      } catch {
+        return null;
+      }
+    };
+    const readLocal = key => {
+      try {
+        return localStorage.getItem(`51invest-${key}`);
+      } catch {
+        return null;
+      }
+    };
+    const storedTheme = readCookie('theme') || readLocal('theme');
+    const mode = ['light', 'dark', 'auto'].includes(storedTheme) ? storedTheme : 'auto';
+    const media = matchMedia('(prefers-color-scheme: dark)');
+    const apply = () => {
+      root.dataset.theme = mode === 'auto' ? (media.matches ? 'dark' : 'light') : mode;
+      root.dataset.themeMode = mode;
+    };
+    apply();
+    media.addEventListener('change', () => {
+      if (root.dataset.themeMode === 'auto') apply();
+    });
+  })();
+</script><link rel="stylesheet" href="/_astro/Base.CocbJOeh.css"></head> <body>  <a class="skip-link" href="#main">Skip to content</a> <header class="site-header"> <div class="container header-inner"> <a class="brand" href="https://51invest.com/en/" data-main-home aria-label="51Invest"> <span class="brand-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="36" height="36" alt class="mascot" loading="lazy" decoding="async"></span> <span class="brand-copy"> <span class="brand-name">51Invest</span> <span class="brand-caption">WUYAO INVEST</span> </span> </a> <nav class="desktop-nav" aria-label="Knowledge stations"> <a class="nav-link" href="https://51invest.com/en/" data-main-home> Home </a> <a class="nav-link" href="https://economics.51invest.com/en/"> Economics </a><a class="nav-link" href="https://finance.51invest.com/en/"> Finance </a><a class="nav-link active" href="/en/" aria-current="page"> Markets </a><a class="nav-link" href="https://invest.51invest.com/en/"> Investing </a><a class="nav-link" href="https://history.51invest.com/en/"> History </a><a class="nav-link" href="https://research.51invest.com/en/"> Research </a> <a class="nav-link" href="https://51invest.com/en/contents/"> Content map </a> </nav> <div class="header-tools"> <a class="icon-button language-button" href="/learn/fx-regimes-ndf-and-cross-border-hedging/" hreflang="zh-CN" lang="zh-CN" data-language-link="zh" aria-label="Switch to Chinese" title="Switch to Chinese"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>中文</span> </a> <button class="icon-button theme-button" type="button" data-theme-toggle aria-label="Theme: System" title="Theme: System" data-label-auto="Theme: System" data-label-light="Theme: Light" data-label-dark="Theme: Dark"> <span class="theme-icon" data-theme-icon="auto"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>        <circle cx="12" cy="12" r="8.5"></circle><path d="M12 3.5v17"></path><path d="M12 7a5 5 0 0 1 0 10" fill="currentColor" stroke="none"></path> </svg></span> <span class="theme-icon" data-theme-icon="light"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>       <circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>  </svg></span> <span class="theme-icon" data-theme-icon="dark"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>      <path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"></path>   </svg></span> <span class="theme-text" data-theme-text="auto">System</span> <span class="theme-text" data-theme-text="light">Light</span> <span class="theme-text" data-theme-text="dark">Dark</span> </button> </div> </div> </header> <main id="main" class="site-main" data-pagefind-body>  <div class="reading-progress" data-reading-progress aria-hidden="true"><span></span></div> <div class="container"> <nav class="breadcrumbs" aria-label="Breadcrumb"> <a href="https://51invest.com/en/" data-main-home>Home</a> <span class="sep">/</span> <a href="/en/">Markets</a> <span class="sep">/</span> <span aria-current="page">FX Regimes, NDFs and Cross-Border Hedging</span> </nav> </div> <article> <header class="article-header"> <div class="container"> <span class="article-type">Product</span> <h1 class="article-title">FX Regimes, NDFs and Cross-Border Hedging</h1> <p class="article-summary">The exchange-rate regime determines which tools are available; NDFs cash-settle around delivery restrictions, but basis, regulation and counterparty risk remain.</p>  <div class="meta-grid"> <div class="meta-item"><span>Module</span><strong>MKT-M12 · 外汇与跨境工具</strong></div> <div class="meta-item"><span>Level</span><strong>Foundation</strong></div> <div class="meta-item"><span>Read</span><strong>8 min · 18 sections</strong></div> </div> <p class="demo-jump"> <a href="#demo-check"> This article has an interactive demo <span aria-hidden="true">↓</span> </a> </p> </div> </header> <div class="container article-layout"> <div class="article-body"> <h2>Definition</h2>
+<p><strong>Exchange-rate regimes</strong> run from hard pegs and adjustable pegs to managed and free floats; the key differences are central-bank intervention and capital-flow restrictions. <strong>Onshore</strong> and <strong>offshore</strong> markets may use different prices and delivery rules. A <strong>non-deliverable forward (NDF)</strong> does not exchange principal; it cash-settles the difference between the contracted rate and a fixing, and is common for restricted currencies. A deliverable forward exchanges principal at maturity and usually requires a genuine trade or investment background.</p>
+<h2>Intuition</h2>
+<p>Cross-border hedging is price insurance for a foreign-currency payment: an exporter fears the USD it will receive becomes cheaper, an importer fears the USD it must pay becomes more expensive. The instrument is only a vehicle; the real questions are how much exposure exists, when it occurs and where it can legally be delivered. An NDF is a difference contract: no principal exchange, only the FX difference settles. A deliverable forward actually exchanges currencies, so both legs must be funded at maturity. If you look only at the locked price and ignore fixing rules, onshore/offshore basis and counterparty credit, the price on the hedge sheet may not be realisable.</p>
+<h2>Mechanism</h2>
+<p>A hedger first fixes the exposure: currency, amount, date and cash-flow direction. An exporter receiving USD fears USD weakness and can sell USD forward; an importer paying USD fears USD strength and can buy USD forward. NDF pricing includes the offshore basis, fixing rules, counterparty credit and regulatory premium; for the same USD exposure, an NDF can be more expensive than an onshore forward. Futures reduce counterparty risk through central clearing, but contract months, margin and basis leave residual risk. Cross-border hedging must also separate transaction, translation and economic exposure [1][2][3].</p>
+<h2>Worked example</h2>
+<p>Suppose an exporter will receive USD 1 million in six months. Spot is 7.10, the six-month onshore forward is 7.08 and the offshore NDF is 7.06. A forward locks in CNY 7.08 million; an NDF locks in CNY 7.06 million, CNY 20,000 less. If spot falls to 6.95 at maturity, unhedged proceeds are CNY 6.95 million: the forward adds CNY 130,000 and the NDF adds CNY 110,000. If spot rises to 7.25, the forward gives up CNY 170,000 versus unhedged — a hedge locks a budget, not the best outcome. These are teaching assumptions and exclude margin, spreads and tax.</p>
+<h2>Second worked example: budget prices under three outcomes</h2>
+<p>Using the USD 1 million export exposure, spot 7.10, forward 7.08 and NDF 7.06: if spot ends at 7.00, unhedged proceeds are CNY 7.00 million, the forward gives 7.08 million and the NDF 7.06 million; the forward beats unhedged by CNY 80,000. If spot ends at 7.20, unhedged gives 7.20 million, the forward 7.08 million and the NDF 7.06 million; the forward gives up CNY 120,000. If spot ends at 7.08, the forward matches unhedged and the NDF is CNY 20,000 lower. A three-scenario table shows the hedge is not &#39;return enhancement&#39; but a compression of outcomes into CNY 7.06–7.08 million; the NDF&#39;s CNY 20,000 gap is the visible cost of offshore basis and fixing rules. If the budget rate is 7.05, all three beat budget; if it is 7.15, the hedge locks below budget and the plan needs revisiting. These are teaching assumptions.</p>
+<h2>Boundary and mistakes</h2>
+<p>First, an NDF is not a free option: it locks a price and gives up favourable moves. Second, the offshore price is not the onshore executable price, and the gap widens in stress. Third, futures and forwards both carry basis risk, especially when contract months do not match cash-flow dates. Fourth, a hedge ratio above 100% becomes speculation and changes regulatory and accounting treatment. Fifth, FX fraud often features high leverage, guaranteed profits and blocked withdrawals; check registration and custody [2].</p>
+<h2>Failure modes</h2>
+<p>The first failure is fixing risk: an NDF settles at an official or industry fixing that may differ from the rate at which you actually convert cash, and the basis widens in stress. The second is treating the offshore price as an onshore executable price: capital controls, participants and delivery rules differ, so quotes are not interchangeable. The third is over-hedging: the part above the true exposure has no matching cash flow, so price moves become a directional bet. The fourth is tenor mismatch: a three-month contract used against a nine-month receivable must be rolled, adding roll spread and margin as new risks. The fifth is counterparty risk: an OTC NDF has no central clearing, so if the counterparty defaults, the locked price is only paper.</p>
+<h2>Three checks</h2>
+<p>First, is the exposure broken down by currency, amount, date and cash-flow direction, and is there a natural offset? Second, where does the instrument deliver, what fixing applies and is a genuine trade background required? Third, are the post-hedge budget rate, worst case and roll plan written down? Beyond these, include margin, spreads, tax and counterparty credit in the all-in cost; comparing only locked prices can turn a &#39;cheap&#39; instrument into one that cannot be honoured.</p>
+<h2>Adjacent concepts and a counterexample</h2>
+<p>NDFs are easily confused with FX futures and deliverable forwards. Futures are exchange-cleared, standardised and margined daily; deliverable forwards trade OTC and exchange principal at maturity; NDFs are also OTC but do not exchange principal, settling only the fixing difference. Counterparty risk, delivery obligation and regulation differ. A counterexample is &#39;the NDF is cheaper, so it is better&#39;: an NDF may price below an onshore forward, but the gap can come from offshore basis, fixing rules or a liquidity discount, and the cheapness can return as basis or settlement disputes at maturity. Another is &#39;a hedge must cover 100%&#39;: when cash-flow dates and amounts are uncertain, 100% notional leaves over-hedge; layered, rolling or option hedges can match exposure better. Compare all-in cost before comparing the locked price.</p>
+<h2>Scope and limits</h2>
+<p>This FX-regime and NDF framework applies to currency pairs with clear fixing rules, convertible-restricted but hedgeable exposure and identifiable capital controls. If onshore and offshore markets are segmented, the fixing is manipulated, or delivery needs extra approval, basis and locked prices are distorted. It does not apply to treating an NDF as a free option without principal, nor to hedging that ignores counterparty and settlement risk. Confirm fixing source, settlement currency, capital controls and counterparty, then compare instruments on all-in cost; a cheap quoted price may only be a liquidity discount.</p>
+<p>Finally, the hedge ratio should follow how certain the exposure is; when cash-flow dates and amounts are uncertain, retaining some exposure is more robust than forcing full cover.</p>
+<p>Also record the source of basis and any settlement disputes.</p>
+<p>Also keep reproducible intermediate records and scripts.</p>
+<h2>Related</h2>
+<ul>
+<li>MKT-017 FX Quotes and Trading Instruments: adjacent main article; read it before this supplement.</li>
+<li>MKT-001 Assets and Instruments: adjacent main article; read it before this supplement.</li>
+<li>MKT-018 Futures Contracts and Margin: adjacent main article; read it before this supplement.</li>
+</ul>
+<h2>Source note</h2>
+<p>This article uses Bank for International Settlements, U.S. Commodity Futures Trading Commission, ICE Futures U.S. to check definitions, institutions or measurement conventions; the exact terms, numbers and dates follow the sources [1][2][3].</p>
+<h2>What the product is: rights and cash-flow structure</h2>
+<p>A non-deliverable forward (NDF) is a cash-settled FX forward: the parties fix a future exchange rate and settle only the difference between the agreed rate and the fixing rate at maturity, without delivering either currency. It is used mainly for currencies that are not freely convertible or where cross-border delivery is restricted.</p>
+<p>The NDF buyer locks a forward price to buy foreign currency; the seller locks a price to sell it. Neither party delivers principal; both bear cash settlement of the difference. Cross-border hedging must also separate onshore and offshore prices, fixing rules and convertibility limits.</p>
+<table>
+<thead>
+<tr>
+<th>Date/condition</th>
+<th>Cash flow</th>
+<th align="right">Amount</th>
+<th>Currency</th>
+<th>Uncertainty</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>T0 signing</td>
+<td>No principal exchange</td>
+<td align="right">0</td>
+<td>USD/CNY etc.</td>
+<td>Fixing source and settlement date</td>
+</tr>
+<tr>
+<td>Fixing date</td>
+<td>Difference versus agreed rate</td>
+<td align="right">(fix − agreed) × notional</td>
+<td>Settlement currency</td>
+<td>Fixing source and manipulation risk</td>
+</tr>
+<tr>
+<td>Settlement</td>
+<td>Cash payment of difference</td>
+<td align="right">Positive or negative</td>
+<td>USD or local currency</td>
+<td>Counterparty and settlement failure</td>
+</tr>
+</tbody></table>
+<h2>Participants, trading, holding and exit</h2>
+<p>Participants include corporate treasuries, banks, NDF market makers, brokers, offshore clearing firms and regulators. Corporates lock budget rates, banks and market makers quote and hedge, and regulators define convertibility and fixing rules.</p>
+<p>Trading starts with a quote and rate lock, runs to the fixing date, and ends in cash settlement; it can also be closed early or rolled. Exit must handle the NDF leg, the onshore spot leg and the accounting hedge relationship together, not just one leg.</p>
+<h2>Costs, risks and terms and documents</h2>
+<p>Costs: Bid-ask spread, fixing basis, credit-line usage, settlement fees and cross-border funding cost. When onshore-offshore spreads widen, a seemingly cheap quote may hide a larger basis risk.</p>
+<p>Risks: FX risk, fixing risk, convertibility and exchange-control risk, counterparty risk, basis risk and hedge-accounting failure. An NDF does not remove all FX risk; it converts part of future uncertainty into a priced contract.</p>
+<p>Terms: Key documents are the ISDA master agreement, NDF confirmation, fixing-source and settlement-date rules, credit support annex and cross-border hedging policy. Check fixing time, holidays, settlement currency and default handling.</p>
+<h2>Figures in plain language</h2>
+<p>The four figures below check the mechanism, boundary and comparison in this article; labels come from its own sections, not new data.</p>
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-chain-title fig-batch-chain-desc" viewBox="0 0 340 304" width="100%">
+    <title id="fig-batch-chain-title">FX Regimes, NDFs and Cross-Border Hedging: mechanism chain</title>
+    <desc id="fig-batch-chain-desc">FX Regimes, NDFs and Cross-Border Hedging — three-step structure: problem, mechanism, judgment. Labels come from the article's sections, not new data.</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">FX Regimes, NDFs and Cross-Border Hedging: mechanism chain</text>
+    <text x="14" y="38" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">Labels come from the article's sections; all three steps matter.</text>
+    <line x1="14" y1="46" x2="326" y2="46" stroke="var(--border)" stroke-width="1"/>
+    <g>
+      <rect x="14" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="22" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">Problem</text>
+      <text x="22" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">The exchange-rate</text>
+      <text x="22" y="102" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start"> regime determine…</text>
+      <text x="22" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">The exchange-rat</text>
+      <text x="22" y="141" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">e regime determi</text>
+      <text x="22" y="158" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">nes which tools</text>
+      <text x="22" y="175" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">are available;</text>
+      <text x="22" y="192" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">NDFs cash-settle…</text>
+    </g>
+      <g>
+      <rect x="123" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="131" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">Definition</text>
+      <text x="131" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">Definition:</text>
+      <text x="131" y="102" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">Exchange-rate…</text>
+      <text x="131" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">Definition:</text>
+      <text x="131" y="141" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">Exchange-rate</text>
+      <text x="131" y="158" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">regimes run</text>
+      <text x="131" y="175" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">from hard pegs</text>
+      <text x="131" y="192" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">and adjustable…</text>
+    </g>
+      <g>
+      <rect x="232" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="240" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">Worked example</text>
+      <text x="240" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">Suppose an</text>
+      <text x="240" y="102" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">exporter will…</text>
+      <text x="240" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">Suppose an</text>
+      <text x="240" y="141" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">exporter will</text>
+      <text x="240" y="158" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">receive USD 1</text>
+      <text x="240" y="175" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">million in six</text>
+      <text x="240" y="192" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">months.…</text>
+    </g>
+    <line x1="108" y1="144" x2="123" y2="144" stroke="var(--border)" stroke-width="1.1"/>
+    <path d="M120 140 L125 144 L120 148" fill="none" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="217" y1="144" x2="232" y2="144" stroke="var(--border)" stroke-width="1.1"/>
+    <path d="M229 140 L234 144 L229 148" fill="none" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="14" y1="250" x2="326" y2="250" stroke="var(--border)" stroke-width="1"/>
+    <text x="14" y="266" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">Reading order: test the problem, then the mechanism, then whether the judgment overreaches.</text>
+    <text x="14" y="280" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">If a middle step lacks evidence, later conclusions are hypotheses, not facts.</text>
+    <text x="14" y="294" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">Structural illustration, not a new data chart; sample is the article's own argument.</text>
+  </svg>
+  <figcaption>Figure 1: FX Regimes, NDFs and Cross-Border Hedging — mechanism chain: problem, mechanism, judgment. Sample: the article's own argument; units as stated in the text.</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-boundary-title fig-batch-boundary-desc" viewBox="0 0 340 244" width="100%">
+    <title id="fig-batch-boundary-title">FX Regimes, NDFs and Cross-Border Hedging: boundary</title>
+    <desc id="fig-batch-boundary-desc">Separates conditions where the claim holds from those where it fails; a local example is not universal.</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">FX Regimes, NDFs and Cross-Border Hedging: when does it hold?</text>
+    <line x1="14" y1="34" x2="326" y2="34" stroke="var(--border)" stroke-width="1"/>
+    <rect x="14" y="44" width="312" height="38" rx="7" fill="var(--surface-2)" stroke="var(--border)"/>
+    <text x="170" y="62" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="middle">Check the conditions before the conclusion</text>
+    <text x="170" y="75" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="middle">If conditions, definitions or samples change, recompute the conclusion</text>
+    <line x1="170" y1="82" x2="90" y2="104" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="170" y1="82" x2="250" y2="104" stroke="var(--border)" stroke-width="1.1"/>
+    <rect x="14" y="104" width="148" height="100" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+    <text x="24" y="122" font-size="8.6" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">Holds</text>
+    <text x="24" y="138" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">First, an NDF is not a free</text>
+      <text x="24" y="154" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">option: it locks a price</text>
+      <text x="24" y="170" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">and gives up favourable</text>
+      <text x="24" y="186" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">moves.…</text>
+    <rect x="178" y="104" width="148" height="100" rx="8" fill="var(--gold)" opacity="0.18" stroke="var(--border)"/>
+    <text x="188" y="122" font-size="8.6" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">Fails / rewrite</text>
+    <text x="188" y="138" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">First, an NDF is not a free</text>
+      <text x="188" y="154" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">option: it locks a price</text>
+      <text x="188" y="170" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">and gives up favourable</text>
+      <text x="188" y="186" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">moves.…</text>
+    <line x1="14" y1="216" x2="326" y2="216" stroke="var(--border)" stroke-width="1"/>
+    <text x="14" y="232" font-size="8.3" fill="var(--muted)" font-family="inherit" text-anchor="start">Boundary illustration; sample is the article's own argument; units as stated in the text.</text>
+  </svg>
+  <figcaption>Figure 2: FX Regimes, NDFs and Cross-Border Hedging — boundary: when the claim holds, and when it fails. Sample: the article's own argument; units as stated in the text.</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-compare-title fig-batch-compare-desc" viewBox="0 0 340 252" width="100%">
+    <title id="fig-batch-compare-title">FX Regimes, NDFs and Cross-Border Hedging: object, conditions and common mistakes</title>
+    <desc id="fig-batch-compare-desc">Three rows compare the concept, its conditions and common mistakes; comparison is not equivalence and does not replace a definition.</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">FX Regimes, NDFs and Cross-Border Hedging: object, conditions and common mistakes at a glance</text>
+    <line x1="14" y1="34" x2="326" y2="34" stroke="var(--border)" stroke-width="1"/>
+    <text x="82" y="46" font-size="8.4" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">This article</text>
+    <text x="200" y="46" font-size="8.4" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">Commonly confused</text>
+    <g>
+      <rect x="14" y="52" width="312" height="58" fill="transparent" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="72" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">Object</text>
+      <text x="82" y="72" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">The exchange-rate</text>
+      <text x="82" y="88" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">regime determines…</text>
+      <text x="200" y="72" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">Adjacent concepts / common claims</text>
+    </g>
+    <g>
+      <rect x="14" y="110" width="312" height="58" fill="var(--surface-2)" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="130" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">Conditions</text>
+      <text x="82" y="130" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">First, an NDF is not</text>
+      <text x="82" y="146" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">a free option: it…</text>
+      <text x="200" y="130" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">First, an NDF is not a free</text>
+      <text x="200" y="146" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">option: it locks a price and…</text>
+    </g>
+    <g>
+      <rect x="14" y="168" width="312" height="58" fill="transparent" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="188" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">Check</text>
+      <text x="82" y="188" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">Define first, then compare; never judge</text>
+      <text x="82" y="204" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">labels only</text>
+      <text x="200" y="188" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">Correlation is not causation; a local case is not universal</text>
+    </g>
+    <text x="14" y="244" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">Comparison illustration; sample is the article's own argument; units as stated in the text.</text>
+  </svg>
+  <figcaption>Figure 3: FX Regimes, NDFs and Cross-Border Hedging — comparison of object, conditions and common mistakes. Sample: the article's own argument; units as stated in the text.</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-033-fx-regimes-ndf-and-cross-border-hedging-example-title fig-033-fx-regimes-ndf-and-cross-border-hedging-example-desc" viewBox="0 0 460 290" width="100%">
+    <title id="fig-033-fx-regimes-ndf-and-cross-border-hedging-example-title">Three-row worked example: Forward versus NDF: locked revenue and basis cost</title>
+    <desc id="fig-033-fx-regimes-ndf-and-cross-border-hedging-example-desc">Reading path: three rows give the key number, unit and worked-example condition; not market data.</desc>
+    <text x="16" y="24" font-size="12.2" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">Three-row worked example</text>
+    <text x="16" y="40" font-size="9.2" fill="var(--muted)" font-family="inherit" text-anchor="start">Units as labelled; sample is the article’s teaching assumption</text>
+    <line x1="12" y1="48" x2="448" y2="48" stroke="var(--border)" stroke-width="1"/>
+    <g>
+      <rect x="12" y="58" width="436" height="58" rx="9" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="24" y="76" font-size="10.2" fill="var(--muted)" font-family="inherit" text-anchor="start">Forward locked revenue</text>
+      <text x="448" y="80" font-size="17" font-weight="700" fill="var(--accent)" font-family="inherit" text-anchor="end">7.08m CNY</text>
+      <text x="24" y="96" font-size="9.3" fill="var(--text)" font-family="inherit" text-anchor="start">1m USD × 7.08</text>
+    </g>
+    <g>
+      <rect x="12" y="128" width="436" height="58" rx="9" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="24" y="146" font-size="10.2" fill="var(--muted)" font-family="inherit" text-anchor="start">NDF locked revenue</text>
+      <text x="448" y="150" font-size="17" font-weight="700" fill="var(--accent)" font-family="inherit" text-anchor="end">7.06m CNY</text>
+      <text x="24" y="166" font-size="9.3" fill="var(--text)" font-family="inherit" text-anchor="start">1m USD × 7.06</text>
+    </g>
+    <g>
+      <rect x="12" y="198" width="436" height="58" rx="9" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="24" y="216" font-size="10.2" fill="var(--muted)" font-family="inherit" text-anchor="start">Offshore basis cost</text>
+      <text x="448" y="220" font-size="17" font-weight="700" fill="var(--accent)" font-family="inherit" text-anchor="end">20k CNY</text>
+      <text x="24" y="236" font-size="9.3" fill="var(--text)" font-family="inherit" text-anchor="start">7.08 − 7.06</text>
+    </g>
+    <line x1="12" y1="266" x2="448" y2="266" stroke="var(--border)" stroke-width="1"/>
+    <text x="16" y="280" font-size="8.8" fill="var(--muted)" font-family="inherit" text-anchor="start">A relationship illustration only; not a forecast or investment advice</text>
+  </svg>
+  <figcaption>Figure 4：Hedging locks a budget, not the highest possible revenue。Units as labelled; sample is the article’s teaching assumption, not market or statistical data; it only illustrates the quantitative relationship.</figcaption>
+</figure>
+
+<h2>Exercises</h2>
+<ol>
+<li><strong>Concept check:</strong> Concept check: what is the core difference between an NDF and a deliverable forward?</li>
+<li><strong>Calculation:</strong> Calculation: USD 1 million exposure, forward 7.08 and NDF 7.06. What is the CNY difference in locked proceeds?</li>
+<li><strong>Boundary:</strong> Boundary: why can a hedge ratio above 100% be treated as speculation?</li>
+</ol>
+<details>
+<summary>Answer key</summary>
+
+<ol>
+<li>An NDF does not exchange principal; it cash-settles the fixing difference. A deliverable forward exchanges principal and usually requires a genuine trade or investment background.</li>
+<li>The difference is 0.02 CNY/USD, or CNY 20,000 on USD 1 million.</li>
+<li>The excess has no underlying exposure, so price moves become a directional bet and no longer qualify as a hedge for regulation or accounting.</li>
+</ol>
+</details>
+
+<h2>Sources</h2>
+<ol>
+<li>Bank for International Settlements. <em>OTC foreign exchange turnover in April 2025</em>. Bank for International Settlements. BIS terms: non-commercial download, display and redistribution allowed with attribution. <a href="https://www.bis.org/statistics/rpfx25_fx.htm">https://www.bis.org/statistics/rpfx25_fx.htm</a> (accessed 2026-10-30)</li>
+<li>U.S. Commodity Futures Trading Commission. <em>Fraud Advisory: Foreign Currency (Forex) Fraud</em>. U.S. Commodity Futures Trading Commission. U.S. Government work (public domain), 17 U.S.C. §105. <a href="https://www.cftc.gov/LearnAndProtect/FraudAwarenessPrevention/CFTCFraudAdvisories/fraudadv_forex">https://www.cftc.gov/LearnAndProtect/FraudAwarenessPrevention/CFTCFraudAdvisories/fraudadv_forex</a> (accessed 2026-10-30)</li>
+<li>Intercontinental Exchange. <em>US Dollar Index Futures</em>. ICE Futures U.S.. Copyrighted; all rights reserved, no ownership granted to users (cite-only). <a href="https://www.ice.com/products/194/US-Dollar-Index-Futures">https://www.ice.com/products/194/US-Dollar-Index-Futures</a> (accessed 2026-10-30)</li>
+</ol>
+  <section class="article-demo" id="demo-check" data-demo="check" data-lang="en" aria-labelledby="demo-check-title" data-check-done="All three are covered: the core of this article is in place." data-check-pending="One item is still open: go back to the matching section and retell it with a number or counterexample." data-check-count="Ticked"> <header class="demo-head"> <div class="demo-head-top"> <p class="demo-eyebrow">Worked demo</p> <button class="demo-reset" type="button" data-demo-reset>Reset</button> </div> <h2 id="demo-check-title">Read-through check: can you say three things?</h2> <p class="demo-intro">No recitation needed. Tick each sentence below and see whether you can explain the mechanism, one worked example and one boundary in your own words.</p> </header>          <div class="demo-check"> <ul class="demo-check-list"> <li> <label> <input type="checkbox" data-check-index="0"> <span>Distinguish fixed, floating and managed regimes, and onshore versus offshore deliverability.</span> </label> </li><li> <label> <input type="checkbox" data-check-index="1"> <span>Explain NDF cash settlement and compare it with deliverable forwards and futures.</span> </label> </li><li> <label> <input type="checkbox" data-check-index="2"> <span>Name one condition under which the article’s conclusion does not hold</span> </label> </li> </ul> <p class="demo-check-status" data-out="checkStatus" role="status"> Ticked 0 / 3
+</p> </div> <p class="demo-footnote">The numbers are teaching assumptions that show relationships, not forecasts or investment advice.</p> </section><script type="module" src="/_astro/ArticleDemo.astro_astro_type_script_index_0_lang.C9VQAsQ0.js"></script> <p class="notice"> This article has passed the current publication gate. Factual, calculation and translation revisions update both language versions together. </p> <p> <a class="button secondary" href="/en/"> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class> <path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path>        </svg>Back to station </a> </p> </div> <aside class="article-aside" aria-label="Article information"> <section class="aside-card"> <h2>Learning objectives</h2> <ul> <li>Distinguish fixed, floating and managed regimes, and onshore versus offshore deliverability.</li><li>Explain NDF cash settlement and compare it with deliverable forwards and futures.</li><li>Use basis and hedge cost to judge hedging a cross-border receivable or payable.</li> </ul> </section> <section class="aside-card"> <h2>Required prerequisites</h2> <ul> <li> <a href="/en/learn/fx-quotes-and-trading-instruments/">MKT-017 · FX Quotes and Trading Instruments</a> </li> </ul> </section> <section class="aside-card"> <h2>Recommended reading</h2> <ul> <li> <a href="/en/learn/assets-vs-instruments/">MKT-001 · Assets and Instruments</a> </li><li> <a href="/en/learn/futures-contracts-and-margin/">MKT-018 · Futures Contracts and Margin</a> </li> </ul> </section> <section class="aside-card"> <h2>AI review record</h2> <p class="muted"> There is no human sign-off; these states come from the AI-only editorial review. </p> <ul> <li> Facts and calculations : AI review passed </li><li> Subject : AI review passed </li><li> English : AI review passed </li><li> Page : AI review passed </li> </ul> </section> <section class="aside-card"> <h2>Sources</h2> <div class="source"> <a href="https://www.bis.org/statistics/rpfx25_fx.htm" rel="noopener noreferrer" target="_blank">OTC foreign exchange turnover in April 2025</a> <p>Bank for International Settlements · Bank for International Settlements</p> <p>Accessed: 2026-10-30 · License: BIS terms: non-commercial download, display and redistribution allowed with attribution</p> <p>Supports: Used to check the definitions, institutions, measurement conventions or product terms relevant to &quot;FX Regimes, NDFs and Cross-Border Hedging&quot;; the article does not treat material absent from the source as fact, and exact numbers and dates follow the source.</p> </div><div class="source"> <a href="https://www.cftc.gov/LearnAndProtect/FraudAwarenessPrevention/CFTCFraudAdvisories/fraudadv_forex" rel="noopener noreferrer" target="_blank">Fraud Advisory: Foreign Currency (Forex) Fraud</a> <p>U.S. Commodity Futures Trading Commission · U.S. Commodity Futures Trading Commission</p> <p>Accessed: 2026-10-30 · License: U.S. Government work (public domain), 17 U.S.C. §105</p> <p>Supports: Used to check the definitions, institutions, measurement conventions or product terms relevant to &quot;FX Regimes, NDFs and Cross-Border Hedging&quot;; the article does not treat material absent from the source as fact, and exact numbers and dates follow the source.</p> </div><div class="source"> <a href="https://www.ice.com/products/194/US-Dollar-Index-Futures" rel="noopener noreferrer" target="_blank">US Dollar Index Futures</a> <p>Intercontinental Exchange · ICE Futures U.S.</p> <p>Accessed: 2026-10-30 · License: Copyrighted; all rights reserved, no ownership granted to users (cite-only)</p> <p>Supports: Used to check the definitions, institutions, measurement conventions or product terms relevant to &quot;FX Regimes, NDFs and Cross-Border Hedging&quot;; the article does not treat material absent from the source as fact, and exact numbers and dates follow the source.</p> </div> </section> </aside> </div> </article><script type="module">var e=document.querySelector(`[data-reading-progress] span`),t=document.querySelector(`article`);if(e&&t){let n=()=>{let n=t.offsetTop,r=t.offsetHeight-window.innerHeight,i=r>0?(window.scrollY-n)/r:0;e.style.width=`${Math.min(1,Math.max(0,i))*100}%`};window.addEventListener(`scroll`,n,{passive:!0}),window.addEventListener(`resize`,n),n()}</script>  </main> <footer class="site-footer"> <div class="container footer-inner"> <div class="footer-brand"> <span class="footer-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="28" height="28" alt class="mascot" loading="lazy" decoding="async"></span> <div> <strong>巫妖投资 51Invest</strong> <p class="footer-note">A free, non-commercial knowledge site. Sources and definitions are labelled; nothing here is investment advice.</p> </div> </div> <nav class="footer-links" aria-label="Knowledge stations"> <a href="https://51invest.com/en/" data-main-home>Home</a> <a href="https://51invest.com/en/contents/">Content map</a> <a href="/en/glossary/">Glossary</a> <a href="/en/search/">Search</a> <a href="https://51invest.com/en/charts/" data-main-link>Charts</a> <a href="https://51invest.com/en/sources/" data-main-link>Data &amp; licences</a> <a href="/en/">Station home</a> </nav> </div> </footer> <nav class="mobile-nav" aria-label="Knowledge stations"> <a class="mobile-link" href="https://51invest.com/en/" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>    <path d="m3 10 9-7 9 7"></path><path d="M5 9v11h14V9"></path><path d="M9 20v-6h6v6"></path>     </svg> <span>Home</span> </a> <a class="mobile-link" href="https://51invest.com/en/#stations" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>   <rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect>      </svg> <span>Knowledge stations</span> </a> <a class="mobile-link active" href="/en/" aria-current="page"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>  <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v18H6.5A2.5 2.5 0 0 1 4 18.5z"></path><path d="M4 18.5A2.5 2.5 0 0 1 6.5 16H20"></path>       </svg> <span>Station home</span> </a> <a class="mobile-link" href="/learn/fx-regimes-ndf-and-cross-border-hedging/" data-language-link="zh"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>中文</span> </a> </nav><script type="module">var e=document.documentElement,t=[`auto`,`light`,`dark`],n=matchMedia(`(prefers-color-scheme: dark)`),r=()=>{let t=e.dataset.themeMode;return t===`light`||t===`dark`?t:`auto`},i=e=>{try{localStorage.setItem(`51invest-theme`,e)}catch{}try{let t=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-theme=${e}; Path=/; Max-Age=31536000; SameSite=Lax${t}`}catch{}},a=e=>{document.querySelectorAll(`[data-theme-toggle]`).forEach(t=>{let n=t.dataset[`label${e[0].toUpperCase()}${e.slice(1)}`];n&&(t.setAttribute(`aria-label`,n),t.setAttribute(`title`,n))})},o=t=>{e.dataset.themeMode=t,e.dataset.theme=t===`auto`?n.matches?`dark`:`light`:t,i(t),a(t)};a(r()),document.querySelectorAll(`[data-theme-toggle]`).forEach(e=>{e.addEventListener(`click`,()=>{let e=t[(t.indexOf(r())+1)%t.length];o(e)})}),n.addEventListener(`change`,()=>{r()===`auto`&&(e.dataset.theme=n.matches?`dark`:`light`)}),document.querySelectorAll(`[data-language-link]`).forEach(e=>{e.addEventListener(`click`,()=>{let t=e.dataset.languageLink;if(t===`zh`||t===`en`){try{localStorage.setItem(`51invest-language`,JSON.stringify(t))}catch{}try{let e=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-language=${t}; Path=/; Max-Age=31536000; SameSite=Lax${e}`}catch{}}})});</script> </body> </html>

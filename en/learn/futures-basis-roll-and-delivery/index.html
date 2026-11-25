@@ -1,0 +1,275 @@
+<!DOCTYPE html><html lang="en" data-theme="light" data-theme-mode="auto"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark"><title>Futures Basis, Rolls and Delivery · 51Invest</title><meta name="description" content="The gap between futures and spot, the cost of rolling and delivery rules jointly determine hedging and holding returns; a futures price move alone is not enough."><link rel="canonical" href="https://markets.51invest.com/en/learn/futures-basis-roll-and-delivery/"><link rel="alternate" hreflang="en" href="https://markets.51invest.com/en/learn/futures-basis-roll-and-delivery/"><link rel="alternate" hreflang="zh-CN" href="https://markets.51invest.com/learn/futures-basis-roll-and-delivery/"><link rel="alternate" hreflang="x-default" href="https://markets.51invest.com/learn/futures-basis-roll-and-delivery/"><link rel="icon" type="image/png" href="/_astro/neutral.Dr5C2SoA.png"><script>
+  (() => {
+    const root = document.documentElement;
+    const readCookie = key => {
+      try {
+        return document.cookie.split('; ').find(value => value.startsWith(`51invest-${key}=`))?.split('=').slice(1).join('=') ?? null;
+      } catch {
+        return null;
+      }
+    };
+    const readLocal = key => {
+      try {
+        return localStorage.getItem(`51invest-${key}`);
+      } catch {
+        return null;
+      }
+    };
+    const storedTheme = readCookie('theme') || readLocal('theme');
+    const mode = ['light', 'dark', 'auto'].includes(storedTheme) ? storedTheme : 'auto';
+    const media = matchMedia('(prefers-color-scheme: dark)');
+    const apply = () => {
+      root.dataset.theme = mode === 'auto' ? (media.matches ? 'dark' : 'light') : mode;
+      root.dataset.themeMode = mode;
+    };
+    apply();
+    media.addEventListener('change', () => {
+      if (root.dataset.themeMode === 'auto') apply();
+    });
+  })();
+</script><link rel="stylesheet" href="/_astro/Base.CocbJOeh.css"></head> <body>  <a class="skip-link" href="#main">Skip to content</a> <header class="site-header"> <div class="container header-inner"> <a class="brand" href="https://51invest.com/en/" data-main-home aria-label="51Invest"> <span class="brand-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="36" height="36" alt class="mascot" loading="lazy" decoding="async"></span> <span class="brand-copy"> <span class="brand-name">51Invest</span> <span class="brand-caption">WUYAO INVEST</span> </span> </a> <nav class="desktop-nav" aria-label="Knowledge stations"> <a class="nav-link" href="https://51invest.com/en/" data-main-home> Home </a> <a class="nav-link" href="https://economics.51invest.com/en/"> Economics </a><a class="nav-link" href="https://finance.51invest.com/en/"> Finance </a><a class="nav-link active" href="/en/" aria-current="page"> Markets </a><a class="nav-link" href="https://invest.51invest.com/en/"> Investing </a><a class="nav-link" href="https://history.51invest.com/en/"> History </a><a class="nav-link" href="https://research.51invest.com/en/"> Research </a> <a class="nav-link" href="https://51invest.com/en/contents/"> Content map </a> </nav> <div class="header-tools"> <a class="icon-button language-button" href="/learn/futures-basis-roll-and-delivery/" hreflang="zh-CN" lang="zh-CN" data-language-link="zh" aria-label="Switch to Chinese" title="Switch to Chinese"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>中文</span> </a> <button class="icon-button theme-button" type="button" data-theme-toggle aria-label="Theme: System" title="Theme: System" data-label-auto="Theme: System" data-label-light="Theme: Light" data-label-dark="Theme: Dark"> <span class="theme-icon" data-theme-icon="auto"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>        <circle cx="12" cy="12" r="8.5"></circle><path d="M12 3.5v17"></path><path d="M12 7a5 5 0 0 1 0 10" fill="currentColor" stroke="none"></path> </svg></span> <span class="theme-icon" data-theme-icon="light"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>       <circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>  </svg></span> <span class="theme-icon" data-theme-icon="dark"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>      <path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"></path>   </svg></span> <span class="theme-text" data-theme-text="auto">System</span> <span class="theme-text" data-theme-text="light">Light</span> <span class="theme-text" data-theme-text="dark">Dark</span> </button> </div> </div> </header> <main id="main" class="site-main" data-pagefind-body>  <div class="reading-progress" data-reading-progress aria-hidden="true"><span></span></div> <div class="container"> <nav class="breadcrumbs" aria-label="Breadcrumb"> <a href="https://51invest.com/en/" data-main-home>Home</a> <span class="sep">/</span> <a href="/en/">Markets</a> <span class="sep">/</span> <span aria-current="page">Futures Basis, Rolls and Delivery</span> </nav> </div> <article> <header class="article-header"> <div class="container"> <span class="article-type">Product</span> <h1 class="article-title">Futures Basis, Rolls and Delivery</h1> <p class="article-summary">The gap between futures and spot, the cost of rolling and delivery rules jointly determine hedging and holding returns; a futures price move alone is not enough.</p>  <div class="meta-grid"> <div class="meta-item"><span>Module</span><strong>MKT-M13 · 远期与期货</strong></div> <div class="meta-item"><span>Level</span><strong>Foundation</strong></div> <div class="meta-item"><span>Read</span><strong>7 min · 18 sections</strong></div> </div> <p class="demo-jump"> <a href="#demo-check"> This article has an interactive demo <span aria-hidden="true">↓</span> </a> </p> </div> </header> <div class="container article-layout"> <div class="article-body"> <h2>Definition</h2>
+<p><strong>Basis</strong> is usually written as spot minus futures: basis = spot − futures. Near delivery, eligible spot and futures prices converge through delivery arbitrage, but grade, location and costs mean convergence is not exact equality. A <strong>roll</strong> closes the expiring contract and buys a later one; for a long, a higher later price means paying a positive roll cost.</p>
+<h2>Intuition</h2>
+<p>Basis is an exchange rate between spot and futures: spot is the price for taking delivery today, futures is the price for a later delivery month, and the gap contains storage, insurance, financing, transport and spot tightness. A roll is like swapping a ticket for the next train: you stay on the journey but pay or receive the difference. Many hedgers watch only the futures move and forget that what they actually lock is &#39;spot price + basis + roll cost&#39;. If basis strengthens by CNY 10 while futures fall by CNY 8, the hedger&#39;s effective procurement cost may still rise.</p>
+<h2>Mechanism</h2>
+<p>Carry consists of storage, insurance, financing and shrinkage; convenience yield is the benefit of holding spot for uninterrupted production or sales. In theory, futures ≈ spot + carry − convenience yield. When futures exceed spot by more than carry, a cash-and-carry trade sells futures, buys spot and delivers; a backwardated market can reflect tight spot or a high convenience yield. A roll replaces old-contract price risk with new-contract risk while locking in or paying the calendar spread; margin and price limits make roll timing matter more than the theoretical spread [2][3].</p>
+<h2>Worked example</h2>
+<p>Suppose spot is CNY 100, the three-month future is CNY 104, three-month storage and insurance is CNY 6, financing is CNY 4 and delivery cost is CNY 2. Total carry is CNY 12 while futures are only CNY 4 higher, so buying spot and delivering loses CNY 8; if tight spot creates a CNY 8 convenience yield, the theoretical gap is exactly CNY 4. For a long hedger, the old contract expires at CNY 104 and the later one costs CNY 108, a CNY 4 roll cost; if the later contract falls to CNY 102, the roll gains CNY 2. These are teaching assumptions and exclude tax and margin funding.</p>
+<h2>Second worked example: cash-and-carry and delivery</h2>
+<p>Suppose spot is CNY 100, the three-month future is CNY 106, storage and insurance are CNY 7, financing is CNY 3, delivery cost is CNY 1 and convenience yield is CNY 2. Theoretical futures = 100 + 7 + 3 + 1 − 2 = CNY 109; the actual CNY 106 is CNY 3 below theory, so buying spot and delivering does not pay. If futures rise to CNY 112, do the reverse: sell futures, buy spot, pay CNY 11 of carry and delivery, and deliver at CNY 112 for a gross profit of 112 − 100 − 11 = CNY 1/tonne. If margin ties up CNY 10 and funding costs CNY 0.5, net profit is only CNY 0.5/tonne; a CNY 2 headline gap may not cover operations after friction. These are teaching assumptions.</p>
+<h2>Boundary and mistakes</h2>
+<p>First, keep the basis sign convention consistent or a &#39;stronger basis&#39; will be read backwards. Second, deliverable grade and location differ, so a futures price cannot be compared with any spot quote. Third, a roll is not a free switch: bid-ask, commissions and margin funding all count. Fourth, a 100% hedge ratio is not automatically safe; mismatched cash-flow timing, quantity and contract multiplier leave residual risk. Fifth, futures reflect expectations and funding, not a forecast of future spot.</p>
+<h2>Failure modes</h2>
+<p>The first failure is a reversed basis sign. Some write &#39;futures minus spot&#39;, others &#39;spot minus futures&#39;; the same numbers then produce opposite conclusions. A team must fix the convention and label it on every chart. The second is using the wrong spot: the deliverable grade, location and VAT treatment may differ from the actual purchase contract, so apparent convergence leaves a settlement gap. The third is ignoring margin liquidity: when the near-versus-later spread widens during a roll, a margin call can force an exit at the worst time. The fourth is a hedge quantity that does not match the contract multiplier, leaving residual exposure. The fifth is treating the exchange futures price as a forecast of future spot; futures reflect current deliverable supply, demand and funding.</p>
+<h2>Three checks</h2>
+<p>First, are the basis formula and sign written in the text and captions so a reader can recompute with the same numbers? Second, are grade, location, tax and delivery costs aligned between spot and futures, and is any convergence gap explained? Third, are roll cost, margin funding and financing included in the effective price? Missing one of these overstates the hedge&#39;s effectiveness.</p>
+<h2>Adjacent concepts and a counterexample</h2>
+<p>Basis is easily confused with calendar spread and processing spread. Basis is spot minus futures; the calendar spread is near-month futures minus later-month futures; the processing spread is product price minus feedstock cost. They answer different questions. A stronger basis can come from tight spot or falling futures; a stronger calendar spread can come from scarce storage or a funding squeeze. A counterexample is &#39;negative basis is a risk-free arbitrage&#39;: negative basis may reflect convenience yield, delivery limits or warehouse costs, and cash-and-carry need not pay. Another is &#39;futures must converge to spot&#39;: near delivery, eligible spot and futures converge, but grade, location, transport and warehouse receipts keep a gap. Before comparing analyses, fix the sign and definition, or &#39;stronger&#39; will be read backwards.</p>
+<h2>Scope and limits</h2>
+<p>This basis framework applies to futures with standard contracts, clear deliverable grades and measurable warehouse and transport costs. If spot grades vary widely, delivery capacity is limited, or liquidity concentrates in a few months, basis is distorted by grade, location and squeezes. It does not apply to cash-settled contracts without physical delivery, nor to using basis as a directional forecast. Align grade, location and tax first, then cross-check with open interest, warehouse receipts and calendar spreads; a one-day basis jump may only be a contract roll.</p>
+<p>Finally, when comparing basis across products, align quotation units, FX and tax; if spot contracts carry quality premiums, convert to the standard grade before subtracting futures, or grade differences hide the basis direction.</p>
+<p>Intertemporal comparison must separate delivery months from the front contract; basis before and after a roll is not continuous, and different multipliers or quotation units must be converted first.</p>
+<p>Also keep reproducible intermediate records and scripts.</p>
+<h2>Related</h2>
+<ul>
+<li>MKT-018 Futures Contracts and Margin: adjacent main article; read it before this supplement.</li>
+<li>MKT-001 Assets and Instruments: adjacent main article; read it before this supplement.</li>
+<li>MKT-017 FX Quotes and Trading Instruments: adjacent main article; read it before this supplement.</li>
+</ul>
+<h2>Source note</h2>
+<p>This article uses U.S. Commodity Futures Trading Commission, CME Group, CME Group to check definitions, institutions or measurement conventions; the exact terms, numbers and dates follow the sources [1][2][3].</p>
+<h2>What the product is: rights and cash-flow structure</h2>
+<p>A futures contract is a standardised obligation: the long agrees to receive the underlying at a fixed price, grade and delivery location, while the short agrees to deliver. What is really traded is the package of price, basis, margin and delivery rules, not an abstract price chart.</p>
+<p>Before expiry, the long can close, roll or enter delivery; the short can close, roll or deliver. Both post margin and accept daily mark-to-market. Basis is usually spot minus futures; reverse the sign and “strengthening” becomes the opposite conclusion.</p>
+<table>
+<thead>
+<tr>
+<th>Date/condition</th>
+<th>Cash flow</th>
+<th align="right">Amount</th>
+<th>Currency</th>
+<th>Uncertainty</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>T0 open</td>
+<td>Post initial margin</td>
+<td align="right">−10 CNY/t</td>
+<td>CNY</td>
+<td>Margin calls and liquidation rules</td>
+</tr>
+<tr>
+<td>Expiry or close</td>
+<td>Futures P&amp;L settlement</td>
+<td align="right">104 − 100 = +4 CNY/t</td>
+<td>CNY</td>
+<td>Whether basis converges</td>
+</tr>
+<tr>
+<td>Roll</td>
+<td>Close front month, open deferred</td>
+<td align="right">104 − 108 = −4 CNY/t</td>
+<td>CNY</td>
+<td>Deferred liquidity and spread</td>
+</tr>
+</tbody></table>
+<h2>Participants, trading, holding and exit</h2>
+<p>Participants include the exchange, clearing house, brokers, hedgers, directional traders, warehouse receipt holders and delivery warehouses. The exchange sets contract and delivery rules, the clearing house stands in the middle, brokers manage client margin, and warehouses determine receipts and location premiums.</p>
+<p>Trading starts with an open position, runs through daily mark-to-market and rolls, and ends by close-out, physical delivery or cash settlement. Holding costs include storage, insurance, funding and delivery fees. Exit analysis must include the futures leg, the physical leg and margin funding, not just the screen spread.</p>
+<h2>Costs, risks and terms and documents</h2>
+<p>Costs: Commissions, bid-ask spread, margin funding, storage and insurance, delivery fees and roll slippage all belong in the effective price. A 2 CNY spread may leave only 0.5 CNY after frictions.</p>
+<p>Risks: Basis risk, roll risk, margin-call liquidity risk, grade and location mismatch, delivery failure and contract liquidity. A hedge is not safe just because it is 100%: quantity, timing and contract multiplier mismatches leave residual exposure.</p>
+<p>Terms: Key documents are the exchange contract specification, margin and delivery rules, warehouse receipts and grade premium tables. Before trading, check deliverable grade, location, tax treatment, last trading day and cash-settlement terms.</p>
+<h2>Figures in plain language</h2>
+<p>The four figures below check the mechanism, boundary and comparison in this article; labels come from its own sections, not new data.</p>
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-chain-title fig-batch-chain-desc" viewBox="0 0 340 304" width="100%">
+    <title id="fig-batch-chain-title">Futures Basis, Rolls and Delivery: mechanism chain</title>
+    <desc id="fig-batch-chain-desc">Futures Basis, Rolls and Delivery — three-step structure: problem, mechanism, judgment. Labels come from the article's sections, not new data.</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">Futures Basis, Rolls and Delivery: mechanism chain</text>
+    <text x="14" y="38" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">Labels come from the article's sections; all three steps matter.</text>
+    <line x1="14" y1="46" x2="326" y2="46" stroke="var(--border)" stroke-width="1"/>
+    <g>
+      <rect x="14" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="22" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">Problem</text>
+      <text x="22" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">The gap between</text>
+      <text x="22" y="102" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">futures and…</text>
+      <text x="22" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">The gap between</text>
+      <text x="22" y="141" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">futures and</text>
+      <text x="22" y="158" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">spot, the cost</text>
+      <text x="22" y="175" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">of rolling and</text>
+      <text x="22" y="192" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">delivery rules…</text>
+    </g>
+      <g>
+      <rect x="123" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="131" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">Definition</text>
+      <text x="131" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">Definition:</text>
+      <text x="131" y="102" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">Basis is usually…</text>
+      <text x="131" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">Definition:</text>
+      <text x="131" y="141" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">Basis is usually</text>
+      <text x="131" y="158" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start"> written as</text>
+      <text x="131" y="175" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">spot minus</text>
+      <text x="131" y="192" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">futures: basis…</text>
+    </g>
+      <g>
+      <rect x="232" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="240" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">Worked example</text>
+      <text x="240" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">Suppose spot is</text>
+      <text x="240" y="102" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">CNY 100, the…</text>
+      <text x="240" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">Suppose spot is</text>
+      <text x="240" y="141" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">CNY 100, the</text>
+      <text x="240" y="158" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">three-month</text>
+      <text x="240" y="175" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">future is CNY</text>
+      <text x="240" y="192" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">104, three-month…</text>
+    </g>
+    <line x1="108" y1="144" x2="123" y2="144" stroke="var(--border)" stroke-width="1.1"/>
+    <path d="M120 140 L125 144 L120 148" fill="none" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="217" y1="144" x2="232" y2="144" stroke="var(--border)" stroke-width="1.1"/>
+    <path d="M229 140 L234 144 L229 148" fill="none" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="14" y1="250" x2="326" y2="250" stroke="var(--border)" stroke-width="1"/>
+    <text x="14" y="266" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">Reading order: test the problem, then the mechanism, then whether the judgment overreaches.</text>
+    <text x="14" y="280" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">If a middle step lacks evidence, later conclusions are hypotheses, not facts.</text>
+    <text x="14" y="294" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">Structural illustration, not a new data chart; sample is the article's own argument.</text>
+  </svg>
+  <figcaption>Figure 1: Futures Basis, Rolls and Delivery — mechanism chain: problem, mechanism, judgment. Sample: the article's own argument; units as stated in the text.</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-boundary-title fig-batch-boundary-desc" viewBox="0 0 340 244" width="100%">
+    <title id="fig-batch-boundary-title">Futures Basis, Rolls and Delivery: boundary</title>
+    <desc id="fig-batch-boundary-desc">Separates conditions where the claim holds from those where it fails; a local example is not universal.</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">Futures Basis, Rolls and Delivery: when does it hold?</text>
+    <line x1="14" y1="34" x2="326" y2="34" stroke="var(--border)" stroke-width="1"/>
+    <rect x="14" y="44" width="312" height="38" rx="7" fill="var(--surface-2)" stroke="var(--border)"/>
+    <text x="170" y="62" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="middle">Check the conditions before the conclusion</text>
+    <text x="170" y="75" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="middle">If conditions, definitions or samples change, recompute the conclusion</text>
+    <line x1="170" y1="82" x2="90" y2="104" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="170" y1="82" x2="250" y2="104" stroke="var(--border)" stroke-width="1.1"/>
+    <rect x="14" y="104" width="148" height="100" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+    <text x="24" y="122" font-size="8.6" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">Holds</text>
+    <text x="24" y="138" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">First, keep the basis sign</text>
+      <text x="24" y="154" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">convention consistent or a</text>
+      <text x="24" y="170" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">'stronger basis' will be</text>
+      <text x="24" y="186" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">read backwards.…</text>
+    <rect x="178" y="104" width="148" height="100" rx="8" fill="var(--gold)" opacity="0.18" stroke="var(--border)"/>
+    <text x="188" y="122" font-size="8.6" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">Fails / rewrite</text>
+    <text x="188" y="138" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">First, keep the basis sign</text>
+      <text x="188" y="154" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">convention consistent or a</text>
+      <text x="188" y="170" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">'stronger basis' will be</text>
+      <text x="188" y="186" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">read backwards.…</text>
+    <line x1="14" y1="216" x2="326" y2="216" stroke="var(--border)" stroke-width="1"/>
+    <text x="14" y="232" font-size="8.3" fill="var(--muted)" font-family="inherit" text-anchor="start">Boundary illustration; sample is the article's own argument; units as stated in the text.</text>
+  </svg>
+  <figcaption>Figure 2: Futures Basis, Rolls and Delivery — boundary: when the claim holds, and when it fails. Sample: the article's own argument; units as stated in the text.</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-compare-title fig-batch-compare-desc" viewBox="0 0 340 252" width="100%">
+    <title id="fig-batch-compare-title">Futures Basis, Rolls and Delivery: object, conditions and common mistakes</title>
+    <desc id="fig-batch-compare-desc">Three rows compare the concept, its conditions and common mistakes; comparison is not equivalence and does not replace a definition.</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">Futures Basis, Rolls and Delivery: object, conditions and common mistakes at a glance</text>
+    <line x1="14" y1="34" x2="326" y2="34" stroke="var(--border)" stroke-width="1"/>
+    <text x="82" y="46" font-size="8.4" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">This article</text>
+    <text x="200" y="46" font-size="8.4" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">Commonly confused</text>
+    <g>
+      <rect x="14" y="52" width="312" height="58" fill="transparent" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="72" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">Object</text>
+      <text x="82" y="72" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">The gap between</text>
+      <text x="82" y="88" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">futures and spot…</text>
+      <text x="200" y="72" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">Adjacent concepts / common claims</text>
+    </g>
+    <g>
+      <rect x="14" y="110" width="312" height="58" fill="var(--surface-2)" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="130" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">Conditions</text>
+      <text x="82" y="130" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">First, keep the</text>
+      <text x="82" y="146" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">basis sign convention…</text>
+      <text x="200" y="130" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">First, keep the basis sign</text>
+      <text x="200" y="146" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">convention consistent or a…</text>
+    </g>
+    <g>
+      <rect x="14" y="168" width="312" height="58" fill="transparent" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="188" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">Check</text>
+      <text x="82" y="188" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">Define first, then compare; never judge</text>
+      <text x="82" y="204" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">labels only</text>
+      <text x="200" y="188" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">Correlation is not causation; a local case is not universal</text>
+    </g>
+    <text x="14" y="244" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">Comparison illustration; sample is the article's own argument; units as stated in the text.</text>
+  </svg>
+  <figcaption>Figure 3: Futures Basis, Rolls and Delivery — comparison of object, conditions and common mistakes. Sample: the article's own argument; units as stated in the text.</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-031-futures-basis-roll-and-delivery-example-title fig-031-futures-basis-roll-and-delivery-example-desc" viewBox="0 0 460 290" width="100%">
+    <title id="fig-031-futures-basis-roll-and-delivery-example-title">Three-row worked example: Futures carry: premium, cost and delivery loss</title>
+    <desc id="fig-031-futures-basis-roll-and-delivery-example-desc">Reading path: three rows give the key number, unit and worked-example condition; not market data.</desc>
+    <text x="16" y="24" font-size="12.2" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">Three-row worked example</text>
+    <text x="16" y="40" font-size="9.2" fill="var(--muted)" font-family="inherit" text-anchor="start">Units as labelled; sample is the article’s teaching assumption</text>
+    <line x1="12" y1="48" x2="448" y2="48" stroke="var(--border)" stroke-width="1"/>
+    <g>
+      <rect x="12" y="58" width="436" height="58" rx="9" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="24" y="76" font-size="10.2" fill="var(--muted)" font-family="inherit" text-anchor="start">Carry cost</text>
+      <text x="448" y="80" font-size="17" font-weight="700" fill="var(--accent)" font-family="inherit" text-anchor="end">12 CNY/t</text>
+      <text x="24" y="96" font-size="9.3" fill="var(--text)" font-family="inherit" text-anchor="start">Storage 6 + funding 4 + delivery 2</text>
+    </g>
+    <g>
+      <rect x="12" y="128" width="436" height="58" rx="9" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="24" y="146" font-size="10.2" fill="var(--muted)" font-family="inherit" text-anchor="start">Futures premium</text>
+      <text x="448" y="150" font-size="17" font-weight="700" fill="var(--accent)" font-family="inherit" text-anchor="end">4 CNY/t</text>
+      <text x="24" y="166" font-size="9.3" fill="var(--text)" font-family="inherit" text-anchor="start">104 − 100</text>
+    </g>
+    <g>
+      <rect x="12" y="198" width="436" height="58" rx="9" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="24" y="216" font-size="10.2" fill="var(--muted)" font-family="inherit" text-anchor="start">Cash-and-carry loss</text>
+      <text x="448" y="220" font-size="17" font-weight="700" fill="var(--accent)" font-family="inherit" text-anchor="end">8 CNY/t</text>
+      <text x="24" y="236" font-size="9.3" fill="var(--text)" font-family="inherit" text-anchor="start">4 − 12</text>
+    </g>
+    <line x1="12" y1="266" x2="448" y2="266" stroke="var(--border)" stroke-width="1"/>
+    <text x="16" y="280" font-size="8.8" fill="var(--muted)" font-family="inherit" text-anchor="start">A relationship illustration only; not a forecast or investment advice</text>
+  </svg>
+  <figcaption>Figure 4：When the futures premium does not cover carry, cash-and-carry loses money。Units as labelled; sample is the article’s teaching assumption, not market or statistical data; it only illustrates the quantitative relationship.</figcaption>
+</figure>
+
+<h2>Exercises</h2>
+<ol>
+<li><strong>Concept check:</strong> Concept check: with basis = spot − futures, does a move from −4 to −2 mean strengthening or weakening?</li>
+<li><strong>Calculation:</strong> Calculation: spot 100, futures 106, carry 10, convenience yield 6. What is the theoretical basis?</li>
+<li><strong>Boundary:</strong> Boundary: why can the basis remain non-zero near delivery?</li>
+</ol>
+<details>
+<summary>Answer key</summary>
+
+<ol>
+<li>From −4 to −2 is an increase, so the basis is strengthening.</li>
+<li>Theoretical futures = 100 + 10 − 6 = 104; basis = 100 − 104 = −4.</li>
+<li>Grade, location, transport and costs differ, and delivery arbitrage is limited by position, funding and warehouse receipts; convergence is not exact equality.</li>
+</ol>
+</details>
+
+<h2>Sources</h2>
+<ol>
+<li>U.S. Commodity Futures Trading Commission. <em>Basics of Futures Trading</em>. U.S. Commodity Futures Trading Commission. U.S. Government work (public domain), 17 U.S.C. §105. <a href="https://www.cftc.gov/LearnAndProtect/AdvisoriesAndArticles/FuturesMarketBasics/index.htm">https://www.cftc.gov/LearnAndProtect/AdvisoriesAndArticles/FuturesMarketBasics/index.htm</a> (accessed 2026-10-30)</li>
+<li>CME Group. <em>Learn about Basis: Grains</em>. CME Group. © CME Group; cite-only. <a href="https://www.cmegroup.com/education/courses/introduction-to-grains-and-oilseeds/learn-about-basis-grains.html">https://www.cmegroup.com/education/courses/introduction-to-grains-and-oilseeds/learn-about-basis-grains.html</a> (accessed 2026-11-21)</li>
+<li>CME Group. <em>了解保证金相关要求 (Understanding Margin Requirements)</em>. CME Group. 版权所有、保留所有权利；未见允许转载条款（cite-only）. <a href="https://www.cmegroup.cn/education/4934.htm">https://www.cmegroup.cn/education/4934.htm</a> (accessed 2026-10-30)</li>
+</ol>
+  <section class="article-demo" id="demo-check" data-demo="check" data-lang="en" aria-labelledby="demo-check-title" data-check-done="All three are covered: the core of this article is in place." data-check-pending="One item is still open: go back to the matching section and retell it with a number or counterexample." data-check-count="Ticked"> <header class="demo-head"> <div class="demo-head-top"> <p class="demo-eyebrow">Worked demo</p> <button class="demo-reset" type="button" data-demo-reset>Reset</button> </div> <h2 id="demo-check-title">Read-through check: can you say three things?</h2> <p class="demo-intro">No recitation needed. Tick each sentence below and see whether you can explain the mechanism, one worked example and one boundary in your own words.</p> </header>          <div class="demo-check"> <ul class="demo-check-list"> <li> <label> <input type="checkbox" data-check-index="0"> <span>Write the basis with a consistent sign convention and explain convergence near delivery.</span> </label> </li><li> <label> <input type="checkbox" data-check-index="1"> <span>Separate roll return, storage and financing cost and convenience yield, and calculate one roll.</span> </label> </li><li> <label> <input type="checkbox" data-check-index="2"> <span>Name one condition under which the article’s conclusion does not hold</span> </label> </li> </ul> <p class="demo-check-status" data-out="checkStatus" role="status"> Ticked 0 / 3
+</p> </div> <p class="demo-footnote">The numbers are teaching assumptions that show relationships, not forecasts or investment advice.</p> </section><script type="module" src="/_astro/ArticleDemo.astro_astro_type_script_index_0_lang.C9VQAsQ0.js"></script> <p class="notice"> This article has passed the current publication gate. Factual, calculation and translation revisions update both language versions together. </p> <p> <a class="button secondary" href="/en/"> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class> <path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path>        </svg>Back to station </a> </p> </div> <aside class="article-aside" aria-label="Article information"> <section class="aside-card"> <h2>Learning objectives</h2> <ul> <li>Write the basis with a consistent sign convention and explain convergence near delivery.</li><li>Separate roll return, storage and financing cost and convenience yield, and calculate one roll.</li><li>Identify how deliverable grade, location, margin and position limits change hedging outcomes.</li> </ul> </section> <section class="aside-card"> <h2>Required prerequisites</h2> <ul> <li> <a href="/en/learn/futures-contracts-and-margin/">MKT-018 · Futures Contracts and Margin</a> </li> </ul> </section> <section class="aside-card"> <h2>Recommended reading</h2> <ul> <li> <a href="/en/learn/assets-vs-instruments/">MKT-001 · Assets and Instruments</a> </li><li> <a href="/en/learn/fx-quotes-and-trading-instruments/">MKT-017 · FX Quotes and Trading Instruments</a> </li> </ul> </section> <section class="aside-card"> <h2>AI review record</h2> <p class="muted"> There is no human sign-off; these states come from the AI-only editorial review. </p> <ul> <li> Facts and calculations : AI review passed </li><li> Subject : AI review passed </li><li> English : AI review passed </li><li> Page : AI review passed </li> </ul> </section> <section class="aside-card"> <h2>Sources</h2> <div class="source"> <a href="https://www.cftc.gov/LearnAndProtect/AdvisoriesAndArticles/FuturesMarketBasics/index.htm" rel="noopener noreferrer" target="_blank">Basics of Futures Trading</a> <p>U.S. Commodity Futures Trading Commission · U.S. Commodity Futures Trading Commission</p> <p>Accessed: 2026-10-30 · License: U.S. Government work (public domain), 17 U.S.C. §105</p> <p>Supports: Used to check the definitions, institutions, measurement conventions or product terms relevant to &quot;Futures Basis, Rolls and Delivery&quot;; the article does not treat material absent from the source as fact, and exact numbers and dates follow the source.</p> </div><div class="source"> <a href="https://www.cmegroup.com/education/courses/introduction-to-grains-and-oilseeds/learn-about-basis-grains.html" rel="noopener noreferrer" target="_blank">Learn about Basis: Grains</a> <p>CME Group · CME Group</p> <p>Accessed: 2026-11-21 · License: © CME Group; cite-only</p> <p>Supports: Used to check the definitions, institutions, measurement conventions or product terms relevant to &quot;Futures Basis, Rolls and Delivery&quot;; the article does not treat material absent from the source as fact, and exact numbers and dates follow the source.</p> </div><div class="source"> <a href="https://www.cmegroup.cn/education/4934.htm" rel="noopener noreferrer" target="_blank">了解保证金相关要求 (Understanding Margin Requirements)</a> <p>CME Group · CME Group</p> <p>Accessed: 2026-10-30 · License: 版权所有、保留所有权利；未见允许转载条款（cite-only）</p> <p>Supports: Used to check the definitions, institutions, measurement conventions or product terms relevant to &quot;Futures Basis, Rolls and Delivery&quot;; the article does not treat material absent from the source as fact, and exact numbers and dates follow the source.</p> </div> </section> </aside> </div> </article><script type="module">var e=document.querySelector(`[data-reading-progress] span`),t=document.querySelector(`article`);if(e&&t){let n=()=>{let n=t.offsetTop,r=t.offsetHeight-window.innerHeight,i=r>0?(window.scrollY-n)/r:0;e.style.width=`${Math.min(1,Math.max(0,i))*100}%`};window.addEventListener(`scroll`,n,{passive:!0}),window.addEventListener(`resize`,n),n()}</script>  </main> <footer class="site-footer"> <div class="container footer-inner"> <div class="footer-brand"> <span class="footer-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="28" height="28" alt class="mascot" loading="lazy" decoding="async"></span> <div> <strong>巫妖投资 51Invest</strong> <p class="footer-note">A free, non-commercial knowledge site. Sources and definitions are labelled; nothing here is investment advice.</p> </div> </div> <nav class="footer-links" aria-label="Knowledge stations"> <a href="https://51invest.com/en/" data-main-home>Home</a> <a href="https://51invest.com/en/contents/">Content map</a> <a href="/en/glossary/">Glossary</a> <a href="/en/search/">Search</a> <a href="https://51invest.com/en/charts/" data-main-link>Charts</a> <a href="https://51invest.com/en/sources/" data-main-link>Data &amp; licences</a> <a href="/en/">Station home</a> </nav> </div> </footer> <nav class="mobile-nav" aria-label="Knowledge stations"> <a class="mobile-link" href="https://51invest.com/en/" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>    <path d="m3 10 9-7 9 7"></path><path d="M5 9v11h14V9"></path><path d="M9 20v-6h6v6"></path>     </svg> <span>Home</span> </a> <a class="mobile-link" href="https://51invest.com/en/#stations" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>   <rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect>      </svg> <span>Knowledge stations</span> </a> <a class="mobile-link active" href="/en/" aria-current="page"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>  <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v18H6.5A2.5 2.5 0 0 1 4 18.5z"></path><path d="M4 18.5A2.5 2.5 0 0 1 6.5 16H20"></path>       </svg> <span>Station home</span> </a> <a class="mobile-link" href="/learn/futures-basis-roll-and-delivery/" data-language-link="zh"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>中文</span> </a> </nav><script type="module">var e=document.documentElement,t=[`auto`,`light`,`dark`],n=matchMedia(`(prefers-color-scheme: dark)`),r=()=>{let t=e.dataset.themeMode;return t===`light`||t===`dark`?t:`auto`},i=e=>{try{localStorage.setItem(`51invest-theme`,e)}catch{}try{let t=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-theme=${e}; Path=/; Max-Age=31536000; SameSite=Lax${t}`}catch{}},a=e=>{document.querySelectorAll(`[data-theme-toggle]`).forEach(t=>{let n=t.dataset[`label${e[0].toUpperCase()}${e.slice(1)}`];n&&(t.setAttribute(`aria-label`,n),t.setAttribute(`title`,n))})},o=t=>{e.dataset.themeMode=t,e.dataset.theme=t===`auto`?n.matches?`dark`:`light`:t,i(t),a(t)};a(r()),document.querySelectorAll(`[data-theme-toggle]`).forEach(e=>{e.addEventListener(`click`,()=>{let e=t[(t.indexOf(r())+1)%t.length];o(e)})}),n.addEventListener(`change`,()=>{r()===`auto`&&(e.dataset.theme=n.matches?`dark`:`light`)}),document.querySelectorAll(`[data-language-link]`).forEach(e=>{e.addEventListener(`click`,()=>{let t=e.dataset.languageLink;if(t===`zh`||t===`en`){try{localStorage.setItem(`51invest-language`,JSON.stringify(t))}catch{}try{let e=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-language=${t}; Path=/; Max-Age=31536000; SameSite=Lax${e}`}catch{}}})});</script> </body> </html>

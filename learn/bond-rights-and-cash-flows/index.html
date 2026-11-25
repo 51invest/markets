@@ -1,0 +1,422 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light" data-theme-mode="auto"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark"><title>债券的权利与现金流 · 巫妖投资</title><meta name="description" content="债券是发行人的债务，持有人按发行文件收取票息与本金；票息、价格、收益率和风险不能混为一谈。"><link rel="canonical" href="https://markets.51invest.com/learn/bond-rights-and-cash-flows/"><link rel="alternate" hreflang="zh-CN" href="https://markets.51invest.com/learn/bond-rights-and-cash-flows/"><link rel="alternate" hreflang="en" href="https://markets.51invest.com/en/learn/bond-rights-and-cash-flows/"><link rel="alternate" hreflang="x-default" href="https://markets.51invest.com/learn/bond-rights-and-cash-flows/"><link rel="icon" type="image/png" href="/_astro/neutral.Dr5C2SoA.png"><script>
+  (() => {
+    const root = document.documentElement;
+    const readCookie = key => {
+      try {
+        return document.cookie.split('; ').find(value => value.startsWith(`51invest-${key}=`))?.split('=').slice(1).join('=') ?? null;
+      } catch {
+        return null;
+      }
+    };
+    const readLocal = key => {
+      try {
+        return localStorage.getItem(`51invest-${key}`);
+      } catch {
+        return null;
+      }
+    };
+    const storedTheme = readCookie('theme') || readLocal('theme');
+    const mode = ['light', 'dark', 'auto'].includes(storedTheme) ? storedTheme : 'auto';
+    const media = matchMedia('(prefers-color-scheme: dark)');
+    const apply = () => {
+      root.dataset.theme = mode === 'auto' ? (media.matches ? 'dark' : 'light') : mode;
+      root.dataset.themeMode = mode;
+    };
+    apply();
+    media.addEventListener('change', () => {
+      if (root.dataset.themeMode === 'auto') apply();
+    });
+  })();
+</script><link rel="stylesheet" href="/_astro/Base.CocbJOeh.css"></head> <body>  <a class="skip-link" href="#main">跳到正文</a> <header class="site-header"> <div class="container header-inner"> <a class="brand" href="https://51invest.com/" data-main-home aria-label="巫妖投资"> <span class="brand-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="36" height="36" alt class="mascot" loading="lazy" decoding="async"></span> <span class="brand-copy"> <span class="brand-name">巫妖投资</span> <span class="brand-caption">51INVEST</span> </span> </a> <nav class="desktop-nav" aria-label="知识分站"> <a class="nav-link" href="https://51invest.com/" data-main-home> 首页 </a> <a class="nav-link" href="https://economics.51invest.com/"> 经济学 </a><a class="nav-link" href="https://finance.51invest.com/"> 金融基础 </a><a class="nav-link active" href="/" aria-current="page"> 市场与产品 </a><a class="nav-link" href="https://invest.51invest.com/"> 投资方法 </a><a class="nav-link" href="https://history.51invest.com/"> 经济与金融史 </a><a class="nav-link" href="https://research.51invest.com/"> 研究方法 </a> <a class="nav-link" href="https://51invest.com/contents/"> 内容地图 </a> </nav> <div class="header-tools"> <a class="icon-button language-button" href="/en/learn/bond-rights-and-cash-flows/" hreflang="en" lang="en" data-language-link="en" aria-label="切换为英文" title="切换为英文"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>English</span> </a> <button class="icon-button theme-button" type="button" data-theme-toggle aria-label="主题: 跟随系统" title="主题: 跟随系统" data-label-auto="主题: 跟随系统" data-label-light="主题: 浅色" data-label-dark="主题: 深色"> <span class="theme-icon" data-theme-icon="auto"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>        <circle cx="12" cy="12" r="8.5"></circle><path d="M12 3.5v17"></path><path d="M12 7a5 5 0 0 1 0 10" fill="currentColor" stroke="none"></path> </svg></span> <span class="theme-icon" data-theme-icon="light"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>       <circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>  </svg></span> <span class="theme-icon" data-theme-icon="dark"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>      <path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"></path>   </svg></span> <span class="theme-text" data-theme-text="auto">跟随系统</span> <span class="theme-text" data-theme-text="light">浅色</span> <span class="theme-text" data-theme-text="dark">深色</span> </button> </div> </div> </header> <main id="main" class="site-main" data-pagefind-body>  <div class="reading-progress" data-reading-progress aria-hidden="true"><span></span></div> <div class="container"> <nav class="breadcrumbs" aria-label="Breadcrumb"> <a href="https://51invest.com/" data-main-home>首页</a> <span class="sep">/</span> <a href="/">市场与产品</a> <span class="sep">/</span> <span aria-current="page">债券的权利与现金流</span> </nav> </div> <article> <header class="article-header"> <div class="container"> <span class="article-type">产品与品种</span> <h1 class="article-title">债券的权利与现金流</h1> <p class="article-summary">债券是发行人的债务，持有人按发行文件收取票息与本金；票息、价格、收益率和风险不能混为一谈。</p>  <div class="meta-grid"> <div class="meta-item"><span>模块</span><strong>MKT-M04 · 债券与信用</strong></div> <div class="meta-item"><span>层级</span><strong>入门</strong></div> <div class="meta-item"><span>阅读</span><strong>18 分钟 · 15 节</strong></div> </div> <p class="demo-jump"> <a href="#demo-check"> 这篇有一个可以动手操作的演示 <span aria-hidden="true">↓</span> </a> </p> </div> </header> <div class="container article-layout"> <div class="article-body"> <h2>产品定义</h2>
+<p>债券是发行人向投资者借款，并承诺按发行文件支付利息和本金的债务证券。持有人是发行人的债权人，不是股东，通常不拥有企业剩余利润或投票权。FINRA 把债券描述为具有明确条款、票息和到期日的债务证券[1]；发行文件决定具体权利义务。</p>
+<p>发行文件通常规定：面值、票面利率、付息频率、到期日、担保或抵押、清偿顺序、赎回或回售条款、财务契约以及违约处理。不同市场、发行人和司法辖区的文件结构不同，不能只看“债券”两个字就推定条款相同。</p>
+<h2>权利、义务与现金流</h2>
+<p>持有人通常拥有：</p>
+<ul>
+<li>按约定时间和金额收取票息的权利；</li>
+<li>到期收取本金的权利；</li>
+<li>在发行文件规定的清偿顺序中主张债权的权利；</li>
+<li>在发行人违反契约或进入重组时，按文件参与程序的权利。</li>
+</ul>
+<p>发行人的义务是支付票息和本金，并遵守契约。持有人不分享发行人的剩余利润，也不因公司价值上涨而自动获得额外收益；除非债券条款或可转换结构另有规定。</p>
+<p>一个三年期、面值 1,000 元、票面利率 5%、每年付息一次的债券，若以 973.27 元买入并持有到期，现金流如下（仅为教学假设）：</p>
+<table>
+<thead>
+<tr>
+<th>时间</th>
+<th>现金流项目</th>
+<th align="right">金额（元）</th>
+<th>币种</th>
+<th>不确定性</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>第 0 年</td>
+<td>购买价格</td>
+<td align="right">-973.27</td>
+<td>人民币元（教学假设币种；英文版同段用 currency units，两者同指一个假设记账单位）</td>
+<td>成交价随市场利率与信用利差变化，非发行文件约定</td>
+</tr>
+<tr>
+<td>第 1 年</td>
+<td>票息</td>
+<td align="right">+50.00</td>
+<td>人民币元（教学假设币种）</td>
+<td>取决于发行人是否按约付息（信用与契约事件）</td>
+</tr>
+<tr>
+<td>第 2 年</td>
+<td>票息</td>
+<td align="right">+50.00</td>
+<td>人民币元（教学假设币种）</td>
+<td>同上；若含赎回条款，该笔可能不发生</td>
+</tr>
+<tr>
+<td>第 3 年</td>
+<td>票息 + 本金</td>
+<td align="right">+1,050.00</td>
+<td>人民币元（教学假设币种）</td>
+<td>本金偿付取决于发行人履约与清偿顺序，违约时可能少偿或延后</td>
+</tr>
+</tbody></table>
+<figure>
+  <svg role="img" aria-labelledby="fig-bond-title fig-bond-desc" viewBox="0 0 520 220" width="100%">
+    <title id="fig-bond-title">三年期债券的票息与本金现金流</title>
+    <desc id="fig-bond-desc">时间轴从第零年到第三年。第一年和第二年各收到五十元票息，第三年收到五十元票息和一千元本金，共一千零五十元。购买价格未在图中表示。</desc>
+    <line x1="60" y1="150" x2="480" y2="150" stroke="var(--border)" stroke-width="2"></line>
+    <g fill="var(--muted)" font-size="12" font-family="inherit">
+      <text x="55" y="175">0</text>
+      <text x="170" y="175">1</text>
+      <text x="290" y="175">2</text>
+      <text x="410" y="175">3 年</text>
+    </g>
+    <g stroke="var(--accent)" stroke-width="2">
+      <line x1="180" y1="145" x2="180" y2="105"></line>
+      <line x1="300" y1="145" x2="300" y2="105"></line>
+      <line x1="420" y1="145" x2="420" y2="85"></line>
+    </g>
+    <g fill="var(--accent)" font-size="12" font-family="inherit">
+      <text x="145" y="96">50</text>
+      <text x="265" y="96">50</text>
+      <text x="385" y="76">50 + 1,000</text>
+    </g>
+  </svg>
+  <figcaption>图 1：三年期债券的票息与本金现金流。图只表示合同约定，不表示价格变化、再投资收益或违约可能。横轴按年份等距排列，票息与本金标签的竖向位置只表示收付时点，不按金额比例绘制；图中的 50 与 1,000 是合同数值，不是长度尺度。；样本为本文论证，单位为文中标注。</figcaption>
+</figure>
+
+<p>中期国债（Treasury notes）一侧的合约条款按 TreasuryDirect：每半年支付固定利息，期限为 2、3、5、7 或 10 年，最低购买面额 100 美元[2]。</p>
+<h2>参与者与场所</h2>
+<p>债券市场通常涉及发行人、承销商、受托人、支付代理、清算与结算机构、做市商或经纪交易商，以及投资者。新发行在一级市场完成；已发行债券在二级市场交易。许多债券通过场外交易完成，报价和流动性因发行人、规模、期限和市场环境而异。</p>
+<p>长期国债一侧同样按 TreasuryDirect：每半年支付固定利息，期限为 20 或 30 年，最低购买面额 100 美元[3]。</p>
+<h2>交易、持有与退出</h2>
+<p>持有人可以选择持有至到期，按合同收回票息和本金；也可以在二级市场卖出，但成交价格由当时的市场收益率、信用状况和流动性决定，可能高于或低于买入价。部分债券含发行人赎回权、投资者回售权、转换权或分期偿还安排；这些条款会改变现金流和退出路径。</p>
+<p>发行人违约时，持有人通常进入重组、协商或法律程序，回收金额和时间不确定。债券有清偿顺序，不代表本金有保证。</p>
+<h2>成本</h2>
+<ul>
+<li>买卖价差和经纪交易商的加价；</li>
+<li>交易佣金或平台费用；</li>
+<li>托管、结算或账户费用；</li>
+<li>税费，按司法辖区和投资者类型判断；</li>
+<li>机会成本：资金若用于其他期限或信用质量不同的资产，可能有不同回报；</li>
+<li>若通过基金或 ETF 持有，还有管理费、跟踪误差和申赎安排。</li>
+</ul>
+<h2>风险</h2>
+<p><strong>信用风险。</strong> 发行人可能无法按时支付票息或本金，或信用质量恶化导致价格下跌。政府债券也不能免除所有风险；它通常只降低发行人违约风险，不消除价格、通胀和货币风险。这里关于政府债券的判断是本文的分析：所引 TreasuryDirect 两页都没有 full faith and credit 字样（实测各 0 次），因此本文不作“本国政府债券必然无信用风险”式论断，也不把该说法挂到来源 2 或 3。</p>
+<p><strong>利率风险。</strong> 市场收益率上升时，既有固定票息债券的吸引力下降，价格通常下跌；收益率下降时价格通常上涨。期限越长、久期越大，价格对收益率变化通常越敏感。</p>
+<p><strong>通胀风险。</strong> 固定名义现金流在物价上涨时购买力下降；通胀挂钩债券也不能消除所有实际风险。</p>
+<p><strong>流动性风险。</strong> 某些债券交易不活跃，买卖价差可能很大，急售时价格可能明显低于估值。</p>
+<p><strong>条款风险。</strong> 赎回权可能在利率下降时提前收回本金；回售、转换、担保和契约条款都会改变风险。</p>
+<p><strong>其他风险。</strong> 汇率、法律、税务、监管和对手方风险，按发行结构和持有方式判断。</p>
+<h2>价格与收益率</h2>
+<p>票面利率按面值计算，是合同规定的利率；市场价格由未来现金流和市场要求的收益率共同决定。价格公式为：</p>
+<div class="formula" role="math" aria-label="债券价格等于各期票息现值加本金现值">P = Σ_{t=1..n} C / (1 + y)^t + F / (1 + y)^n</div>
+
+<p>其中 <code>C</code> 是每期票息，<code>F</code> 是面值，<code>y</code> 是每期到期收益率，<code>n</code> 是期数。若票息按年支付、面值 1,000 元、票息率 5%、期限 3 年：</p>
+<table>
+<thead>
+<tr>
+<th align="right">到期收益率</th>
+<th align="right">价格（元）</th>
+<th>状态</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="right">4%</td>
+<td align="right">1,027.75</td>
+<td>溢价</td>
+</tr>
+<tr>
+<td align="right">5%</td>
+<td align="right">1,000.00</td>
+<td>平价</td>
+</tr>
+<tr>
+<td align="right">6%</td>
+<td align="right">973.27</td>
+<td>折价</td>
+</tr>
+</tbody></table>
+<p>价格为 973.27 元时，当期收益率是 <code>50 / 973.27 ≈ 5.14%</code>，但到期收益率仍是 6%，因为价格折价会在到期时补回。当期收益率只看一年票息，不能替代到期收益率，也不能单独衡量总回报。</p>
+<p>价格与收益率反向变动：市场要求更高的收益率，未来现金流按更高折现率折现，价格下降。信用利差扩大、通胀预期上升或流动性变差，也都可能推高要求收益率并压低价格，具体影响取决于债券条款和市场环境。</p>
+<p>把表里的三个点放回价格—收益率平面，反向关系会更直观：收益率从 4% 升到 6%，同一只债券的价格从 1,027.75 元降到 973.27 元。</p>
+<figure id="figure-bond-yield">
+  <svg role="img" aria-labelledby="fig-bond-yield-title fig-bond-yield-desc" viewBox="0 0 380 290" width="100%">
+    <title id="fig-bond-yield-title">同一只债券：收益率越高，价格越低</title>
+    <desc id="fig-bond-yield-desc">横轴为到期收益率，纵轴为价格。三年期、票息百分之五、面值一千元的债券：收益率百分之四时价格一千零二十七点七五元，溢价；百分之五时一千元，平价；百分之六时九百七十三点二七元，折价。</desc>
+    <g font-family="inherit">
+      <line x1="56" y1="220" x2="370" y2="220" stroke="var(--border)" stroke-width="1.5"/>
+      <line x1="56" y1="50" x2="56" y2="220" stroke="var(--border)" stroke-width="1.5"/>
+      <g stroke="var(--border)" stroke-width="1" stroke-dasharray="3 5">
+        <line x1="56" y1="60" x2="370" y2="60"/>
+        <line x1="56" y1="140" x2="370" y2="140"/>
+        <line x1="56" y1="220" x2="370" y2="220"/>
+        <line x1="104" y1="50" x2="104" y2="220"/>
+        <line x1="213" y1="50" x2="213" y2="220"/>
+        <line x1="322" y1="50" x2="322" y2="220"/>
+      </g>
+      <line x1="56" y1="140" x2="370" y2="140" stroke="var(--muted)" stroke-width="1" stroke-dasharray="7 4"/>
+      <path d="M104 84.5 L158.5 112.5 L213 140 L267.5 167 L322 193.5" fill="none" stroke="var(--gold)" stroke-width="2.5"/>
+      <circle cx="104" cy="84.5" r="4.5" fill="var(--gold)"/>
+      <circle cx="213" cy="140" r="4.5" fill="var(--accent)"/>
+      <circle cx="322" cy="193.5" r="4.5" fill="var(--gold)"/>
+      <g font-size="10.2" fill="var(--muted)">
+        <text x="48" y="64" text-anchor="end">1,040</text>
+        <text x="48" y="144" text-anchor="end">1,000</text>
+        <text x="48" y="224" text-anchor="end">960</text>
+        <text x="104" y="242" text-anchor="middle">4%</text>
+        <text x="213" y="242" text-anchor="middle">5%</text>
+        <text x="322" y="242" text-anchor="middle">6%</text>
+      </g>
+      <text x="66" y="134" font-size="10.2" fill="var(--muted)">平价线 1,000</text>
+      <text x="213" y="270" font-size="10.8" fill="var(--secondary)" text-anchor="middle">到期收益率</text>
+      <text x="6" y="48" font-size="9.4" fill="var(--secondary)">价格（元）</text>
+      <text x="60" y="26" font-size="12.2" font-weight="650" fill="var(--accent)">收益率越高，价格越低</text>
+      <g font-size="10.2">
+        <text x="112" y="68" fill="var(--text)">4% · 1,027.75 <tspan fill="var(--gold)">溢价</tspan></text>
+        <text x="221" y="124" fill="var(--text)">5% · 1,000 <tspan fill="var(--accent)">平价</tspan></text>
+        <text x="312" y="210" text-anchor="end" fill="var(--text)">6% · 973.27 <tspan fill="var(--gold)">折价</tspan></text>
+      </g>
+    </g>
+  </svg>
+  <figcaption>图 2：同一只三年期、票息 5%、面值 1,000 元债券的价格—收益率关系。三个点与正文表一致：4% → 1,027.75 元（溢价）、5% → 1,000 元（平价）、6% → 973.27 元（折价）。曲线只连接表内三点并示意凸性，不引入新的价格预测；债券条款为教学假设。</figcaption>
+</figure>
+
+<h2>条款与文件</h2>
+<p>投资前应阅读发行说明书、募集说明书或正式条款文件，核对：发行人、担保和抵押、清偿顺序、票息计算、付息日、到期日、赎回或回售安排、契约、违约事件、税务处理和适用法律。信用评级是意见，不是保证；评级可能滞后或调整。</p>
+<h2>比较与边界</h2>
+<p>单只债券有明确的到期日和发行人，但集中度和流动性风险较高。债券基金或 ETF 通常分散持有，并可每日申赎，但没有固定到期日或本金保证，价格也会波动。国债、公司债、市政债等在本金、利息、担保、税务和法律结构上不同；不能只按“收益率高低”比较。</p>
+<p>本文不构成投资建议，也不判断某只债券是否适合特定投资者。</p>
+<h2>发行人谱系与信用分层</h2>
+<p>同样叫“债券”，发行人是中央政府、市政机构、政府支持机构、银行还是公司，偿债来源、担保、清偿顺序和监管规则完全不同。先认发行人，再读文件和现金流；不能只按“国债/公司债”两个标签比较。</p>
+<h3>主权与国债</h3>
+<p>主权债由中央政府或财政部发行，常见本币和外币两个版本。本币债的偿付依赖税收、财政支出和债务滚动，政府可通过通胀、财政整顿或央行融资影响名义偿付能力；外币债没有本币印钞权，需要用出口、外汇储备或再融资取得外币，因此同样面值的本币债和外币债，信用风险与汇率风险不同[8]。美国国债按 TreasuryDirect 分为 notes（2、3、5、7、10 年）和 bonds（20、30 年），每半年付息[2][3]；这只是一类主权债的具体条款，不代表所有政府债同构。</p>
+<p>例子：某国同时发行 5 年期本币债和 5 年期美元债。本币债收益率可能包含通胀和汇率贬值预期；美元债收益率更多反映该国获得美元的能力和外部违约风险。把两者收益率直接相减，会混入币种和汇率对冲差异。</p>
+<p>边界：“政府债无风险”最多只在“本币、名义、期限较短、可滚动再融资”的狭窄条件下成立；它不是实际购买力无风险，也不是跨币种无风险。政府也可能违约或重组，主权债没有统一的破产程序[7]。</p>
+<h3>地方市政</h3>
+<p>市政债由州、市、县、镇、学区、交通或水务等法定机构发行，用于资本项目或日常运营[4][5]。常见两类：一般责任债（GO）以发行人的“full faith and credit”和征税权为支持；收入债只以特定项目或收入源偿付，部分为非追索，项目收入枯竭时发行人没有义务补足[5]。conduit 债由市政发行人代私人实体发行，通常由私人借款人还本付息，市政发行人一般不承担最终偿付[5]。</p>
+<p>例子：同一城市的水务收入债和一般责任债，前者看水费收缴和管网维护，后者看税基、预算和债务上限。两者评级相同也不代表损失分布相同；收入债可能因项目现金流下降先受损，GO 债可能受税基萎缩、养老金或政治僵局影响。</p>
+<p>边界：市政债利息“通常”免联邦所得税，但不是全部；免税收益要用税后等效收益率比较，不能直接与应税公司债比表面收益率[5]。市政债也不是“有政府背书就不违约”，不同州的法律、预算程序和债务结构差异很大。</p>
+<h3>机构与超主权</h3>
+<p>机构债包括美国联邦机构债和政府支持企业（GSE）债。FINRA 指出，除 Ginnie Mae 外，机构证券并非全部由美国政府完全担保；GSE 债也不具有美国政府的“full faith and credit”担保[1]。超国家债由世界银行、亚洲开发银行等多边机构发行，这些机构由多个成员国拥有，债项偿付依赖机构自身信用，而不是某一个主权国家的无条件担保[6]。</p>
+<p>例子：世界银行（IBRD）在多个币种发行债券，并被主要评级机构评为 AAA[6]；但同一发行人发行的结构化票据仍可能含嵌入式期权、汇率或流动性风险。把“AAA 多边机构”与“AAA 主权”视为同一信用，是错误类比。</p>
+<p>边界：机构债的关键不是“机构”两个字，而是担保条款：是联邦机构直接担保、GSE 隐含支持，还是仅机构自身信用；GSE 债和机构 MBS 还可能含提前偿还风险。超国家债也不是“无风险”，要看发行文件、币种、流动性和结构性条款。</p>
+<h3>金融与公司债</h3>
+<p>金融债和公司债的发行人是银行、保险公司、非金融公司或控股公司。信用分析要看法律发行人、经营实体的担保、担保物、清偿顺序和契约。破产时，担保债权人、优先无担保债权人、次级债权人和股东依次承担损失；普通公司债持有人通常排在股东之前，但不等于有抵押或优先[1]。</p>
+<p>例子：某公司已有 100 元无担保债；再以核心资产抵押发行 60 元新债。若随后违约，旧债持有人可分配资产被抵押债先拿走，回收率下降。旧债文件若含负面担保（negative pledge）或限制新增担保的契约，新债发行可能受限；没有这类条款，旧债持有人只能承受结构恶化。</p>
+<p>边界：“公司债”不是单一资产类：银行债可能是高级无担保、次级、AT1 或担保债券；控股公司债可能没有经营资产，只能依赖子公司分红或担保。只看发行人名称和票息，无法判断清偿顺序。</p>
+<h3>投资级与高收益</h3>
+<p>投资级一般指 BBB-/Baa3 及以上，高收益（“垃圾债”）一般指 BB+/Ba1 及以下；FINRA 把 Ba 或更低（Moody&#39;s）、BB 或以下（S&amp;P）列为高收益债[1]。评级边界是市场惯例，不同评级机构和指数的划分可能略有差异。</p>
+<p>例子：同期限、同币种的两只 5 年期债，投资级票息 4.5%，高收益票息 8.5%，利差 400bp。400bp 不是“纯违约概率”，它同时补偿预期违约损失、回收不确定性、流动性、契约和风险溢价；若高收益债的预期损失只有 150bp，剩余 250bp 可能是流动性或风险溢价，也可能定价过紧。</p>
+<p>边界：评级是意见，不是违约概率；评级可能滞后、跨机构口径不同，还会出现“坠落天使”（从投资级降到高收益）带来的被迫卖出和流动性冲击。投资级也会违约，高收益也不必然违约；不能用评级替代现金流和契约分析。</p>
+<h3>资本工具</h3>
+<p>银行监管资本分为 CET1、AT1 和 T2[9]。AT1 是持续经营（going concern）资本，票息可自主取消，期限通常为永续；若 AT1 被分类为负债，量化触发点不得低于 5.125% CET1，触发后可转为普通股或减记本金。T2 是清算（gone concern）资本，在银行失败时先于存款人和普通债权人吸收损失，可以有到期日[9]。</p>
+<p>例子：一只面值 100 元的 AT1，票息 7%，在 CET1 低于 5.125% 或监管当局认定银行不可生存时，可能被减记或转股。投资者拿到的 7% 不是“无风险票息”，而是对票息取消、本金减记和转股稀释的补偿。</p>
+<p>边界：AT1/T2 是监管资本工具，不是普通高级债，也不是存款；不同司法辖区的实施、法定减记机制和触发定义不同。把 AT1 票息当作普通债利息、或把 T2 当作有到期日的“安全债”，都会低估损失吸收风险。</p>
+<!-- kp-supplement:start -->
+<h2>知识点精读</h2>
+<h3>主权与国债</h3>
+<p><strong>定义</strong>：主权债是中央政府发行或担保的债务，国债是其中最主要形式，承诺利息和本金。</p>
+<p><strong>机制</strong>：主权债以征税、发钞和借新还旧支持偿付；利率、期限、币种和信用决定收益率，本币债和外币债风险不同。</p>
+<p><strong>例子</strong>：例如美国国债被视为全球安全资产和基准，收益率曲线反映增长和通胀预期。</p>
+<p><strong>边界</strong>：主权债不是无风险；通胀、汇率、违约和利率风险会造成实际损失，本币债可由央行支持但外币债受储备约束，安全资产地位也依赖制度信任。</p>
+<h3>地方市政</h3>
+<p><strong>定义</strong>：市政债是州、省、市或地方政府及其机构发行的债务，用于基础设施、学校和公共服务。</p>
+<p><strong>机制</strong>：市政债由税收、项目收入或上级转移支付偿还；一般责任债和收益债风险不同，免税和监管影响需求。</p>
+<p><strong>例子</strong>：例如城市发行收益债建设地铁，以票款和沿线收入偿还。</p>
+<p><strong>边界</strong>：市政债不是主权债的缩小版；地方财政独立性、转移支付和项目现金流差异大，违约和重组常见，隐性担保也不可靠。</p>
+<h3>机构与超主权</h3>
+<p><strong>定义</strong>：机构债由政府支持企业、政策性银行或机构发行，超主权债由多国机构如世界银行、区域开发银行发行。</p>
+<p><strong>机制</strong>：机构债常享隐性或显性担保、较高流动性和项目用途；超主权债分散多国信用，利率和币种多样。</p>
+<p><strong>例子</strong>：例如房利美发行 MBS 和机构债，世界银行发行全球发展债。</p>
+<p><strong>边界</strong>：机构债不是主权债；担保可能不明确、政治和项目风险存在，超主权债也有治理和币种风险，信用评级不能替代底层分析。</p>
+<h3>金融与公司债</h3>
+<p><strong>定义</strong>：金融债是银行、保险和证券公司发行的债务，公司债是非金融企业发行的债务，均有信用和契约条款。</p>
+<p><strong>机制</strong>：金融债受资本监管、 bail-in 和资产负债结构影响，公司债受经营现金流、抵押、担保和 covenant 影响；优先级决定回收。</p>
+<p><strong>例子</strong>：例如银行发行二级资本债补充资本，制造企业发行公司债扩张产能。</p>
+<p><strong>边界</strong>：金融债不是普通公司债；银行倒闭和 bail-in 可能减记，公司债有违约、流动性和契约风险，担保和抵押也可能不足值。</p>
+<h3>投资级高收益</h3>
+<p><strong>定义</strong>：投资级债券评级较高、违约概率较低，高收益债评级较低、票息较高，二者构成信用谱系。</p>
+<p><strong>机制</strong>：信用利差补偿违约和流动性风险；经济周期、利率和再融资影响违约率，评级迁移和“坠落天使”改变市场。</p>
+<p><strong>例子</strong>：例如衰退期高收益债利差扩大、违约上升，投资级债相对稳健但利率风险仍存。</p>
+<p><strong>边界</strong>：评级不是绝对安全；评级滞后、模型错误和顺周期会误导，高收益不是必然高回报，投资级也会被下调评级并违约，分散和回收分析重要。</p>
+<h3>资本工具</h3>
+<p><strong>定义</strong>：资本工具是银行等机构发行的补充资本证券，如永续债、二级资本债、可转债和 AT1。</p>
+<p><strong>机制</strong>：资本工具在特定触发条件下减记或转股，帮助吸收损失；票息、触发事件和监管认定决定风险收益。</p>
+<p><strong>例子</strong>：例如银行 AT1 在资本充足率低于阈值时减记，投资者可能损失本金。</p>
+<p><strong>边界</strong>：资本工具不是普通高息债；减记、转股和监管干预会在压力下发生，条款复杂且流动性差，收益率高常补偿尾部风险。</p>
+<h3>违约与重组</h3>
+<p><strong>定义</strong>：违约是发行人未按约定付息还本，重组是债权人与发行人重新安排期限、利率、本金或债转股。</p>
+<p><strong>机制</strong>：违约由现金流、杠杆、再融资和市场准入触发；重组通过集体行动、优先级和回收率分配损失，CDS 可对冲或投机。</p>
+<p><strong>例子</strong>：例如主权债违约后延长期限、削减本金，企业债通过债转股降低杠杆。</p>
+<p><strong>边界</strong>：违约不是终点；重组可能拖延多年、法律和债权人结构复杂，回收率不确定，CDS 也有对手方和基差风险，评级下调常滞后。</p>
+<!-- kp-supplement:end -->
+
+<h2>关联</h2>
+<ul>
+<li>必需先修：资产与工具的区别（MKT-001）。</li>
+<li>相关与推荐阅读：货币的时间价值（FIN-009）、现值与现金流贴现（FIN-011）、资产与工具的区别（MKT-001）。</li>
+</ul>
+<h2>图解</h2>
+<p>下面三张图分别检查本文的机制、边界与对照；图内文字取自本文小节，不是新数据。</p>
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-chain-title fig-batch-chain-desc" viewBox="0 0 340 304" width="100%">
+    <title id="fig-batch-chain-title">债券的权利与现金流：机制链</title>
+    <desc id="fig-batch-chain-desc">债券的权利与现金流 的三段结构：问题、机制、判断。图内文字取自本文小节，不是新的数据估计。</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">债券的权利与现金流：机制链</text>
+    <text x="14" y="38" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">图内文字取自本文小节；三段缺一不可。</text>
+    <line x1="14" y1="46" x2="326" y2="46" stroke="var(--border)" stroke-width="1"/>
+    <g>
+      <rect x="14" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="22" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">问题</text>
+      <text x="22" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">债券是发行人的债务，</text>
+      <text x="22" y="102" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">持有人按发行文件收取…</text>
+      <text x="22" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">债券是发行人的债务</text>
+      <text x="22" y="141" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">，持有人按发行文件</text>
+      <text x="22" y="158" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">收取票息与本金；票</text>
+      <text x="22" y="175" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">息、价格、收益率和</text>
+      <text x="22" y="192" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">风险不能混为一谈。</text>
+    </g>
+      <g>
+      <rect x="123" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="131" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">产品定义</text>
+      <text x="131" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">产品定义：债券是发行</text>
+      <text x="131" y="102" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">人向投资者借款，并承…</text>
+      <text x="131" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">产品定义：债券是发</text>
+      <text x="131" y="141" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">行人向投资者借款，</text>
+      <text x="131" y="158" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">并承诺按发行文件支</text>
+      <text x="131" y="175" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">付利息和本金的债务</text>
+      <text x="131" y="192" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">证券。持有人是发行…</text>
+    </g>
+      <g>
+      <rect x="232" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="240" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">成本</text>
+      <text x="240" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">买卖价差和经纪交易商</text>
+      <text x="240" y="102" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">的加价； 交易佣金或…</text>
+      <text x="240" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">买卖价差和经纪交易</text>
+      <text x="240" y="141" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">商的加价；</text>
+      <text x="240" y="158" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">交易佣金或平台费用</text>
+      <text x="240" y="175" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">； 托管、结算或账</text>
+      <text x="240" y="192" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">户费用； 税费，按司…</text>
+    </g>
+    <line x1="108" y1="144" x2="123" y2="144" stroke="var(--border)" stroke-width="1.1"/>
+    <path d="M120 140 L125 144 L120 148" fill="none" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="217" y1="144" x2="232" y2="144" stroke="var(--border)" stroke-width="1.1"/>
+    <path d="M229 140 L234 144 L229 148" fill="none" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="14" y1="250" x2="326" y2="250" stroke="var(--border)" stroke-width="1"/>
+    <text x="14" y="266" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">读法：先看问题能否成立，再看机制能否连通，最后看判断会不会越界。</text>
+    <text x="14" y="280" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">若中间一步缺证据，后面的结论只能当假设，不能当事实。</text>
+    <text x="14" y="294" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">图为结构示意，不是新的数据图；样本为本文论证。</text>
+  </svg>
+  <figcaption>图 3：债券的权利与现金流的机制链：从问题、机制到判断。样本为本文论证，单位为文中标注。</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-boundary-title fig-batch-boundary-desc" viewBox="0 0 340 244" width="100%">
+    <title id="fig-batch-boundary-title">债券的权利与现金流：适用边界</title>
+    <desc id="fig-batch-boundary-desc">把成立条件与失效条件分开；局部例子不能自动推广到所有情形。</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">债券的权利与现金流：什么情况下成立？</text>
+    <line x1="14" y1="34" x2="326" y2="34" stroke="var(--border)" stroke-width="1"/>
+    <rect x="14" y="44" width="312" height="38" rx="7" fill="var(--surface-2)" stroke="var(--border)"/>
+    <text x="170" y="62" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="middle">先检查条件，再看结论</text>
+    <text x="170" y="75" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="middle">条件、口径或样本一变，结论可能要重算</text>
+    <line x1="170" y1="82" x2="90" y2="104" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="170" y1="82" x2="250" y2="104" stroke="var(--border)" stroke-width="1.1"/>
+    <rect x="14" y="104" width="148" height="100" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+    <text x="24" y="122" font-size="8.6" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">成立</text>
+    <text x="24" y="138" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">信用风险。</text>
+    <rect x="178" y="104" width="148" height="100" rx="8" fill="var(--gold)" opacity="0.18" stroke="var(--border)"/>
+    <text x="188" y="122" font-size="8.6" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">不成立 / 需改写</text>
+    <text x="188" y="138" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">单只债券有明确的到期日和发行人，</text>
+      <text x="188" y="154" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">但集中度和流动性风险较高。债券基</text>
+      <text x="188" y="170" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">金或 ETF 通常分散持有，并可每日</text>
+      <text x="188" y="186" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">申赎，但没有固定到期日或本金保证…</text>
+    <line x1="14" y1="216" x2="326" y2="216" stroke="var(--border)" stroke-width="1"/>
+    <text x="14" y="232" font-size="8.3" fill="var(--muted)" font-family="inherit" text-anchor="start">图为边界示意；样本为本文论证，单位为文中标注。</text>
+  </svg>
+  <figcaption>图 4：债券的权利与现金流的边界：哪些条件成立，哪些条件失效。样本为本文论证，单位为文中标注。</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-compare-title fig-batch-compare-desc" viewBox="0 0 340 252" width="100%">
+    <title id="fig-batch-compare-title">债券的权利与现金流：对象、前提与常见误区</title>
+    <desc id="fig-batch-compare-desc">三行比较本文概念、成立条件与常见误区；比较不等于等价，也不能替代定义。</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">债券的权利与现金流：一张表看对象、前提与误区</text>
+    <line x1="14" y1="34" x2="326" y2="34" stroke="var(--border)" stroke-width="1"/>
+    <text x="82" y="46" font-size="8.4" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">本篇</text>
+    <text x="200" y="46" font-size="8.4" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">容易混淆</text>
+    <g>
+      <rect x="14" y="52" width="312" height="58" fill="transparent" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="72" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">对象</text>
+      <text x="82" y="72" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">债券是发行人的债务，持有</text>
+      <text x="82" y="88" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">人按发行文件收取票息与本…</text>
+      <text x="200" y="72" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">相邻概念/常见说法</text>
+    </g>
+    <g>
+      <rect x="14" y="110" width="312" height="58" fill="var(--surface-2)" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="130" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">前提</text>
+      <text x="82" y="130" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">信用风险。</text>
+      <text x="200" y="130" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">单只债券有明确的到期日和发行人，但集</text>
+      <text x="200" y="146" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">中度和流动性风险较高。债券基金或…</text>
+    </g>
+    <g>
+      <rect x="14" y="168" width="312" height="58" fill="transparent" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="188" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">检查</text>
+      <text x="82" y="188" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">先定义，再比较；不能只看</text>
+      <text x="82" y="204" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">名称</text>
+      <text x="200" y="188" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">相关不等于因果，局部不等于普遍</text>
+    </g>
+    <text x="14" y="244" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">图为比较示意；样本为本文论证，单位为文中标注。</text>
+  </svg>
+  <figcaption>图 5：债券的权利与现金流的对象、前提与常见误区比较。样本为本文论证，单位为文中标注。</figcaption>
+</figure>
+
+<h2>练习</h2>
+<ol>
+<li><strong>现金流。</strong> 一只三年期、面值 1,000 元、票息率 5%、每年付息的债券，以 973.27 元买入。持有到期的票息总额是多少？当期收益率是多少？</li>
+<li><strong>价格与收益率。</strong> 若市场到期收益率从 5% 上升到 6%，在其他条件不变时，固定票息债券价格通常如何变化？为什么？</li>
+<li><strong>风险辨别。</strong> 发行人盈利下降、信用利差扩大，但市场基准利率未变。这主要对应哪类风险？价格可能如何变化？</li>
+</ol>
+<details>
+<summary>参考答案</summary>
+
+<ol>
+<li>票息总额为 <code>50 × 3 = 150</code> 元；当期收益率为 <code>50 / 973.27 ≈ 5.14%</code>。到期收益率还需考虑买入价与面值之间的折价。</li>
+<li>价格通常下降。未来票息和本金不变，但折现率上升，现金流的现值下降；期限越长，价格对收益率变化通常越敏感。</li>
+<li>主要是信用风险。信用利差扩大可能推高投资者要求的收益率，即使基准利率不变，债券价格也可能下跌；若发行人违约，现金流和回收金额还会改变。</li>
+</ol>
+</details>
+
+<h2>来源</h2>
+<ol>
+<li>FINRA. “Bonds.” <a href="https://www.finra.org/investors/investing/investment-products/bonds">https://www.finra.org/investors/investing/investment-products/bonds</a>（访问日期：2026-10-30）</li>
+<li>U.S. Department of the Treasury. “Treasury Notes.” TreasuryDirect. <a href="https://www.treasurydirect.gov/marketable-securities/treasury-notes/">https://www.treasurydirect.gov/marketable-securities/treasury-notes/</a>（访问日期：2026-11-04）</li>
+<li>U.S. Department of the Treasury. “Treasury Bonds.” TreasuryDirect. <a href="https://www.treasurydirect.gov/marketable-securities/treasury-bonds/">https://www.treasurydirect.gov/marketable-securities/treasury-bonds/</a>（访问日期：2026-11-04）</li>
+<li>U.S. Securities and Exchange Commission. “Investor Bulletin: Municipal Bonds – An Overview.” <a href="https://www.sec.gov/oiea/investor-alerts-bulletins/investor-alerts-municipalbonds">https://www.sec.gov/oiea/investor-alerts-bulletins/investor-alerts-municipalbonds</a>（访问日期：2026-11-24）</li>
+<li>U.S. Securities and Exchange Commission. “Focus on Municipal Bonds.” <a href="https://www.sec.gov/oiea/investor-alerts-bulletins/investor-alerts-municipal">https://www.sec.gov/oiea/investor-alerts-bulletins/investor-alerts-municipal</a>（访问日期：2026-11-24）</li>
+<li>World Bank Group Treasury. “Debt Products FAQs.” <a href="https://treasury.worldbank.org/en/about/unit/treasury/ibrd/debt-products-faqs">https://treasury.worldbank.org/en/about/unit/treasury/ibrd/debt-products-faqs</a>（访问日期：2026-11-24）</li>
+<li>International Monetary Fund. “A Stocktaking of the Current International Architecture for Resolving Sovereign Debt Involving Private Sector Creditors.” 2025. <a href="https://www.imf.org/-/media/Files/Publications/PP/2025/English/PPEA2025034.ashx">https://www.imf.org/-/media/Files/Publications/PP/2025/English/PPEA2025034.ashx</a>（访问日期：2026-11-24）</li>
+<li>International Monetary Fund. “A Primer on Managing Sovereign Debt-Portfolio Risks.” 2018. <a href="https://www.imf.org/-/media/files/publications/wp/2018/wp1874.pdf">https://www.imf.org/-/media/files/publications/wp/2018/wp1874.pdf</a>（访问日期：2026-11-24）</li>
+<li>Bank for International Settlements. “Basel Framework: Definition of capital (CAP10).” <a href="https://www.bis.org/committees/bcbs/basel-framework/81570/chapter-no-footnotes.pdf">https://www.bis.org/committees/bcbs/basel-framework/81570/chapter-no-footnotes.pdf</a>（访问日期：2026-11-24）</li>
+</ol>
+  <section class="article-demo" id="demo-check" data-demo="check" data-lang="zh" aria-labelledby="demo-check-title" data-check-done="三项都能说清：这篇的核心已经过关。" data-check-pending="还差一项：回到正文对应小节，找一个反例或数字再讲一遍。" data-check-count="已勾选"> <header class="demo-head"> <div class="demo-head-top"> <p class="demo-eyebrow">动手演示</p> <button class="demo-reset" type="button" data-demo-reset>恢复默认</button> </div> <h2 id="demo-check-title">读完自检：三句话能不能说清</h2> <p class="demo-intro">不用背定义。把下面三句逐个勾上，看自己能不能用自己的话讲清机制、算例和边界。</p> </header>          <div class="demo-check"> <ul class="demo-check-list"> <li> <label> <input type="checkbox" data-check-index="0"> <span>说明债券持有人拥有什么权利，以及发行文件如何规定票息、本金和清偿顺序。</span> </label> </li><li> <label> <input type="checkbox" data-check-index="1"> <span>读取票面利率、价格、到期收益率和期限，并解释价格与收益率为什么反向变动。</span> </label> </li><li> <label> <input type="checkbox" data-check-index="2"> <span>能说出一个本文结论不适用的条件</span> </label> </li> </ul> <p class="demo-check-status" data-out="checkStatus" role="status"> 已勾选 0 / 3
+</p> </div> <p class="demo-footnote">数字为教学假设，用来展示关系，不构成预测或投资建议。</p> </section><script type="module" src="/_astro/ArticleDemo.astro_astro_type_script_index_0_lang.C9VQAsQ0.js"></script> <p class="notice"> 本文已通过当前发布门槛；事实、计算与译文如有修订，会同步更新两个语言版本。 </p> <p> <a class="button secondary" href="/"> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class> <path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path>        </svg>返回分站 </a> </p> </div> <aside class="article-aside" aria-label="文章信息"> <section class="aside-card"> <h2>学习目标</h2> <ul> <li>说明债券持有人拥有什么权利，以及发行文件如何规定票息、本金和清偿顺序。</li><li>读取票面利率、价格、到期收益率和期限，并解释价格与收益率为什么反向变动。</li><li>区分信用、利率、通胀、流动性和条款风险，不把债券等同于无风险存款。</li> </ul> </section> <section class="aside-card"> <h2>必需先修</h2> <ul> <li> <a href="/learn/assets-vs-instruments/">MKT-001 · 资产与工具的区别</a> </li> </ul> </section> <section class="aside-card"> <h2>建议阅读</h2> <ul> <li> <a href="https://finance.51invest.com/learn/time-value-of-money/">FIN-009 · 货币的时间价值</a> </li><li> <a href="https://finance.51invest.com/learn/present-value-and-discounted-cash-flows/">FIN-011 · 现值与现金流贴现</a> </li><li> <a href="/learn/assets-vs-instruments/">MKT-001 · 资产与工具的区别</a> </li> </ul> </section> <section class="aside-card"> <h2>AI 复核记录</h2> <p class="muted"> 本项目没有真人签字；下列状态来自 AI-only 编辑复核。 </p> <ul> <li> 事实与计算 ：AI 复核通过 </li><li> 学科 ：AI 复核通过 </li><li> 英文 ：AI 复核通过 </li><li> 页面 ：AI 复核通过 </li> </ul> </section> <section class="aside-card"> <h2>来源</h2> <div class="source"> <a href="https://www.finra.org/investors/investing/investment-products/bonds" rel="noopener noreferrer" target="_blank">Bonds</a> <p>FINRA · FINRA</p> <p>访问：2026-10-30 · 许可：© 2026 FINRA. All rights reserved. Linked summary only.</p> <p>支持论点：债券是债务证券，具有发行文件规定的票息、到期日和本金；价格随利率与信用风险变化。</p> </div><div class="source"> <a href="https://www.treasurydirect.gov/marketable-securities/treasury-notes/" rel="noopener noreferrer" target="_blank">Treasury Notes</a> <p>U.S. Department of the Treasury · TreasuryDirect</p> <p>访问：2026-11-04 · 许可：U.S. Government work (public domain), 17 U.S.C. §105</p> <p>支持论点：美国国债票据每半年支付固定利息，期限为 2、3、5、7 或 10 年，最低购买面额为 100 美元。  2026-11-04 逐字核对（该页本轮 curl 200，36,825 字节，抽取 4,021 字符）：“We sell Treasury Notes for a term of 2, 3, 5, 7, or 10 years. Notes pay a fixed rate of interest every six months until they mature.”；参数表内 “Interest paid Every six months until maturity Minimum purchase $100 In increments of $100”。注意页面无 full faith and credit 字样（实测 0 次），本页只支撑期限、半年付息与 100 美元最小认购面额三项。</p> </div><div class="source"> <a href="https://www.treasurydirect.gov/marketable-securities/treasury-bonds/" rel="noopener noreferrer" target="_blank">Treasury Bonds</a> <p>U.S. Department of the Treasury · TreasuryDirect</p> <p>访问：2026-11-04 · 许可：U.S. Government work (public domain), 17 U.S.C. §105</p> <p>支持论点：美国长期国债每半年支付固定利息，期限为 20 或 30 年，最低购买面额为 100 美元。  2026-11-04 逐字核对（该页本轮 curl 200，39,959 字节，抽取 4,117 字符）：“We sell Treasury Bonds for a term of either 20 or 30 years. Bonds pay a fixed rate of interest every six months until they mature.”；参数表内 “Interest paid Every six months until maturity Minimum purchase $100 In increments of $100”。同页另有“Federal tax due each year on interest earned / No state or local taxes”与“Eligible for STRIPS? Yes”，但正文未使用，故不登记为支撑句。本页同样无 full faith and credit 字样（0 次）。</p> </div><div class="source"> <a href="https://www.sec.gov/oiea/investor-alerts-bulletins/investor-alerts-municipalbonds" rel="noopener noreferrer" target="_blank">Investor Bulletin: Municipal Bonds – An Overview</a> <p>U.S. Securities and Exchange Commission · SEC</p> <p>访问：2026-11-24 · 许可：U.S. Government work (public domain), 17 U.S.C. §105</p> <p>支持论点：市政债由州、市、县、镇、学区及交通、水务等法定机构发行；一般责任债以发行人的 full faith and credit 和征税权支持，收入债只以特定项目或收入源偿付，部分为非追索。</p> </div><div class="source"> <a href="https://www.sec.gov/oiea/investor-alerts-bulletins/investor-alerts-municipal" rel="noopener noreferrer" target="_blank">Focus on Municipal Bonds</a> <p>U.S. Securities and Exchange Commission · SEC</p> <p>访问：2026-11-24 · 许可：U.S. Government work (public domain), 17 U.S.C. §105</p> <p>支持论点：市政债利息通常但并非总是免联邦所得税；收入债通常为非追索；conduit 债由私人借款人还本付息，市政发行人通常不承担最终偿付。</p> </div><div class="source"> <a href="https://treasury.worldbank.org/en/about/unit/treasury/ibrd/debt-products-faqs" rel="noopener noreferrer" target="_blank">Debt Products FAQs</a> <p>World Bank Group Treasury · World Bank Group</p> <p>访问：2026-11-24 · 许可：© World Bank. All rights reserved. Linked summary only.</p> <p>支持论点：世界银行（IBRD）由多个成员国拥有，是 frequent international bond issuer，被 Moody’s 与 S&amp;P 评为 AAA，并在多种币种发行债务工具。</p> </div><div class="source"> <a href="https://www.imf.org/-/media/Files/Publications/PP/2025/English/PPEA2025034.ashx" rel="noopener noreferrer" target="_blank">A Stocktaking of the Current International Architecture for Resolving Sovereign Debt Involving Private Sector Creditors</a> <p>International Monetary Fund · IMF</p> <p>访问：2026-11-24 · 许可：© International Monetary Fund. All rights reserved. Linked summary only.</p> <p>支持论点：主权债没有统一的破产机制；集体行动条款（CAC）允许合格多数持有人把重组条件约束到少数持有人，降低 holdout 阻挠，不同司法辖区与条款的投票阈值不同。</p> </div><div class="source"> <a href="https://www.imf.org/-/media/files/publications/wp/2018/wp1874.pdf" rel="noopener noreferrer" target="_blank">A Primer on Managing Sovereign Debt-Portfolio Risks</a> <p>International Monetary Fund · IMF</p> <p>访问：2026-11-24 · 许可：© International Monetary Fund. All rights reserved. Linked summary only.</p> <p>支持论点：主权债务组合可按本币/外币、居民/非居民等口径分类；外币债务的汇率风险是许多国家债务组合的主要风险之一。</p> </div><div class="source"> <a href="https://www.bis.org/committees/bcbs/basel-framework/81570/chapter-no-footnotes.pdf" rel="noopener noreferrer" target="_blank">Basel Framework: Definition of capital (CAP10)</a> <p>Bank for International Settlements · BIS</p> <p>访问：2026-11-24 · 许可：© Bank for International Settlements. All rights reserved. Linked summary only.</p> <p>支持论点：AT1 是 going-concern 资本；被分类为负债的 AT1 需有至少 5.125% CET1 的量化触发点，触发后可转股或减记本金；T2 是 gone-concern 资本，在银行失败时先于存款人和普通债权人吸收损失，可有到期日。</p> </div> </section> </aside> </div> </article><script type="module">var e=document.querySelector(`[data-reading-progress] span`),t=document.querySelector(`article`);if(e&&t){let n=()=>{let n=t.offsetTop,r=t.offsetHeight-window.innerHeight,i=r>0?(window.scrollY-n)/r:0;e.style.width=`${Math.min(1,Math.max(0,i))*100}%`};window.addEventListener(`scroll`,n,{passive:!0}),window.addEventListener(`resize`,n),n()}</script>  </main> <footer class="site-footer"> <div class="container footer-inner"> <div class="footer-brand"> <span class="footer-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="28" height="28" alt class="mascot" loading="lazy" decoding="async"></span> <div> <strong>巫妖投资 51Invest</strong> <p class="footer-note">非商业免费知识站。每篇标出来源与口径；这里没有投资建议。</p> </div> </div> <nav class="footer-links" aria-label="知识分站"> <a href="https://51invest.com/" data-main-home>首页</a> <a href="https://51invest.com/contents/">内容地图</a> <a href="/glossary/">术语表</a> <a href="/search/">搜索</a> <a href="https://51invest.com/charts/" data-main-link>图表</a> <a href="https://51invest.com/sources/" data-main-link>数据与许可</a> <a href="/">分站首页</a> </nav> </div> </footer> <nav class="mobile-nav" aria-label="知识分站"> <a class="mobile-link" href="https://51invest.com/" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>    <path d="m3 10 9-7 9 7"></path><path d="M5 9v11h14V9"></path><path d="M9 20v-6h6v6"></path>     </svg> <span>首页</span> </a> <a class="mobile-link" href="https://51invest.com/#stations" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>   <rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect>      </svg> <span>知识分站</span> </a> <a class="mobile-link active" href="/" aria-current="page"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>  <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v18H6.5A2.5 2.5 0 0 1 4 18.5z"></path><path d="M4 18.5A2.5 2.5 0 0 1 6.5 16H20"></path>       </svg> <span>分站首页</span> </a> <a class="mobile-link" href="/en/learn/bond-rights-and-cash-flows/" data-language-link="en"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>English</span> </a> </nav><script type="module">var e=document.documentElement,t=[`auto`,`light`,`dark`],n=matchMedia(`(prefers-color-scheme: dark)`),r=()=>{let t=e.dataset.themeMode;return t===`light`||t===`dark`?t:`auto`},i=e=>{try{localStorage.setItem(`51invest-theme`,e)}catch{}try{let t=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-theme=${e}; Path=/; Max-Age=31536000; SameSite=Lax${t}`}catch{}},a=e=>{document.querySelectorAll(`[data-theme-toggle]`).forEach(t=>{let n=t.dataset[`label${e[0].toUpperCase()}${e.slice(1)}`];n&&(t.setAttribute(`aria-label`,n),t.setAttribute(`title`,n))})},o=t=>{e.dataset.themeMode=t,e.dataset.theme=t===`auto`?n.matches?`dark`:`light`:t,i(t),a(t)};a(r()),document.querySelectorAll(`[data-theme-toggle]`).forEach(e=>{e.addEventListener(`click`,()=>{let e=t[(t.indexOf(r())+1)%t.length];o(e)})}),n.addEventListener(`change`,()=>{r()===`auto`&&(e.dataset.theme=n.matches?`dark`:`light`)}),document.querySelectorAll(`[data-language-link]`).forEach(e=>{e.addEventListener(`click`,()=>{let t=e.dataset.languageLink;if(t===`zh`||t===`en`){try{localStorage.setItem(`51invest-language`,JSON.stringify(t))}catch{}try{let e=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-language=${t}; Path=/; Max-Age=31536000; SameSite=Lax${e}`}catch{}}})});</script> </body> </html>

@@ -1,0 +1,420 @@
+<!DOCTYPE html><html lang="en" data-theme="light" data-theme-mode="auto"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark"><title>FX Quotes and Trading Instruments · 51Invest</title><meta name="description" content="FX is quoted in currency pairs; spot, forward, swap, futures and option instruments carry different rights, cash flows, margin and counterparty risks."><link rel="canonical" href="https://markets.51invest.com/en/learn/fx-quotes-and-trading-instruments/"><link rel="alternate" hreflang="en" href="https://markets.51invest.com/en/learn/fx-quotes-and-trading-instruments/"><link rel="alternate" hreflang="zh-CN" href="https://markets.51invest.com/learn/fx-quotes-and-trading-instruments/"><link rel="alternate" hreflang="x-default" href="https://markets.51invest.com/learn/fx-quotes-and-trading-instruments/"><link rel="icon" type="image/png" href="/_astro/neutral.Dr5C2SoA.png"><script>
+  (() => {
+    const root = document.documentElement;
+    const readCookie = key => {
+      try {
+        return document.cookie.split('; ').find(value => value.startsWith(`51invest-${key}=`))?.split('=').slice(1).join('=') ?? null;
+      } catch {
+        return null;
+      }
+    };
+    const readLocal = key => {
+      try {
+        return localStorage.getItem(`51invest-${key}`);
+      } catch {
+        return null;
+      }
+    };
+    const storedTheme = readCookie('theme') || readLocal('theme');
+    const mode = ['light', 'dark', 'auto'].includes(storedTheme) ? storedTheme : 'auto';
+    const media = matchMedia('(prefers-color-scheme: dark)');
+    const apply = () => {
+      root.dataset.theme = mode === 'auto' ? (media.matches ? 'dark' : 'light') : mode;
+      root.dataset.themeMode = mode;
+    };
+    apply();
+    media.addEventListener('change', () => {
+      if (root.dataset.themeMode === 'auto') apply();
+    });
+  })();
+</script><link rel="stylesheet" href="/_astro/Base.CocbJOeh.css"></head> <body>  <a class="skip-link" href="#main">Skip to content</a> <header class="site-header"> <div class="container header-inner"> <a class="brand" href="https://51invest.com/en/" data-main-home aria-label="51Invest"> <span class="brand-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="36" height="36" alt class="mascot" loading="lazy" decoding="async"></span> <span class="brand-copy"> <span class="brand-name">51Invest</span> <span class="brand-caption">WUYAO INVEST</span> </span> </a> <nav class="desktop-nav" aria-label="Knowledge stations"> <a class="nav-link" href="https://51invest.com/en/" data-main-home> Home </a> <a class="nav-link" href="https://economics.51invest.com/en/"> Economics </a><a class="nav-link" href="https://finance.51invest.com/en/"> Finance </a><a class="nav-link active" href="/en/" aria-current="page"> Markets </a><a class="nav-link" href="https://invest.51invest.com/en/"> Investing </a><a class="nav-link" href="https://history.51invest.com/en/"> History </a><a class="nav-link" href="https://research.51invest.com/en/"> Research </a> <a class="nav-link" href="https://51invest.com/en/contents/"> Content map </a> </nav> <div class="header-tools"> <a class="icon-button language-button" href="/learn/fx-quotes-and-trading-instruments/" hreflang="zh-CN" lang="zh-CN" data-language-link="zh" aria-label="Switch to Chinese" title="Switch to Chinese"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>中文</span> </a> <button class="icon-button theme-button" type="button" data-theme-toggle aria-label="Theme: System" title="Theme: System" data-label-auto="Theme: System" data-label-light="Theme: Light" data-label-dark="Theme: Dark"> <span class="theme-icon" data-theme-icon="auto"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>        <circle cx="12" cy="12" r="8.5"></circle><path d="M12 3.5v17"></path><path d="M12 7a5 5 0 0 1 0 10" fill="currentColor" stroke="none"></path> </svg></span> <span class="theme-icon" data-theme-icon="light"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>       <circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>  </svg></span> <span class="theme-icon" data-theme-icon="dark"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>      <path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"></path>   </svg></span> <span class="theme-text" data-theme-text="auto">System</span> <span class="theme-text" data-theme-text="light">Light</span> <span class="theme-text" data-theme-text="dark">Dark</span> </button> </div> </div> </header> <main id="main" class="site-main" data-pagefind-body>  <div class="reading-progress" data-reading-progress aria-hidden="true"><span></span></div> <div class="container"> <nav class="breadcrumbs" aria-label="Breadcrumb"> <a href="https://51invest.com/en/" data-main-home>Home</a> <span class="sep">/</span> <a href="/en/">Markets</a> <span class="sep">/</span> <span aria-current="page">FX Quotes and Trading Instruments</span> </nav> </div> <article> <header class="article-header"> <div class="container"> <span class="article-type">Product</span> <h1 class="article-title">FX Quotes and Trading Instruments</h1> <p class="article-summary">FX is quoted in currency pairs; spot, forward, swap, futures and option instruments carry different rights, cash flows, margin and counterparty risks.</p>  <div class="meta-grid"> <div class="meta-item"><span>Module</span><strong>MKT-M12 · 外汇与跨境工具</strong></div> <div class="meta-item"><span>Level</span><strong>Foundation</strong></div> <div class="meta-item"><span>Read</span><strong>10 min · 14 sections</strong></div> </div> <p class="demo-jump"> <a href="#demo-check"> This article has an interactive demo <span aria-hidden="true">↓</span> </a> </p> </div> </header> <div class="container article-layout"> <div class="article-body"> <h2>What the product is</h2>
+<p>A foreign exchange trade converts one currency into another, and rates are quoted in currency pairs: in the illustrative quote EUR/USD = 1.1000, one euro buys 1.1000 U.S. dollars, so the first currency is the base currency and the second the quote currency. “Base currency” here is the quoting convention for a pair, not the monetary base that FIN-005 describes on a central bank&#39;s balance sheet, and the rate is illustrative rather than a live quote: it is an integer chosen for mental arithmetic, whereas the registered EUR_USD monthly series on this site records 1.1513 for September 2026 (published on this site&#39;s CHART-007 page); the two are different things. Spot, forward, FX swap, currency swap, futures and options are all FX instruments, but their legal structures differ. The BIS April 2025 survey put average OTC FX turnover at about $9.6 trillion per day; spot was about 31%, outright forwards about 19%, FX swaps about 42%, currency swaps about 2% and options about 7% (shares are rounded and sum to slightly over 100%) [2].</p>
+<h2>Rights, obligations and cash flows</h2>
+<table>
+<thead>
+<tr>
+<th>Instrument</th>
+<th>What the buyer or holder obtains</th>
+<th>Cash flow and margin</th>
+<th>Main counterparty</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Spot</td>
+<td>Currency exchanged at the traded rate</td>
+<td>Full payment; typically T+2</td>
+<td>Bank, market maker</td>
+</tr>
+<tr>
+<td>Forward</td>
+<td>Future delivery at an agreed rate</td>
+<td>Full delivery; collateral may apply</td>
+<td>OTC counterparty</td>
+</tr>
+<tr>
+<td>FX swap</td>
+<td>A near leg and an opposite far leg</td>
+<td>Principal exchanged twice; funding and roll</td>
+<td>Bank, corporate</td>
+</tr>
+<tr>
+<td>FX futures</td>
+<td>Standardized contract under exchange rules</td>
+<td>Initial margin, daily mark-to-market, margin calls</td>
+<td>Exchange and clearinghouse</td>
+</tr>
+<tr>
+<td>FX option</td>
+<td>Right to buy or sell at a strike</td>
+<td>Buyer pays premium; writer owes performance</td>
+<td>Exchange or OTC counterparty</td>
+</tr>
+</tbody></table>
+<p>The table sets out the same arrangements as flows over time; the amount column uses expressions or document terms, not market data:</p>
+<table>
+<thead>
+<tr>
+<th>Time or condition</th>
+<th>Cash flow</th>
+<th>Amount</th>
+<th>Currency</th>
+<th>Uncertainty</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Deal spot</td>
+<td>Exchange the two currencies at the agreed rate</td>
+<td>Notional × spot rate</td>
+<td>Base and quote currency</td>
+<td>Settlement is normally T+2, so the rate moves in between; both legs are obligations</td>
+</tr>
+<tr>
+<td>Sign a forward</td>
+<td>Exchange at the contracted rate on the maturity date</td>
+<td>Notional × forward rate</td>
+<td>Base and quote currency</td>
+<td>Counterparty credit, margin or credit-line terms; performance is due at maturity</td>
+</tr>
+<tr>
+<td>Enter an FX swap</td>
+<td>Swap principal near and far in opposite directions</td>
+<td>Two principal exchanges (near spot, far forward)</td>
+<td>Both currencies</td>
+<td>The roll cost is set by the rate differential; each leg carries counterparty risk</td>
+</tr>
+<tr>
+<td>Buy an FX option</td>
+<td>Pay premium for the right to exchange at the strike</td>
+<td>Premium; on exercise exchange at the strike</td>
+<td>Quote currency</td>
+<td>Maximum loss is the premium; the option can expire worthless</td>
+</tr>
+<tr>
+<td>Sell an FX option</td>
+<td>Receive premium and take the obligation</td>
+<td>Premium received; exchange at the strike if assigned</td>
+<td>Quote currency</td>
+<td>Uncovered loss can far exceed the premium</td>
+</tr>
+<tr>
+<td>Exchange-traded FX futures</td>
+<td>Post margin and mark to market daily</td>
+<td>Notional × margin rate; profit or loss = rate change × multiplier</td>
+<td>Contract settlement currency</td>
+<td>Margin calls and liquidation; the rules differ from OTC forwards</td>
+</tr>
+</tbody></table>
+<p>One ICE US Dollar Index futures contract is $1,000 times the index[3]. A 0.010 index-point move equals $10 and the minimum tick of 0.005 equals $5. Contract months are March, June, September and December, and trading ceases at 10:16 Eastern time two days before settlement. The index is not a single currency pair.</p>
+<h2>Quotes, spreads and participants</h2>
+<p>For most pairs one pip is 0.0001; for pairs quoted to two decimals, such as yen quotes, it is 0.01. The bid-offer difference is the spread; retail quotes may add commissions or mark-ups. Participants include banks, market makers, corporates, funds, brokers, exchanges and clearinghouses. Interdealer trading is mainly OTC; futures and options trade on exchanges.</p>
+<p>The two ways of quoting the same pair are reciprocals: the illustrative quote EUR/USD = 1.1000 says one euro buys 1.1000 US dollars; read as “how many euros per US dollar” it is 1 ÷ 1.1000 ≈ 0.9091 euros. Which of the two counts as the direct quote and which as the indirect one depends on which currency you treat as home: the same number is a direct quote for a dollar-based reader and an indirect quote for a euro-based reader (this framing is the article&#39;s own convention). Taking the reciprocal changes only how the price is presented; it changes neither the spread, the costs or the counterparty structure, and it cannot tell you which side is cheaper.</p>
+<h2>Trading, holding and exit</h2>
+<p>Spot settles in full on the settlement date. A forward can be delivered, closed early or rolled. A swap funds and rolls a position through its near and far legs. Futures are usually closed or rolled, or delivered under exchange rules. Options can be closed, exercised or left to expire. Retail FX often uses rolling settlement and overnight financing; terms vary by broker and jurisdiction. The T+2 spot settlement, the roll and the overnight interest are this article&#39;s description of market convention: none of the three registered sources states them (the CFTC page covers risk and margin, the BIS page turnover and instrument shares, the ICE page only that contract&#39;s own last trading day and settlement), so settlement dates and financing terms follow the account agreement and the exchange rules.</p>
+<h2>Costs and risks</h2>
+<p>Costs include spreads, commissions, overnight interest, margin funding and taxes. Risks include adverse currency moves, leverage, liquidity, settlement timing, counterparty default, regulation and cross-border capital restrictions. The CFTC warns that margin trading can make an investor responsible for losses exceeding the amount deposited, and that the forex market is volatile and risky [1]. Futures are marked to market daily and may trigger margin calls; OTC forwards and swaps depend on the counterparty and collateral.</p>
+<h2>Terms and documents</h2>
+<p>OTC transactions use a master agreement and a confirmation that set out the settlement date, exchange rate, notional principal, collateral and termination terms; futures and options follow exchange contract specifications, margin and clearing rules. For retail accounts, check registration and customer-fund segregation.</p>
+<h2>Comparison and boundaries</h2>
+<table>
+<thead>
+<tr>
+<th>Instrument</th>
+<th>Legal claim</th>
+<th>Cash flow</th>
+<th>Main risks</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Spot</td>
+<td>Immediate exchange</td>
+<td>Full payment</td>
+<td>Settlement, liquidity</td>
+</tr>
+<tr>
+<td>Forward</td>
+<td>Contractual exchange at maturity</td>
+<td>Delivery at maturity</td>
+<td>Counterparty, credit</td>
+</tr>
+<tr>
+<td>Futures</td>
+<td>Standardized rights and obligations</td>
+<td>Margin, mark-to-market</td>
+<td>Leverage, margin calls, basis</td>
+</tr>
+<tr>
+<td>Option</td>
+<td>Buyer&#39;s right, writer&#39;s obligation</td>
+<td>Premium, exercise</td>
+<td>Buyer loses at most the premium; an uncovered writer can lose far more than the premium received</td>
+</tr>
+</tbody></table>
+<p>FX futures are standardized and centrally cleared; retail FX is mostly OTC and depends on the counterparty. The dollar index is not a single exchange rate.</p>
+<h2>Figure</h2>
+<figure>
+  <svg role="img" aria-labelledby="fig-fx-quotes-and-trading-instruments-title fig-fx-quotes-and-trading-instruments-desc" viewBox="0 0 470 323" width="100%">
+<title id="fig-fx-quotes-and-trading-instruments-title">FX Quotes and Trading Instruments: concept comparison</title>
+<desc id="fig-fx-quotes-and-trading-instruments-desc">Spot: Immediate delivery; Full principal; Settlement and counterparty risk | Forward: Future delivery agreed now; Locks price; carries credit exposure; Counterparty and liquidity risk | Option: Premium buys a right; The buyer has no obligation; Premium, volatility and margin risk</desc>
+<rect x="0.5" y="0.5" width="469" height="322" rx="12" fill="var(--surface)" stroke="var(--border)"/>
+      <rect x="20" y="18" width="430" height="89" rx="9" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="32" y="38" font-size="13" font-weight="650" fill="var(--accent)" font-family="inherit">Spot</text>
+      <circle cx="32" cy="51" r="2.4" fill="var(--accent)"/><text x="42" y="54" font-size="10.6" font-weight="400" fill="var(--secondary)" text-anchor="start" font-family="inherit"><tspan x="42" dy="0">Immediate delivery</tspan></text><circle cx="32" cy="66" r="2.4" fill="var(--accent)"/><text x="42" y="69" font-size="10.6" font-weight="400" fill="var(--secondary)" text-anchor="start" font-family="inherit"><tspan x="42" dy="0">Full principal</tspan></text><circle cx="32" cy="81" r="2.4" fill="var(--accent)"/><text x="42" y="84" font-size="10.6" font-weight="400" fill="var(--secondary)" text-anchor="start" font-family="inherit"><tspan x="42" dy="0">Settlement and counterparty risk</tspan></text>
+      <rect x="20" y="117" width="430" height="89" rx="9" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="32" y="137" font-size="13" font-weight="650" fill="var(--accent)" font-family="inherit">Forward</text>
+      <circle cx="32" cy="150" r="2.4" fill="var(--accent)"/><text x="42" y="153" font-size="10.6" font-weight="400" fill="var(--secondary)" text-anchor="start" font-family="inherit"><tspan x="42" dy="0">Future delivery agreed now</tspan></text><circle cx="32" cy="165" r="2.4" fill="var(--accent)"/><text x="42" y="168" font-size="10.6" font-weight="400" fill="var(--secondary)" text-anchor="start" font-family="inherit"><tspan x="42" dy="0">Locks price; carries credit exposure</tspan></text><circle cx="32" cy="180" r="2.4" fill="var(--accent)"/><text x="42" y="183" font-size="10.6" font-weight="400" fill="var(--secondary)" text-anchor="start" font-family="inherit"><tspan x="42" dy="0">Counterparty and liquidity risk</tspan></text>
+      <rect x="20" y="216" width="430" height="89" rx="9" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="32" y="236" font-size="13" font-weight="650" fill="var(--accent)" font-family="inherit">Option</text>
+      <circle cx="32" cy="249" r="2.4" fill="var(--accent)"/><text x="42" y="252" font-size="10.6" font-weight="400" fill="var(--secondary)" text-anchor="start" font-family="inherit"><tspan x="42" dy="0">Premium buys a right</tspan></text><circle cx="32" cy="264" r="2.4" fill="var(--accent)"/><text x="42" y="267" font-size="10.6" font-weight="400" fill="var(--secondary)" text-anchor="start" font-family="inherit"><tspan x="42" dy="0">The buyer has no obligation</tspan></text><circle cx="32" cy="279" r="2.4" fill="var(--accent)"/><text x="42" y="282" font-size="10.6" font-weight="400" fill="var(--secondary)" text-anchor="start" font-family="inherit"><tspan x="42" dy="0">Premium, volatility and margin risk</tspan></text>
+</svg>
+  <figcaption>Figure 1: Spot, forward and option features in “FX Quotes and Trading Instruments”. The diagram is conceptual; the documents cited in the article govern the details.; sample: the article’s own argument; units as stated in the text.</figcaption>
+</figure>
+
+<h2>Diagram: what 100 pips cost in margin</h2>
+<figure id="figure-fx-pnl-chain">
+  <svg role="img" aria-labelledby="fig-fx-pnl-title-en fig-fx-pnl-desc-en" viewBox="0 0 380 320" width="100%">
+    <title id="fig-fx-pnl-title-en">What a 100-pip EUR/USD fall does to margin</title>
+    <desc id="fig-fx-pnl-desc-en">EUR/USD falls from 1.1000 to 1.0900, or 100 pips. Buying EUR 100,000 gives USD 110,000 notional; one pip is USD 10 and 100 pips lose USD 1,000. Margin at 5% is USD 5,500, so the loss is 18.2% of margin.</desc>
+    <text x="20" y="22" font-size="11" font-weight="650" fill="var(--text)" font-family="inherit">100 pips, how much margin</text>
+    <text x="20" y="43" font-size="9.5" fill="var(--muted)" font-family="inherit">EUR/USD 1.1000 | buy EUR 100,000 | margin 5%</text>
+    <text x="60" y="58" font-size="9.2" fill="var(--muted)" font-family="inherit">Exit 1.0900</text>
+    <text x="340" y="58" font-size="9.2" fill="var(--muted)" text-anchor="end" font-family="inherit">Entry 1.1000</text>
+    <line x1="60" y1="72" x2="340" y2="72" stroke="var(--gold)" stroke-width="1.2"/>
+    <path d="M60 72 L67 68 M60 72 L67 76" fill="none" stroke="var(--gold)" stroke-width="1.2"/>
+    <path d="M340 72 L333 68 M340 72 L333 76" fill="none" stroke="var(--gold)" stroke-width="1.2"/>
+    <circle cx="60" cy="72" r="3" fill="var(--down)"/>
+    <circle cx="340" cy="72" r="3" fill="var(--accent)"/>
+    <text x="190" y="94" font-size="9.2" fill="var(--gold)" text-anchor="middle" font-family="inherit">−0.0100 = 100 pips</text>
+    <line x1="40" y1="112" x2="340" y2="112" stroke="var(--border)" stroke-width="1.2"/>
+    <line x1="60" y1="64" x2="60" y2="112" stroke="var(--down)" stroke-width="1" stroke-dasharray="3 3"/>
+    <line x1="340" y1="64" x2="340" y2="112" stroke="var(--accent)" stroke-width="1" stroke-dasharray="3 3"/>
+    <g fill="var(--muted)" font-size="8.8" text-anchor="middle" font-family="inherit">
+      <text x="60" y="130">1.0900</text>
+      <text x="115" y="130">1.0925</text>
+      <text x="190" y="130">1.0950</text>
+      <text x="265" y="130">1.0975</text>
+      <text x="340" y="130">1.1000</text>
+    </g>
+    <rect x="40" y="165" width="300" height="22" fill="var(--surface-2)" stroke="var(--border)" stroke-width="1"/>
+    <rect x="40" y="165" width="54.5" height="22" fill="var(--down)" opacity="0.62"/>
+    <text x="40" y="157" font-size="9.2" fill="var(--muted)" font-family="inherit">Margin USD 5,500</text>
+    <text x="340" y="157" font-size="9.2" fill="var(--muted)" text-anchor="end" font-family="inherit">Loss USD 1,000 (18.2%)</text>
+    <line x1="94.5" y1="160" x2="94.5" y2="192" stroke="var(--text)" stroke-width="1" stroke-dasharray="2 3"/>
+    <text x="100" y="181" font-size="8.8" fill="var(--down)" font-family="inherit">18.2%</text>
+    <text x="20" y="238" font-size="9.2" fill="var(--muted)" font-family="inherit">1 pip = 0.0001 → USD 10 on EUR 100,000</text>
+    <text x="20" y="258" font-size="9.2" fill="var(--muted)" font-family="inherit">100 pips → USD 1,000; margin = 110,000 × 5% = USD 5,500</text>
+    <text x="20" y="282" font-size="9" fill="var(--muted)" font-family="inherit">Spread, commission and overnight interest excluded; quote is a teaching example.</text>
+  </svg>
+  <figcaption>Figure 2: A fall from 1.1000 to 1.0900 is 100 pips. EUR 100,000 has USD 110,000 notional; one pip is USD 10 and 100 pips lose USD 1,000. Margin at 5% is USD 5,500, so the loss is about 18.2% of margin. Teaching quote, fees excluded.; sample: the article’s own argument; units as stated in the text.</figcaption>
+</figure>
+
+<!-- kp-supplement:start -->
+<h2>Knowledge-point review</h2>
+<h3>spot FX</h3>
+<p><strong>Definition</strong>: Spot FX exchanges currencies for settlement within about two business days at the spot rate.</p>
+<p><strong>Mechanism</strong>: Spot rates reflect rate differentials, trade, capital flows and expectations; quotes have bid, ask and mid rates.</p>
+<p><strong>Example</strong>: For example, a firm converts dollars to yuan today at the spot rate for settlement in two business days.</p>
+<p><strong>Boundary</strong>: Spot is not instant cash; settlement timing, settlement risk and liquidity affect cost, and spreads widen under stress.</p>
+<h3>cross rates</h3>
+<p><strong>Definition</strong>: A cross rate prices two non-dollar currencies directly, usually derived from their dollar rates.</p>
+<p><strong>Mechanism</strong>: Cross rates should satisfy triangular arbitrage; spreads, liquidity and convention determine whether a direct cross is usable.</p>
+<p><strong>Example</strong>: For example, euro-yen can be computed from euro-dollar and dollar-yen, and deviations trigger triangular arbitrage.</p>
+<p><strong>Boundary</strong>: A cross rate is not independent; dollar liquidity and currency spreads affect the synthetic rate, and a direct cross may be costlier or thinner.</p>
+<h3>FX forwards</h3>
+<p><strong>Definition</strong>: An FX forward fixes an exchange rate for a future date to hedge currency risk.</p>
+<p><strong>Mechanism</strong>: Forward rates reflect spot and rate differentials near interest-rate parity; deliverable and non-deliverable, tenor and counterparty credit differ.</p>
+<p><strong>Example</strong>: For example, an exporter locks the yuan rate on dollar receipts six months ahead to avoid depreciation losses.</p>
+<p><strong>Boundary</strong>: A forward is not free insurance; it forgoes favourable moves, forward points reflect differentials but carry basis and credit risk, and counterparty default matters.</p>
+<h3>non-deliverable forwards</h3>
+<p><strong>Definition</strong>: An NDF is a non-deliverable FX forward settled in cash for the difference between the contracted and fixing rates.</p>
+<p><strong>Mechanism</strong>: NDFs are common for restricted or non-convertible currencies, with quotes reflecting offshore expectations, rate differentials and control risk.</p>
+<p><strong>Example</strong>: For example, a firm hedges yuan with a dollar-settled NDF and pays only the difference at maturity without delivering yuan.</p>
+<p><strong>Boundary</strong>: NDFs are not spot substitutes; fixing, settlement currency, controls and counterparty risk create basis, and liquidity may concentrate in a few tenors.</p>
+<h3>FX swaps</h3>
+<p><strong>Definition</strong>: An FX swap buys one currency spot and sells it forward, or the reverse, economically short-term FX funding.</p>
+<p><strong>Mechanism</strong>: Swap points reflect rate differentials and tenor and are used to roll dollar liquidity, manage cash and arbitrage; both legs execute together.</p>
+<p><strong>Example</strong>: For example, a bank buys dollars spot and sells them one month forward, lending yuan for temporary dollars.</p>
+<p><strong>Boundary</strong>: A swap is not an outright forward; it fixes both legs, basis, collateral and rollover risk affect cost, and it cannot alone hedge a long-term exposure.</p>
+<h3>cross-currency swaps</h3>
+<p><strong>Definition</strong>: A cross-currency swap exchanges principal and interest streams in different currencies over a longer term, used for balance-sheet and cross-border funding hedges.</p>
+<p><strong>Mechanism</strong>: It includes principal exchange and two interest legs, with basis reflecting funding supply and demand; counterparty and collateral risk matter.</p>
+<p><strong>Example</strong>: For example, a firm issues dollar debt, swaps into yuan and fixes interest, then swaps back at maturity.</p>
+<p><strong>Boundary</strong>: A cross-currency swap is not a simple forward; principal, interest and basis are complex, and early termination, credit and regulatory capital affect cost.</p>
+<h3>FX futures and options</h3>
+<p><strong>Definition</strong>: FX futures are exchange-traded standardised future currency contracts, and FX options are rights to buy or sell currency.</p>
+<p><strong>Mechanism</strong>: Futures carry margin, daily marking and delivery, while options carry premium, volatility and time decay; exchange clearing reduces counterparty risk.</p>
+<p><strong>Example</strong>: For example, an exporter buys dollar puts to protect against depreciation and loses only the premium if the dollar rises.</p>
+<p><strong>Boundary</strong>: Futures and options are not universal hedges; basis, margin calls, liquidity and option mispricing cause losses, and standard contracts may not match cash flows.</p>
+<h3>onshore, offshore and delivery</h3>
+<p><strong>Definition</strong>: The onshore market operates under local regulation and settlement, while the offshore market trades the same currency abroad; delivery exchanges currency or settles cash.</p>
+<p><strong>Mechanism</strong>: Onshore and offshore rates can diverge due to controls, liquidity and participants; deliverable and non-deliverable contracts differ.</p>
+<p><strong>Example</strong>: For example, CNH and CNY can gap during controls or risk events, forcing firms to choose a deliverable channel.</p>
+<p><strong>Boundary</strong>: Onshore and offshore are not one market; arbitrage is constrained by rules and settlement, and delivery location, law and time zones create risk that can keep gaps open.</p>
+<!-- kp-supplement:end -->
+
+<h2>Related</h2>
+<ul>
+<li>Required prerequisite: Assets and Instruments (MKT-001).</li>
+<li>Related reading: Assets and Instruments (MKT-001), Futures Contracts and Margin (MKT-018).</li>
+</ul>
+<h2>Figures in plain language</h2>
+<p>The three figures below check the mechanism, boundary and comparison in this article; labels come from its own sections, not new data.</p>
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-chain-title fig-batch-chain-desc" viewBox="0 0 340 304" width="100%">
+    <title id="fig-batch-chain-title">FX Quotes and Trading Instruments: mechanism chain</title>
+    <desc id="fig-batch-chain-desc">FX Quotes and Trading Instruments — three-step structure: problem, mechanism, judgment. Labels come from the article's sections, not new data.</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">FX Quotes and Trading Instruments: mechanism chain</text>
+    <text x="14" y="38" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">Labels come from the article's sections; all three steps matter.</text>
+    <line x1="14" y1="46" x2="326" y2="46" stroke="var(--border)" stroke-width="1"/>
+    <g>
+      <rect x="14" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="22" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">Problem</text>
+      <text x="22" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">FX is quoted in</text>
+      <text x="22" y="102" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">currency pairs…</text>
+      <text x="22" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">FX is quoted in</text>
+      <text x="22" y="141" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">currency pairs;</text>
+      <text x="22" y="158" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">spot, forward,</text>
+      <text x="22" y="175" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">swap, futures</text>
+      <text x="22" y="192" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">and option…</text>
+    </g>
+      <g>
+      <rect x="123" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="131" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">What the product is</text>
+      <text x="131" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">What the product</text>
+      <text x="131" y="102" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">is: A foreign…</text>
+      <text x="131" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">What the product</text>
+      <text x="131" y="141" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start"> is: A foreign</text>
+      <text x="131" y="158" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">exchange trade</text>
+      <text x="131" y="175" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">converts one</text>
+      <text x="131" y="192" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">currency into…</text>
+    </g>
+      <g>
+      <rect x="232" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="240" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">Costs and risks</text>
+      <text x="240" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">Costs include</text>
+      <text x="240" y="102" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">spreads, commissi…</text>
+      <text x="240" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">Costs include</text>
+      <text x="240" y="141" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">spreads, commiss</text>
+      <text x="240" y="158" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">ions, overnight</text>
+      <text x="240" y="175" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">interest,</text>
+      <text x="240" y="192" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">margin funding…</text>
+    </g>
+    <line x1="108" y1="144" x2="123" y2="144" stroke="var(--border)" stroke-width="1.1"/>
+    <path d="M120 140 L125 144 L120 148" fill="none" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="217" y1="144" x2="232" y2="144" stroke="var(--border)" stroke-width="1.1"/>
+    <path d="M229 140 L234 144 L229 148" fill="none" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="14" y1="250" x2="326" y2="250" stroke="var(--border)" stroke-width="1"/>
+    <text x="14" y="266" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">Reading order: test the problem, then the mechanism, then whether the judgment overreaches.</text>
+    <text x="14" y="280" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">If a middle step lacks evidence, later conclusions are hypotheses, not facts.</text>
+    <text x="14" y="294" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">Structural illustration, not a new data chart; sample is the article's own argument.</text>
+  </svg>
+  <figcaption>Figure 3: FX Quotes and Trading Instruments — mechanism chain: problem, mechanism, judgment. Sample: the article's own argument; units as stated in the text.</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-boundary-title fig-batch-boundary-desc" viewBox="0 0 340 244" width="100%">
+    <title id="fig-batch-boundary-title">FX Quotes and Trading Instruments: boundary</title>
+    <desc id="fig-batch-boundary-desc">Separates conditions where the claim holds from those where it fails; a local example is not universal.</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">FX Quotes and Trading Instruments: when does it hold?</text>
+    <line x1="14" y1="34" x2="326" y2="34" stroke="var(--border)" stroke-width="1"/>
+    <rect x="14" y="44" width="312" height="38" rx="7" fill="var(--surface-2)" stroke="var(--border)"/>
+    <text x="170" y="62" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="middle">Check the conditions before the conclusion</text>
+    <text x="170" y="75" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="middle">If conditions, definitions or samples change, recompute the conclusion</text>
+    <line x1="170" y1="82" x2="90" y2="104" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="170" y1="82" x2="250" y2="104" stroke="var(--border)" stroke-width="1.1"/>
+    <rect x="14" y="104" width="148" height="100" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+    <text x="24" y="122" font-size="8.6" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">Holds</text>
+    <text x="24" y="138" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">Costs include spreads,</text>
+      <text x="24" y="154" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">commissions, overnight</text>
+      <text x="24" y="170" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">interest, margin funding</text>
+      <text x="24" y="186" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">and taxes.…</text>
+    <rect x="178" y="104" width="148" height="100" rx="8" fill="var(--gold)" opacity="0.18" stroke="var(--border)"/>
+    <text x="188" y="122" font-size="8.6" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">Fails / rewrite</text>
+    <text x="188" y="138" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">| Instrument | Legal claim</text>
+      <text x="188" y="154" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">| Cash flow | Main risks |</text>
+      <text x="188" y="170" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">| --- | --- | --- | --- | |</text>
+      <text x="188" y="186" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">Spot | Immediate exchange |…</text>
+    <line x1="14" y1="216" x2="326" y2="216" stroke="var(--border)" stroke-width="1"/>
+    <text x="14" y="232" font-size="8.3" fill="var(--muted)" font-family="inherit" text-anchor="start">Boundary illustration; sample is the article's own argument; units as stated in the text.</text>
+  </svg>
+  <figcaption>Figure 4: FX Quotes and Trading Instruments — boundary: when the claim holds, and when it fails. Sample: the article's own argument; units as stated in the text.</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-compare-title fig-batch-compare-desc" viewBox="0 0 340 252" width="100%">
+    <title id="fig-batch-compare-title">FX Quotes and Trading Instruments: object, conditions and common mistakes</title>
+    <desc id="fig-batch-compare-desc">Three rows compare the concept, its conditions and common mistakes; comparison is not equivalence and does not replace a definition.</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">FX Quotes and Trading Instruments: object, conditions and common mistakes at a glance</text>
+    <line x1="14" y1="34" x2="326" y2="34" stroke="var(--border)" stroke-width="1"/>
+    <text x="82" y="46" font-size="8.4" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">This article</text>
+    <text x="200" y="46" font-size="8.4" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">Commonly confused</text>
+    <g>
+      <rect x="14" y="52" width="312" height="58" fill="transparent" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="72" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">Object</text>
+      <text x="82" y="72" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">FX is quoted in</text>
+      <text x="82" y="88" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">currency pairs…</text>
+      <text x="200" y="72" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">Adjacent concepts / common claims</text>
+    </g>
+    <g>
+      <rect x="14" y="110" width="312" height="58" fill="var(--surface-2)" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="130" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">Conditions</text>
+      <text x="82" y="130" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">Costs include</text>
+      <text x="82" y="146" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">spreads, commissions…</text>
+      <text x="200" y="130" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">| Instrument | Legal claim |</text>
+      <text x="200" y="146" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">Cash flow | Main risks | | ---…</text>
+    </g>
+    <g>
+      <rect x="14" y="168" width="312" height="58" fill="transparent" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="188" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">Check</text>
+      <text x="82" y="188" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">Define first, then compare; never judge</text>
+      <text x="82" y="204" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">labels only</text>
+      <text x="200" y="188" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">Correlation is not causation; a local case is not universal</text>
+    </g>
+    <text x="14" y="244" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">Comparison illustration; sample is the article's own argument; units as stated in the text.</text>
+  </svg>
+  <figcaption>Figure 5: FX Quotes and Trading Instruments — comparison of object, conditions and common mistakes. Sample: the article's own argument; units as stated in the text.</figcaption>
+</figure>
+
+<h2>Exercises</h2>
+<ol>
+<li><strong>Notional value.</strong> If you buy EUR 100,000 at EUR/USD = 1.1000, what is the dollar notional?</li>
+<li><strong>Pip value.</strong> What is a one-pip (0.0001) move worth? What about 50 pips?</li>
+<li><strong>Leverage.</strong> At a 5% margin requirement, how much margin is needed, and what is the loss and margin percentage if the rate falls 100 pips?</li>
+</ol>
+<details>
+<summary>Suggested answers</summary>
+
+<ol>
+<li>100,000 × 1.1000 = $110,000. Hypothetical, excluding fees.</li>
+<li>100,000 × 0.0001 = $10; 50 pips = $500.</li>
+<li>Margin is 110,000 × 5% = $5,500; the loss is $1,000, or about 18.2% of margin. Hypothetical, excluding spread, commission and overnight interest.</li>
+</ol>
+</details>
+
+<h2>Sources</h2>
+<ol>
+<li>U.S. Commodity Futures Trading Commission. “Fraud Advisory: Foreign Currency (Forex) Fraud.” <a href="https://www.cftc.gov/LearnAndProtect/FraudAwarenessPrevention/CFTCFraudAdvisories/fraudadv_forex">https://www.cftc.gov/LearnAndProtect/FraudAwarenessPrevention/CFTCFraudAdvisories/fraudadv_forex</a> (accessed 2026-10-30)</li>
+<li>Bank for International Settlements. “OTC foreign exchange turnover in April 2025.” <a href="https://www.bis.org/statistics/rpfx25_fx.htm">https://www.bis.org/statistics/rpfx25_fx.htm</a> (accessed 2026-10-30)</li>
+<li>Intercontinental Exchange. “US Dollar Index Futures.” <a href="https://www.ice.com/products/194/US-Dollar-Index-Futures">https://www.ice.com/products/194/US-Dollar-Index-Futures</a> (accessed 2026-10-30)</li>
+</ol>
+  <section class="article-demo" id="demo-check" data-demo="check" data-lang="en" aria-labelledby="demo-check-title" data-check-done="All three are covered: the core of this article is in place." data-check-pending="One item is still open: go back to the matching section and retell it with a number or counterexample." data-check-count="Ticked"> <header class="demo-head"> <div class="demo-head-top"> <p class="demo-eyebrow">Worked demo</p> <button class="demo-reset" type="button" data-demo-reset>Reset</button> </div> <h2 id="demo-check-title">Read-through check: can you say three things?</h2> <p class="demo-intro">No recitation needed. Tick each sentence below and see whether you can explain the mechanism, one worked example and one boundary in your own words.</p> </header>          <div class="demo-check"> <ul class="demo-check-list"> <li> <label> <input type="checkbox" data-check-index="0"> <span>Read a currency pair quote for direction and pip value, and date the cash flows of spot, forward, swap, futures and options</span> </label> </li><li> <label> <input type="checkbox" data-check-index="1"> <span>Show how margin and counterparty risk change when the same view is expressed with different tools</span> </label> </li><li> <label> <input type="checkbox" data-check-index="2"> <span>Name one condition under which the article’s conclusion does not hold</span> </label> </li> </ul> <p class="demo-check-status" data-out="checkStatus" role="status"> Ticked 0 / 3
+</p> </div> <p class="demo-footnote">The numbers are teaching assumptions that show relationships, not forecasts or investment advice.</p> </section><script type="module" src="/_astro/ArticleDemo.astro_astro_type_script_index_0_lang.C9VQAsQ0.js"></script> <p class="notice"> This article has passed the current publication gate. Factual, calculation and translation revisions update both language versions together. </p> <p> <a class="button secondary" href="/en/"> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class> <path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path>        </svg>Back to station </a> </p> </div> <aside class="article-aside" aria-label="Article information"> <section class="aside-card"> <h2>Learning objectives</h2> <ul> <li>Read a currency pair quote for direction and pip value, and date the cash flows of spot, forward, swap, futures and options</li><li>Show how margin and counterparty risk change when the same view is expressed with different tools</li> </ul> </section> <section class="aside-card"> <h2>Required prerequisites</h2> <ul> <li> <a href="/en/learn/assets-vs-instruments/">MKT-001 · Assets and Instruments</a> </li> </ul> </section> <section class="aside-card"> <h2>Recommended reading</h2> <ul> <li> <a href="/en/learn/assets-vs-instruments/">MKT-001 · Assets and Instruments</a> </li><li> <a href="/en/learn/futures-contracts-and-margin/">MKT-018 · Futures Contracts and Margin</a> </li> </ul> </section> <section class="aside-card"> <h2>AI review record</h2> <p class="muted"> There is no human sign-off; these states come from the AI-only editorial review. </p> <ul> <li> Facts and calculations : AI review passed </li><li> Subject : AI review passed </li><li> English : AI review passed </li><li> Page : AI review passed </li> </ul> </section> <section class="aside-card"> <h2>Sources</h2> <div class="source"> <a href="https://www.cftc.gov/LearnAndProtect/FraudAwarenessPrevention/CFTCFraudAdvisories/fraudadv_forex" rel="noopener noreferrer" target="_blank">Fraud Advisory: Foreign Currency (Forex) Fraud</a> <p>U.S. Commodity Futures Trading Commission · U.S. Commodity Futures Trading Commission</p> <p>Accessed: 2026-10-30 · License: U.S. Government work (public domain), 17 U.S.C. §105</p> <p>Supports: The forex market is volatile and carries substantial risks, and margin trading can make an investor responsible for losses that greatly exceed the amount deposited.</p> </div><div class="source"> <a href="https://www.bis.org/statistics/rpfx25_fx.htm" rel="noopener noreferrer" target="_blank">OTC foreign exchange turnover in April 2025</a> <p>Bank for International Settlements · Bank for International Settlements</p> <p>Accessed: 2026-10-30 · License: BIS terms: non-commercial download, display and redistribution allowed with attribution</p> <p>Supports: OTC FX turnover averaged about $9.6 trillion per day in April 2025, with spot at about 31%, outright forwards 19%, FX swaps 42%, currency swaps about 2% and options 7% (rounded).</p> </div><div class="source"> <a href="https://www.ice.com/products/194/US-Dollar-Index-Futures" rel="noopener noreferrer" target="_blank">US Dollar Index Futures</a> <p>Intercontinental Exchange · ICE Futures U.S.</p> <p>Accessed: 2026-10-30 · License: Copyrighted; all rights reserved, no ownership granted to users (cite-only)</p> <p>Supports: One ICE US Dollar Index futures contract is $1,000 times the index; a 0.010 index point move equals $10 and the minimum tick of 0.005 equals $5; contract months are March, June, September and December; trading ceases at 10:16 Eastern time two days before settlement; settlement is physical against six component currencies.</p> </div> </section> </aside> </div> </article><script type="module">var e=document.querySelector(`[data-reading-progress] span`),t=document.querySelector(`article`);if(e&&t){let n=()=>{let n=t.offsetTop,r=t.offsetHeight-window.innerHeight,i=r>0?(window.scrollY-n)/r:0;e.style.width=`${Math.min(1,Math.max(0,i))*100}%`};window.addEventListener(`scroll`,n,{passive:!0}),window.addEventListener(`resize`,n),n()}</script>  </main> <footer class="site-footer"> <div class="container footer-inner"> <div class="footer-brand"> <span class="footer-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="28" height="28" alt class="mascot" loading="lazy" decoding="async"></span> <div> <strong>巫妖投资 51Invest</strong> <p class="footer-note">A free, non-commercial knowledge site. Sources and definitions are labelled; nothing here is investment advice.</p> </div> </div> <nav class="footer-links" aria-label="Knowledge stations"> <a href="https://51invest.com/en/" data-main-home>Home</a> <a href="https://51invest.com/en/contents/">Content map</a> <a href="/en/glossary/">Glossary</a> <a href="/en/search/">Search</a> <a href="https://51invest.com/en/charts/" data-main-link>Charts</a> <a href="https://51invest.com/en/sources/" data-main-link>Data &amp; licences</a> <a href="/en/">Station home</a> </nav> </div> </footer> <nav class="mobile-nav" aria-label="Knowledge stations"> <a class="mobile-link" href="https://51invest.com/en/" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>    <path d="m3 10 9-7 9 7"></path><path d="M5 9v11h14V9"></path><path d="M9 20v-6h6v6"></path>     </svg> <span>Home</span> </a> <a class="mobile-link" href="https://51invest.com/en/#stations" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>   <rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect>      </svg> <span>Knowledge stations</span> </a> <a class="mobile-link active" href="/en/" aria-current="page"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>  <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v18H6.5A2.5 2.5 0 0 1 4 18.5z"></path><path d="M4 18.5A2.5 2.5 0 0 1 6.5 16H20"></path>       </svg> <span>Station home</span> </a> <a class="mobile-link" href="/learn/fx-quotes-and-trading-instruments/" data-language-link="zh"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>中文</span> </a> </nav><script type="module">var e=document.documentElement,t=[`auto`,`light`,`dark`],n=matchMedia(`(prefers-color-scheme: dark)`),r=()=>{let t=e.dataset.themeMode;return t===`light`||t===`dark`?t:`auto`},i=e=>{try{localStorage.setItem(`51invest-theme`,e)}catch{}try{let t=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-theme=${e}; Path=/; Max-Age=31536000; SameSite=Lax${t}`}catch{}},a=e=>{document.querySelectorAll(`[data-theme-toggle]`).forEach(t=>{let n=t.dataset[`label${e[0].toUpperCase()}${e.slice(1)}`];n&&(t.setAttribute(`aria-label`,n),t.setAttribute(`title`,n))})},o=t=>{e.dataset.themeMode=t,e.dataset.theme=t===`auto`?n.matches?`dark`:`light`:t,i(t),a(t)};a(r()),document.querySelectorAll(`[data-theme-toggle]`).forEach(e=>{e.addEventListener(`click`,()=>{let e=t[(t.indexOf(r())+1)%t.length];o(e)})}),n.addEventListener(`change`,()=>{r()===`auto`&&(e.dataset.theme=n.matches?`dark`:`light`)}),document.querySelectorAll(`[data-language-link]`).forEach(e=>{e.addEventListener(`click`,()=>{let t=e.dataset.languageLink;if(t===`zh`||t===`en`){try{localStorage.setItem(`51invest-language`,JSON.stringify(t))}catch{}try{let e=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-language=${t}; Path=/; Max-Age=31536000; SameSite=Lax${e}`}catch{}}})});</script> </body> </html>

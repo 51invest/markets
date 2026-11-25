@@ -1,0 +1,416 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light" data-theme-mode="auto"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark"><title>原油与成品油 · 巫妖投资</title><meta name="description" content="原油是炼厂原料，成品油是炼厂产出；原油期货、成品油期货与炼油利润对应不同的权利和现金流。"><link rel="canonical" href="https://markets.51invest.com/learn/crude-oil-and-refined-products/"><link rel="alternate" hreflang="zh-CN" href="https://markets.51invest.com/learn/crude-oil-and-refined-products/"><link rel="alternate" hreflang="en" href="https://markets.51invest.com/en/learn/crude-oil-and-refined-products/"><link rel="alternate" hreflang="x-default" href="https://markets.51invest.com/learn/crude-oil-and-refined-products/"><link rel="icon" type="image/png" href="/_astro/neutral.Dr5C2SoA.png"><script>
+  (() => {
+    const root = document.documentElement;
+    const readCookie = key => {
+      try {
+        return document.cookie.split('; ').find(value => value.startsWith(`51invest-${key}=`))?.split('=').slice(1).join('=') ?? null;
+      } catch {
+        return null;
+      }
+    };
+    const readLocal = key => {
+      try {
+        return localStorage.getItem(`51invest-${key}`);
+      } catch {
+        return null;
+      }
+    };
+    const storedTheme = readCookie('theme') || readLocal('theme');
+    const mode = ['light', 'dark', 'auto'].includes(storedTheme) ? storedTheme : 'auto';
+    const media = matchMedia('(prefers-color-scheme: dark)');
+    const apply = () => {
+      root.dataset.theme = mode === 'auto' ? (media.matches ? 'dark' : 'light') : mode;
+      root.dataset.themeMode = mode;
+    };
+    apply();
+    media.addEventListener('change', () => {
+      if (root.dataset.themeMode === 'auto') apply();
+    });
+  })();
+</script><link rel="stylesheet" href="/_astro/Base.CocbJOeh.css"></head> <body>  <a class="skip-link" href="#main">跳到正文</a> <header class="site-header"> <div class="container header-inner"> <a class="brand" href="https://51invest.com/" data-main-home aria-label="巫妖投资"> <span class="brand-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="36" height="36" alt class="mascot" loading="lazy" decoding="async"></span> <span class="brand-copy"> <span class="brand-name">巫妖投资</span> <span class="brand-caption">51INVEST</span> </span> </a> <nav class="desktop-nav" aria-label="知识分站"> <a class="nav-link" href="https://51invest.com/" data-main-home> 首页 </a> <a class="nav-link" href="https://economics.51invest.com/"> 经济学 </a><a class="nav-link" href="https://finance.51invest.com/"> 金融基础 </a><a class="nav-link active" href="/" aria-current="page"> 市场与产品 </a><a class="nav-link" href="https://invest.51invest.com/"> 投资方法 </a><a class="nav-link" href="https://history.51invest.com/"> 经济与金融史 </a><a class="nav-link" href="https://research.51invest.com/"> 研究方法 </a> <a class="nav-link" href="https://51invest.com/contents/"> 内容地图 </a> </nav> <div class="header-tools"> <a class="icon-button language-button" href="/en/learn/crude-oil-and-refined-products/" hreflang="en" lang="en" data-language-link="en" aria-label="切换为英文" title="切换为英文"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>English</span> </a> <button class="icon-button theme-button" type="button" data-theme-toggle aria-label="主题: 跟随系统" title="主题: 跟随系统" data-label-auto="主题: 跟随系统" data-label-light="主题: 浅色" data-label-dark="主题: 深色"> <span class="theme-icon" data-theme-icon="auto"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>        <circle cx="12" cy="12" r="8.5"></circle><path d="M12 3.5v17"></path><path d="M12 7a5 5 0 0 1 0 10" fill="currentColor" stroke="none"></path> </svg></span> <span class="theme-icon" data-theme-icon="light"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>       <circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>  </svg></span> <span class="theme-icon" data-theme-icon="dark"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>      <path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"></path>   </svg></span> <span class="theme-text" data-theme-text="auto">跟随系统</span> <span class="theme-text" data-theme-text="light">浅色</span> <span class="theme-text" data-theme-text="dark">深色</span> </button> </div> </div> </header> <main id="main" class="site-main" data-pagefind-body>  <div class="reading-progress" data-reading-progress aria-hidden="true"><span></span></div> <div class="container"> <nav class="breadcrumbs" aria-label="Breadcrumb"> <a href="https://51invest.com/" data-main-home>首页</a> <span class="sep">/</span> <a href="/">市场与产品</a> <span class="sep">/</span> <span aria-current="page">原油与成品油</span> </nav> </div> <article> <header class="article-header"> <div class="container"> <span class="article-type">产品与品种</span> <h1 class="article-title">原油与成品油</h1> <p class="article-summary">原油是炼厂原料，成品油是炼厂产出；原油期货、成品油期货与炼油利润对应不同的权利和现金流。</p>  <div class="meta-grid"> <div class="meta-item"><span>模块</span><strong>MKT-M08 · 能源与电力</strong></div> <div class="meta-item"><span>层级</span><strong>入门</strong></div> <div class="meta-item"><span>阅读</span><strong>21 分钟 · 14 节</strong></div> </div> <p class="demo-jump"> <a href="#demo-check"> 这篇有一个可以动手操作的演示 <span aria-hidden="true">↓</span> </a> </p> </div> </header> <div class="container article-layout"> <div class="article-body"> <h2>产品定义</h2>
+<p>原油是烃类混合物，业内按密度与含硫量分级：EIA 术语表把 API 度（API gravity）定义为表示原油或凝析油比重的刻度，即表达液体石油产品比重或密度的标度[6]；按含硫量高低的称呼本文未取到定义它的登记页面，这一半按本文的行业惯用表述处理，不挂来源。炼厂经蒸馏和转化，把它变成汽油、柴油、航空煤油、燃料油和化工原料。原油是原料，成品油是产出；原油期货、成品油期货和裂解价差（crack spread）是三类不同的交易对象。WTI、Brent、Dubai 是基准，世界银行 Pink Sheet 以美元/桶发布三者月度均价，并将三者等权平均称为“原油平均”。</p>
+<h2>权利、义务与现金流</h2>
+<table>
+<thead>
+<tr>
+<th>方式</th>
+<th>买方或持有人拥有什么</th>
+<th>现金流与成本</th>
+<th>主要交易对手</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>实物原油采购</td>
+<td>按合同品质和交货地取得原油所有权</td>
+<td>货款、运费、保险、仓储、融资</td>
+<td>生产商、贸易商、炼厂</td>
+</tr>
+<tr>
+<td>原油期货</td>
+<td>按交易所规则交割或平仓</td>
+<td>保证金、盯市、佣金、展期</td>
+<td>交易所、清算所、经纪商</td>
+</tr>
+<tr>
+<td>成品油合同</td>
+<td>按规格取得汽油、柴油等</td>
+<td>货款、升贴水、运费</td>
+<td>炼厂、贸易商、终端</td>
+</tr>
+</tbody></table>
+<p>下表把该篇的持有与交易安排按时间排开，金额栏用表达式或文件约定表示，不引用真实行情：</p>
+<table>
+<thead>
+<tr>
+<th>时间</th>
+<th>现金流</th>
+<th>金额</th>
+<th>币种</th>
+<th>不确定性</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>采购原油</td>
+<td>支付货款、运费与保险</td>
+<td>基准价 ± 升贴水 + 运费</td>
+<td>合同计价币种（以美元/桶报价）</td>
+<td>密度与硫含量等品质差异；交货地与检验</td>
+</tr>
+<tr>
+<td>炼厂加工</td>
+<td>付加工成本，收成品油款</td>
+<td>产出 × 售价 − 投入 × 成本</td>
+<td>销售币种</td>
+<td>裂解价差随产品结构、季节与装置能力变化</td>
+</tr>
+<tr>
+<td>交易原油期货</td>
+<td>缴保证金、每日盯市</td>
+<td>名义 × 保证金比例；盈亏＝价格变动 × 合约乘数</td>
+<td>合约结算币种</td>
+<td>杠杆、基差与交割规则（交割地与规格按合约）</td>
+</tr>
+<tr>
+<td>签订基差合同</td>
+<td>按期货价加基差结算</td>
+<td>期货价 × 数量 + 基差 × 数量</td>
+<td>合同币种</td>
+<td>基差随区域供需与库存变化，可能反向</td>
+</tr>
+<tr>
+<td>成品油合同</td>
+<td>按规格取得汽油、柴油等</td>
+<td>货款 + 升贴水 + 运费</td>
+<td>交易币种</td>
+<td>规格与季节性需求影响可得性与价格</td>
+</tr>
+</tbody></table>
+<h2>供应链与参与者</h2>
+<p>原油经管道、油轮和储罐进入炼厂，成品油再经管道、卡车和船舶送到加油站、工业和航空用户。现金流包括采购、运输、加工和销售。参与者包括生产商、贸易商、炼厂、船东、仓储商和交易所。EIA 说明美国炼厂平均把一桶 42 加仑原油加工成汽油约 19 至 20 加仑、馏分油 11 至 13 加仑、航空煤油 3 至 5 加仑[1]；同一机构的另一页给出 2023 年的单一年份数值——每桶平均产出成品油约 45 加仑、加工增益约 6.3%，其中汽油 19.57 加仑、馏分油 12.47 加仑、航空煤油 4.41 加仑[4]。区间与单年数值口径不同，实际产出随炼厂和需求调整。</p>
+<h2>交易、持有与退出</h2>
+<p>实物合同以交货、化验、付款和所有权转移完成。期货多在到期前平仓或展期，交割按交易所品质和程序执行。ICE Brent 合约为 1,000 桶，以美元/桶报价，最小变动价位 0.01 美元/桶（每手 10 美元），可用 EFP 交割或按 ICE Brent 指数现金结算，合约月份最长 156 个月[2]。炼厂可用原油与成品油期货锁定裂解价差。</p>
+<h2>成本与风险</h2>
+<p>成本包括品质升贴水、运费、炼厂加工、融资、保证金、展期和税费。风险包括价格不同步、炼油利润收窄、地缘冲突、炼厂事故、运费变化、品质不合格、库存跌价、杠杆与追保、交易对手和制裁合规。Pink Sheet 价格是月度均价，不是可成交的现货报价。</p>
+<h2>条款与文件</h2>
+<p>实物合同核对品质、数量、交货地、贸易术语、化验和付款；期货核对合约规格、保证金、最后交易日和交割品质；基金读招募说明书、基准和费用。</p>
+<h2>比较与边界</h2>
+<table>
+<thead>
+<tr>
+<th>产品</th>
+<th>法律权利</th>
+<th>现金流</th>
+<th>主要风险</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>实物原油</td>
+<td>所有权和提取权</td>
+<td>货款、运费、仓储</td>
+<td>品质、物流、价格</td>
+</tr>
+<tr>
+<td>原油期货</td>
+<td>标准化合约权利义务</td>
+<td>保证金、盯市</td>
+<td>杠杆、基差、交割</td>
+</tr>
+<tr>
+<td>成品油合同</td>
+<td>按规格交付</td>
+<td>货款、升贴水</td>
+<td>品质、裂解价差</td>
+</tr>
+</tbody></table>
+<p>原油期货不等于加油站零售价：EIA 把零售价分解为原油成本、税、炼油成本与利润、分销与营销四个组成部分，并写明联邦机动车汽油税为 18.40 美分/加仑[5]；该页的份额图在文本层无法与四个行名一一对应，本文不列各部份额，也不用该页未出现的“零售毛利”一词。原油涨价不一定提高炼油利润，因为裂解价差可能收窄。三者品质和交割地不同，价差不是无风险套利保证。</p>
+<h2>原油与成品油的横截面：品质、规格、运输、地区与期限结构</h2>
+<p>同一桶油在炼厂门口、交割库、码头和期货到期日并不是同一个价格。下面五节把“品种”拆成五个横截面：原油品质、成品规格、运输方式、地区交割和期限结构。五个横截面各有自己的计价单位和失效条件，不能合并成一个“油价”。</p>
+<h3>原油品质：密度、含硫量与基准</h3>
+<p>原油品质通常用两个维度描述：密度与含硫量。EIA 的炼厂投入定义把 API 度写成表示液体石油产品比重的刻度，密度越低、API 度越高；同一页把 API 度高于 38 的称为轻质、22 及以下的称为重质、22 至 38 之间的称为中间质[7]。EIA 的另一页则用低于 1% 硫为甜油、高于 1% 为酸油，并把 35 度以上称轻质、25 度以下称重质[8]。两页阈值并不完全一致，这说明品质标签是统计口径或合约口径，不是自然常数；引用时必须连同来源和合约一起写。</p>
+<p>品质影响炼厂价值，而不是直接决定桶价。轻质低硫原油更容易产出汽油和馏分油，重质含硫原油需要焦化、裂化和加氢等装置，加工成本更高，因此前者通常相对后者有溢价[8]。WTI、Brent 与 Dubai 是三个常用基准：WTI 在库欣交割，Brent 是北海一揽子，Dubai 偏中质含硫；世界银行 Pink Sheet 以美元/桶发布三者月度均价，并把三者等权平均称为“原油平均”[3]。基准不是某一船货的成交价，而是用来给其他等级定升贴水的参照。</p>
+<p>教学算例：假设基准 80 美元/桶，某重质含硫等级因为额外加工成本与收率损失折价 12 美元，报价 68 美元。没有焦化装置的炼厂买下这船折价油，未必能赚到 12 美元，因为它无法把重质组分转成高价值产品；折价是对装置能力的补偿，不是免费套利。反过来，拥有复杂装置的炼厂在重质折价走阔时利润可能改善，但还要看开工率、氢气和焦炭价格。</p>
+<p>边界有三条。第一，API 度与含硫量不是全部：金属、酸值、蜡含量、倾点和低温流动性都会影响可加工性，单看“轻甜”会漏掉这些约束。第二，基准品质是合约可交割范围，不是全产区平均；同一名称的 WTI 可以是一篮子符合规格的轻甜原油，Brent 也是一揽子而非单一油田。第三，品质价差会因装置开工、检修、制裁和运费而反向，不能把历史均值当成下限。</p>
+<h3>成品油规格：辛烷值、蒸气压与硫含量</h3>
+<p>成品油不是“从原油蒸馏出来就能卖”的单一商品。汽油由多种调合组分在终端调合，零售按辛烷值分为常规、中级和高级；同一等级还要按地区和季节满足不同配方[9]。美国夏季汽油的雷德蒸气压（RVP）联邦上限为 9.0 psi，臭氧超标地区更严，分别为 7.8、7.4 甚至 7.0 psi；冬季则允许更高蒸气压，帮助冷启动[9][11]。硫含量方面，美国 2017 年起对汽油实行平均 10 ppm 的 Tier 3 限值，单批允许短时高于平均值，但年度平均必须达标[10]。</p>
+<p>机制在于调合池的取舍。丁烷便宜、辛烷值不低，但蒸气压高，夏季配方会限制其用量；炼厂要用烷基化油、重整油等更贵的组分替代，因此夏季汽油成本更高[11]。冬季配方可以多放丁烷和轻组分，成本下降，但蒸发排放上升。柴油和航空煤油又是另一套规格：柴油看十六烷值、硫含量和低温流动性，航煤看冰点、闪点和杂质；它们不能拿汽油的辛烷值去比较。</p>
+<p>教学算例：假设一桶调合池的丁烷上限从 8% 降到 2%，每减少 1 个百分点需要补入成本高 6 美分/加仑的烷基化油，那么 6 个百分点的替代至少增加 36 美分/加仑的调合成本；实际还要看辛烷值缺口和乙醇价格。这个数字是教学假设，不是某家炼厂的报表。</p>
+<p>边界：辛烷值衡量抗爆性，不等同于热值或续航；高标号汽油不会自动让普通车更省油。RVP 限值是区域环保规则，不是全球统一标准；同一季节不同州、不同国家的配方可能不同。夏季/冬季切换有库存和物流过渡期，批次日期的合规判断要看监管日历，不能只看气温。</p>
+<h3>运输：管道、油轮、铁路与运费</h3>
+<p>原油从井口到炼厂，运输方式决定谁能在哪个市场报价。管道适合大批量、稳定流向，通常按长期运输协议和最低运量分摊固定成本；油轮适合跨海，运费随航线、船型、燃油、保险和港口拥堵变化；铁路把内陆产区接到沿海炼厂，但单位成本高、装卸环节多；卡车只承担短途和终端配送。</p>
+<p>EIA 指出，炼厂投资决策常受运输成本影响：墨西哥湾炼厂多加工重质墨西哥和南美原油，东海岸炼厂多加工较轻的大西洋盆地原油，因为把重质油运到东海岸并不经济[8]。铁路曾经填补管道不足：美国原油铁路运量在 2014 年 10 月达到 92.8 万桶/日的峰值，随后随着管道投产和价差收窄而下降[12]。这说明运输方式不是静态菜单，而是由价差、管道容量和合同共同决定的。</p>
+<p>教学算例：假设 10 万桶原油，管道运费 2 美元/桶，铁路 8 美元/桶，油轮 3 美元/桶加港口费 0.5 美元/桶。管道总运费 20 万美元，铁路 80 万美元，油轮 35 万美元；如果管道已满、只能铁路，炼厂的到厂成本立刻高出 60 万美元，相当于每桶多 6 美元。这个差额会直接改变它愿意支付的井口价格。</p>
+<p>边界：报价里的“运费”通常不含滞期费、保险、港口费、洗舱费和品质调整；这些附加项足以改变套利是否成立。管道容量是长期合约和监管审批的结果，不能按现货价格瞬间增加；油轮航线受地缘、运河、天气和制裁影响，绕行会把“到岸成本”推高。运输成本还是沉没成本与机会成本的混合，不能简单按每桶平均分摊。</p>
+<h3>地区价差：基准、交割地与可交割品</h3>
+<p>地区价差不是同一个商品在两个地方随便减出来的数字，而是三个部件的组合：基准价格、品质升贴水和地点/时间价差。WTI 的报价点是库欣，Brent 是北海装船的一揽子，Dubai 是中东含硫原油的参照；Pink Sheet 把三者并列，是为了给全球原油提供一个可比的月度口径，而不是说三者在同一地点可互换[3]。EIA 也提醒，轻质与重质、低硫与含硫之间的价差会随供应结构变化而收窄或走阔[8]。</p>
+<p>机制上，区域库存、管道能力、炼厂检修和出口限制共同决定基差。内陆产区如果管道外输能力不足，当地井口价可能相对沿海基准大幅折价；管道投产或出口窗口打开后，折价收窄。铁路和油轮的存在给产区一个“逃逸阀”，但逃逸阀的运费就构成折价的下限[12]。反过来，沿海炼厂如果只能加工轻质低硫原油，重质折价对它没有价值，因为它缺少把重质油转化为轻质产品的装置[8]。</p>
+<p>教学算例：假设 WTI 80 美元/桶、Brent 84 美元/桶、Dubai 78 美元/桶。某内陆重质含硫原油相对 WTI 折价 12 美元，报价 68 美元；如果管道检修使外输能力下降，折价扩大到 18 美元，报价 62 美元。此时拥有焦化装置的炼厂可能增加采购，而没有装置的炼厂仍不会买。价差扩大不是“市场错价”，而是地点和品质约束在报价。</p>
+<p>边界：WTI 不是“德州所有原油”，Brent 不是“布伦特油田一个点”，Dubai 也不是“所有中东原油”；它们都是评估或合约的一揽子。基准价差不是无风险套利：把一船油从 A 地运到 B 地要付运费、保险、损耗和融资，还要满足 B 地的品质规格。期货可以现金结算，实物交割又受港口、储罐和检验约束，金融价格与可交割实物价格不能随意互换。</p>
+<h3>期限结构与季节：近月、远月与裂解价差</h3>
+<p>期货曲线把同一品种不同到期日的价格排开。近月低于远月叫 contango，近月高于远月叫 backwardation；EIA 把后者解释为近端供应紧张、市场愿意为“现在就能拿到”的桶支付溢价，前者则反映储存、资金和不确定性把远月价格推高[13]。曲线形状不是价格预测，而是当下库存、运费、储存成本和便利收益的合成。</p>
+<p>季节通过产品规格和需求进入曲线。汽油在夏季面临更低的 RVP 和更高的调合成本，冬季则相反；取暖油和柴油在冷季需求上升；天然气在冷季取暖、热季发电，储气库把两个季节连接起来。对炼厂而言，裂解价差是成品价值减去原油成本与加工成本；价差走阔可能来自产品短缺，也可能来自原油下跌，二者对炼厂利润的含义不同。</p>
+<p>教学算例：假设原油 80 美元/桶，储存加资金成本 1.2 美元/桶/月，六个月持有成本 7.2 美元；完全 carry 的六个月期货应在 87.2 美元。如果市场只报 84 美元，contango 只有 4 美元，低于持有成本，单纯买近月、卖远月并储油就会亏钱，除非持有者能从“随时可提货”的便利收益中补回差额。裂解价差算例：2 桶原油 160 美元，汽油 95 美元、柴油 105 美元，成品收入 200 美元，毛裂解价差 40 美元/2 桶即 20 美元/桶；若原油涨到 90 美元而成品价格不变，价差降到 10 美元/桶。以上均为教学假设。</p>
+<p>边界：contango 不等于“未来一定涨”，backwardation 不等于“未来一定跌”；曲线可以因为储存瓶颈、运费、制裁或合约交割规则而扭曲。季节形态因地区、天气和库存而异，不能把美国汽油的夏季规格套到别国。期货有到期日和展期，展期收益不是现货涨幅；裂解价差是毛利指标，不是炼厂净利润，未计加工、运费、税费和库存估值。</p>
+<h2>图表</h2>
+<figure>
+  <svg role="img" aria-labelledby="fig-mkt-013-chain-title fig-mkt-013-chain-desc" viewBox="0 0 560 310" width="100%">
+    <title id="fig-mkt-013-chain-title">原油与成品油：三段判断链</title>
+    <desc id="fig-mkt-013-chain-desc">原油：品质、硫含量与运输；成品：汽油、柴油、航煤与化工品；裂解价差：成品价值减原料与加工成本</desc>
+    <rect x="0.5" y="0.5" width="559" height="309" rx="12" fill="var(--surface)" stroke="var(--border)"/>
+    <rect x="24" y="16" width="512" height="86" rx="10" fill="var(--surface-2)" stroke="var(--border)" stroke-width="1"/>
+    <rect x="24" y="16" width="5" height="86" rx="2.5" fill="var(--accent)"/>
+    <text x="44" y="35" font-size="9.5" letter-spacing="1.1" fill="var(--accent)" font-family="inherit">起点</text>
+    <text x="44" y="56" font-size="13" font-weight="650" fill="var(--text)" font-family="inherit">原油</text>
+    <text x="44" y="76" font-size="10.5" fill="var(--secondary)" font-family="inherit">品质、硫含量与运输</text>
+    <line x1="280" y1="102" x2="280" y2="108" stroke="var(--border)" stroke-width="1.5"/>
+    <path d="M276 106 L280 110 L284 106" fill="none" stroke="var(--border)" stroke-width="1.5"/>
+    <rect x="24" y="112" width="512" height="86" rx="10" fill="var(--surface-2)" stroke="var(--border)" stroke-width="1"/>
+    <rect x="24" y="112" width="5" height="86" rx="2.5" fill="var(--accent)"/>
+    <text x="44" y="131" font-size="9.5" letter-spacing="1.1" fill="var(--accent)" font-family="inherit">机制</text>
+    <text x="44" y="152" font-size="13" font-weight="650" fill="var(--text)" font-family="inherit">成品</text>
+    <text x="44" y="172" font-size="10.5" fill="var(--secondary)" font-family="inherit">汽油、柴油、航煤与化工品</text>
+    <line x1="280" y1="198" x2="280" y2="204" stroke="var(--border)" stroke-width="1.5"/>
+    <path d="M276 202 L280 206 L284 202" fill="none" stroke="var(--border)" stroke-width="1.5"/>
+    <rect x="24" y="208" width="512" height="86" rx="10" fill="var(--surface-2)" stroke="var(--border)" stroke-width="1"/>
+    <rect x="24" y="208" width="5" height="86" rx="2.5" fill="var(--accent)"/>
+    <text x="44" y="227" font-size="9.5" letter-spacing="1.1" fill="var(--accent)" font-family="inherit">判断</text>
+    <text x="44" y="248" font-size="13" font-weight="650" fill="var(--text)" font-family="inherit">裂解价差</text>
+    <text x="44" y="268" font-size="10.5" fill="var(--secondary)" font-family="inherit">成品价值减原料与加工成本</text>
+  </svg>
+  <figcaption>图 1：原油与成品油的三段判断链——原油 → 成品 → 裂解价差。三段是判断链，不是唯一路径；图中文字取自本文正文，不含统计数据。样本为本文论证，单位为文中标注。</figcaption>
+</figure>
+
+<!-- kp-supplement:start -->
+<h2>知识点精读</h2>
+<h3>原油</h3>
+<p><strong>定义</strong>：原油是未精炼的石油，按密度和含硫量分级，WTI 和 Brent 是主要基准。</p>
+<p><strong>机制</strong>：价格受 OPEC+ 产量、页岩供给、库存、地缘冲突和需求影响；品质、地点和运输决定基准价差。</p>
+<p><strong>例子</strong>：例如布伦特原油作为欧洲基准，WTI 交割库位于库欣，二者价差反映运输和出口约束。</p>
+<p><strong>边界</strong>：原油不是统一商品；不同品质和地点不可直接交割，金融化、政治和投资不足会放大波动，长期需求还受能源转型影响。</p>
+<h3>成品油</h3>
+<p><strong>定义</strong>：成品油是原油炼制成的汽油、柴油、航煤和燃料油，质量和用途决定规格与市场。</p>
+<p><strong>机制</strong>：炼厂利润由成品油价格减原油成本决定，crack spread 反映裂解经济；季节、规格和环保政策影响需求。</p>
+<p><strong>例子</strong>：例如夏季汽油需求上升，冬季取暖油需求上升，炼厂按利润调整产出。</p>
+<p><strong>边界</strong>：成品油不是原油的简单加价；炼能、规格切换、库存和区域短缺会造成非线性和价差，环保政策也会改变长期需求。</p>
+<h3>天然气</h3>
+<p><strong>定义</strong>：天然气是甲烷为主的化石燃料，通过管道、液化或压缩运输，用于发电、供暖和工业。</p>
+<p><strong>机制</strong>：价格受天气、库存、管道容量、LNG 出口和替代能源影响；区域市场分割，Henry Hub、TTF 和 JKM 是主要基准。</p>
+<p><strong>例子</strong>：例如寒冬提高供暖需求，管道瓶颈使产地价格远低于消费地。</p>
+<p><strong>边界</strong>：天然气不是全球统一市场；运输基础设施和合同长期锁定造成区域价差，天气和储气会放大波动，甲烷泄漏和环保约束也影响需求。</p>
+<h3>LNG</h3>
+<p><strong>定义</strong>：LNG 是把天然气冷却液化以便海运的形态，需液化厂、运输船和再气化终端。</p>
+<p><strong>机制</strong>：LNG 贸易由长期 take-or-pay 合同和现货市场组成；液化成本、运费、船期和再气化能力决定到岸价。</p>
+<p><strong>例子</strong>：例如卡塔尔或美国 LNG 运往亚洲，价格挂钩油价或亨利港，再加运费和再气化。</p>
+<p><strong>边界</strong>：LNG 不是普通商品；项目资本密集、合同长期、船运和终端受限，现货流动性有限，地缘冲突和极端天气会造成短缺。</p>
+<h3>煤</h3>
+<p><strong>定义</strong>：煤是用于发电和炼钢的固体化石燃料，分为动力煤和焦煤，按热值、灰分和硫分分级。</p>
+<p><strong>机制</strong>：需求受电力、钢铁、天气和替代能源影响；铁路、港口和进口政策决定可得性，碳排放和环保约束影响长期需求。</p>
+<p><strong>例子</strong>：例如中国和印度火电需求支撑动力煤，钢铁周期影响焦煤。</p>
+<p><strong>边界</strong>：煤不是单一品种；品质、运输和环保成本造成地区价差，能源转型和政策会使需求骤降，矿山投资和关停也有长周期。</p>
+<h3>电力</h3>
+<p><strong>定义</strong>：电力是二次能源，通过电网实时平衡发电和负荷，按时间、地点和可靠性定价。</p>
+<p><strong>机制</strong>：电力不可大规模储存，调度按边际成本排序，峰谷、容量、备用和输配成本决定价格；可再生占比提高增加波动。</p>
+<p><strong>例子</strong>：例如中午光伏出力高时电价低，傍晚负荷高峰电价高；容量市场补偿可靠性。</p>
+<p><strong>边界</strong>：电力不是普通商品；电网约束、监管定价和实时平衡使其高度区域化，极端天气和燃料价格会造成尖峰，零售价格常受管制。</p>
+<h3>核燃料；储存</h3>
+<p><strong>定义</strong>：核燃料是用于核反应堆的铀产品，储存则把核燃料和商品库存放在受控设施，二者都影响供应连续性和成本。</p>
+<p><strong>机制</strong>：核燃料供应链长、认证严格，铀价、浓缩、组件和反应堆许可决定成本；储存通过库存、仓容、保险和融资影响期货曲线和基差。</p>
+<p><strong>例子</strong>：例如电力企业签订多年铀合同并按换料周期储备，原油库存上升则近月价格低于远月，储油商可买近卖远。</p>
+<p><strong>边界</strong>：核燃料和储存都不是普通商品；核燃料供应集中、监管严格，储存受库容、损耗、安全和融资限制，事故和物流瓶颈会改变市场。</p>
+<h3>运输</h3>
+<p><strong>定义</strong>：运输是把商品从产地移到消费地，包括管道、铁路、卡车、船舶和港口，成本与容量影响地区价差。</p>
+<p><strong>机制</strong>：运费、保险、装卸、航线和拥堵决定到岸成本；船型、管道协议和港口能力造成瓶颈，地缘冲突可改变路线。</p>
+<p><strong>例子</strong>：例如油轮运费飙升会使远距离原油价差扩大，管道瓶颈使产地折价。</p>
+<p><strong>边界</strong>：运输不是背景成本；封锁、制裁、港口罢工和天气会中断供应链，运费波动大，运输资产也有长周期和环保约束。</p>
+<h3>地区</h3>
+<p><strong>定义</strong>：地区是商品交割、消费和生产的地理范围，地区价差反映运输、品质、库存、政策和当地供需。</p>
+<p><strong>机制</strong>：同一商品在不同地区不能自由套利，管道、港口、铁路和关税造成分割；地区升贴水和基准价决定到岸成本。</p>
+<p><strong>例子</strong>：例如天然气产地价格低于消费地，原油品级和运输成本造成不同地区价格。</p>
+<p><strong>边界</strong>：地区不是简单地理标签；运输瓶颈、管制、天气和断供会使价差脱节，地区市场也可能被垄断和补贴扭曲，历史价差不一定回归。</p>
+<h3>季节与价格结构</h3>
+<p><strong>定义</strong>：季节是天气、收储、节气和需求周期造成的规律性变化，价格结构是不同月份、品质和地点的价格关系。</p>
+<p><strong>机制</strong>：季节影响库存和供需，期货曲线通过 contango 或 backwardation 反映储存和稀缺；品质升贴水和基差构成完整价格结构。</p>
+<p><strong>例子</strong>：例如冬季取暖需求推高天然气，农产品收储季压低现货，原油近远月价差反映库存压力。</p>
+<p><strong>边界</strong>：季节和结构不是固定规律；天气异常、政策、技术和贸易会改变模式，曲线可因逼仓和断供扭曲，历史季节性也会失效。</p>
+<!-- kp-supplement:end -->
+
+<h2>关联</h2>
+<ul>
+<li>必需先修：资产与工具的区别（MKT-001）。</li>
+<li>相关与推荐阅读：资产与工具的区别（MKT-001）、天然气与电力市场（MKT-014）。</li>
+</ul>
+<h2>图解</h2>
+<p>下面三张图分别检查本文的机制、边界与对照；图内文字取自本文小节，不是新数据。</p>
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-chain-title fig-batch-chain-desc" viewBox="0 0 340 304" width="100%">
+    <title id="fig-batch-chain-title">原油与成品油：机制链</title>
+    <desc id="fig-batch-chain-desc">原油与成品油 的三段结构：问题、机制、判断。图内文字取自本文小节，不是新的数据估计。</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">原油与成品油：机制链</text>
+    <text x="14" y="38" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">图内文字取自本文小节；三段缺一不可。</text>
+    <line x1="14" y1="46" x2="326" y2="46" stroke="var(--border)" stroke-width="1"/>
+    <g>
+      <rect x="14" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="22" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">问题</text>
+      <text x="22" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">原油是炼厂原料，成品</text>
+      <text x="22" y="102" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">油是炼厂产出；原油期…</text>
+      <text x="22" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">原油是炼厂原料，成</text>
+      <text x="22" y="141" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">品油是炼厂产出；原</text>
+      <text x="22" y="158" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">油期货、成品油期货</text>
+      <text x="22" y="175" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">与炼油利润对应不同</text>
+      <text x="22" y="192" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">的权利和现金流。</text>
+    </g>
+      <g>
+      <rect x="123" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="131" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">产品定义</text>
+      <text x="131" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">产品定义：原油是烃类</text>
+      <text x="131" y="102" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">混合物，业内按密度与…</text>
+      <text x="131" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">产品定义：原油是烃</text>
+      <text x="131" y="141" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">类混合物，业内按密</text>
+      <text x="131" y="158" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">度与含硫量分级：EI</text>
+      <text x="131" y="175" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">A 术语表把 API</text>
+      <text x="131" y="192" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">度（API gravity）…</text>
+    </g>
+      <g>
+      <rect x="232" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="240" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">成本与风险</text>
+      <text x="240" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">成本包括品质升贴水、</text>
+      <text x="240" y="102" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">运费、炼厂加工、融资…</text>
+      <text x="240" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">成本包括品质升贴水</text>
+      <text x="240" y="141" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">、运费、炼厂加工、</text>
+      <text x="240" y="158" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">融资、保证金、展期</text>
+      <text x="240" y="175" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">和税费。风险包括价</text>
+      <text x="240" y="192" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">格不同步、炼油利润…</text>
+    </g>
+    <line x1="108" y1="144" x2="123" y2="144" stroke="var(--border)" stroke-width="1.1"/>
+    <path d="M120 140 L125 144 L120 148" fill="none" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="217" y1="144" x2="232" y2="144" stroke="var(--border)" stroke-width="1.1"/>
+    <path d="M229 140 L234 144 L229 148" fill="none" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="14" y1="250" x2="326" y2="250" stroke="var(--border)" stroke-width="1"/>
+    <text x="14" y="266" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">读法：先看问题能否成立，再看机制能否连通，最后看判断会不会越界。</text>
+    <text x="14" y="280" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">若中间一步缺证据，后面的结论只能当假设，不能当事实。</text>
+    <text x="14" y="294" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">图为结构示意，不是新的数据图；样本为本文论证。</text>
+  </svg>
+  <figcaption>图 2：原油与成品油的机制链：从问题、机制到判断。样本为本文论证，单位为文中标注。</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-boundary-title fig-batch-boundary-desc" viewBox="0 0 340 244" width="100%">
+    <title id="fig-batch-boundary-title">原油与成品油：适用边界</title>
+    <desc id="fig-batch-boundary-desc">把成立条件与失效条件分开；局部例子不能自动推广到所有情形。</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">原油与成品油：什么情况下成立？</text>
+    <line x1="14" y1="34" x2="326" y2="34" stroke="var(--border)" stroke-width="1"/>
+    <rect x="14" y="44" width="312" height="38" rx="7" fill="var(--surface-2)" stroke="var(--border)"/>
+    <text x="170" y="62" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="middle">先检查条件，再看结论</text>
+    <text x="170" y="75" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="middle">条件、口径或样本一变，结论可能要重算</text>
+    <line x1="170" y1="82" x2="90" y2="104" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="170" y1="82" x2="250" y2="104" stroke="var(--border)" stroke-width="1.1"/>
+    <rect x="14" y="104" width="148" height="100" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+    <text x="24" y="122" font-size="8.6" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">成立</text>
+    <text x="24" y="138" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">成本包括品质升贴水、运费、炼厂加</text>
+      <text x="24" y="154" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">工、融资、保证金、展期和税费。风</text>
+      <text x="24" y="170" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">险包括价格不同步、炼油利润收窄、</text>
+      <text x="24" y="186" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">地缘冲突、炼厂事故、运费变化、品…</text>
+    <rect x="178" y="104" width="148" height="100" rx="8" fill="var(--gold)" opacity="0.18" stroke="var(--border)"/>
+    <text x="188" y="122" font-size="8.6" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">不成立 / 需改写</text>
+    <text x="188" y="138" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">| 产品 | 法律权利 | 现金流 |</text>
+      <text x="188" y="154" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">主要风险 | | --- | --- | ---</text>
+      <text x="188" y="170" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">| --- | | 实物原油 |</text>
+      <text x="188" y="186" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">所有权和提取权 | 货款、运费、仓…</text>
+    <line x1="14" y1="216" x2="326" y2="216" stroke="var(--border)" stroke-width="1"/>
+    <text x="14" y="232" font-size="8.3" fill="var(--muted)" font-family="inherit" text-anchor="start">图为边界示意；样本为本文论证，单位为文中标注。</text>
+  </svg>
+  <figcaption>图 3：原油与成品油的边界：哪些条件成立，哪些条件失效。样本为本文论证，单位为文中标注。</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-compare-title fig-batch-compare-desc" viewBox="0 0 340 252" width="100%">
+    <title id="fig-batch-compare-title">原油与成品油：对象、前提与常见误区</title>
+    <desc id="fig-batch-compare-desc">三行比较本文概念、成立条件与常见误区；比较不等于等价，也不能替代定义。</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">原油与成品油：一张表看对象、前提与误区</text>
+    <line x1="14" y1="34" x2="326" y2="34" stroke="var(--border)" stroke-width="1"/>
+    <text x="82" y="46" font-size="8.4" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">本篇</text>
+    <text x="200" y="46" font-size="8.4" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">容易混淆</text>
+    <g>
+      <rect x="14" y="52" width="312" height="58" fill="transparent" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="72" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">对象</text>
+      <text x="82" y="72" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">原油是炼厂原料，成品油是</text>
+      <text x="82" y="88" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">炼厂产出；原油期货、成品…</text>
+      <text x="200" y="72" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">相邻概念/常见说法</text>
+    </g>
+    <g>
+      <rect x="14" y="110" width="312" height="58" fill="var(--surface-2)" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="130" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">前提</text>
+      <text x="82" y="130" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">成本包括品质升贴水、运费</text>
+      <text x="82" y="146" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">、炼厂加工、融资、保证金…</text>
+      <text x="200" y="130" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">| 产品 | 法律权利 | 现金流 |</text>
+      <text x="200" y="146" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">主要风险 | | --- | --- | --- |…</text>
+    </g>
+    <g>
+      <rect x="14" y="168" width="312" height="58" fill="transparent" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="188" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">检查</text>
+      <text x="82" y="188" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">先定义，再比较；不能只看</text>
+      <text x="82" y="204" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">名称</text>
+      <text x="200" y="188" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">相关不等于因果，局部不等于普遍</text>
+    </g>
+    <text x="14" y="244" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">图为比较示意；样本为本文论证，单位为文中标注。</text>
+  </svg>
+  <figcaption>图 4：原油与成品油的对象、前提与常见误区比较。样本为本文论证，单位为文中标注。</figcaption>
+</figure>
+
+<h2>练习</h2>
+<ol>
+<li><strong>产量换算。</strong> 一桶 42 加仑原油约产出多少成品油？汽油和中间馏分各多少？</li>
+<li><strong>合约计算。</strong> 假设 Brent 为 80 美元/桶，计算 1,000 桶合约的名义价值和 0.01 美元/桶变动对应的每手金额。</li>
+<li><strong>裂解价差。</strong> 假设 2 桶原油成本 160 美元，产出汽油 95 美元和柴油 105 美元，计算简单裂解价差。</li>
+<li><strong>零售价构成。</strong> EIA 把美国汽油零售价分为哪四个部分？联邦机动车汽油税是多少？</li>
+<li><strong>适用条件。</strong> 什么情况下用裂解价差对冲炼油利润会失效？写出一条可反驳条件。</li>
+</ol>
+<details>
+<summary>参考答案</summary>
+
+<ol>
+<li>约 45 加仑；汽油约 19–20 加仑，中间馏分约 11–13 加仑。加工增益和产品结构随炼厂变化。</li>
+<li>名义价值 1,000×80＝80,000 美元；0.01 美元/桶变动对应 10 美元/手。此为假设价格，未计费用和保证金。</li>
+<li>收入 95＋105＝200 美元；裂解价差 200－160＝40 美元/2 桶，即 20 美元/桶。此为简化示例，未计炼厂成本和运费。</li>
+<li>原油成本、税、炼油成本与利润、分销与营销；联邦机动车汽油税为 18.40 美分/加仑。</li>
+<li>当价差走阔并非来自炼油毛利，而是一侧原料或成品库存估值、运费或税率变化时，对冲就失效；可反驳条件例如：同期炼油毛利与价差背离，或价差扩大但开工率下降。</li>
+</ol>
+</details>
+
+<h2>来源</h2>
+<ol>
+<li>U.S. Energy Information Administration. “Refining crude oil.” <a href="https://www.eia.gov/energyexplained/oil-and-petroleum-products/refining-crude-oil.php">https://www.eia.gov/energyexplained/oil-and-petroleum-products/refining-crude-oil.php</a>（访问日期：2026-11-05）</li>
+<li>Intercontinental Exchange. “Brent Crude Futures.” <a href="https://www.ice.com/products/219/Brent-Crude-Futures">https://www.ice.com/products/219/Brent-Crude-Futures</a>（访问日期：2026-11-05）</li>
+<li>World Bank. “World Bank Commodities Price Data (The Pink Sheet), October 2026.” <a href="https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Pink-Sheet-October-2026.pdf">https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Pink-Sheet-October-2026.pdf</a>（访问日期：2026-10-30）</li>
+<li>U.S. Energy Information Administration. “Refining crude oil: inputs and outputs.” <a href="https://www.eia.gov/energyexplained/oil-and-petroleum-products/refining-crude-oil-inputs-and-outputs.php">https://www.eia.gov/energyexplained/oil-and-petroleum-products/refining-crude-oil-inputs-and-outputs.php</a>（访问日期：2026-11-05）</li>
+<li>U.S. Energy Information Administration. “Factors affecting gasoline prices.” <a href="https://www.eia.gov/energyexplained/gasoline/factors-affecting-gasoline-prices.php">https://www.eia.gov/energyexplained/gasoline/factors-affecting-gasoline-prices.php</a>（访问日期：2026-11-05）</li>
+<li>U.S. Energy Information Administration. “Glossary of terms.” <a href="https://www.eia.gov/tools/glossary/index.php">https://www.eia.gov/tools/glossary/index.php</a>（访问日期：2026-11-05）</li>
+<li>U.S. Energy Information Administration. “Table Definitions, Sources, and Explanatory Notes: Qualities of Crude Oil Input.” <a href="https://www.eia.gov/dnav/pet/tbldefs/pet_pnp_crq_tbldef2.asp">https://www.eia.gov/dnav/pet/tbldefs/pet_pnp_crq_tbldef2.asp</a>（访问日期：2026-11-24）</li>
+<li>U.S. Energy Information Administration. “Changing quality mix is affecting crude oil price differentials and refining decisions.” <a href="https://www.eia.gov/todayinenergy/detail.php?id=33012">https://www.eia.gov/todayinenergy/detail.php?id=33012</a>（访问日期：2026-11-24）</li>
+<li>U.S. Energy Information Administration. “What’s in your gasoline? Understanding U.S. motor gasoline formulations.” <a href="https://www.eia.gov/todayinenergy/detail.php?id=67464">https://www.eia.gov/todayinenergy/detail.php?id=67464</a>（访问日期：2026-11-24）</li>
+<li>U.S. Energy Information Administration. “Analysis of Gasoline Octane Costs.” <a href="https://www.eia.gov/analysis/octanestudy/pdf/phase1.pdf">https://www.eia.gov/analysis/octanestudy/pdf/phase1.pdf</a>（访问日期：2026-11-24）</li>
+<li>U.S. Energy Information Administration. “Date of switch to summer-grade gasoline approaches.” <a href="https://www.eia.gov/todayinenergy/detail.php?id=11031">https://www.eia.gov/todayinenergy/detail.php?id=11031</a>（访问日期：2026-11-24）</li>
+<li>U.S. Energy Information Administration. “Crude oil shipments by rail from Midwest to coastal regions decline.” <a href="https://www.eia.gov/todayinenergy/detail.php?id=25332">https://www.eia.gov/todayinenergy/detail.php?id=25332</a>（访问日期：2026-11-24）</li>
+<li>U.S. Energy Information Administration. “Oil futures price curve has steepened over the past six months.” <a href="https://www.eia.gov/todayinenergy/detail.php?id=13051">https://www.eia.gov/todayinenergy/detail.php?id=13051</a>（访问日期：2026-11-24）</li>
+</ol>
+ <section class="article-related-charts"> <h2>相关数据图</h2> <p>这几张图把本文的概念放到可核对的时间序列上；图内数字来自来源快照，不是本文的教学假设。</p> <ul> <li> <a href="https://51invest.com/charts/chart-006/"> 原油与库存 </a> </li> </ul> </section> <section class="article-demo" id="demo-check" data-demo="check" data-lang="zh" aria-labelledby="demo-check-title" data-check-done="三项都能说清：这篇的核心已经过关。" data-check-pending="还差一项：回到正文对应小节，找一个反例或数字再讲一遍。" data-check-count="已勾选"> <header class="demo-head"> <div class="demo-head-top"> <p class="demo-eyebrow">动手演示</p> <button class="demo-reset" type="button" data-demo-reset>恢复默认</button> </div> <h2 id="demo-check-title">读完自检：三句话能不能说清</h2> <p class="demo-intro">不用背定义。把下面三句逐个勾上，看自己能不能用自己的话讲清机制、算例和边界。</p> </header>          <div class="demo-check"> <ul class="demo-check-list"> <li> <label> <input type="checkbox" data-check-index="0"> <span>能区分原油作为炼厂原料与成品油作为产出的定价关系，并解释炼油利润的来源</span> </label> </li><li> <label> <input type="checkbox" data-check-index="1"> <span>能说明原油期货、成品油期货与炼油价差各自的现金流与风险</span> </label> </li><li> <label> <input type="checkbox" data-check-index="2"> <span>能说出一个本文结论不适用的条件</span> </label> </li> </ul> <p class="demo-check-status" data-out="checkStatus" role="status"> 已勾选 0 / 3
+</p> </div> <p class="demo-footnote">数字为教学假设，用来展示关系，不构成预测或投资建议。</p> </section><script type="module" src="/_astro/ArticleDemo.astro_astro_type_script_index_0_lang.C9VQAsQ0.js"></script> <p class="notice"> 本文已通过当前发布门槛；事实、计算与译文如有修订，会同步更新两个语言版本。 </p> <p> <a class="button secondary" href="/"> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class> <path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path>        </svg>返回分站 </a> </p> </div> <aside class="article-aside" aria-label="文章信息"> <section class="aside-card"> <h2>学习目标</h2> <ul> <li>能区分原油作为炼厂原料与成品油作为产出的定价关系，并解释炼油利润的来源</li><li>能说明原油期货、成品油期货与炼油价差各自的现金流与风险</li><li>能按 API 度、含硫量和交割地解释 WTI、Brent、Dubai 及地区价差，不把基准价差当成无风险套利。</li><li>能把成品油规格、运费和期限结构放回现金流，说明裂解价差与炼厂利润不是同一个数。</li> </ul> </section> <section class="aside-card"> <h2>必需先修</h2> <ul> <li> <a href="/learn/assets-vs-instruments/">MKT-001 · 资产与工具的区别</a> </li> </ul> </section> <section class="aside-card"> <h2>建议阅读</h2> <ul> <li> <a href="/learn/assets-vs-instruments/">MKT-001 · 资产与工具的区别</a> </li><li> <a href="/learn/natural-gas-and-electricity-markets/">MKT-014 · 天然气与电力市场</a> </li> </ul> </section> <section class="aside-card"> <h2>AI 复核记录</h2> <p class="muted"> 本项目没有真人签字；下列状态来自 AI-only 编辑复核。 </p> <ul> <li> 事实与计算 ：AI 复核通过 </li><li> 学科 ：AI 复核通过 </li><li> 英文 ：AI 复核通过 </li><li> 页面 ：AI 复核通过 </li> </ul> </section> <section class="aside-card"> <h2>来源</h2> <div class="source"> <a href="https://www.eia.gov/energyexplained/oil-and-petroleum-products/refining-crude-oil.php" rel="noopener noreferrer" target="_blank">Refining crude oil</a> <p>U.S. Energy Information Administration · U.S. Energy Information Administration</p> <p>访问：2026-11-05 · 许可：Public domain (U.S. Government work)</p> <p>支持论点：美国炼厂平均把一桶 42 加仑原油加工成汽油约 19 至 20 加仑、馏分油 11 至 13 加仑、航空煤油 3 至 5 加仑。 逐字（页面于 2026-11-05 取回，HTTP 200、76,776 字节，去标签文本 11,245 字符，缓存 docs/data-evidence/m013-eia-refin.txt；下列片段各出现 1 次）：“On average, U.S. refineries produce, from a 42-gallon barrel of crude oil:”、“About 19 to 20 gallons of motor gasoline”、“11 to 13 gallons of distillate fuel”、“3 to 5 gallons of jet fuel”。注记：本条此前登记在 oil-and-petroleum-products 章节根页（该页文本层没有这些句子），第 229 轮按取证把 URL 就地改到真正承载这些句子的 refining-crude-oil.php 子页，改动依据即上面的取回记录。</p> </div><div class="source"> <a href="https://www.ice.com/products/219/Brent-Crude-Futures" rel="noopener noreferrer" target="_blank">Brent Crude Futures</a> <p>Intercontinental Exchange · Intercontinental Exchange</p> <p>访问：2026-11-05 · 许可：Copyrighted; all rights reserved, no ownership granted to users (cite-only)</p> <p>支持论点：Brent 原油期货合约单位为 1,000 桶，以美元和美分计价，最小变动价位为每桶 1 美分（美元 $0.01），合约序列最长至 156 个连续月份，交割方式为 EFP、并可按 ICE Brent 指数现金结算。 逐字（2026-11-05 重新取回，HTTP 200、129,034 字节，去标签文本 4,297 字符，缓存 docs/data-evidence/m013-ice-brent.txt；各片段 1 次）：“Contract Size 1,000 barrels”、“Minimum Price Fluctuation One cent ($0.01) per barrel”、“Up to 156 consecutive months, or as otherwise determined by the Exchange”、“EFP delivery with an option to cash settle against the ICE Brent Index price”。这些取值取自交易所自己公布的产品规格页文本，本轮没有另取规则书 PDF；正文只写规格页写明的字段，“每手 10 美元”是由 1,000 桶 × 0.01 美元/桶 得到的换算，属本文计算。</p> </div><div class="source"> <a href="https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Pink-Sheet-October-2026.pdf" rel="noopener noreferrer" target="_blank">World Bank Commodities Price Data (The Pink Sheet), October 2026</a> <p>World Bank · World Bank</p> <p>访问：2026-10-30 · 许可：CC BY 4.0 (World Bank Dataset Terms of Use; attribution required)</p> <p>支持论点：Pink Sheet 以美元/桶发布 Brent、Dubai 和 WTI 的月度均价，并把“原油平均”定义为三者等权平均；这些是价格基准，不是某笔现货的成交价。</p> </div><div class="source"> <a href="https://www.eia.gov/energyexplained/oil-and-petroleum-products/refining-crude-oil-inputs-and-outputs.php" rel="noopener noreferrer" target="_blank">Refining crude oil: inputs and outputs</a> <p>U.S. Energy Information Administration · EIA</p> <p>访问：2026-11-05 · 许可：U.S. Government work (public domain), 17 U.S.C. §105</p> <p>支持论点：2023 年美国炼厂每加工一桶 42 加仑原油平均产出约 45 加仑成品油，加工增益约 6.3%，单一年份的产量表给出汽油 19.57、馏分油 12.47、航空煤油 4.41 加仑。 逐字（2026-11-05 取回，HTTP 200、81,613 字节，文本 13,627 字符，缓存 docs/data-evidence/m013-eia-io.txt；各片段 1 次）：“In 2023, U.S. refineries produced an average of about 45 gallons of refined products for every 42-gallon barrel of crude oil they refined.”、“processing gain at U.S. refineries was about 6.3% in 2023”、表题 “Petroleum products produced from one 42-gallon barrel of oil input at U.S. refineries, 2023”、行名 “Finished motor gasoline 19.57”、“Distillate fuel oil 12.47”、“Kerosene-type jet fuel 4.41”。区间句来自另一页（见来源 1），本页给的是 2023 年单一年份数值，两者口径不同不可互替。</p> </div><div class="source"> <a href="https://www.eia.gov/energyexplained/gasoline/factors-affecting-gasoline-prices.php" rel="noopener noreferrer" target="_blank">Factors affecting gasoline prices</a> <p>U.S. Energy Information Administration · EIA</p> <p>访问：2026-11-05 · 许可：U.S. Government work (public domain), 17 U.S.C. §105</p> <p>支持论点：美国加油站零售价由原油成本、税、炼油成本与利润、分销与营销四部分构成，联邦机动车汽油税为 18.40 美分/加仑。 逐字（2026-11-05 取回，HTTP 200、88,659 字节，文本 14,624 字符，缓存 docs/data-evidence/m013-eia-gasprice.txt；各片段 1 次）：“The retail price of gasoline includes”、“The federal tax on motor gasoline is 18.40 cents per gallon”。该页还把四部分份额画进图里，但在文本层里份额数字与四个行名交错，无法确认一一对应，本文因此不写各部份额，也不写该页未出现的“零售毛利”一词。</p> </div><div class="source"> <a href="https://www.eia.gov/tools/glossary/index.php" rel="noopener noreferrer" target="_blank">Glossary of terms</a> <p>U.S. Energy Information Administration · EIA</p> <p>访问：2026-11-05 · 许可：U.S. Government work (public domain), 17 U.S.C. §105</p> <p>支持论点：EIA 术语表把 API 度（API gravity）定义为美国石油学会用来表示原油或凝析油比重的刻度，即表达液体石油产品比重或密度的任意标度。 逐字（2026-11-05 取回，HTTP 200、95,000 字节，文本 38,087 字符，缓存 docs/data-evidence/m013-eia-gloss.txt；片段 1 次）：“API gravity: American Petroleum Institute measure of specific gravity of crude oil or condensate in degrees”。同一文本层里 sweet 与按含硫量分级的定义各 0 次，所以正文的“按含硫量分级”只作为本文的行业惯用表述保留，不挂来源。</p> </div><div class="source"> <a href="https://www.eia.gov/dnav/pet/tbldefs/pet_pnp_crq_tbldef2.asp" rel="noopener noreferrer" target="_blank">Table Definitions, Sources, and Explanatory Notes: Qualities of Crude Oil Input</a> <p>U.S. Energy Information Administration · U.S. Energy Information Administration</p> <p>访问：2026-11-24 · 许可：U.S. Government work (public domain), 17 U.S.C. §105</p> <p>支持论点：API 度是表示液体石油产品比重的刻度，数值越高越轻；轻质原油一般高于 38 度，重质原油一般为 22 度及以下，22 至 38 度为中间质；原油品质指含硫量与 API 度两项属性，影响加工复杂度和产品特性。</p> </div><div class="source"> <a href="https://www.eia.gov/todayinenergy/detail.php?id=33012" rel="noopener noreferrer" target="_blank">Changing quality mix is affecting crude oil price differentials and refining decisions</a> <p>U.S. Energy Information Administration · U.S. Energy Information Administration</p> <p>访问：2026-11-24 · 许可：U.S. Government work (public domain), 17 U.S.C. §105</p> <p>支持论点：EIA 把含硫量低于 1% 的原油定义为甜油、高于 1% 为酸油，并把 API 度低于 25 称为重质、高于 35 称为轻质；轻质原油通常比重质原油贵，因为加工成高价值产品所需处理更少；重质含硫原油需要焦化、裂化和加氢装置，装置复杂度影响炼厂利润。</p> </div><div class="source"> <a href="https://www.eia.gov/todayinenergy/detail.php?id=67464" rel="noopener noreferrer" target="_blank">What’s in your gasoline? Understanding U.S. motor gasoline formulations</a> <p>U.S. Energy Information Administration · U.S. Energy Information Administration</p> <p>访问：2026-11-24 · 许可：U.S. Government work (public domain), 17 U.S.C. §105</p> <p>支持论点：美国汽油分常规汽油与重配方汽油（reformulated gasoline）两类，并按辛烷值分常规、中级和高级；夏季汽油的 RVP 联邦上限为 9.0 psi，环保区更严，分别为 7.8、7.4 和 7.0 psi；夏季零售合规期为 6 月 1 日至 9 月 15 日，炼厂和批发商从 5 月 1 日开始；低 RVP 汽油需要更贵的调合组分，丁烷因高 RVP 在夏季受限。</p> </div><div class="source"> <a href="https://www.eia.gov/analysis/octanestudy/pdf/phase1.pdf" rel="noopener noreferrer" target="_blank">Analysis of Gasoline Octane Costs</a> <p>U.S. Energy Information Administration · U.S. Energy Information Administration</p> <p>访问：2026-11-24 · 许可：U.S. Government work (public domain), 17 U.S.C. §105</p> <p>支持论点：美国成品汽油须满足十多项规格，且随地区和季节变化；夏季汽油 RVP 在部分区域不超过 7.8 psi，其他区域不超过 9.0 psi；2017 年起 Tier 3 对汽油硫含量实行年均 10 ppm 限值，炼厂单批可短时高于均值。</p> </div><div class="source"> <a href="https://www.eia.gov/todayinenergy/detail.php?id=11031" rel="noopener noreferrer" target="_blank">Date of switch to summer-grade gasoline approaches</a> <p>U.S. Energy Information Administration · U.S. Energy Information Administration</p> <p>访问：2026-11-24 · 许可：U.S. Government work (public domain), 17 U.S.C. §105</p> <p>支持论点：夏季汽油蒸气压更低，以减少蒸发排放；炼厂生产夏季汽油比冬季汽油每加仑贵数美分；丁烷便宜且辛烷值不低，但高蒸气压限制其在夏季配方中的用量，冬季配方通常含更多丁烷。</p> </div><div class="source"> <a href="https://www.eia.gov/todayinenergy/detail.php?id=25332" rel="noopener noreferrer" target="_blank">Crude oil shipments by rail from Midwest to coastal regions decline</a> <p>U.S. Energy Information Administration · U.S. Energy Information Administration</p> <p>访问：2026-11-24 · 许可：U.S. Government work (public domain), 17 U.S.C. §105</p> <p>支持论点：美国原油铁路运量在 2014 年 10 月达到 92.8 万桶/日的峰值；随着管道投产和国内原油相对进口原油的价差收窄，铁路运量下降；铁路运输的经济性取决于产区折价与替代运输成本。</p> </div><div class="source"> <a href="https://www.eia.gov/todayinenergy/detail.php?id=13051" rel="noopener noreferrer" target="_blank">Oil futures price curve has steepened over the past six months</a> <p>U.S. Energy Information Administration · U.S. Energy Information Administration</p> <p>访问：2026-11-24 · 许可：U.S. Government work (public domain), 17 U.S.C. §105</p> <p>支持论点：近月价格高于远月叫 backwardation，远月高于近月叫 contango；储存成本、长期头寸的机会成本和不确定性会把远月价格推高；曲线形状反映当前供需与物流，不是未来价格的承诺。</p> </div> </section> </aside> </div> </article><script type="module">var e=document.querySelector(`[data-reading-progress] span`),t=document.querySelector(`article`);if(e&&t){let n=()=>{let n=t.offsetTop,r=t.offsetHeight-window.innerHeight,i=r>0?(window.scrollY-n)/r:0;e.style.width=`${Math.min(1,Math.max(0,i))*100}%`};window.addEventListener(`scroll`,n,{passive:!0}),window.addEventListener(`resize`,n),n()}</script>  </main> <footer class="site-footer"> <div class="container footer-inner"> <div class="footer-brand"> <span class="footer-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="28" height="28" alt class="mascot" loading="lazy" decoding="async"></span> <div> <strong>巫妖投资 51Invest</strong> <p class="footer-note">非商业免费知识站。每篇标出来源与口径；这里没有投资建议。</p> </div> </div> <nav class="footer-links" aria-label="知识分站"> <a href="https://51invest.com/" data-main-home>首页</a> <a href="https://51invest.com/contents/">内容地图</a> <a href="/glossary/">术语表</a> <a href="/search/">搜索</a> <a href="https://51invest.com/charts/" data-main-link>图表</a> <a href="https://51invest.com/sources/" data-main-link>数据与许可</a> <a href="/">分站首页</a> </nav> </div> </footer> <nav class="mobile-nav" aria-label="知识分站"> <a class="mobile-link" href="https://51invest.com/" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>    <path d="m3 10 9-7 9 7"></path><path d="M5 9v11h14V9"></path><path d="M9 20v-6h6v6"></path>     </svg> <span>首页</span> </a> <a class="mobile-link" href="https://51invest.com/#stations" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>   <rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect>      </svg> <span>知识分站</span> </a> <a class="mobile-link active" href="/" aria-current="page"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>  <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v18H6.5A2.5 2.5 0 0 1 4 18.5z"></path><path d="M4 18.5A2.5 2.5 0 0 1 6.5 16H20"></path>       </svg> <span>分站首页</span> </a> <a class="mobile-link" href="/en/learn/crude-oil-and-refined-products/" data-language-link="en"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>English</span> </a> </nav><script type="module">var e=document.documentElement,t=[`auto`,`light`,`dark`],n=matchMedia(`(prefers-color-scheme: dark)`),r=()=>{let t=e.dataset.themeMode;return t===`light`||t===`dark`?t:`auto`},i=e=>{try{localStorage.setItem(`51invest-theme`,e)}catch{}try{let t=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-theme=${e}; Path=/; Max-Age=31536000; SameSite=Lax${t}`}catch{}},a=e=>{document.querySelectorAll(`[data-theme-toggle]`).forEach(t=>{let n=t.dataset[`label${e[0].toUpperCase()}${e.slice(1)}`];n&&(t.setAttribute(`aria-label`,n),t.setAttribute(`title`,n))})},o=t=>{e.dataset.themeMode=t,e.dataset.theme=t===`auto`?n.matches?`dark`:`light`:t,i(t),a(t)};a(r()),document.querySelectorAll(`[data-theme-toggle]`).forEach(e=>{e.addEventListener(`click`,()=>{let e=t[(t.indexOf(r())+1)%t.length];o(e)})}),n.addEventListener(`change`,()=>{r()===`auto`&&(e.dataset.theme=n.matches?`dark`:`light`)}),document.querySelectorAll(`[data-language-link]`).forEach(e=>{e.addEventListener(`click`,()=>{let t=e.dataset.languageLink;if(t===`zh`||t===`en`){try{localStorage.setItem(`51invest-language`,JSON.stringify(t))}catch{}try{let e=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-language=${t}; Path=/; Max-Age=31536000; SameSite=Lax${e}`}catch{}}})});</script> </body> </html>

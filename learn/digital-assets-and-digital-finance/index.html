@@ -1,0 +1,367 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light" data-theme-mode="auto"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark"><title>数字资产与数字金融分类 · 巫妖投资</title><meta name="description" content="数字资产不是单一资产类别；代币、稳定币、DeFi 和央行数字货币的法律权利、托管与风险各不相同。"><link rel="canonical" href="https://markets.51invest.com/learn/digital-assets-and-digital-finance/"><link rel="alternate" hreflang="zh-CN" href="https://markets.51invest.com/learn/digital-assets-and-digital-finance/"><link rel="alternate" hreflang="en" href="https://markets.51invest.com/en/learn/digital-assets-and-digital-finance/"><link rel="alternate" hreflang="x-default" href="https://markets.51invest.com/learn/digital-assets-and-digital-finance/"><link rel="icon" type="image/png" href="/_astro/neutral.Dr5C2SoA.png"><script>
+  (() => {
+    const root = document.documentElement;
+    const readCookie = key => {
+      try {
+        return document.cookie.split('; ').find(value => value.startsWith(`51invest-${key}=`))?.split('=').slice(1).join('=') ?? null;
+      } catch {
+        return null;
+      }
+    };
+    const readLocal = key => {
+      try {
+        return localStorage.getItem(`51invest-${key}`);
+      } catch {
+        return null;
+      }
+    };
+    const storedTheme = readCookie('theme') || readLocal('theme');
+    const mode = ['light', 'dark', 'auto'].includes(storedTheme) ? storedTheme : 'auto';
+    const media = matchMedia('(prefers-color-scheme: dark)');
+    const apply = () => {
+      root.dataset.theme = mode === 'auto' ? (media.matches ? 'dark' : 'light') : mode;
+      root.dataset.themeMode = mode;
+    };
+    apply();
+    media.addEventListener('change', () => {
+      if (root.dataset.themeMode === 'auto') apply();
+    });
+  })();
+</script><link rel="stylesheet" href="/_astro/Base.CocbJOeh.css"></head> <body>  <a class="skip-link" href="#main">跳到正文</a> <header class="site-header"> <div class="container header-inner"> <a class="brand" href="https://51invest.com/" data-main-home aria-label="巫妖投资"> <span class="brand-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="36" height="36" alt class="mascot" loading="lazy" decoding="async"></span> <span class="brand-copy"> <span class="brand-name">巫妖投资</span> <span class="brand-caption">51INVEST</span> </span> </a> <nav class="desktop-nav" aria-label="知识分站"> <a class="nav-link" href="https://51invest.com/" data-main-home> 首页 </a> <a class="nav-link" href="https://economics.51invest.com/"> 经济学 </a><a class="nav-link" href="https://finance.51invest.com/"> 金融基础 </a><a class="nav-link active" href="/" aria-current="page"> 市场与产品 </a><a class="nav-link" href="https://invest.51invest.com/"> 投资方法 </a><a class="nav-link" href="https://history.51invest.com/"> 经济与金融史 </a><a class="nav-link" href="https://research.51invest.com/"> 研究方法 </a> <a class="nav-link" href="https://51invest.com/contents/"> 内容地图 </a> </nav> <div class="header-tools"> <a class="icon-button language-button" href="/en/learn/digital-assets-and-digital-finance/" hreflang="en" lang="en" data-language-link="en" aria-label="切换为英文" title="切换为英文"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>English</span> </a> <button class="icon-button theme-button" type="button" data-theme-toggle aria-label="主题: 跟随系统" title="主题: 跟随系统" data-label-auto="主题: 跟随系统" data-label-light="主题: 浅色" data-label-dark="主题: 深色"> <span class="theme-icon" data-theme-icon="auto"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>        <circle cx="12" cy="12" r="8.5"></circle><path d="M12 3.5v17"></path><path d="M12 7a5 5 0 0 1 0 10" fill="currentColor" stroke="none"></path> </svg></span> <span class="theme-icon" data-theme-icon="light"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>       <circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>  </svg></span> <span class="theme-icon" data-theme-icon="dark"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>      <path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"></path>   </svg></span> <span class="theme-text" data-theme-text="auto">跟随系统</span> <span class="theme-text" data-theme-text="light">浅色</span> <span class="theme-text" data-theme-text="dark">深色</span> </button> </div> </div> </header> <main id="main" class="site-main" data-pagefind-body>  <div class="reading-progress" data-reading-progress aria-hidden="true"><span></span></div> <div class="container"> <nav class="breadcrumbs" aria-label="Breadcrumb"> <a href="https://51invest.com/" data-main-home>首页</a> <span class="sep">/</span> <a href="/">市场与产品</a> <span class="sep">/</span> <span aria-current="page">数字资产与数字金融分类</span> </nav> </div> <article> <header class="article-header"> <div class="container"> <span class="article-type">产品与品种</span> <h1 class="article-title">数字资产与数字金融分类</h1> <p class="article-summary">数字资产不是单一资产类别；代币、稳定币、DeFi 和央行数字货币的法律权利、托管与风险各不相同。</p>  <div class="meta-grid"> <div class="meta-item"><span>模块</span><strong>MKT-M20 · 数字资产与数字金融</strong></div> <div class="meta-item"><span>层级</span><strong>入门</strong></div> <div class="meta-item"><span>阅读</span><strong>14 分钟 · 15 节</strong></div> </div> <p class="demo-jump"> <a href="#demo-check"> 这篇有一个可以动手操作的演示 <span aria-hidden="true">↓</span> </a> </p> </div> </header> <div class="container article-layout"> <div class="article-body"> <h2>产品定义</h2>
+<p>“数字资产”是法律和技术结构的集合，而不是一种同质资产。它可能包括加密代币、稳定币、代币化证券、去中心化金融（DeFi）协议中的头寸，以及央行数字货币（CBDC）。判断一个产品，需要看它代表什么权利、由谁发行或创设、如何托管、在哪个司法辖区适用何种规则，而不能只看“币”或“链”的名称（SEC；FSB）。</p>
+<h2>权利、托管与现金流</h2>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>持有人拥有什么</th>
+<th>现金流/用途</th>
+<th>主要风险</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>加密代币</td>
+<td>取决于协议与发行文件；可能没有债权或股权</td>
+<td>交易、治理或协议使用</td>
+<td>价格、欺诈、私钥、流动性</td>
+</tr>
+<tr>
+<td>稳定币</td>
+<td>对发行人的赎回主张或储备安排</td>
+<td>支付、结算或抵押</td>
+<td>储备、发行人信用、脱锚</td>
+</tr>
+<tr>
+<td>代币化证券</td>
+<td>对应证券或基金权益，受证券法约束</td>
+<td>股息、利息或赎回</td>
+<td>法律结构、托管、披露</td>
+</tr>
+<tr>
+<td>DeFi 头寸</td>
+<td>智能合约规定的权利</td>
+<td>借贷、交易或流动性提供</td>
+<td>合约漏洞、清算、对手方</td>
+</tr>
+<tr>
+<td>CBDC</td>
+<td>对中央银行的主张（本文概括，具体形态依设计而定）</td>
+<td>零售或批发支付</td>
+<td>隐私、运营、金融稳定</td>
+</tr>
+</tbody></table>
+<p>下表把该篇的安排按时间排开，金额栏用表达式或文件约定表示，不引用真实行情：</p>
+<table>
+<thead>
+<tr>
+<th>时间</th>
+<th>现金流</th>
+<th>金额</th>
+<th>币种</th>
+<th>不确定性</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>购买代币</td>
+<td>支付对价并取得链上记录</td>
+<td>数量 × 成交价 + 网络费</td>
+<td>计价币种与网络原生币种</td>
+<td>价格波动；私钥控制与否决定实际权利</td>
+</tr>
+<tr>
+<td>链上转账或交互</td>
+<td>支付网络使用费</td>
+<td>按当时的费率与计算量</td>
+<td>网络原生币种</td>
+<td>费率与确认时间在拥堵时剧烈变化</td>
+</tr>
+<tr>
+<td>使用 DeFi 协议头寸</td>
+<td>存入或取回资产，收取或支付协议收益</td>
+<td>按协议规则与池内比例</td>
+<td>相关资产币种</td>
+<td>合约风险、脱锚与清算条件由协议代码决定</td>
+</tr>
+<tr>
+<td>持有代币化证券</td>
+<td>收到对应证券的权利（股息、利息或赎回）</td>
+<td>按底层证券条款</td>
+<td>底层证券币种</td>
+<td>是否真的具备证券权利取决于法律结构与披露，链上记录本身不创设权利</td>
+</tr>
+<tr>
+<td>使用托管或交易所账户</td>
+<td>存入与提取，支付托管费</td>
+<td>托管费按协议；提现扣除网络费</td>
+<td>账户计价币种</td>
+<td>对手方风险、提取限额与暂停；账外负债不可见</td>
+</tr>
+<tr>
+<td>使用央行数字货币</td>
+<td>按设计进行零售或批发支付</td>
+<td>面值</td>
+<td>该法币</td>
+<td>隐私、运营与金融稳定设计因辖区而异，尚未定型的部分不能假定为已存在</td>
+</tr>
+</tbody></table>
+<p>加密代币不自动赋予股权、债权或本金保证；稳定币的“稳定”取决于储备、赎回机制和发行人信用；DeFi 协议的条款由智能合约和治理安排决定；CBDC 的设计选择会影响隐私、准入和金融稳定（BIS）。具体法律性质依司法辖区和产品文件而异。</p>
+<h2>托管与交易</h2>
+<p>数字资产可能由用户自托管（私钥由用户控制）或由交易所、托管人代持。自托管减少平台对手方风险，但私钥一旦丢失或被盗通常无法找回；平台托管则带来托管人信用风险，以及资产隔离、破产隔离和运营方面的不确定性。代币化证券仍可能触发证券托管与披露等监管要求；登记的 SEC 页面只写到监管适用取决于具体结构与事实[1]，结算层面的规则须按适用规则文本核对。跨境交易还可能涉及制裁、反洗钱和税务申报。</p>
+<h2>参与者与场所</h2>
+<p>本节是本文按结构整理，不引用行情或第三方数据。提供撮合与账户的是中心化交易平台，它们掌握账户与提取通道；提供结算的是链上协议或流动性池，条款写在代码里；持有环节可能由用户自托管，也可能由交易所、托管机构或遵循证券规则的存管机构代持；代币化证券还牵入发行人、基金管理人、审计与信息披露方。同一代币在不同场所流通时，可交易范围、可提取条件与适用法律都随场所改变，因此参与者和场所要连着看，不能只看资产名称。</p>
+<h2>交易、持有与退出</h2>
+<p>交易路径至少有三种：平台账户内撮合、场外双边成交、直接调用链上协议。持有阶段的差别在于能否取回——自托管取决于私钥与备份，平台托管取决于提取通道是否开放、有无限额或暂停，协议头寸还可能因清算或流动性枯竭而无法平仓。退出同样分三层：卖出换取法币或稳定币、按条款赎回（发行人与底层证券条款决定能否赎回）、或把资产转到自己控制的地址。结算时点、可提取时间与费用在这三条路径中各不相同，不能与传统的 T+1、T+2 安排直接类比；跨境退出还可能触发申报与限制。</p>
+<h2>例子（假设）</h2>
+<p>下面用一组假设数字把费用链条走完，币种记作元；数字不是行情，也不是任何产品的实际费率。买入 2 个单位、单价 50 元，名义金额 2 × 50 = 100 元；场所按 0.20% 收手续费 100 × 0.002 = 0.2 元，另有网络费 3 元，取得成本 100 + 0.2 + 3 = 103.2 元。之后按单价 45 元卖出这 2 个单位，名义金额 90 元，手续费 90 × 0.002 = 0.18 元、网络费仍为 3 元，实际到手 90 − 0.18 − 3 = 86.82 元。全程损失 103.2 − 86.82 = 16.38 元，其中费用合计 0.2 + 3 + 0.18 + 3 = 6.38 元，约占取得成本的 6.38 ÷ 103.2 ≈ 6.2%：价格只下跌 10%，费用与网络费仍把亏损放大。未计税、买卖价差与滑点；费率与网络费以具体场所和当时链上条件为准。</p>
+<h2>成本与风险</h2>
+<ul>
+<li>价格波动、流动性和买卖价差；</li>
+<li>智能合约漏洞、预言机失败和清算级联；</li>
+<li>稳定币储备不透明、脱锚和发行人信用；</li>
+<li>托管、私钥、诈骗和网络攻击；</li>
+<li>监管变化、税务和跨境合规；</li>
+<li>杠杆、质押和收益产品可能放大损失。</li>
+</ul>
+<p>“去中心化”不等于没有治理或对手方；“稳定币”不保证面值始终可兑付；“央行数字货币”也不等于现有银行存款。本文不构成法律、税务或投资建议。</p>
+<h2>条款与文件</h2>
+<p>本篇有意不写监管规则的生效年份与条款编号：这类规则修订频繁，写死年份会让正文先于规则失效。读者的核对路径是按篇名与发布机构找到现行文本，而不是引用本文的年份；本站对这类快速变化产品的表述按季度复核一次，复核只更新辖区与文件指向，不把任何辖区的规则当成已生效的定论（该约定属本文的编辑决定，2026-11-04 记录）。</p>
+<p>数字资产没有统一的&quot;发行文件&quot;概念，需要核对的文本随结构而变：代币或协议通常有白皮书与协议规则，托管或交易所账户有客户服务协议与披露，代币化证券还有底层证券的发行文件。SEC 指出，数字资产可能涉及证券法、托管、披露与欺诈风险，监管适用取决于具体结构和事实，不能只凭名称判断[1]。
+因此&quot;条款&quot;要从三层读：法律结构层（持有者是否取得债权、股权或其他可执行权利，以及向谁主张）、运营层（谁掌握密钥或私钥、能否取回、暂停与冻结果如何）、以及披露层（发行方或协议是否提供可核对的信息）。同一链上记录在不同结构下代表完全不同的权利，记录本身不创设权利。
+稳定币与跨境安排另有监管维度：FSB 在全球稳定币与加密资产框架下关注金融稳定、跨境监管与稳定币安排[2]。央行数字货币则取决于设计选择——BIS 说明其设计须不损害货币与金融稳定，并涉及运营、准入、隐私与跨境安排等决定[3]。这些是&quot;以文件与设计为准&quot;的具体含义：本文列出需要核对的项目，不替代任何辖区的规则文本或协议代码。</p>
+<h2>比较与边界</h2>
+<p>覆盖范围要说清边界：本篇处理加密代币、稳定币、代币化证券、DeFi 头寸与央行数字货币这几类结构，非同质化代币与去中心化自治组织不在本篇展开——前者是确权与收藏属性的问题，后者是治理与表决机制的问题，它们仍落在“同一链上记录可代表不同权利”这条主线之内，但需要各自的文本与合同核对，不能由本篇的分类直接推出结论。</p>
+<p>加密代币是协议或网络中的资产，稳定币试图把价值锚定到法币，代币化证券是传统证券的数字表示；按本文的工作定义，CBDC 是中央银行以数字形式承担的负债，其具体形态取决于设计。它们的法律权利、托管、结算和监管不同，不能因为都使用分布式账本就归为同一类。投资前应核对发行文件、托管安排、适用法律和赎回条件。</p>
+<p>本节的稳定与监管边界按两家机构的说法：FSB 指出加密资产市场与传统金融的联系增强后需关注金融稳定、跨境监管与全球稳定币风险；BIS 则说明央行数字货币的设计不得损害货币与金融稳定，并涉及运营、准入、隐私与跨境安排等选择[2][3]。</p>
+<h2>图表</h2>
+<figure>
+  <svg role="img" aria-labelledby="fig-digital-assets-and-digital-finance-title fig-digital-assets-and-digital-finance-desc" viewBox="0 0 470 422" width="100%">
+<title id="fig-digital-assets-and-digital-finance-title">数字资产与数字金融分类：概念对照</title>
+<desc id="fig-digital-assets-and-digital-finance-desc">加密代币: 协议或网络中的资产; 不自动赋予股权或债权; 价格、托管与合约风险 | 稳定币: 锚定法币的私人负债; 依赖储备与赎回机制; 脱锚与发行人信用风险 | 代币化证券: 传统证券的数字表示; 仍受证券规则约束; 托管、披露与结算风险 | 央行数字货币: 央行发行的数字法币; 设计选择影响隐私与准入; 金融稳定与离线支付问题</desc>
+<rect x="0.5" y="0.5" width="469" height="421" rx="12" fill="var(--surface)" stroke="var(--border)"/>
+      <rect x="20" y="18" width="430" height="89" rx="9" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="32" y="38" font-size="13" font-weight="650" fill="var(--accent)" font-family="inherit">加密代币</text>
+      <circle cx="32" cy="51" r="2.4" fill="var(--accent)"/><text x="42" y="54" font-size="10.6" font-weight="400" fill="var(--secondary)" text-anchor="start" font-family="inherit"><tspan x="42" dy="0">协议或网络中的资产</tspan></text><circle cx="32" cy="66" r="2.4" fill="var(--accent)"/><text x="42" y="69" font-size="10.6" font-weight="400" fill="var(--secondary)" text-anchor="start" font-family="inherit"><tspan x="42" dy="0">不自动赋予股权或债权</tspan></text><circle cx="32" cy="81" r="2.4" fill="var(--accent)"/><text x="42" y="84" font-size="10.6" font-weight="400" fill="var(--secondary)" text-anchor="start" font-family="inherit"><tspan x="42" dy="0">价格、托管与合约风险</tspan></text>
+      <rect x="20" y="117" width="430" height="89" rx="9" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="32" y="137" font-size="13" font-weight="650" fill="var(--accent)" font-family="inherit">稳定币</text>
+      <circle cx="32" cy="150" r="2.4" fill="var(--accent)"/><text x="42" y="153" font-size="10.6" font-weight="400" fill="var(--secondary)" text-anchor="start" font-family="inherit"><tspan x="42" dy="0">锚定法币的私人负债</tspan></text><circle cx="32" cy="165" r="2.4" fill="var(--accent)"/><text x="42" y="168" font-size="10.6" font-weight="400" fill="var(--secondary)" text-anchor="start" font-family="inherit"><tspan x="42" dy="0">依赖储备与赎回机制</tspan></text><circle cx="32" cy="180" r="2.4" fill="var(--accent)"/><text x="42" y="183" font-size="10.6" font-weight="400" fill="var(--secondary)" text-anchor="start" font-family="inherit"><tspan x="42" dy="0">脱锚与发行人信用风险</tspan></text>
+      <rect x="20" y="216" width="430" height="89" rx="9" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="32" y="236" font-size="13" font-weight="650" fill="var(--accent)" font-family="inherit">代币化证券</text>
+      <circle cx="32" cy="249" r="2.4" fill="var(--accent)"/><text x="42" y="252" font-size="10.6" font-weight="400" fill="var(--secondary)" text-anchor="start" font-family="inherit"><tspan x="42" dy="0">传统证券的数字表示</tspan></text><circle cx="32" cy="264" r="2.4" fill="var(--accent)"/><text x="42" y="267" font-size="10.6" font-weight="400" fill="var(--secondary)" text-anchor="start" font-family="inherit"><tspan x="42" dy="0">仍受证券规则约束</tspan></text><circle cx="32" cy="279" r="2.4" fill="var(--accent)"/><text x="42" y="282" font-size="10.6" font-weight="400" fill="var(--secondary)" text-anchor="start" font-family="inherit"><tspan x="42" dy="0">托管、披露与结算风险</tspan></text>
+      <rect x="20" y="315" width="430" height="89" rx="9" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="32" y="335" font-size="13" font-weight="650" fill="var(--accent)" font-family="inherit">央行数字货币</text>
+      <circle cx="32" cy="348" r="2.4" fill="var(--accent)"/><text x="42" y="351" font-size="10.6" font-weight="400" fill="var(--secondary)" text-anchor="start" font-family="inherit"><tspan x="42" dy="0">央行发行的数字法币</tspan></text><circle cx="32" cy="363" r="2.4" fill="var(--accent)"/><text x="42" y="366" font-size="10.6" font-weight="400" fill="var(--secondary)" text-anchor="start" font-family="inherit"><tspan x="42" dy="0">设计选择影响隐私与准入</tspan></text><circle cx="32" cy="378" r="2.4" fill="var(--accent)"/><text x="42" y="381" font-size="10.6" font-weight="400" fill="var(--secondary)" text-anchor="start" font-family="inherit"><tspan x="42" dy="0">金融稳定与离线支付问题</tspan></text>
+</svg>
+  <figcaption>图 1：“数字资产与数字金融分类”四类结构的权利与风险对照。图为概念示意，具体条款以正文引用的文件为准。</figcaption>
+</figure>
+
+<!-- kp-supplement:start -->
+<h2>知识点精读</h2>
+<h3>加密资产</h3>
+<p><strong>定义</strong>：加密资产是依赖密码学和分布式账本记录所有权、转移和发行的数字资产，如比特币和以太币。</p>
+<p><strong>机制</strong>：供给规则、共识机制、网络效应和需求决定价格；私钥、托管和监管决定持有风险。</p>
+<p><strong>例子</strong>：例如比特币总量上限和减半机制影响新增供给，但价格仍受流动性和叙事驱动。</p>
+<p><strong>边界</strong>：加密资产不是法定货币；波动、丢失私钥、欺诈、监管和流动性风险很高，去中心化叙事也不等于无中介。</p>
+<h3>稳定币</h3>
+<p><strong>定义</strong>：稳定币是声称锚定法币、商品或算法的加密代币，用于支付、交易和链上抵押。</p>
+<p><strong>机制</strong>：法币储备型依赖发行方资产和赎回，算法型依赖套利和信心；储备透明度、审计和挤兑风险关键。</p>
+<p><strong>例子</strong>：例如美元稳定币声称 1:1 储备，若储备不足或赎回受阻，价格可能脱锚。</p>
+<p><strong>边界</strong>：稳定币不是银行存款；发行方信用、储备质量、监管和托管风险会造成损失，算法稳定币在压力下可能崩溃。</p>
+<h3>协议</h3>
+<p><strong>定义</strong>：加密协议是链上规则和智能合约组成的系统，定义发行、交易、借贷和治理。</p>
+<p><strong>机制</strong>：协议通过代码、代币激励和治理投票协调参与者；升级、漏洞和治理攻击改变规则。</p>
+<p><strong>例子</strong>：例如去中心化借贷协议用智能合约匹配存款和借款，利率由池子利用率决定。</p>
+<p><strong>边界</strong>：协议不是公司；代码漏洞、治理集中、监管和可升级权限会造成风险，所谓去中心化可能只是表面。</p>
+<h3>代币</h3>
+<p><strong>定义</strong>：代币是链上发行的可替代或不可替代单位，可代表支付、治理、效用、证券或资产份额。</p>
+<p><strong>机制</strong>：代币经济设计决定供给、激励和治理；法律定性、披露和流动性影响价值。</p>
+<p><strong>例子</strong>：例如治理代币持有人可投票决定协议参数，但投票权可能集中于大户。</p>
+<p><strong>边界</strong>：代币不是股票或货币；效用、治理和证券属性常混合，供应膨胀、内幕分配和监管不确定性会造成损失。</p>
+<h3>DeFi</h3>
+<p><strong>定义</strong>：DeFi 是用智能合约提供借贷、交易、衍生和收益的链上金融，通常无需传统中介。</p>
+<p><strong>机制</strong>：DeFi 通过流动性池、抵押和治理运行；代码风险、清算、预言机、合规和跨链桥是主要脆弱点。</p>
+<p><strong>例子</strong>：例如去中心化交易所用流动性池撮合代币，用户提供流动性赚手续费但承担无常损失。</p>
+<p><strong>边界</strong>：DeFi 不是无风险金融；智能合约漏洞、清算螺旋、治理攻击和监管会让资金损失，去中心化治理也未必负责。</p>
+<h3>链上与托管</h3>
+<p><strong>定义</strong>：链上资产由私钥控制并记录在分布式账本，托管是第三方代管私钥或资产的服务。</p>
+<p><strong>机制</strong>：自托管掌握私钥但承担丢失和诈骗风险，第三方托管便利但引入对手方和监管风险；多签和冷存储可降低单点风险。</p>
+<p><strong>例子</strong>：例如用户把代币放在硬件钱包自托管，交易所托管则依赖平台偿付能力。</p>
+<p><strong>边界</strong>：托管不是保险；私钥丢失不可逆、平台破产和黑客攻击会造成损失，链上记录也不保证法律所有权。</p>
+<h3>NFT DAO</h3>
+<p><strong>定义</strong>：NFT 是记录唯一链上所有权的代币，用于数字艺术、收藏和凭证；DAO 是链上治理组织，成员按代币或 NFT 投票。</p>
+<p><strong>机制</strong>：NFT 价值依赖稀缺、社区、版权和流动性；DAO 依赖治理规则、金库和执行力。</p>
+<p><strong>例子</strong>：例如艺术 NFT 证明链上所有权，但版权许可和实物权利可能另附合同；DAO 投票决定资金用途。</p>
+<p><strong>边界</strong>：NFT 不是版权本身；链上所有权、元数据存储和平台依赖会造成价值损失，DAO 也可能被大户控制、法律地位不清。</p>
+<h3>代币化资产及传统金融连接</h3>
+<p><strong>定义</strong>：代币化资产是把债券、基金、房地产或商品等传统资产的权利记录在链上，传统金融连接指托管、支付和合规的桥接。</p>
+<p><strong>机制</strong>：代币化提高分割、结算和可编程性，但法律所有权、托管、审计和跨链互操作决定可行性。</p>
+<p><strong>例子</strong>：例如货币基金份额代币化后可小额转让和即时结算，但持有人仍依赖基金和托管链。</p>
+<p><strong>边界</strong>：代币化不是自动流动性；法律映射、平台风险、合规和区块链拥堵会造成折价，传统金融的信用和监管仍不可绕过。</p>
+<!-- kp-supplement:end -->
+
+<h2>关联</h2>
+<ul>
+<li>必需先修：资产与工具的区别（MKT-001）。</li>
+<li>相关与推荐阅读：资产与工具的区别（MKT-001）。</li>
+</ul>
+<h2>图解</h2>
+<p>下面三张图分别检查本文的机制、边界与对照；图内文字取自本文小节，不是新数据。</p>
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-chain-title fig-batch-chain-desc" viewBox="0 0 340 304" width="100%">
+    <title id="fig-batch-chain-title">数字资产与数字金融分类：机制链</title>
+    <desc id="fig-batch-chain-desc">数字资产与数字金融分类 的三段结构：问题、机制、判断。图内文字取自本文小节，不是新的数据估计。</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">数字资产与数字金融分类：机制链</text>
+    <text x="14" y="38" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">图内文字取自本文小节；三段缺一不可。</text>
+    <line x1="14" y1="46" x2="326" y2="46" stroke="var(--border)" stroke-width="1"/>
+    <g>
+      <rect x="14" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="22" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">问题</text>
+      <text x="22" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">数字资产不是单一资产</text>
+      <text x="22" y="102" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">类别；代币、稳定币、…</text>
+      <text x="22" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">数字资产不是单一资</text>
+      <text x="22" y="141" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">产类别；代币、稳定</text>
+      <text x="22" y="158" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">币、DeFi 和央行数</text>
+      <text x="22" y="175" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">字货币的法律权利、</text>
+      <text x="22" y="192" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">托管与风险各不相同…</text>
+    </g>
+      <g>
+      <rect x="123" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="131" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">产品定义</text>
+      <text x="131" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">产品定义：“数字资产”</text>
+      <text x="131" y="102" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">是法律和技术结构的集…</text>
+      <text x="131" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">产品定义：“数字资</text>
+      <text x="131" y="141" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">产”是法律和技术结</text>
+      <text x="131" y="158" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">构的集合，而不是一</text>
+      <text x="131" y="175" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">种同质资产。它可能</text>
+      <text x="131" y="192" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">包括加密代币、稳定…</text>
+    </g>
+      <g>
+      <rect x="232" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="240" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">例子（假设）</text>
+      <text x="240" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">下面用一组假设数字把</text>
+      <text x="240" y="102" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">费用链条走完，币种记…</text>
+      <text x="240" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">下面用一组假设数字</text>
+      <text x="240" y="141" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">把费用链条走完，币</text>
+      <text x="240" y="158" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">种记作元；数字不是</text>
+      <text x="240" y="175" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">行情，也不是任何产</text>
+      <text x="240" y="192" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">品的实际费率。买入…</text>
+    </g>
+    <line x1="108" y1="144" x2="123" y2="144" stroke="var(--border)" stroke-width="1.1"/>
+    <path d="M120 140 L125 144 L120 148" fill="none" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="217" y1="144" x2="232" y2="144" stroke="var(--border)" stroke-width="1.1"/>
+    <path d="M229 140 L234 144 L229 148" fill="none" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="14" y1="250" x2="326" y2="250" stroke="var(--border)" stroke-width="1"/>
+    <text x="14" y="266" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">读法：先看问题能否成立，再看机制能否连通，最后看判断会不会越界。</text>
+    <text x="14" y="280" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">若中间一步缺证据，后面的结论只能当假设，不能当事实。</text>
+    <text x="14" y="294" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">图为结构示意，不是新的数据图；样本为本文论证。</text>
+  </svg>
+  <figcaption>图 2：数字资产与数字金融分类的机制链：从问题、机制到判断。样本为本文论证，单位为文中标注。</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-boundary-title fig-batch-boundary-desc" viewBox="0 0 340 244" width="100%">
+    <title id="fig-batch-boundary-title">数字资产与数字金融分类：适用边界</title>
+    <desc id="fig-batch-boundary-desc">把成立条件与失效条件分开；局部例子不能自动推广到所有情形。</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">数字资产与数字金融分类：什么情况下成立？</text>
+    <line x1="14" y1="34" x2="326" y2="34" stroke="var(--border)" stroke-width="1"/>
+    <rect x="14" y="44" width="312" height="38" rx="7" fill="var(--surface-2)" stroke="var(--border)"/>
+    <text x="170" y="62" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="middle">先检查条件，再看结论</text>
+    <text x="170" y="75" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="middle">条件、口径或样本一变，结论可能要重算</text>
+    <line x1="170" y1="82" x2="90" y2="104" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="170" y1="82" x2="250" y2="104" stroke="var(--border)" stroke-width="1.1"/>
+    <rect x="14" y="104" width="148" height="100" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+    <text x="24" y="122" font-size="8.6" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">成立</text>
+    <text x="24" y="138" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">价格波动、流动性和买卖价差；</text>
+      <text x="24" y="154" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">智能合约漏洞、预言机失败和清算级</text>
+      <text x="24" y="170" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">联； 稳定币储备不透明、脱锚和发</text>
+      <text x="24" y="186" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">行人信用； 托管、私钥、诈骗和网…</text>
+    <rect x="178" y="104" width="148" height="100" rx="8" fill="var(--gold)" opacity="0.18" stroke="var(--border)"/>
+    <text x="188" y="122" font-size="8.6" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">不成立 / 需改写</text>
+    <text x="188" y="138" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">覆盖范围要说清边界：本篇处理加密</text>
+      <text x="188" y="154" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">代币、稳定币、代币化证券、DeFi</text>
+      <text x="188" y="170" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">头寸与央行数字货币这几类结构，非</text>
+      <text x="188" y="186" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">同质化代币与去中心化自治组织不在…</text>
+    <line x1="14" y1="216" x2="326" y2="216" stroke="var(--border)" stroke-width="1"/>
+    <text x="14" y="232" font-size="8.3" fill="var(--muted)" font-family="inherit" text-anchor="start">图为边界示意；样本为本文论证，单位为文中标注。</text>
+  </svg>
+  <figcaption>图 3：数字资产与数字金融分类的边界：哪些条件成立，哪些条件失效。样本为本文论证，单位为文中标注。</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-compare-title fig-batch-compare-desc" viewBox="0 0 340 252" width="100%">
+    <title id="fig-batch-compare-title">数字资产与数字金融分类：对象、前提与常见误区</title>
+    <desc id="fig-batch-compare-desc">三行比较本文概念、成立条件与常见误区；比较不等于等价，也不能替代定义。</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">数字资产与数字金融分类：一张表看对象、前提与误区</text>
+    <line x1="14" y1="34" x2="326" y2="34" stroke="var(--border)" stroke-width="1"/>
+    <text x="82" y="46" font-size="8.4" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">本篇</text>
+    <text x="200" y="46" font-size="8.4" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">容易混淆</text>
+    <g>
+      <rect x="14" y="52" width="312" height="58" fill="transparent" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="72" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">对象</text>
+      <text x="82" y="72" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">数字资产不是单一资产类别</text>
+      <text x="82" y="88" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">；代币、稳定币、DeFi…</text>
+      <text x="200" y="72" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">相邻概念/常见说法</text>
+    </g>
+    <g>
+      <rect x="14" y="110" width="312" height="58" fill="var(--surface-2)" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="130" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">前提</text>
+      <text x="82" y="130" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">价格波动、流动性和买卖价</text>
+      <text x="82" y="146" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">差； 智能合约漏洞、预言…</text>
+      <text x="200" y="130" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">覆盖范围要说清范围：本篇处理加密代币</text>
+      <text x="200" y="146" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">、稳定币、代币化证券、DeFi…</text>
+    </g>
+    <g>
+      <rect x="14" y="168" width="312" height="58" fill="transparent" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="188" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">检查</text>
+      <text x="82" y="188" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">先定义，再比较；不能只看</text>
+      <text x="82" y="204" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">名称</text>
+      <text x="200" y="188" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">相关不等于因果，局部不等于普遍</text>
+    </g>
+    <text x="14" y="244" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">图为比较示意；样本为本文论证，单位为文中标注。</text>
+  </svg>
+  <figcaption>图 4：数字资产与数字金融分类的对象、前提与常见误区比较。样本为本文论证，单位为文中标注。</figcaption>
+</figure>
+
+<h2>练习</h2>
+<ol>
+<li><strong>权利辨别。</strong> 加密代币一定代表股权或债权吗？为什么？</li>
+<li><strong>稳定币。</strong> “稳定币”可能通过哪些机制维持价格？主要风险是什么？</li>
+<li><strong>托管。</strong> 自托管与平台托管各有什么优势和风险？</li>
+</ol>
+<details>
+<summary>参考答案</summary>
+
+<ol>
+<li>不一定；权利取决于协议和发行文件，很多代币不赋予股权、债权或本金保证。</li>
+<li>按本文的分类，可能通过法币储备、短期证券、抵押或算法机制维持——这几类机制名称是本文的整理，登记来源没有给出该分类；风险包括储备不足、发行人信用、脱锚和监管变化。</li>
+<li>自托管减少平台对手方风险，但私钥一旦丢失或被盗通常无法找回；平台托管更便利，但带来托管人信用风险以及破产隔离和运营方面的不确定性。</li>
+</ol>
+</details>
+
+<h2>来源</h2>
+<ol>
+<li>U.S. Securities and Exchange Commission. “Crypto Assets.” <a href="https://www.sec.gov/securities-topics/crypto-assets">https://www.sec.gov/securities-topics/crypto-assets</a>（访问日期：2026-10-30）</li>
+<li>Financial Stability Board. “Crypto-assets and Global Stablecoins.” <a href="https://www.fsb.org/work-of-the-fsb/financial-innovation-and-structural-change/crypto-assets-and-global-stablecoins/">https://www.fsb.org/work-of-the-fsb/financial-innovation-and-structural-change/crypto-assets-and-global-stablecoins/</a>（访问日期：2026-11-05）</li>
+<li>Bank for International Settlements. “Central bank digital currencies: foundational principles and core features.” <a href="https://www.bis.org/publ/othp33.htm">https://www.bis.org/publ/othp33.htm</a>（访问日期：2026-11-05）</li>
+</ol>
+  <section class="article-demo" id="demo-check" data-demo="check" data-lang="zh" aria-labelledby="demo-check-title" data-check-done="三项都能说清：这篇的核心已经过关。" data-check-pending="还差一项：回到正文对应小节，找一个反例或数字再讲一遍。" data-check-count="已勾选"> <header class="demo-head"> <div class="demo-head-top"> <p class="demo-eyebrow">动手演示</p> <button class="demo-reset" type="button" data-demo-reset>恢复默认</button> </div> <h2 id="demo-check-title">读完自检：三句话能不能说清</h2> <p class="demo-intro">不用背定义。把下面三句逐个勾上，看自己能不能用自己的话讲清机制、算例和边界。</p> </header>          <div class="demo-check"> <ul class="demo-check-list"> <li> <label> <input type="checkbox" data-check-index="0"> <span>能按代币、稳定币、DeFi 与央行数字货币分别说明法律权利与托管方式</span> </label> </li><li> <label> <input type="checkbox" data-check-index="1"> <span>能解释为何数字资产不构成单一资产类别，并给出分类时应核对的项目</span> </label> </li><li> <label> <input type="checkbox" data-check-index="2"> <span>能说出一个本文结论不适用的条件</span> </label> </li> </ul> <p class="demo-check-status" data-out="checkStatus" role="status"> 已勾选 0 / 3
+</p> </div> <p class="demo-footnote">数字为教学假设，用来展示关系，不构成预测或投资建议。</p> </section><script type="module" src="/_astro/ArticleDemo.astro_astro_type_script_index_0_lang.C9VQAsQ0.js"></script> <p class="notice"> 本文已通过当前发布门槛；事实、计算与译文如有修订，会同步更新两个语言版本。 </p> <p> <a class="button secondary" href="/"> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class> <path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path>        </svg>返回分站 </a> </p> </div> <aside class="article-aside" aria-label="文章信息"> <section class="aside-card"> <h2>学习目标</h2> <ul> <li>能按代币、稳定币、DeFi 与央行数字货币分别说明法律权利与托管方式</li><li>能解释为何数字资产不构成单一资产类别，并给出分类时应核对的项目</li> </ul> </section> <section class="aside-card"> <h2>必需先修</h2> <ul> <li> <a href="/learn/assets-vs-instruments/">MKT-001 · 资产与工具的区别</a> </li> </ul> </section> <section class="aside-card"> <h2>建议阅读</h2> <ul> <li> <a href="/learn/assets-vs-instruments/">MKT-001 · 资产与工具的区别</a> </li> </ul> </section> <section class="aside-card"> <h2>AI 复核记录</h2> <p class="muted"> 本项目没有真人签字；下列状态来自 AI-only 编辑复核。 </p> <ul> <li> 事实与计算 ：AI 复核通过 </li><li> 学科 ：AI 复核通过 </li><li> 英文 ：AI 复核通过 </li><li> 页面 ：AI 复核通过 </li> </ul> </section> <section class="aside-card"> <h2>来源</h2> <div class="source"> <a href="https://www.sec.gov/securities-topics/crypto-assets" rel="noopener noreferrer" target="_blank">Crypto Assets</a> <p>U.S. Securities and Exchange Commission · U.S. Securities and Exchange Commission</p> <p>访问：2026-10-30 · 许可：U.S. public information; copying and further distribution allowed</p> <p>支持论点：数字资产可能涉及证券法、托管、披露和欺诈风险；监管适用取决于具体结构和事实，不能只凭名称判断。</p> </div><div class="source"> <a href="https://www.fsb.org/work-of-the-fsb/financial-innovation-and-structural-change/crypto-assets-and-global-stablecoins/" rel="noopener noreferrer" target="_blank">Crypto-assets and Global Stablecoins</a> <p>Financial Stability Board · Financial Stability Board</p> <p>访问：2026-11-05 · 许可：FSB terms; linked summary only</p> <p>支持论点：随着加密资产市场与传统金融联系增强，FSB 关注金融稳定、跨境监管和全球稳定币风险。 覆盖范围注记（2026-11-05 重取，HTTP 200，424,546 字节，去标签文本 10,153 字符，缓存 docs/data-evidence/m024-fsb-stablecoins.htm）：stablecoin 出现 28 次，而 maintain a stable value／reference asset／redeem／reserve 分别出现 0／0／0／1 次，即本页没有定义稳定币靠什么维持锚定，正文的机制分类因此标为本文整理。</p> </div><div class="source"> <a href="https://www.bis.org/publ/othp33.htm" rel="noopener noreferrer" target="_blank">Central bank digital currencies: foundational principles and core features</a> <p>Bank for International Settlements · Bank for International Settlements</p> <p>访问：2026-11-05 · 许可：BIS terms: non-commercial download, display and redistribution allowed with attribution</p> <p>支持论点：央行数字货币的设计需不损害货币与金融稳定，并涉及运营、准入、隐私和跨境安排等选择。 覆盖范围注记（2026-11-05 重取，HTTP 200，137,696 字节，去标签文本 10,650 字符，缓存 docs/data-evidence/m024-bis-cbdc.htm）：monetary and financial stability 出现 4 次，而 direct claim／central bank liability／digital form of central bank money 各 0 次，即该页没有写出央行数字货币的负债属性，正文因此把该说法标为本文的工作定义。</p> </div> </section> </aside> </div> </article><script type="module">var e=document.querySelector(`[data-reading-progress] span`),t=document.querySelector(`article`);if(e&&t){let n=()=>{let n=t.offsetTop,r=t.offsetHeight-window.innerHeight,i=r>0?(window.scrollY-n)/r:0;e.style.width=`${Math.min(1,Math.max(0,i))*100}%`};window.addEventListener(`scroll`,n,{passive:!0}),window.addEventListener(`resize`,n),n()}</script>  </main> <footer class="site-footer"> <div class="container footer-inner"> <div class="footer-brand"> <span class="footer-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="28" height="28" alt class="mascot" loading="lazy" decoding="async"></span> <div> <strong>巫妖投资 51Invest</strong> <p class="footer-note">非商业免费知识站。每篇标出来源与口径；这里没有投资建议。</p> </div> </div> <nav class="footer-links" aria-label="知识分站"> <a href="https://51invest.com/" data-main-home>首页</a> <a href="https://51invest.com/contents/">内容地图</a> <a href="/glossary/">术语表</a> <a href="/search/">搜索</a> <a href="https://51invest.com/charts/" data-main-link>图表</a> <a href="https://51invest.com/sources/" data-main-link>数据与许可</a> <a href="/">分站首页</a> </nav> </div> </footer> <nav class="mobile-nav" aria-label="知识分站"> <a class="mobile-link" href="https://51invest.com/" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>    <path d="m3 10 9-7 9 7"></path><path d="M5 9v11h14V9"></path><path d="M9 20v-6h6v6"></path>     </svg> <span>首页</span> </a> <a class="mobile-link" href="https://51invest.com/#stations" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>   <rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect>      </svg> <span>知识分站</span> </a> <a class="mobile-link active" href="/" aria-current="page"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>  <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v18H6.5A2.5 2.5 0 0 1 4 18.5z"></path><path d="M4 18.5A2.5 2.5 0 0 1 6.5 16H20"></path>       </svg> <span>分站首页</span> </a> <a class="mobile-link" href="/en/learn/digital-assets-and-digital-finance/" data-language-link="en"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>English</span> </a> </nav><script type="module">var e=document.documentElement,t=[`auto`,`light`,`dark`],n=matchMedia(`(prefers-color-scheme: dark)`),r=()=>{let t=e.dataset.themeMode;return t===`light`||t===`dark`?t:`auto`},i=e=>{try{localStorage.setItem(`51invest-theme`,e)}catch{}try{let t=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-theme=${e}; Path=/; Max-Age=31536000; SameSite=Lax${t}`}catch{}},a=e=>{document.querySelectorAll(`[data-theme-toggle]`).forEach(t=>{let n=t.dataset[`label${e[0].toUpperCase()}${e.slice(1)}`];n&&(t.setAttribute(`aria-label`,n),t.setAttribute(`title`,n))})},o=t=>{e.dataset.themeMode=t,e.dataset.theme=t===`auto`?n.matches?`dark`:`light`:t,i(t),a(t)};a(r()),document.querySelectorAll(`[data-theme-toggle]`).forEach(e=>{e.addEventListener(`click`,()=>{let e=t[(t.indexOf(r())+1)%t.length];o(e)})}),n.addEventListener(`change`,()=>{r()===`auto`&&(e.dataset.theme=n.matches?`dark`:`light`)}),document.querySelectorAll(`[data-language-link]`).forEach(e=>{e.addEventListener(`click`,()=>{let t=e.dataset.languageLink;if(t===`zh`||t===`en`){try{localStorage.setItem(`51invest-language`,JSON.stringify(t))}catch{}try{let e=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-language=${t}; Path=/; Max-Age=31536000; SameSite=Lax${e}`}catch{}}})});</script> </body> </html>

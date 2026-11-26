@@ -1,7 +1,1 @@
-{
-  "site": "markets",
-  "domain": "markets.51invest.com",
-  "source": "dist/markets",
-  "builtAt": "2026-11-25T08:52:47.669Z",
-  "note": "Static GitHub Pages deployment."
-}
+{"site":"markets","servedDomain":"markets.51invest.com","canonical":"https://markets.51invest.com","source":"dist/markets","builtAt":"2026-11-26T02:01:36Z","pages":141,"articles":68,"commit":"250e8e6","tag":"release-351-2026-11-26","note":"Static GitHub Pages deployment for the 351 baseline at markets.51invest.com."}

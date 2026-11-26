@@ -1,0 +1,211 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light" data-theme-mode="auto"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark"><title>2018 年“波动率末日”：反向波动率 ETN 与再平衡 · 巫妖投资</title><meta name="description" content="2018 年 2 月 5 日，VIX 从前一日收盘 17.31 升至 37.32，单日涨幅约 116%；XIV 净值跌约 96%，触发清盘。把每日再平衡、反向敞口和清盘条款放在一条链上，才能理解“低波动率交易”为何会自我放大。"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https:; font-src 'self' data:; connect-src 'self'; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self'"><meta name="referrer" content="strict-origin-when-cross-origin"><link rel="canonical" href="https://markets.51invest.com/learn/volmageddon-2018-inverse-vol-etn-rebalance/"><link rel="alternate" hreflang="zh-CN" href="https://markets.51invest.com/learn/volmageddon-2018-inverse-vol-etn-rebalance/" />
+    <link rel="alternate" hreflang="en" href="https://markets.51invest.com/en/learn/volmageddon-2018-inverse-vol-etn-rebalance/" />
+    <link rel="alternate" hreflang="x-default" href="https://markets.51invest.com/learn/volmageddon-2018-inverse-vol-etn-rebalance/" /><link rel="alternate" type="application/rss+xml" title="巫妖投资 RSS" href="/rss.xml"><meta property="og:site_name" content="51invest"><meta property="og:type" content="article"><meta property="og:title" content="2018 年“波动率末日”：反向波动率 ETN 与再平衡 · 巫妖投资"><meta property="og:description" content="2018 年 2 月 5 日，VIX 从前一日收盘 17.31 升至 37.32，单日涨幅约 116%；XIV 净值跌约 96%，触发清盘。把每日再平衡、反向敞口和清盘条款放在一条链上，才能理解“低波动率交易”为何会自我放大。"><meta property="og:url" content="https://markets.51invest.com/learn/volmageddon-2018-inverse-vol-etn-rebalance/"><meta property="og:image" content="https://51invest.com/_astro/markets.DKcvA6Jy.png"><meta property="og:locale" content="zh_CN"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="2018 年“波动率末日”：反向波动率 ETN 与再平衡 · 巫妖投资"><meta name="twitter:description" content="2018 年 2 月 5 日，VIX 从前一日收盘 17.31 升至 37.32，单日涨幅约 116%；XIV 净值跌约 96%，触发清盘。把每日再平衡、反向敞口和清盘条款放在一条链上，才能理解“低波动率交易”为何会自我放大。"><meta name="twitter:image" content="https://51invest.com/_astro/markets.DKcvA6Jy.png"><meta property="article:published_time" content="2026-11-25"><meta property="article:modified_time" content="2026-11-25"><meta property="article:section" content="案例"><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"2018 年“波动率末日”：反向波动率 ETN 与再平衡","description":"2018 年 2 月 5 日，VIX 从前一日收盘 17.31 升至 37.32，单日涨幅约 116%；XIV 净值跌约 96%，触发清盘。把每日再平衡、反向敞口和清盘条款放在一条链上，才能理解“低波动率交易”为何会自我放大。","inLanguage":"zh-CN","mainEntityOfPage":"https://markets.51invest.com/learn/volmageddon-2018-inverse-vol-etn-rebalance/","datePublished":"2026-11-25","dateModified":"2026-11-25","articleSection":"案例","author":{"@type":"Organization","name":"51invest AI 编辑部","url":"https://51invest.com/"},"publisher":{"@type":"Organization","name":"51invest","url":"https://51invest.com/","logo":{"@type":"ImageObject","url":"https://51invest.com/_astro/neutral.Dr5C2SoA.png"}},"image":["https://51invest.com/_astro/neutral.Dr5C2SoA.png"]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://51invest.com/"},{"@type":"ListItem","position":2,"name":"市场与产品","item":"https://markets.51invest.com/"},{"@type":"ListItem","position":3,"name":"2018 年“波动率末日”：反向波动率 ETN 与再平衡","item":"https://markets.51invest.com/learn/volmageddon-2018-inverse-vol-etn-rebalance/"}]}]}</script><link rel="icon" type="image/png" href="/_astro/neutral.Dr5C2SoA.png"><script>
+  (() => {
+    const root = document.documentElement;
+    const readCookie = key => {
+      try {
+        return document.cookie.split('; ').find(value => value.startsWith(`51invest-${key}=`))?.split('=').slice(1).join('=') ?? null;
+      } catch {
+        return null;
+      }
+    };
+    const readLocal = key => {
+      try {
+        return localStorage.getItem(`51invest-${key}`);
+      } catch {
+        return null;
+      }
+    };
+    const storedTheme = readCookie('theme') || readLocal('theme');
+    const mode = ['light', 'dark', 'auto'].includes(storedTheme) ? storedTheme : 'auto';
+    const media = matchMedia('(prefers-color-scheme: dark)');
+    const apply = () => {
+      root.dataset.theme = mode === 'auto' ? (media.matches ? 'dark' : 'light') : mode;
+      root.dataset.themeMode = mode;
+    };
+    apply();
+    media.addEventListener('change', () => {
+      if (root.dataset.themeMode === 'auto') apply();
+    });
+  })();
+</script><script>
+      (() => {
+        const host = location.hostname;
+        if (host === 'www.51invest.com' || (host === '51invest.com' && location.protocol === 'http:')) {
+          location.replace(`https://51invest.com${location.pathname}${location.search}${location.hash}`);
+        }
+      })();
+    </script><link rel="stylesheet" href="/_astro/Base.C6WC_-AH.css"></head> <body>  <a class="skip-link" href="#main">跳到正文</a> <header class="site-header"> <div class="container header-inner"> <a class="brand" href="https://51invest.com/" data-main-home aria-label="巫妖投资 51INVEST"> <span class="brand-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="36" height="36" alt class="mascot" loading="lazy" decoding="async"></span> <span class="brand-copy"> <span class="brand-name">巫妖投资</span> <span class="brand-caption">51INVEST</span> </span> </a> <nav class="desktop-nav" aria-label="知识分站"> <a class="nav-link" href="https://51invest.com/" data-main-home> 首页 </a> <a class="nav-link" href="https://economics.51invest.com/"> 经济学 </a><a class="nav-link" href="https://finance.51invest.com/"> 金融基础 </a><a class="nav-link active" href="/" aria-current="page"> 市场与产品 </a><a class="nav-link" href="https://invest.51invest.com/"> 投资方法 </a><a class="nav-link" href="https://history.51invest.com/"> 经济与金融史 </a><a class="nav-link" href="https://research.51invest.com/"> 研究方法 </a> <a class="nav-link nav-external" href="https://nav.51invest.com/" data-external-nav rel="noopener noreferrer" aria-label="打开外链导航"> 导航 </a> </nav> <div class="header-tools"> <a class="icon-button language-button" href="/en/learn/volmageddon-2018-inverse-vol-etn-rebalance/" hreflang="en" lang="en" data-language-link="en" aria-label="English — 切换为英文" title="English — 切换为英文"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>            </svg> <span>English</span> </a> <button class="icon-button theme-button" type="button" data-theme-toggle aria-label="主题: 跟随系统" title="主题: 跟随系统" data-label-auto="主题: 跟随系统" data-label-light="主题: 浅色" data-label-dark="主题: 深色"> <span class="theme-icon" data-theme-icon="auto"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>        <circle cx="12" cy="12" r="8.5"></circle><path d="M12 3.5v17"></path><path d="M12 7a5 5 0 0 1 0 10" fill="currentColor" stroke="none"></path>         </svg></span> <span class="theme-icon" data-theme-icon="light"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>       <circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>          </svg></span> <span class="theme-icon" data-theme-icon="dark"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>      <path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"></path>           </svg></span> <span class="theme-text" data-theme-text="auto">跟随系统</span> <span class="theme-text" data-theme-text="light">浅色</span> <span class="theme-text" data-theme-text="dark">深色</span> </button> </div> </div> </header> <main id="main" class="site-main" data-pagefind-body>  <div class="reading-progress" data-reading-progress aria-hidden="true"><span></span></div> <div class="container"> <nav class="breadcrumbs" aria-label="Breadcrumb"> <a href="https://51invest.com/" data-main-home>首页</a> <span class="sep">/</span> <a href="/">市场与产品</a> <span class="sep">/</span> <span aria-current="page">2018 年“波动率末日”：反向波动率 ETN 与再平衡</span> </nav> </div> <article> <header class="article-header"> <div class="container"> <span class="article-type">案例</span> <h1 class="article-title">2018 年“波动率末日”：反向波动率 ETN 与再平衡</h1> <p class="article-summary">2018 年 2 月 5 日，VIX 从前一日收盘 17.31 升至 37.32，单日涨幅约 116%；XIV 净值跌约 96%，触发清盘。把每日再平衡、反向敞口和清盘条款放在一条链上，才能理解“低波动率交易”为何会自我放大。</p>  <div class="meta-grid"> <div class="meta-item"><span>模块</span><strong>MKT-M11 · 环境运力与专业市场</strong></div> <div class="meta-item"><span>层级</span><strong>系统</strong></div> <div class="meta-item"><span>阅读</span><strong>10 分钟 · 13 节</strong></div> </div> <p class="demo-jump"> <a href="#demo-check"> 这篇有一个可以动手操作的演示 <span aria-hidden="true">↓</span> </a> </p> </div> </header> <div class="container article-layout"> <div class="article-body"> <div class="article-toc-mobile"> <details> <summary>本文目录 · 13 节</summary> <ol> <li><a href="#section-1">背景与时间线</a></li><li><a href="#section-2">可获得的信息与主体</a></li><li><a href="#section-3">结果与数字链</a></li><li><a href="#section-4">机制</a></li><li><a href="#section-5">图表</a></li><li><a href="#section-6">反事实与替代解释</a></li><li><a href="#section-7">局限与边界</a></li><li><a href="#section-8">复现清单</a></li><li><a href="#section-10">关联</a></li><li><a href="#section-11">练习</a></li><li><a href="#section-12">决策复盘</a></li><li><a href="#section-13">复核记录</a></li><li><a href="#section-14">来源</a></li> </ol> </details> </div> <h2 id="section-1">背景与时间线</h2>
+<p>2017 年是低波动率的一年，标普 500 多次创下长期没有单日 2% 跌幅的纪录。低波动率环境让“做空波动率”的策略看起来像稳定收益：只要 VIX 保持低位，反向波动率产品就能赚钱。XIV 和 SVXY 是两只最大的反向波动率 ETN/ETF，通过做空近月 VIX 期货获得反向敞口[4]。</p>
+<p>2018 年 2 月 5 日，标普 500 下跌约 4.1%，道指下跌约 1,175 点；VIX 从前一日收盘 17.31 升至 37.32，单日涨幅约 115.6%，是当时历史上最大的单日涨幅之一。XIV 的净值从前一日的 108.37 美元跌到盘后约 4.22 美元，跌幅约 96%；SVXY 下跌约 91%[4]。</p>
+<p>XIV 的招股书规定，若盘中指示价值跌破前一日收盘的 20%，发行人有权加速清盘。2 月 5 日的跌幅触发了这一条款；XIV 最后交易日为 2 月 20 日，随后终止。SVXY 继续交易，但规模大幅缩水。一天之内，低波动率交易从“稳定收益”变成“尾部风险”的代名词[4]。</p>
+<h2 id="section-2">可获得的信息与主体</h2>
+<p>主要主体包括：反向波动率产品的发行人（Credit Suisse 等）、做市商、持有产品的散户和机构、VIX 期货的清算所、以及指数提供方。产品的目标是提供 VIX 期货的“每日反向”收益，不是长期持有 VIX 的反向敞口；这个“每日”二字是理解一切的关键。</p>
+<p>发行人的决策受产品条款约束。每日收盘后，产品必须按当日 VIX 期货的结算价重新计算敞口；若 VIX 期货上涨，反向产品的净值下降，为了维持固定的反向敞口，产品必须买入更多 VIX 期货。买入推高期货价格，又降低产品净值，迫使下一轮买入。这个再平衡是机械的，不由基金经理判断。</p>
+<p>投资者的决策受“稳定收益”叙事影响。2017 年低波动率让产品净值稳步上升，投资者把“低波动率”误认为“低风险”；但反向产品的尾部风险在波动率飙升时集中释放。产品条款中的清盘线不是保护投资者，而是保护发行人，避免损失超过本金。</p>
+<h2 id="section-3">结果与数字链</h2>
+<p>关键数字：VIX 从 17.31 到 37.32，涨幅约 115.6%；XIV 从 108.37 美元到 4.22 美元，跌幅约 96%；SVXY 下跌约 91%；XIV 和 SVXY 合计做空约 28 万张 VIX 期货，约 2.8 亿 vega；清盘触发线为前一日收盘的 20%；XIV 最后交易日 2 月 20 日[4]。</p>
+<p>把这些数字串起来：VIX 上涨 → 反向产品净值下降 → 再平衡买入 VIX 期货 → 期货价格上升 → 净值再下降 → 触发清盘。28 万张期货的敞口在平时可以吸收，但在波动率飙升、流动性变薄时，再平衡的买入量足以把市场推得更远。</p>
+<p>2.8 亿 vega 意味着 VIX 每上升 1 点，组合损失约 2.8 亿美元。这个数字不是“总资产”，而是敞口；当净值下降，敞口相对于净值变得更大，再平衡的压力也更大。杠杆不是借来的钱，而是产品结构内置的。</p>
+<h2 id="section-4">机制</h2>
+<p>第一层是每日再平衡。反向产品每天重置敞口，波动率上升时买入期货，波动率下降时卖出期货；这种“追涨杀跌”在波动率飙升时是正反馈。第二层是流动性。VIX 期货市场深度有限，集中买入会推高价格，进一步触发其他产品的再平衡。第三层是清盘条款。20% 的触发线让产品在极端下跌时自动清盘，清盘本身又释放卖压/买压，放大市场波动[4]。</p>
+<p>三层叠加，形成“波动率上升 → 产品买期货 → 期货价格上升 → 波动率上升”的循环。这个循环不是市场操纵，而是产品规则在极端行情下的机械反应。产品越受欢迎、规模越大，循环越强；当规模超过市场深度，低波动率交易就变成系统性风险。</p>
+<h2 id="section-5">图表</h2>
+<figure>
+  <svg role="img" aria-labelledby="fig-mkt-067-1-title fig-mkt-067-1-desc" viewBox="0 0 460 300" width="100%">
+    <title id="fig-mkt-067-1-title">反向波动率产品的正反馈</title>
+    <desc id="fig-mkt-067-1-desc">VIX 飙升 净值下降，每日再平衡 买入期货，触发清盘 产品退出。XIV 净值跌约 96%，SVXY 跌约 91%；单位：美元、合约张数。 教学机制图。</desc>
+    <rect x="14" y="38" width="432" height="32" rx="7" fill="var(--surface-2)" stroke="var(--border)"></rect>
+    <text x="28" y="59" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit">VIX↑ → 净值↓ → 买期货 → VIX↑</text>
+    <rect x="14" y="82" width="132" height="92" rx="8" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="26" y="104" font-size="10.2" font-weight="650" fill="var(--text)" font-family="inherit">VIX 飙升</text>
+    <text x="26" y="128" font-size="12" font-weight="700" fill="var(--accent)" font-family="inherit">净值下降</text>
+    <text x="26" y="148" font-size="9.2" fill="var(--muted)" font-family="inherit">108→4.22 美元</text>
+    <text x="26" y="164" font-size="9.2" fill="var(--muted)" font-family="inherit"></text>
+    <rect x="164" y="82" width="132" height="92" rx="8" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="176" y="104" font-size="10.2" font-weight="650" fill="var(--text)" font-family="inherit">每日再平衡</text>
+    <text x="176" y="128" font-size="12" font-weight="700" fill="var(--accent)" font-family="inherit">买入期货</text>
+    <text x="176" y="148" font-size="9.2" fill="var(--muted)" font-family="inherit">28 万张</text>
+    <text x="176" y="164" font-size="9.2" fill="var(--muted)" font-family="inherit"></text>
+    <rect x="314" y="82" width="132" height="92" rx="8" fill="var(--accent-soft)" stroke="var(--accent)"></rect>
+    <text x="326" y="104" font-size="10.2" font-weight="650" fill="var(--text)" font-family="inherit">触发清盘</text>
+    <text x="326" y="128" font-size="12" font-weight="700" fill="var(--accent)" font-family="inherit">产品退出</text>
+    <text x="326" y="148" font-size="9.2" fill="var(--muted)" font-family="inherit">2 月 20 日</text>
+    <text x="326" y="164" font-size="9.2" fill="var(--muted)" font-family="inherit"></text>
+    <line x1="146" y1="128" x2="164" y2="128" stroke="var(--border)" stroke-width="1.5"></line>
+    <line x1="296" y1="128" x2="314" y2="128" stroke="var(--border)" stroke-width="1.5"></line>
+    <rect x="14" y="190" width="432" height="82" rx="8" fill="var(--surface-2)" stroke="var(--border)"></rect>
+    <text x="28" y="214" font-size="10" font-weight="650" fill="var(--text)" font-family="inherit">机械再平衡放大波动</text>
+    <text x="28" y="236" font-size="9.6" fill="var(--muted)" font-family="inherit">XIV 净值跌约 96%，SVXY 跌约 91%；单位：美元、合约张数</text>
+    <text x="28" y="256" font-size="9.6" fill="var(--muted)" font-family="inherit"></text>
+  </svg>
+  <figcaption>图 1：VIX 飙升 净值下降，每日再平衡 买入期货，触发清盘 产品退出。XIV 净值跌约 96%，SVXY 跌约 91%；单位：美元、合约张数。 教学机制图。</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-mkt-067-2-title fig-mkt-067-2-desc" viewBox="0 0 460 300" width="100%">
+    <title id="fig-mkt-067-2-title">2018 年 2 月 5 日关键数字</title>
+    <desc id="fig-mkt-067-2-desc">2018 年 2 月 5 日关键数字。VIX：前收 17.31，收盘 37.32，跌幅 +115.6%；产品：Prior 108.37 美元，Close 4.22 美元，Fall −96%。XIV 为盘后指示价值；单位：点、美元、百分比。 数字为教学假设。</desc>
+    <rect x="14" y="36" width="432" height="34" rx="7" fill="var(--surface-2)" stroke="var(--border)"></rect>
+    <text x="28" y="57" font-size="10" font-weight="650" fill="var(--text)" font-family="inherit">VIX +115.6%；XIV −96%；SVXY −91%</text>
+    <rect x="14" y="86" width="204" height="132" rx="8" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="28" y="109" font-size="10.2" font-weight="650" fill="var(--text)" font-family="inherit">VIX</text>
+    <text x="26" y="135" font-size="9.4" fill="var(--muted)" font-family="inherit">前收</text>
+    <text x="206" y="135" text-anchor="end" font-size="9.6" font-weight="650" fill="var(--text)" font-family="inherit">17.31</text>
+    <text x="26" y="163" font-size="9.4" fill="var(--muted)" font-family="inherit">收盘</text>
+    <text x="206" y="163" text-anchor="end" font-size="9.6" font-weight="650" fill="var(--text)" font-family="inherit">37.32</text>
+    <text x="26" y="191" font-size="9.4" fill="var(--muted)" font-family="inherit">跌幅</text>
+    <text x="206" y="191" text-anchor="end" font-size="9.6" font-weight="650" fill="var(--text)" font-family="inherit">+115.6%</text>
+    <rect x="242" y="86" width="204" height="132" rx="8" fill="var(--accent-soft)" stroke="var(--accent)"></rect>
+    <text x="256" y="109" font-size="10.2" font-weight="650" fill="var(--text)" font-family="inherit">产品</text>
+    <text x="254" y="135" font-size="9.4" fill="var(--muted)" font-family="inherit">前收</text>
+    <text x="434" y="135" text-anchor="end" font-size="9.6" font-weight="650" fill="var(--text)" font-family="inherit">108.37 美元</text>
+    <text x="254" y="163" font-size="9.4" fill="var(--muted)" font-family="inherit">收盘</text>
+    <text x="434" y="163" text-anchor="end" font-size="9.6" font-weight="650" fill="var(--text)" font-family="inherit">4.22 美元</text>
+    <text x="254" y="191" font-size="9.4" fill="var(--muted)" font-family="inherit">跌幅</text>
+    <text x="434" y="191" text-anchor="end" font-size="9.6" font-weight="650" fill="var(--text)" font-family="inherit">−96%</text>
+    <text x="28" y="240" font-size="9.6" fill="var(--muted)" font-family="inherit">XIV 为盘后指示价值；单位：点、美元、百分比</text>
+    <text x="28" y="262" font-size="9.6" fill="var(--muted)" font-family="inherit"></text>
+  </svg>
+  <figcaption>图 2：2018 年 2 月 5 日关键数字。VIX：前收 17.31，收盘 37.32，跌幅 +115.6%；产品：Prior 108.37 美元，Close 4.22 美元，Fall −96%。XIV 为盘后指示价值；单位：点、美元、百分比。 数字为教学假设。</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-mkt-067-3-title fig-mkt-067-3-desc" viewBox="0 0 460 300" width="100%">
+    <title id="fig-mkt-067-3-title">每日再平衡与每月再平衡</title>
+    <desc id="fig-mkt-067-3-desc">每日再平衡与每月再平衡。每日：跟踪误差 较小，尾部风险 较高，再平衡频率 每日；每月：跟踪误差 较大，尾部风险 较低，再平衡频率 每月。定性对比；单位：机制类型。频率越高，正反馈越强。 教学对比图。</desc>
+    <rect x="14" y="38" width="204" height="172" rx="8" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="28" y="61" font-size="10.2" font-weight="650" fill="var(--text)" font-family="inherit">每日</text>
+    <text x="26" y="88" font-size="9.4" fill="var(--muted)" font-family="inherit">跟踪误差</text>
+    <text x="206" y="88" text-anchor="end" font-size="9.6" font-weight="650" fill="var(--text)" font-family="inherit">较小</text>
+    <text x="26" y="116" font-size="9.4" fill="var(--muted)" font-family="inherit">尾部风险</text>
+    <text x="206" y="116" text-anchor="end" font-size="9.6" font-weight="650" fill="var(--text)" font-family="inherit">较高</text>
+    <text x="26" y="144" font-size="9.4" fill="var(--muted)" font-family="inherit">再平衡频率</text>
+    <text x="206" y="144" text-anchor="end" font-size="9.6" font-weight="650" fill="var(--text)" font-family="inherit">每日</text>
+    <rect x="242" y="38" width="204" height="172" rx="8" fill="var(--accent-soft)" stroke="var(--accent)"></rect>
+    <text x="256" y="61" font-size="10.2" font-weight="650" fill="var(--text)" font-family="inherit">每月</text>
+    <text x="254" y="88" font-size="9.4" fill="var(--muted)" font-family="inherit">跟踪误差</text>
+    <text x="434" y="88" text-anchor="end" font-size="9.6" font-weight="650" fill="var(--text)" font-family="inherit">较大</text>
+    <text x="254" y="116" font-size="9.4" fill="var(--muted)" font-family="inherit">尾部风险</text>
+    <text x="434" y="116" text-anchor="end" font-size="9.6" font-weight="650" fill="var(--text)" font-family="inherit">较低</text>
+    <text x="254" y="144" font-size="9.4" fill="var(--muted)" font-family="inherit">再平衡频率</text>
+    <text x="434" y="144" text-anchor="end" font-size="9.6" font-weight="650" fill="var(--text)" font-family="inherit">每月</text>
+    <text x="28" y="240" font-size="9.6" fill="var(--muted)" font-family="inherit">定性对比；单位：机制类型</text>
+    <text x="28" y="262" font-size="9.6" fill="var(--muted)" font-family="inherit">频率越高，正反馈越强</text>
+  </svg>
+  <figcaption>图 3：每日再平衡与每月再平衡。每日：跟踪误差 较小，尾部风险 较高，再平衡频率 每日；每月：跟踪误差 较大，尾部风险 较低，再平衡频率 每月。定性对比；单位：机制类型。频率越高，正反馈越强。 教学对比图。</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-mkt-067-4-title fig-mkt-067-4-desc" viewBox="0 0 460 300" width="100%">
+    <title id="fig-mkt-067-4-title">波动率产品的四个边界</title>
+    <desc id="fig-mkt-067-4-desc">波动率产品的四个边界。每日反向；杠杆内置；清盘条款；市场深度。四项共同决定尾部风险；缺一项就不能直接复制。单位：条件数。 这些条件决定方法是否适用。</desc>
+    <text x="28" y="36" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit">先核对条款、规模、流动性与市场</text>
+    <rect x="14" y="52" width="204" height="52" rx="7" fill="var(--accent-soft)" stroke="var(--accent)"></rect>
+    <text x="24" y="72" font-size="9.8" font-weight="650" fill="var(--text)" font-family="inherit">每日反向</text>
+    <text x="24" y="89" font-size="9.2" fill="var(--muted)" font-family="inherit">不是长期</text>
+    <rect x="242" y="52" width="204" height="52" rx="7" fill="var(--accent-soft)" stroke="var(--accent)"></rect>
+    <text x="252" y="72" font-size="9.8" font-weight="650" fill="var(--text)" font-family="inherit">杠杆内置</text>
+    <text x="252" y="89" font-size="9.2" fill="var(--muted)" font-family="inherit">产品结构</text>
+    <rect x="14" y="110" width="204" height="52" rx="7" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="24" y="130" font-size="9.8" font-weight="650" fill="var(--text)" font-family="inherit">清盘条款</text>
+    <text x="24" y="147" font-size="9.2" fill="var(--muted)" font-family="inherit">20% 触发</text>
+    <rect x="242" y="110" width="204" height="52" rx="7" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="252" y="130" font-size="9.8" font-weight="650" fill="var(--text)" font-family="inherit">市场深度</text>
+    <text x="252" y="147" font-size="9.2" fill="var(--muted)" font-family="inherit">VIX 期货</text>
+    <text x="28" y="248" font-size="9.6" fill="var(--muted)" font-family="inherit">四项共同决定尾部风险；缺一项就不能直接复制</text>
+    <text x="28" y="270" font-size="9.6" fill="var(--muted)" font-family="inherit">单位：条件数</text>
+  </svg>
+  <figcaption>图 4：波动率产品的四个边界。每日反向；杠杆内置；清盘条款；市场深度。四项共同决定尾部风险；缺一项就不能直接复制。单位：条件数。 这些条件决定方法是否适用。</figcaption>
+</figure>
+
+<h2 id="section-6">反事实与替代解释</h2>
+<p>反事实一：如果没有杠杆反向产品，只有现金持有的波动率多头，VIX 飙升不会触发机械再平衡，市场的正反馈会小得多。反事实二：如果产品采用每月再平衡而不是每日再平衡，敞口变化更慢，尾部风险更低，但产品跟踪误差更大。</p>
+<p>反事实三：如果清盘条款的触发线更低，XIV 可能不会在当天清盘，但净值会继续下跌，投资者损失更大，发行人风险更高。反事实四：如果 VIX 期货市场流动性更厚，再平衡的买入可以被吸收，价格冲击更小，循环不会那么剧烈。</p>
+<h2 id="section-7">局限与边界</h2>
+<p>这个案例能证明：每日再平衡的反向产品在波动率飙升时会产生正反馈；清盘条款会在极端行情下加速产品退出；产品规模超过市场深度时，低波动率交易可以变成系统性风险。</p>
+<p>它不能证明：所有波动率产品都有同样风险；VIX 上涨 116% 一定是产品造成的；清盘条款不公平；也不能把 2018 年的结构直接套到 2020 年或 2024 年的产品。产品条款、市场规模和流动性条件不同，结果会不同。</p>
+<h2 id="section-8">复现清单</h2>
+<p>复现时先列 VIX 的前收、开盘、收盘和涨幅；再列 XIV、SVXY 的净值变化；然后列产品规模、期货持仓和再平衡规则；最后列清盘触发线和最后交易日。四类信息齐全，才能区分“市场波动”与“产品机械放大”[4]。</p>
+<p>来源对照：制度与机制背景见[1][2][3]，案例事实见[4]。</p>
+<h3 id="section-9">工作纸：把判断拆成可复核的四栏</h3>
+<p>本文的主题是“2018 年“波动率末日”：反向波动率 ETN 与再平衡”。读完之后，不要先记结论，先做一张四栏工作纸：第一栏写“VIX 与波动率期货”的定义、分子、分母和单位；第二栏写“反向 ETN 与每日再平衡”的传导渠道；第三栏写“清盘条款与流动性”的制度边界；第四栏写结论的反证信号。四栏都填满，才允许把结论带进下一步；任何一栏空白，结论就只能当作假设。</p>
+<p>第一栏最容易偷懒。把指标写成一句“越高越好”，等于没有定义。至少要回答：它衡量的是存量还是流量，分母是产出、人口、资产还是交易量，价格是名义还是实际，时间点是期末还是期间平均。换掉其中任何一个，排序和结论都可能改变。若来源只给了一个数字而没有给出分母，先回到来源脚注，不要用相邻文章的分母替代。</p>
+<p>第二栏要把“反向 ETN 与每日再平衡”写成一条可观察的链：哪一个变量先动，经过什么中介，最后改变哪个结果。链上每一环都要有时间和单位，不能把“长期”与“季度”混写。链越长，越要标出哪一环是作者推演、哪一环有来源支持；推演可以用于教学，但不能冒充事实。</p>
+<p>第三栏处理制度。清盘条款与流动性不是背景段落，而是样本定义：哪些主体被覆盖，哪些被豁免，规则从哪一天生效，跨境比较是否由同一套规则约束。制度不同，同样的数字会对应不同的激励；把制度差异写成行为差异，是跨市场比较里最常见的错误。若无法确认规则一致，就把比较降级为“两个独立情景”，不要给出排序。</p>
+<p>第四栏写反证。用一句可证伪的话收尾：“如果观察到 A，在 B 时间内出现 C，则原判断成立；否则放弃。”A 必须是可观察的变量，B 必须是可以等待的时间，C 必须是可以复核的结果。三项写不清，说明结论还不可检验。最后把工作纸、来源链接和复核日期放在同一页；下一次复盘时，先看当时的四栏，而不是只看事后结果。</p>
+<h2 id="section-10">关联</h2>
+<ul>
+<li>与 <strong>MKT-034 期权定价与波动率曲面</strong> 的关系：母文给出模块总框架；本文把「每日再平衡、反向敞口与清盘条款如何放大波动」单独拆开，落到可计算的例子和适用条件上。</li>
+<li>与 <strong>MKT-023 保险与养老产品结构</strong> 的关系：同站相邻主题，提供背景或对照；本文不重复它的重点，而聚焦「每日再平衡、反向敞口与清盘条款如何放大波动」。</li>
+<li>与 <strong>MKT-013 原油与成品油</strong> 的关系：同站相邻主题，提供背景或对照；本文不重复它的重点，而聚焦「每日再平衡、反向敞口与清盘条款如何放大波动」。</li>
+</ul>
+<h2 id="section-11">练习</h2>
+<ol>
+<li>时间线题：列出 VIX 前收、收盘、XIV 净值、清盘触发和最后交易日。</li>
+<li>涨幅题：VIX 从 17.31 到 37.32，涨幅约多少？</li>
+<li>再平衡题：VIX 上涨时，反向产品为什么要买入期货？</li>
+<li>杠杆题：2.8 亿 vega 意味着 VIX 每涨 1 点损失多少？</li>
+<li>清盘题：20% 触发线保护的是发行人还是投资者？</li>
+<li>反事实题：若产品每月再平衡，尾部风险会怎样变化？</li>
+<li>边界题：为什么不能把 2018 年的结构套到所有波动率产品？</li>
+<li>数据阅读题：从 Cboe 报告中找出 XIV、SVXY 的跌幅。</li>
+<li>流动性题：产品规模超过市场深度会发生什么？</li>
+<li>决策题：若你是发行人风控，会如何设置清盘线？写出理由。</li>
+</ol>
+<h2 id="section-12">决策复盘</h2>
+<p>从产品设计视角看，“每日反向”是一个明确的合约承诺，不是长期策略。产品每天重置敞口，使投资者可以获得当日的反向收益，但也把长期复利变成了路径依赖；在波动率飙升时，再平衡会机械地买入期货，放大损失。设计者知道这个风险，但产品条款把尾部风险转移给了投资者。</p>
+<p>从投资者视角看，2017 年的稳定净值制造了“低风险”错觉。低波动率不等于低风险；当波动率处于历史低位，向上飙升的尾部风险反而更大。投资者若只看历史收益，不看产品条款和再平衡机制，会把“稳定收益”误当成“安全资产”。</p>
+<p>从交易所和清算所视角看，产品规模超过市场深度时，再平衡会变成系统性事件。清算所需要对极端波动率情景做压力测试，交易所需要评估产品条款是否会在同一时间触发大量同向交易。产品创新不能只看单个产品的风险，还要看产品之间的相关性和集中度。</p>
+<h2 id="section-13">复核记录</h2>
+<p>事实层：对照 Cboe 研究文，确认 VIX 变化、XIV/SVXY 跌幅、持仓规模和清盘条款。数字层：区分净值、盘中指示价值、期货合约张数和 vega 敞口。机制层：确认每日再平衡、流动性和清盘三层。反事实层：分别改变产品杠杆、再平衡频率、清盘线和市场深度。边界层：明确案例只适用于特定反向产品，不外推到所有波动率产品。</p>
+<h2 id="section-14">来源</h2>
+<ol>
+<li>Financial Industry Regulatory Authority, <em>Options</em>, Financial Industry Regulatory Authority. <a href="https://www.finra.org/investors/investing/investment-products/options" rel="noopener noreferrer">https://www.finra.org/investors/investing/investment-products/options</a></li>
+<li>CME Group, <em>期权是什么意思 (What Is an Option)</em>, CME Group. <a href="https://www.cmegroup.cn/knowledge/12439.htm" rel="noopener noreferrer">https://www.cmegroup.cn/knowledge/12439.htm</a></li>
+<li>U.S. Commodity Futures Trading Commission, <em>Basics of Futures Trading</em>, U.S. Commodity Futures Trading Commission. <a href="https://www.cftc.gov/LearnAndProtect/AdvisoriesAndArticles/FuturesMarketBasics/index.htm" rel="noopener noreferrer">https://www.cftc.gov/LearnAndProtect/AdvisoriesAndArticles/FuturesMarketBasics/index.htm</a></li>
+<li>Cboe Global Markets, <em>After the Volpocalypse: Market Observation</em>, Cboe. <a href="https://cdn.cboe.com/resources/education/research_publications/after-the-volpocalypse-market-observation.pdf" rel="noopener noreferrer">https://cdn.cboe.com/resources/education/research_publications/after-the-volpocalypse-market-observation.pdf</a></li>
+</ol>
+  <section class="article-demo" id="demo-check" data-demo="check" data-lang="zh" aria-labelledby="demo-check-title" data-check-done="三项都能说清：这篇的核心已经过关。" data-check-pending="还差一项：回到正文对应小节，找一个反例或数字再讲一遍。" data-check-count="已勾选"> <header class="demo-head"> <div class="demo-head-top"> <p class="demo-eyebrow">动手演示</p> <button class="demo-reset" type="button" data-demo-reset>恢复默认</button> </div> <h2 id="demo-check-title">读完自检：三句话能不能说清</h2> <p class="demo-intro">不用背定义。把下面三句逐个勾上，看自己能不能用自己的话讲清机制、算例和边界。</p> </header>          <div class="demo-check"> <ul class="demo-check-list"> <li> <label> <input type="checkbox" data-check-index="0"> <span>按时间重建 2018 年 2 月 5 日的 VIX、XIV 和 SVXY 变化。</span> </label> </li><li> <label> <input type="checkbox" data-check-index="1"> <span>解释每日再平衡、反向敞口和清盘条款如何形成正反馈。</span> </label> </li><li> <label> <input type="checkbox" data-check-index="2"> <span>能说出一个本文结论不适用的条件</span> </label> </li> </ul> <p class="demo-check-status" data-out="checkStatus" role="status"> 已勾选 0 / 3
+</p> </div> <p class="demo-footnote">数字为教学假设，用来展示关系，不构成预测或投资建议。</p> </section><script type="module" src="/_astro/ArticleDemo.astro_astro_type_script_index_0_lang.C9VQAsQ0.js"></script> <p class="notice"> 本文已通过当前发布门槛；事实、计算与译文如有修订，会同步更新两个语言版本。 </p> <section class="article-cite" aria-labelledby="cite-heading"> <h2 id="cite-heading">引用这篇</h2> <p>非商业引用请注明作者、标题、本站和链接；第三方来源按原许可。</p> <code data-cite-text>2018 年“波动率末日”：反向波动率 ETN 与再平衡。巫妖投资，2026-11-25。https://markets.51invest.com/learn/volmageddon-2018-inverse-vol-etn-rebalance/</code> <div class="cite-actions"> <button type="button" data-copy-cite>复制引用</button> <span data-cite-status role="status" aria-live="polite"></span> </div> </section> <nav class="article-pager" aria-label="同站上一篇与下一篇"> <a href="/learn/european-gas-2022-ttf-storage/"> <small>上一篇</small> <strong>2022 欧洲天然气：TTF、储气与替代</strong> </a> <a class="next" href="/learn/reits-2022-rate-shock-cap-rates/"> <small>下一篇</small> <strong>2022 REITs 利率冲击：NOI、Cap rate 与再融资</strong> </a> </nav> <p> <a class="button secondary" href="/"> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class> <path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path>                </svg>返回分站 </a> </p> </div> <aside class="article-aside" aria-label="文章信息"> <section class="aside-card article-toc-aside"> <h2>本文目录</h2> <ol> <li><a href="#section-1">背景与时间线</a></li><li><a href="#section-2">可获得的信息与主体</a></li><li><a href="#section-3">结果与数字链</a></li><li><a href="#section-4">机制</a></li><li><a href="#section-5">图表</a></li><li><a href="#section-6">反事实与替代解释</a></li><li><a href="#section-7">局限与边界</a></li><li><a href="#section-8">复现清单</a></li><li><a href="#section-10">关联</a></li><li><a href="#section-11">练习</a></li><li><a href="#section-12">决策复盘</a></li><li><a href="#section-13">复核记录</a></li><li><a href="#section-14">来源</a></li> </ol> </section> <section class="aside-card"> <h2>学习目标</h2> <ul> <li>按时间重建 2018 年 2 月 5 日的 VIX、XIV 和 SVXY 变化。</li><li>解释每日再平衡、反向敞口和清盘条款如何形成正反馈。</li><li>写出两个使结果不同的反事实，并说明产品边界。</li> </ul> </section> <section class="aside-card"> <h2>必需先修</h2> <ul> <li> <a href="/learn/option-pricing-and-volatility-surface/">MKT-034 · 期权定价与波动率曲面</a> </li> </ul> </section> <section class="aside-card"> <h2>建议阅读</h2> <ul> <li> <a href="/learn/option-pricing-and-volatility-surface/">MKT-034 · 期权定价与波动率曲面</a> </li><li> <a href="/learn/insurance-and-retirement-products/">MKT-023 · 保险与养老产品结构</a> </li><li> <a href="/learn/crude-oil-and-refined-products/">MKT-013 · 原油与成品油</a> </li> </ul> </section> <section class="aside-card"> <h2>AI 复核记录</h2> <p class="muted"> 本项目没有真人签字；下列状态来自 AI-only 编辑复核。 </p> <ul> <li> 事实与计算 ：AI 复核通过 </li><li> 学科 ：AI 复核通过 </li><li> 英文 ：AI 复核通过 </li><li> 页面 ：AI 复核通过 </li> </ul> <p class="muted"> 复核日期：2026-11-25 </p> </section> <section class="aside-card"> <h2>来源</h2> <div class="source"> <a href="https://www.finra.org/investors/investing/investment-products/options" rel="noopener noreferrer" target="_blank">Options</a> <p>Financial Industry Regulatory Authority · Financial Industry Regulatory Authority</p> <p>访问：2026-11-25 · 许可：Copyrighted; reproduction prohibited, linking permitted (cite-only)</p> <p>支持论点：用于核对“期权定价与波动率曲面”涉及的定义、制度、统计口径或产品条款；正文不把来源未写的内容当作事实，具体数字与日期以来源原文为准。</p> </div><div class="source"> <a href="https://www.cmegroup.cn/knowledge/12439.htm" rel="noopener noreferrer" target="_blank">期权是什么意思 (What Is an Option)</a> <p>CME Group · CME Group</p> <p>访问：2026-11-25 · 许可：版权所有、保留所有权利；未见允许转载条款（cite-only）</p> <p>支持论点：用于核对“期权定价与波动率曲面”涉及的定义、制度、统计口径或产品条款；正文不把来源未写的内容当作事实，具体数字与日期以来源原文为准。</p> </div><div class="source"> <a href="https://www.cftc.gov/LearnAndProtect/AdvisoriesAndArticles/FuturesMarketBasics/index.htm" rel="noopener noreferrer" target="_blank">Basics of Futures Trading</a> <p>U.S. Commodity Futures Trading Commission · U.S. Commodity Futures Trading Commission</p> <p>访问：2026-11-25 · 许可：U.S. Government work (public domain), 17 U.S.C. §105</p> <p>支持论点：用于核对“期权定价与波动率曲面”涉及的定义、制度、统计口径或产品条款；正文不把来源未写的内容当作事实，具体数字与日期以来源原文为准。</p> </div><div class="source"> <a href="https://cdn.cboe.com/resources/education/research_publications/after-the-volpocalypse-market-observation.pdf" rel="noopener noreferrer" target="_blank">After the Volpocalypse: Market Observation</a> <p>Cboe Global Markets · Cboe</p> <p>访问：2026-11-25 · 许可：© Cboe; cite-only</p> <p>支持论点：核对 2018 年 2 月 5 日 VIX 单日涨幅、XIV 与 SVXY 跌幅、两只产品合计约 28 万张 VIX 期货空头以及 80% 清盘触发条款。</p> </div> </section>  </aside> </div> </article><script type="module">var e=document.querySelector(`[data-reading-progress] span`),t=document.querySelector(`article`);if(e&&t){let n=()=>{let n=t.offsetTop,r=t.offsetHeight-window.innerHeight,i=r>0?(window.scrollY-n)/r:0;e.style.width=`${Math.min(1,Math.max(0,i))*100}%`};window.addEventListener(`scroll`,n,{passive:!0}),window.addEventListener(`resize`,n),n()}var n=document.querySelector(`[data-copy-cite]`),r=document.querySelector(`[data-cite-text]`),i=document.querySelector(`[data-cite-status]`);n?.addEventListener(`click`,async()=>{if(!r)return;let e=r.textContent?.trim()??``;try{await navigator.clipboard.writeText(e),i&&(i.textContent=document.documentElement.lang===`en`?`Copied`:`已复制`)}catch{i&&(i.textContent=document.documentElement.lang===`en`?`Copy failed; select the text manually.`:`复制失败，请手动选择文字。`)}window.setTimeout(()=>{i&&(i.textContent=``)},2500)});</script>  </main> <footer class="site-footer"> <div class="container footer-inner"> <div class="footer-brand"> <span class="footer-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="28" height="28" alt class="mascot" loading="lazy" decoding="async"></span> <div> <strong>巫妖投资 51Invest</strong> <p class="footer-note">非商业免费知识站。每篇标出来源与口径；这里没有投资建议。</p> </div> </div> <nav class="footer-links" aria-label="知识分站"> <a href="https://51invest.com/" data-main-home>首页</a> <a href="https://51invest.com/contents/">内容地图</a> <a href="https://51invest.com/glossary/">术语表</a> <a href="/search/">搜索</a> <a href="https://51invest.com/charts/" data-main-link>图表</a> <a href="https://51invest.com/sources/" data-main-link>数据与许可</a> <a href="https://51invest.com/about/" data-main-link>关于</a> <a href="https://51invest.com/method/" data-main-link>方法</a> <a href="https://51invest.com/corrections/" data-main-link>更正</a> <a href="https://51invest.com/privacy/" data-main-link>隐私</a> <a href="https://nav.51invest.com/" rel="noopener noreferrer">导航</a> <a href="/">分站首页</a> </nav> </div> </footer> <nav class="mobile-nav" aria-label="快捷导航"> <a class="mobile-link" href="https://51invest.com/" data-main-home> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>    <path d="m3 10 9-7 9 7"></path><path d="M5 9v11h14V9"></path><path d="M9 20v-6h6v6"></path>             </svg> <span>首页</span> </a> <a class="mobile-link" href="https://economics.51invest.com/" aria-label="经济学" title="经济学"> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>           <path d="M4 19V5"></path><path d="M4 19h16"></path><path d="m7 15 3-4 3 2 4-6"></path>      </svg> <span>经济学</span> </a><a class="mobile-link" href="https://finance.51invest.com/" aria-label="金融基础" title="金融基础"> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>            <path d="m3 9 9-6 9 6"></path><path d="M4 10h16"></path><path d="M6 10v8M10 10v8M14 10v8M18 10v8"></path><path d="M3 19h18"></path>     </svg> <span>金融</span> </a><a class="mobile-link active" href="/" aria-current="page" aria-label="市场与产品" title="市场与产品"> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>             <path d="m12 3 9 5-9 5-9-5 9-5Z"></path><path d="m3 12 9 5 9-5"></path><path d="m3 16 9 5 9-5"></path>    </svg> <span>市场</span> </a><a class="mobile-link" href="https://invest.51invest.com/" aria-label="投资方法" title="投资方法"> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>              <circle cx="12" cy="12" r="8"></circle><circle cx="12" cy="12" r="4"></circle><path d="M12 2v3M12 19v3M2 12h3M19 12h3"></path>   </svg> <span>投资</span> </a><a class="mobile-link" href="https://history.51invest.com/" aria-label="经济与金融史" title="经济与金融史"> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>               <circle cx="12" cy="12" r="8.5"></circle><path d="M12 7v5l3 2"></path>  </svg> <span>经济史</span> </a><a class="mobile-link" href="https://research.51invest.com/" aria-label="研究方法" title="研究方法"> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>                <path d="M9 3h6"></path><path d="M10 3v5L5 17a3 3 0 0 0 2.6 4h8.8a3 3 0 0 0 2.6-4L14 8V3"></path><path d="M7 15h10"></path> </svg> <span>研究</span> </a> <a class="mobile-link" href="https://nav.51invest.com/" rel="noopener noreferrer" data-external-nav aria-label="打开外链导航"> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>          <path d="M10 13a5 5 0 0 0 7.1 0l2-2a5 5 0 0 0-7.1-7.1l-1.2 1.2"></path><path d="M14 11a5 5 0 0 0-7.1 0l-2 2A5 5 0 0 0 12 20.1l1.2-1.2"></path>       </svg> <span>导航</span> </a> </nav><script type="module">var e=document.documentElement,t=[`auto`,`light`,`dark`],n=matchMedia(`(prefers-color-scheme: dark)`),r=()=>{let t=e.dataset.themeMode;return t===`light`||t===`dark`?t:`auto`},i=e=>{try{localStorage.setItem(`51invest-theme`,e)}catch{}try{let t=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-theme=${e}; Path=/; Max-Age=31536000; SameSite=Lax${t}`}catch{}},a=e=>{document.querySelectorAll(`[data-theme-toggle]`).forEach(t=>{let n=t.dataset[`label${e[0].toUpperCase()}${e.slice(1)}`];n&&(t.setAttribute(`aria-label`,n),t.setAttribute(`title`,n))})},o=t=>{e.dataset.themeMode=t,e.dataset.theme=t===`auto`?n.matches?`dark`:`light`:t,i(t),a(t)};a(r()),document.querySelectorAll(`[data-theme-toggle]`).forEach(e=>{e.addEventListener(`click`,()=>{let e=t[(t.indexOf(r())+1)%t.length];o(e)})}),n.addEventListener(`change`,()=>{r()===`auto`&&(e.dataset.theme=n.matches?`dark`:`light`)}),document.querySelectorAll(`[data-language-link]`).forEach(e=>{e.addEventListener(`click`,()=>{let t=e.dataset.languageLink;if(t===`zh`||t===`en`){try{localStorage.setItem(`51invest-language`,JSON.stringify(t))}catch{}try{let e=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-language=${t}; Path=/; Max-Age=31536000; SameSite=Lax${e}`}catch{}}})});</script> </body> </html>

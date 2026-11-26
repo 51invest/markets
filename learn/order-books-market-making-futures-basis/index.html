@@ -1,0 +1,261 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light" data-theme-mode="auto"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark"><title>订单簿、做市与期货基差 · 巫妖投资</title><meta name="description" content="订单簿把“想买”和“想卖”变成可执行的价格与数量；价差、深度、冲击成本和基差，决定一笔交易的真实成本，也决定做市商靠什么活。"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https:; font-src 'self' data:; connect-src 'self'; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self'"><meta name="referrer" content="strict-origin-when-cross-origin"><link rel="canonical" href="https://markets.51invest.com/learn/order-books-market-making-futures-basis/"><link rel="alternate" hreflang="zh-CN" href="https://markets.51invest.com/learn/order-books-market-making-futures-basis/" />
+    <link rel="alternate" hreflang="en" href="https://markets.51invest.com/en/learn/order-books-market-making-futures-basis/" />
+    <link rel="alternate" hreflang="x-default" href="https://markets.51invest.com/learn/order-books-market-making-futures-basis/" /><link rel="alternate" type="application/rss+xml" title="巫妖投资 RSS" href="/rss.xml"><meta property="og:site_name" content="51invest"><meta property="og:type" content="article"><meta property="og:title" content="订单簿、做市与期货基差 · 巫妖投资"><meta property="og:description" content="订单簿把“想买”和“想卖”变成可执行的价格与数量；价差、深度、冲击成本和基差，决定一笔交易的真实成本，也决定做市商靠什么活。"><meta property="og:url" content="https://markets.51invest.com/learn/order-books-market-making-futures-basis/"><meta property="og:image" content="https://51invest.com/_astro/markets.DKcvA6Jy.png"><meta property="og:locale" content="zh_CN"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="订单簿、做市与期货基差 · 巫妖投资"><meta name="twitter:description" content="订单簿把“想买”和“想卖”变成可执行的价格与数量；价差、深度、冲击成本和基差，决定一笔交易的真实成本，也决定做市商靠什么活。"><meta name="twitter:image" content="https://51invest.com/_astro/markets.DKcvA6Jy.png"><meta property="article:published_time" content="2026-11-26"><meta property="article:modified_time" content="2026-11-26"><meta property="article:section" content="概念"><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"订单簿、做市与期货基差","description":"订单簿把“想买”和“想卖”变成可执行的价格与数量；价差、深度、冲击成本和基差，决定一笔交易的真实成本，也决定做市商靠什么活。","inLanguage":"zh-CN","mainEntityOfPage":"https://markets.51invest.com/learn/order-books-market-making-futures-basis/","datePublished":"2026-11-26","dateModified":"2026-11-26","articleSection":"概念","author":{"@type":"Organization","name":"51invest AI 编辑部","url":"https://51invest.com/"},"publisher":{"@type":"Organization","name":"51invest","url":"https://51invest.com/","logo":{"@type":"ImageObject","url":"https://51invest.com/_astro/neutral.Dr5C2SoA.png"}},"image":["https://51invest.com/_astro/neutral.Dr5C2SoA.png"]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://51invest.com/"},{"@type":"ListItem","position":2,"name":"市场与产品","item":"https://markets.51invest.com/"},{"@type":"ListItem","position":3,"name":"订单簿、做市与期货基差","item":"https://markets.51invest.com/learn/order-books-market-making-futures-basis/"}]}]}</script><link rel="icon" type="image/png" href="/_astro/neutral.Dr5C2SoA.png"><script>
+  (() => {
+    const root = document.documentElement;
+    const readCookie = key => {
+      try {
+        return document.cookie.split('; ').find(value => value.startsWith(`51invest-${key}=`))?.split('=').slice(1).join('=') ?? null;
+      } catch {
+        return null;
+      }
+    };
+    const readLocal = key => {
+      try {
+        return localStorage.getItem(`51invest-${key}`);
+      } catch {
+        return null;
+      }
+    };
+    const storedTheme = readCookie('theme') || readLocal('theme');
+    const mode = ['light', 'dark', 'auto'].includes(storedTheme) ? storedTheme : 'auto';
+    const media = matchMedia('(prefers-color-scheme: dark)');
+    const apply = () => {
+      root.dataset.theme = mode === 'auto' ? (media.matches ? 'dark' : 'light') : mode;
+      root.dataset.themeMode = mode;
+    };
+    apply();
+    media.addEventListener('change', () => {
+      if (root.dataset.themeMode === 'auto') apply();
+    });
+  })();
+</script><script>
+      (() => {
+        const host = location.hostname;
+        if (host === 'www.51invest.com' || (host === '51invest.com' && location.protocol === 'http:')) {
+          location.replace(`https://51invest.com${location.pathname}${location.search}${location.hash}`);
+        }
+      })();
+    </script><link rel="stylesheet" href="/_astro/Base.C6WC_-AH.css"></head> <body>  <a class="skip-link" href="#main">跳到正文</a> <header class="site-header"> <div class="container header-inner"> <a class="brand" href="https://51invest.com/" data-main-home aria-label="巫妖投资 51INVEST"> <span class="brand-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="36" height="36" alt class="mascot" loading="lazy" decoding="async"></span> <span class="brand-copy"> <span class="brand-name">巫妖投资</span> <span class="brand-caption">51INVEST</span> </span> </a> <nav class="desktop-nav" aria-label="知识分站"> <a class="nav-link" href="https://51invest.com/" data-main-home> 首页 </a> <a class="nav-link" href="https://economics.51invest.com/"> 经济学 </a><a class="nav-link" href="https://finance.51invest.com/"> 金融基础 </a><a class="nav-link active" href="/" aria-current="page"> 市场与产品 </a><a class="nav-link" href="https://invest.51invest.com/"> 投资方法 </a><a class="nav-link" href="https://history.51invest.com/"> 经济与金融史 </a><a class="nav-link" href="https://research.51invest.com/"> 研究方法 </a> <a class="nav-link nav-external" href="https://nav.51invest.com/" data-external-nav rel="noopener noreferrer" aria-label="打开外链导航"> 导航 </a> </nav> <div class="header-tools"> <a class="icon-button language-button" href="/en/learn/order-books-market-making-futures-basis/" hreflang="en" lang="en" data-language-link="en" aria-label="English — 切换为英文" title="English — 切换为英文"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>            </svg> <span>English</span> </a> <button class="icon-button theme-button" type="button" data-theme-toggle aria-label="主题: 跟随系统" title="主题: 跟随系统" data-label-auto="主题: 跟随系统" data-label-light="主题: 浅色" data-label-dark="主题: 深色"> <span class="theme-icon" data-theme-icon="auto"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>        <circle cx="12" cy="12" r="8.5"></circle><path d="M12 3.5v17"></path><path d="M12 7a5 5 0 0 1 0 10" fill="currentColor" stroke="none"></path>         </svg></span> <span class="theme-icon" data-theme-icon="light"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>       <circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>          </svg></span> <span class="theme-icon" data-theme-icon="dark"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>      <path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"></path>           </svg></span> <span class="theme-text" data-theme-text="auto">跟随系统</span> <span class="theme-text" data-theme-text="light">浅色</span> <span class="theme-text" data-theme-text="dark">深色</span> </button> </div> </div> </header> <main id="main" class="site-main" data-pagefind-body>  <div class="reading-progress" data-reading-progress aria-hidden="true"><span></span></div> <div class="container"> <nav class="breadcrumbs" aria-label="Breadcrumb"> <a href="https://51invest.com/" data-main-home>首页</a> <span class="sep">/</span> <a href="/">市场与产品</a> <span class="sep">/</span> <span aria-current="page">订单簿、做市与期货基差</span> </nav> </div> <article> <header class="article-header"> <div class="container"> <span class="article-type">概念</span> <h1 class="article-title">订单簿、做市与期货基差</h1> <p class="article-summary">订单簿把“想买”和“想卖”变成可执行的价格与数量；价差、深度、冲击成本和基差，决定一笔交易的真实成本，也决定做市商靠什么活。</p>  <div class="meta-grid"> <div class="meta-item"><span>模块</span><strong>MKT-M13 · 远期与期货</strong></div> <div class="meta-item"><span>层级</span><strong>进阶</strong></div> <div class="meta-item"><span>阅读</span><strong>10 分钟 · 12 节</strong></div> </div> <p class="demo-jump"> <a href="#demo-check"> 这篇有一个可以动手操作的演示 <span aria-hidden="true">↓</span> </a> </p> </div> </header> <div class="container article-layout"> <div class="article-body"> <div class="article-toc-mobile"> <details> <summary>本文目录 · 12 节</summary> <ol> <li><a href="#section-1">问题与范围</a></li><li><a href="#section-2">订单簿的五个数</a></li><li><a href="#section-3">价差、库存与逆向选择</a></li><li><a href="#section-4">期货基差与展期</a></li><li><a href="#section-5">数值算例</a></li><li><a href="#section-6">边界与反例</a></li><li><a href="#section-7">一页清单</a></li><li><a href="#section-8">常见误读</a></li><li><a href="#section-9">数据口径</a></li><li><a href="#section-10">练习</a></li><li><a href="#section-11">关联</a></li><li><a href="#section-12">来源</a></li> </ol> </details> </div> <h2 id="section-1">问题与范围</h2>
+<p>同一只股票、同一份期货合约，在不同时点、不同下单方式下，成交价可能差几十个基点。这个差异不是“市场情绪”四个字能解释的，它来自订单簿的结构：有多少限价单、挂在什么价位、每档多厚、买卖不平衡有多大、做市商愿意承担多少库存。订单簿研究（市场微结构）关心的不是“价格应该多少”，而是“在给定的订单流下，一笔交易实际能拿到什么价”。</p>
+<p>本文用五个数把订单簿拆开：最优买卖价、价差、各档深度、订单不平衡和冲击成本；再把期货基差接进来，说明同一标的的现货、期货和展期收益如何互相约束。最后用一个可手算的算例，比较市价单、限价单和拆单执行的成本。所有数字都是教学假设，不是任何真实合约的报价。</p>
+<h2 id="section-2">订单簿的五个数</h2>
+<p>第一，<strong>最优买卖价</strong>。买一边最高的出价是 best bid，卖一边最低的要价是 best ask。两者之间的中点常被当作“市场价”，但可成交价从来不是中点：想买就得付 ask，想卖就只能拿 bid。</p>
+<p>第二，<strong>价差</strong>。ask 减 bid 是绝对价差；除以中点得到相对价差，通常用基点表示。价差是做市商对“提供即时性”的收费，也是流动性最直观的刻度。价差窄不等于便宜：如果挂单量只有一手，大单仍会打穿。</p>
+<p>第三，<strong>深度</strong>。每一档价位的挂单量，以及从最优价往后累计的“市场深度”。深度决定一笔大单会吃掉几档。只看最优档的数量，会把“看起来很深”的市场误判为能承接大单。</p>
+<p>第四，<strong>订单不平衡</strong>。买档总量减卖档总量，或主动买成交量减主动卖成交量。不平衡为正，说明买方更急；为负，说明卖方更急。不平衡是短期价格压力的一个可观察量，但不是预测方向的充分统计量。</p>
+<p>第五，<strong>冲击成本</strong>。一笔订单从最优价开始逐档成交，实际成交量加权均价与到达时中点之间的差，就是冲击成本。冲击成本随订单规模非线性上升：小单可能只付半个价差，大单要吃掉多档并留下“脚印”。</p>
+<figure>
+  <svg role="img" aria-labelledby="fig-mkt-069-order-books-market-making-futures-basis-zh-1-title fig-mkt-069-order-books-market-making-futures-basis-zh-1-desc" viewBox="0 0 460 300" width="100%">
+    <title id="fig-mkt-069-order-books-market-making-futures-basis-zh-1-title">订单流、订单簿、价差深度与成交均价的传导链（教学示意）</title>
+    <desc id="fig-mkt-069-order-books-market-making-futures-basis-zh-1-desc">订单流、订单簿、价差深度与成交均价的传导链（教学示意）。图中数字为教学假设，不是真实统计。</desc>
+<text x="230" y="40" font-size="12" font-weight="650" fill="var(--text)" text-anchor="middle" font-family="inherit">四个核算节点</text>
+    <rect x="16" y="120" width="96" height="62" rx="9" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="64" y="155" font-size="10.5" font-weight="600" fill="var(--text)" text-anchor="middle" font-family="inherit">订单流</text>
+    <line x1="112" y1="151" x2="126" y2="151" stroke="currentColor" stroke-width="1.4"></line>
+    <rect x="126" y="120" width="96" height="62" rx="9" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="174" y="155" font-size="10.5" font-weight="600" fill="var(--text)" text-anchor="middle" font-family="inherit">订单簿</text>
+    <line x1="222" y1="151" x2="236" y2="151" stroke="currentColor" stroke-width="1.4"></line>
+    <rect x="236" y="120" width="96" height="62" rx="9" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="284" y="155" font-size="10.5" font-weight="600" fill="var(--text)" text-anchor="middle" font-family="inherit">价差深度</text>
+    <line x1="332" y1="151" x2="346" y2="151" stroke="currentColor" stroke-width="1.4"></line>
+    <rect x="346" y="120" width="96" height="62" rx="9" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="394" y="155" font-size="10.5" font-weight="600" fill="var(--text)" text-anchor="middle" font-family="inherit">成交/VWAP</text>
+    <text x="230" y="238" font-size="9.5" font-weight="500" fill="var(--muted)" text-anchor="middle" font-family="inherit">箭头表示核算顺序，不代表因果</text>
+  </svg>
+  <figcaption>图 1：订单流、订单簿、价差深度与成交均价的传导链（教学示意）。</figcaption>
+</figure>
+
+<h2 id="section-3">价差、库存与逆向选择</h2>
+<p>做市商不是无风险的中介。他同时面对三类成本：<strong>订单处理成本</strong>（系统、清算、人力）、<strong>库存风险</strong>（吃下存货后价格反向波动）、<strong>逆向选择</strong>（对手方在下单前知道一些你不知道的信息）。价差必须覆盖这三类成本，否则做市商退出，流动性变薄。</p>
+<p>库存风险可以用一个简单模型看：做市商以 100 元买入 1,000 股，若价格瞬时下跌 0.5%，库存损失 500 元；若他每笔赚 0.2 元价差，需要 2,500 股的正常流量才能补回。库存越高，做市商越愿意压低买价、抬高卖价，价差随之扩大。</p>
+<p>逆向选择更隐蔽。若知情交易者占订单流的 20%，每笔知情订单造成 0.3 元损失，那么每 100 笔订单的逆向选择成本是 20×0.3=6 元；若每笔正常订单赚 0.2 元，80 笔正常订单赚 16 元，净赚 10 元。知情比例升到 35%，逆向选择成本 10.5 元，净赚只剩 5.5 元。做市商不需要“预测方向”，只需要识别订单流的信息含量。</p>
+<h2 id="section-4">期货基差与展期</h2>
+<p>期货价格不是现货价格的简单复制。基差等于现货减期货（或反之，取决于报价惯例），它包含持有成本、便利收益、融资成本和供需预期。对可储存商品，基差通常围绕“持有成本”波动；对股指期货，基差还受分红、利率和融券成本影响；对国债期货，最便宜可交割券（CTD）和转换因子会把基差拆成“交割期权”。</p>
+<p>展期收益（roll yield）是近月与远月价差带来的收益或成本。期货升水（contango）时，多头展期要买更贵的远月，承担负 carry；期货贴水（backwardation）时，多头展期买更便宜的远月，获得正 carry。但展期收益不是免费午餐：它可能补偿现货储存成本，也可能反映便利收益或风险溢价。把历史平均 roll yield 直接当成预期收益，是把基差的结构性来源忽略了。</p>
+<figure>
+  <svg role="img" aria-labelledby="fig-mkt-069-order-books-market-making-futures-basis-zh-2-title fig-mkt-069-order-books-market-making-futures-basis-zh-2-desc" viewBox="0 0 460 300" width="100%">
+    <title id="fig-mkt-069-order-books-market-making-futures-basis-zh-2-title">前两档买卖挂单量：买一 500、卖一 400（教学假设）</title>
+    <desc id="fig-mkt-069-order-books-market-making-futures-basis-zh-2-desc">前两档买卖挂单量：买一 500、卖一 400（教学假设）。图中数字为教学假设，不是真实统计。</desc>
+<text x="230" y="38" font-size="12" font-weight="650" fill="var(--text)" text-anchor="middle" font-family="inherit">数值对照（教学假设）</text>
+    <line x1="40" y1="232" x2="430" y2="232" stroke="var(--border)" stroke-width="1.2"></line>
+    <rect x="63" y="138.25" width="56" height="93.75" rx="4" fill="currentColor" opacity=".82"></rect>
+    <text x="91" y="131.25" font-size="9.5" font-weight="650" fill="var(--text)" text-anchor="middle" font-family="inherit">500手</text>
+    <text x="91" y="252" font-size="9" font-weight="500" fill="var(--text)" text-anchor="middle" font-family="inherit">买一</text>
+    <rect x="153" y="157" width="56" height="75" rx="4" fill="currentColor" opacity=".82"></rect>
+    <text x="181" y="150" font-size="9.5" font-weight="650" fill="var(--text)" text-anchor="middle" font-family="inherit">400手</text>
+    <text x="181" y="252" font-size="9" font-weight="500" fill="var(--text)" text-anchor="middle" font-family="inherit">卖一</text>
+    <rect x="243" y="119.5" width="56" height="112.5" rx="4" fill="currentColor" opacity=".82"></rect>
+    <text x="271" y="112.5" font-size="9.5" font-weight="650" fill="var(--text)" text-anchor="middle" font-family="inherit">600手</text>
+    <text x="271" y="252" font-size="9" font-weight="500" fill="var(--text)" text-anchor="middle" font-family="inherit">买二</text>
+    <rect x="333" y="100.75" width="56" height="131.25" rx="4" fill="currentColor" opacity=".55"></rect>
+    <text x="361" y="93.75" font-size="9.5" font-weight="650" fill="var(--text)" text-anchor="middle" font-family="inherit">700手</text>
+    <text x="361" y="252" font-size="9" font-weight="500" fill="var(--text)" text-anchor="middle" font-family="inherit">卖二</text>
+  </svg>
+  <figcaption>图 2：前两档买卖挂单量：买一 500、卖一 400（教学假设）。</figcaption>
+</figure>
+
+<h2 id="section-5">数值算例</h2>
+<p>假设某合约订单簿如下：买一 99.80×500，买二 99.50×600，买三 99.20×900；卖一 100.20×400，卖二 100.50×700，卖三 100.80×1,000。中点 100.00，绝对价差 0.40，相对价差 40 基点。</p>
+<p>第一笔市价买单 600 手：先吃卖一 400 手，成交价 100.20；再吃卖二 200 手，成交价 100.50。成交量加权均价为（400×100.20+200×100.50）/600=100.30。相对到达时中点 100.00，冲击成本 0.30 元，即 30 基点。若只买 400 手，均价 100.20，冲击 20 基点；规模翻一半，冲击从 20 升到 30 基点，非线性上升。</p>
+<p>第二笔市价卖单 500 手：卖一只有 400 手，剩余 100 手打到买二 99.50。VWAP 为（400×99.80+100×99.50）/500=99.74，相对中点折价 0.26 元，即 26 基点。买卖各 500 手的往返成本约 56 基点，还没算佣金和冲击后的价格继续移动。</p>
+<p>第三，做市商一天成交 1,000 手，平均每手赚半个价差 0.20 元，毛收入 200 元。若其中 20% 的成交是知情订单，每笔逆向选择损失 0.30 元，成本 60 元；库存平均 300 手，价格不利变动 0.10 元，库存成本 30 元；净收入 110 元。价差收入不是净利，必须扣掉逆向选择和库存。</p>
+<figure>
+  <svg role="img" aria-labelledby="fig-mkt-069-order-books-market-making-futures-basis-zh-3-title fig-mkt-069-order-books-market-making-futures-basis-zh-3-desc" viewBox="0 0 460 300" width="100%">
+    <title id="fig-mkt-069-order-books-market-making-futures-basis-zh-3-title">订单规模从 100 增至 1,000 手时的冲击成本（教学假设）</title>
+    <desc id="fig-mkt-069-order-books-market-making-futures-basis-zh-3-desc">订单规模从 100 增至 1,000 手时的冲击成本（教学假设）。图中数字为教学假设，不是真实统计。</desc>
+<text x="230" y="38" font-size="12" font-weight="650" fill="var(--text)" text-anchor="middle" font-family="inherit">路径与阈值（教学假设）</text>
+    <line x1="44" y1="230" x2="430" y2="230" stroke="var(--border)" stroke-width="1.2"></line>
+    <line x1="50" y1="200" x2="170" y2="170" stroke="currentColor" stroke-width="2"></line>
+    <line x1="170" y1="170" x2="290" y2="140" stroke="currentColor" stroke-width="2"></line>
+    <line x1="290" y1="140" x2="410" y2="95" stroke="currentColor" stroke-width="2"></line>
+    <circle cx="50" cy="200" r="3.4" fill="currentColor"></circle>
+    <text x="50" y="190" font-size="9" font-weight="650" fill="var(--text)" text-anchor="middle" font-family="inherit">10基点</text>
+    <text x="50" y="252" font-size="8.6" font-weight="500" fill="var(--text)" text-anchor="middle" font-family="inherit">100</text>
+    <circle cx="170" cy="170" r="3.4" fill="currentColor"></circle>
+    <text x="170" y="160" font-size="9" font-weight="650" fill="var(--text)" text-anchor="middle" font-family="inherit">20基点</text>
+    <text x="170" y="252" font-size="8.6" font-weight="500" fill="var(--text)" text-anchor="middle" font-family="inherit">300</text>
+    <circle cx="290" cy="140" r="3.4" fill="currentColor"></circle>
+    <text x="290" y="130" font-size="9" font-weight="650" fill="var(--text)" text-anchor="middle" font-family="inherit">30基点</text>
+    <text x="290" y="252" font-size="8.6" font-weight="500" fill="var(--text)" text-anchor="middle" font-family="inherit">600</text>
+    <circle cx="410" cy="95" r="3.4" fill="currentColor"></circle>
+    <text x="410" y="85" font-size="9" font-weight="650" fill="var(--text)" text-anchor="middle" font-family="inherit">45基点</text>
+    <text x="410" y="252" font-size="8.6" font-weight="500" fill="var(--text)" text-anchor="middle" font-family="inherit">1000</text>
+  </svg>
+  <figcaption>图 3：订单规模从 100 增至 1,000 手时的冲击成本（教学假设）。</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-mkt-069-order-books-market-making-futures-basis-zh-4-title fig-mkt-069-order-books-market-making-futures-basis-zh-4-desc" viewBox="0 0 460 300" width="100%">
+    <title id="fig-mkt-069-order-books-market-making-futures-basis-zh-4-title">三笔订单的 VWAP 与冲击成本对照（教学假设）</title>
+    <desc id="fig-mkt-069-order-books-market-making-futures-basis-zh-4-desc">三笔订单的 VWAP 与冲击成本对照（教学假设）。图中数字为教学假设，不是真实统计。</desc>
+<text x="230" y="38" font-size="12" font-weight="650" fill="var(--text)" text-anchor="middle" font-family="inherit">关键数字表（教学假设）</text>
+    <rect x="20" y="62" width="140" height="38" rx="4" fill="var(--surface-2)" stroke="var(--border)"></rect>
+    <text x="90" y="86" font-size="9.6" font-weight="700" fill="var(--text)" text-anchor="middle" font-family="inherit">订单</text>
+    <rect x="170" y="62" width="140" height="38" rx="4" fill="var(--surface-2)" stroke="var(--border)"></rect>
+    <text x="240" y="86" font-size="9.6" font-weight="700" fill="var(--text)" text-anchor="middle" font-family="inherit">VWAP</text>
+    <rect x="320" y="62" width="140" height="38" rx="4" fill="var(--surface-2)" stroke="var(--border)"></rect>
+    <text x="390" y="86" font-size="9.6" font-weight="700" fill="var(--text)" text-anchor="middle" font-family="inherit">冲击</text>
+    <rect x="20" y="108" width="140" height="38" rx="4" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="90" y="132" font-size="9.6" font-weight="500" fill="var(--text)" text-anchor="middle" font-family="inherit">买 400</text>
+    <rect x="170" y="108" width="140" height="38" rx="4" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="240" y="132" font-size="9.6" font-weight="500" fill="var(--text)" text-anchor="middle" font-family="inherit">100.20</text>
+    <rect x="320" y="108" width="140" height="38" rx="4" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="390" y="132" font-size="9.6" font-weight="500" fill="var(--text)" text-anchor="middle" font-family="inherit">20 bp</text>
+    <rect x="20" y="154" width="140" height="38" rx="4" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="90" y="178" font-size="9.6" font-weight="500" fill="var(--text)" text-anchor="middle" font-family="inherit">买 600</text>
+    <rect x="170" y="154" width="140" height="38" rx="4" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="240" y="178" font-size="9.6" font-weight="500" fill="var(--text)" text-anchor="middle" font-family="inherit">100.30</text>
+    <rect x="320" y="154" width="140" height="38" rx="4" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="390" y="178" font-size="9.6" font-weight="500" fill="var(--text)" text-anchor="middle" font-family="inherit">30 bp</text>
+    <rect x="20" y="200" width="140" height="38" rx="4" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="90" y="224" font-size="9.6" font-weight="500" fill="var(--text)" text-anchor="middle" font-family="inherit">卖 500</text>
+    <rect x="170" y="200" width="140" height="38" rx="4" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="240" y="224" font-size="9.6" font-weight="500" fill="var(--text)" text-anchor="middle" font-family="inherit">99.74</text>
+    <rect x="320" y="200" width="140" height="38" rx="4" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="390" y="224" font-size="9.6" font-weight="500" fill="var(--text)" text-anchor="middle" font-family="inherit">26 bp</text>
+  </svg>
+  <figcaption>图 4：三笔订单的 VWAP 与冲击成本对照（教学假设）。</figcaption>
+</figure>
+
+<h2 id="section-6">边界与反例</h2>
+<p>第一，<strong>报价不等于成交</strong>。挂单可以随时撤，显示深度可能是“幽灵流动性”。在快速市场里，最优价差的挂单量会在毫秒内消失；用静态快照估计执行成本，会低估大单冲击。</p>
+<p>第二，<strong>冰山单与隐藏单</strong>。真实订单可能被拆成小片，订单簿显示的深度只是冰山一角；反之，挂单也可能是诱导性的。只看可见深度，无法判断真实供给。</p>
+<p>第三，<strong>高频做市不等于稳赚</strong>。做市商在平静市场赚价差，在跳空市场可能一次亏损吞掉数日收入；2010 年闪崩、2015 年瑞郎脱钩都是库存风险的反例。</p>
+<p>第四，<strong>基差不等于无风险套利</strong>。现货、期货和融资任何一端出问题，套利都会断；交割规则、仓单、保证金和对手方风险都会改变基差。</p>
+<p>第五，<strong>冲击成本与波动率互为因果</strong>。波动率上升时，做市商扩大价差、减少深度，同样的订单产生更大冲击；冲击又可能触发更多止损，放大波动。用平静期的成本假设做危机期回测，是常见的低估。</p>
+<figure>
+  <svg role="img" aria-labelledby="fig-mkt-069-order-books-market-making-futures-basis-zh-5-title fig-mkt-069-order-books-market-making-futures-basis-zh-5-desc" viewBox="0 0 460 300" width="100%">
+    <title id="fig-mkt-069-order-books-market-making-futures-basis-zh-5-title">波动率与深度组合下的执行风险（教学示意）</title>
+    <desc id="fig-mkt-069-order-books-market-making-futures-basis-zh-5-desc">波动率与深度组合下的执行风险（教学示意）。图中数字为教学假设，不是真实统计。</desc>
+<text x="230" y="36" font-size="12" font-weight="650" fill="var(--text)" text-anchor="middle" font-family="inherit">二维判断矩阵（教学示意）</text>
+    <rect x="88" y="76" width="170" height="88" rx="6" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="173" y="124" font-size="10" font-weight="650" fill="var(--text)" text-anchor="middle" font-family="inherit">常规</text>
+    <rect x="88" y="174" width="170" height="88" rx="6" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="173" y="222" font-size="10" font-weight="650" fill="var(--text)" text-anchor="middle" font-family="inherit">监控</text>
+    <rect x="268" y="76" width="170" height="88" rx="6" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="353" y="124" font-size="10" font-weight="650" fill="var(--text)" text-anchor="middle" font-family="inherit">谨慎</text>
+    <rect x="268" y="174" width="170" height="88" rx="6" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="353" y="222" font-size="10" font-weight="650" fill="var(--text)" text-anchor="middle" font-family="inherit">拆单/推迟</text>
+    <text x="44" y="118" font-size="9" font-weight="600" fill="var(--text)" text-anchor="start" font-family="inherit">低波动</text>
+    <text x="44" y="216" font-size="9" font-weight="600" fill="var(--text)" text-anchor="start" font-family="inherit">高波动</text>
+    <text x="173" y="62" font-size="9" font-weight="600" fill="var(--text)" text-anchor="middle" font-family="inherit">深度充足</text>
+    <text x="353" y="62" font-size="9" font-weight="600" fill="var(--text)" text-anchor="middle" font-family="inherit">深度不足</text>
+  </svg>
+  <figcaption>图 5：波动率与深度组合下的执行风险（教学示意）。</figcaption>
+</figure>
+
+<p>补充边界一：订单簿快照不是流动性。冰山单、隐藏单和临时撤单会让可见深度偏离真实可成交深度；5,000 手挂单中只有 500 手会显示，按 10% 参与率执行时还要考虑排队和撤单。</p>
+<p>补充边界二：冲击成本随订单非线性上升。买 600 手先吃 <a href="mailto:400@100.20">400@100.20</a>、再吃 <a href="mailto:200@100.50">200@100.50</a>，VWAP 为 100.30，对中点 100.00 的冲击是 30 个基点；再放大到 1,000 手，后段价格更深，平均成本不会只按 30 个基点线性外推。</p>
+<p>补充边界三：基差不是无风险套利。50,000 元名义、10% 保证金是 5,000 元；标的逆向变动 12% 就是 6,000 元损失，已超过保证金。展期、保证金追缴和流动性枯竭可以在现货与期货收敛前先迫使平仓。</p>
+<p>补充数值反例：买一 99.80、卖一 100.20，绝对价差 0.40、相对价差约 40 个基点；做市商成交 1,000 手、每手赚 0.20，扣掉 20% 知情订单每笔 0.30 的损失和 30 的库存成本，净收入约 110。这个结果对知情比例和库存成本都很敏感。</p>
+<h2 id="section-7">一页清单</h2>
+<ul>
+<li><p>记录到达时的 best bid/ask、中点、价差（绝对与基点）。</p>
+</li>
+<li><p>记录前五档深度和累计深度，不只记最优档。</p>
+</li>
+<li><p>用 VWAP 与到达时中点比较，计算冲击成本。</p>
+</li>
+<li><p>把订单拆成“小单/中单/大单”三档，分别估成本，不用一个平均数。</p>
+</li>
+<li><p>做市收入要扣逆向选择、库存和系统成本，不能只看价差。</p>
+</li>
+<li><p>期货分析写清基差定义、CTD、持有成本和展期规则。</p>
+</li>
+<li><p>回测执行成本时加入波动率情景和“深度消失”情景。</p>
+</li>
+<li><p>所有订单簿数字标注快照时点和教学属性。</p>
+</li>
+<li><p>记录撤单率、成交率和快照时点，静态深度不能替代执行质量。</p>
+</li>
+<li><p>用同一合约的现货、期货和保证金数据复算基差，不跨月拼接。</p>
+</li>
+<li><p>跨月拼接基差会混入不同的持有成本和交割条件。</p>
+</li>
+</ul>
+<h2 id="section-8">常见误读</h2>
+<p>误读一：价差小就等于交易成本低。价差只是最优档的显性成本，大单还要吃深度、排队和冲击；买一卖一各 0.20 元，看似 40 个基点，600 手执行后可能变成 30 个基点以上的冲击。</p>
+<p>误读二：基差一定会收敛，所以套利无风险。收敛需要时间、资金和可交割条件；保证金追缴、展期成本和流动性枯竭可以在收敛前让头寸先爆掉。</p>
+<p>误读三：做市商稳赚价差。每手 0.20 元的价差要覆盖知情订单的逆向选择、库存成本和撤单风险；20% 知情订单每笔损失 0.30 元，就足以把 1,000 手的净收入压到 110 元。</p>
+<p>误读四：订单簿深度就是流动性。可见挂单可以被撤、被隐藏、被冰山单稀释；5,000 手挂单里真正可成交的也许只有 500 手，静态快照不能替代执行模拟。</p>
+<p>误读五：VWAP 就是全天成交均价，所以能代表真实成本。VWAP 是成交量加权的结果，不是可执行报价；用日终 VWAP 评估一笔 600 手订单，会忽略下单时点和冲击路径，也可能把收盘集合竞价算进去。</p>
+<h2 id="section-9">数据口径</h2>
+<p>口径一：订单簿要记录时间戳、买卖价、各档深度和撤单率。静态快照只保存一瞬间的挂单，VWAP 和冲击成本要用逐笔成交或下单簿重建；5,000 手挂单与 500 手可成交是两件事。</p>
+<p>口径二：基差要写清现货价、期货价、合约月份和保证金。50,000 元名义、10% 保证金是 5,000 元，标的逆向 12% 就损失 6,000 元；展期收益和保证金追缴必须进同一张现金流表。</p>
+<p>口径三：做市净收入要拆成价差收入、逆向选择损失和库存成本。1,000 手、每手 0.20 元是 200 元收入，20% 知情订单每笔损失 0.30 元是 60 元，库存成本 30 元，净收入 110 元；不拆项就无法判断哪个参数最致命。</p>
+<p>口径四：执行基准要写清到达价、决策价和收盘价。用到达时中点衡量冲击，用决策价衡量延迟，用收盘价衡量机会成本；三个基准混用，会把执行好坏和选股好坏搅在一起。</p>
+<h2 id="section-10">练习</h2>
+<ol>
+<li>买一 99.80、卖一 100.20，计算绝对价差、中点与相对价差（基点）。</li>
+<li>买 600 手先吃 <a href="mailto:400@100.20">400@100.20</a>、再吃 <a href="mailto:200@100.50">200@100.50</a>，计算 VWAP 与相对中点的冲击。</li>
+<li>卖 500 手先吃 <a href="mailto:400@99.80">400@99.80</a>、再吃 <a href="mailto:100@99.50">100@99.50</a>，计算 VWAP 与冲击。</li>
+<li>若订单增至 1,000 手，怎样用前五档深度估算冲击？说明非线性来源。</li>
+<li>做市商成交 1,000 手、每手赚 0.20，20% 知情订单每笔损失 0.30，库存成本 30，计算净收入。</li>
+<li>区分逆向选择成本与库存风险，各给一个可观察指标。</li>
+<li>解释 contango 与 backwardation 下多头展期收益的方向，并说明它补偿什么。</li>
+<li>为什么“最优档挂单量很大”不等于“大单能低成本成交”？</li>
+<li>冰山单和隐藏单会怎样改变静态订单簿的成本估计？</li>
+<li>设计一个 10% POV 执行方案，写出时间、参与率和主要风险。</li>
+<li>保证金变化如何让一个看似盈利的基差交易被迫平仓？</li>
+<li>用一段话说明订单簿快照的局限，并给出两个改进数据项。</li>
+</ol>
+<p>数据说明：订单簿与市场结构参考 SEC、IOSCO、BIS、Kyle、Glosten–Milgrom、NYSE、Nasdaq 与 CFA Institute[1][2][3][4][5][6][7][8]；正文数字为教学假设。</p>
+<h2 id="section-11">关联</h2>
+<ul>
+<li>先修：MKT-013 原油与成品油</li>
+<li>延伸：MKT-067 2018 年“波动率末日”：反向波动率 ETN 与再平衡</li>
+</ul>
+<h2 id="section-12">来源</h2>
+<ol>
+<li>U.S. Securities and Exchange Commission. <em>Market structure</em>. <a href="https://www.sec.gov/marketstructure/" rel="noopener noreferrer">https://www.sec.gov/marketstructure/</a>（访问日期：2026-11-25）</li>
+<li>IOSCO. <em>Market microstructure and liquidity research</em>. <a href="https://www.iosco.org/" rel="noopener noreferrer">https://www.iosco.org/</a>（访问日期：2026-11-25）</li>
+<li>Bank for International Settlements. <em>Market liquidity and stress</em>. <a href="https://www.bis.org/" rel="noopener noreferrer">https://www.bis.org/</a>（访问日期：2026-11-25）</li>
+<li>Kyle, A. S. <em>Continuous auctions and insider trading</em>. <a href="https://doi.org/10.1016/0304-405X(85)90045-6" rel="noopener noreferrer">https://doi.org/10.1016/0304-405X(85)90045-6</a>（访问日期：2026-11-25）</li>
+<li>Glosten, L. R. and Milgrom, P. R. <em>Bid, ask and transaction prices</em>. <a href="https://www.sciencedirect.com/science/article/pii/0304405X85900444" rel="noopener noreferrer">https://www.sciencedirect.com/science/article/pii/0304405X85900444</a>（访问日期：2026-11-25）</li>
+<li>NYSE. <em>Market model and order types</em>. <a href="https://www.nyse.com/markets/nyse" rel="noopener noreferrer">https://www.nyse.com/markets/nyse</a>（访问日期：2026-11-25）</li>
+<li>Nasdaq. <em>Order book and trading mechanics</em>. <a href="https://www.nasdaq.com/" rel="noopener noreferrer">https://www.nasdaq.com/</a>（访问日期：2026-11-25）</li>
+<li>CFA Institute. <em>Market microstructure and execution</em>. <a href="https://www.cfainstitute.org/" rel="noopener noreferrer">https://www.cfainstitute.org/</a>（访问日期：2026-11-25）</li>
+</ol>
+  <section class="article-demo" id="demo-check" data-demo="check" data-lang="zh" aria-labelledby="demo-check-title" data-check-done="三项都能说清：这篇的核心已经过关。" data-check-pending="还差一项：回到正文对应小节，找一个反例或数字再讲一遍。" data-check-count="已勾选"> <header class="demo-head"> <div class="demo-head-top"> <p class="demo-eyebrow">动手演示</p> <button class="demo-reset" type="button" data-demo-reset>恢复默认</button> </div> <h2 id="demo-check-title">读完自检：三句话能不能说清</h2> <p class="demo-intro">不用背定义。把下面三句逐个勾上，看自己能不能用自己的话讲清机制、算例和边界。</p> </header>          <div class="demo-check"> <ul class="demo-check-list"> <li> <label> <input type="checkbox" data-check-index="0"> <span>能读出订单簿的最优买卖价、价差、深度和订单不平衡，并判断一笔订单会吃掉几档。</span> </label> </li><li> <label> <input type="checkbox" data-check-index="1"> <span>能用 VWAP 与到达时中点复算冲击成本，并把基差、展期和保证金风险放进同一笔交易判断。</span> </label> </li><li> <label> <input type="checkbox" data-check-index="2"> <span>能说出一个本文结论不适用的条件</span> </label> </li> </ul> <p class="demo-check-status" data-out="checkStatus" role="status"> 已勾选 0 / 3
+</p> </div> <p class="demo-footnote">数字为教学假设，用来展示关系，不构成预测或投资建议。</p> </section><script type="module" src="/_astro/ArticleDemo.astro_astro_type_script_index_0_lang.C9VQAsQ0.js"></script> <p class="notice"> 本文已通过当前发布门槛；事实、计算与译文如有修订，会同步更新两个语言版本。 </p> <section class="article-cite" aria-labelledby="cite-heading"> <h2 id="cite-heading">引用这篇</h2> <p>非商业引用请注明作者、标题、本站和链接；第三方来源按原许可。</p> <code data-cite-text>订单簿、做市与期货基差。巫妖投资，2026-11-26。https://markets.51invest.com/learn/order-books-market-making-futures-basis/</code> <div class="cite-actions"> <button type="button" data-copy-cite>复制引用</button> <span data-cite-status role="status" aria-live="polite"></span> </div> </section> <nav class="article-pager" aria-label="同站上一篇与下一篇"> <a href="/learn/reits-2022-rate-shock-cap-rates/"> <small>上一篇</small> <strong>2022 REITs 利率冲击：NOI、Cap rate 与再融资</strong> </a> <span></span> </nav> <p> <a class="button secondary" href="/"> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class> <path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path>                </svg>返回分站 </a> </p> </div> <aside class="article-aside" aria-label="文章信息"> <section class="aside-card article-toc-aside"> <h2>本文目录</h2> <ol> <li><a href="#section-1">问题与范围</a></li><li><a href="#section-2">订单簿的五个数</a></li><li><a href="#section-3">价差、库存与逆向选择</a></li><li><a href="#section-4">期货基差与展期</a></li><li><a href="#section-5">数值算例</a></li><li><a href="#section-6">边界与反例</a></li><li><a href="#section-7">一页清单</a></li><li><a href="#section-8">常见误读</a></li><li><a href="#section-9">数据口径</a></li><li><a href="#section-10">练习</a></li><li><a href="#section-11">关联</a></li><li><a href="#section-12">来源</a></li> </ol> </section> <section class="aside-card"> <h2>学习目标</h2> <ul> <li>能读出订单簿的最优买卖价、价差、深度和订单不平衡，并判断一笔订单会吃掉几档。</li><li>能用 VWAP 与到达时中点复算冲击成本，并把基差、展期和保证金风险放进同一笔交易判断。</li> </ul> </section> <section class="aside-card"> <h2>必需先修</h2> <ul> <li> <a href="/learn/crude-oil-and-refined-products/">MKT-013 · 原油与成品油</a> </li> </ul> </section> <section class="aside-card"> <h2>建议阅读</h2> <ul> <li> <a href="/learn/volmageddon-2018-inverse-vol-etn-rebalance/">MKT-067 · 2018 年“波动率末日”：反向波动率 ETN 与再平衡</a> </li> </ul> </section> <section class="aside-card"> <h2>AI 复核记录</h2> <p class="muted"> 本项目没有真人签字；下列状态来自 AI-only 编辑复核。 </p> <ul> <li> 事实与计算 ：AI 复核通过 </li><li> 学科 ：AI 复核通过 </li><li> 英文 ：AI 复核通过 </li><li> 页面 ：AI 复核通过 </li> </ul> <p class="muted"> 复核日期：2026-11-26 </p> </section> <section class="aside-card"> <h2>来源</h2> <div class="source"> <a href="https://www.sec.gov/marketstructure/" rel="noopener noreferrer" target="_blank">Market structure</a> <p>U.S. Securities and Exchange Commission · SEC</p> <p>访问：2026-11-25 · 许可：Public domain (U.S. government)</p> <p>支持论点：用于核对本文的制度、数据或方法入口；正文中的教学推演与来源事实分开标注。</p> </div><div class="source"> <a href="https://www.iosco.org/" rel="noopener noreferrer" target="_blank">Market microstructure and liquidity research</a> <p>IOSCO · IOSCO</p> <p>访问：2026-11-25 · 许可：IOSCO terms; cite-only</p> <p>支持论点：用于核对本文的制度、数据或方法入口；正文中的教学推演与来源事实分开标注。</p> </div><div class="source"> <a href="https://www.bis.org/" rel="noopener noreferrer" target="_blank">Market liquidity and stress</a> <p>Bank for International Settlements · BIS</p> <p>访问：2026-11-25 · 许可：BIS terms; cite-only</p> <p>支持论点：用于核对本文的制度、数据或方法入口；正文中的教学推演与来源事实分开标注。</p> </div><div class="source"> <a href="https://doi.org/10.1016/0304-405X(85)90045-6" rel="noopener noreferrer" target="_blank">Continuous auctions and insider trading</a> <p>Albert S. Kyle · Journal of Financial Economics</p> <p>访问：2026-11-25 · 许可：Publisher terms; cite-only</p> <p>支持论点：用于核对本文的制度、数据或方法入口；正文中的教学推演与来源事实分开标注。</p> </div><div class="source"> <a href="https://www.sciencedirect.com/science/article/pii/0304405X85900444" rel="noopener noreferrer" target="_blank">Bid, ask and transaction prices</a> <p>Lawrence R. Glosten and Paul R. Milgrom · Journal of Financial Economics</p> <p>访问：2026-11-25 · 许可：Publisher terms; cite-only</p> <p>支持论点：用于核对本文的制度、数据或方法入口；正文中的教学推演与来源事实分开标注。</p> </div><div class="source"> <a href="https://www.nyse.com/markets/nyse" rel="noopener noreferrer" target="_blank">Market model and order types</a> <p>NYSE · NYSE</p> <p>访问：2026-11-25 · 许可：Exchange terms; cite-only</p> <p>支持论点：用于核对本文的制度、数据或方法入口；正文中的教学推演与来源事实分开标注。</p> </div><div class="source"> <a href="https://www.nasdaq.com/" rel="noopener noreferrer" target="_blank">Order book and trading mechanics</a> <p>Nasdaq · Nasdaq</p> <p>访问：2026-11-25 · 许可：Exchange terms; cite-only</p> <p>支持论点：用于核对本文的制度、数据或方法入口；正文中的教学推演与来源事实分开标注。</p> </div><div class="source"> <a href="https://www.cfainstitute.org/" rel="noopener noreferrer" target="_blank">Market microstructure and execution</a> <p>CFA Institute · CFA Institute</p> <p>访问：2026-11-25 · 许可：CFA Institute terms; cite-only</p> <p>支持论点：用于核对本文的制度、数据或方法入口；正文中的教学推演与来源事实分开标注。</p> </div> </section>  </aside> </div> </article><script type="module">var e=document.querySelector(`[data-reading-progress] span`),t=document.querySelector(`article`);if(e&&t){let n=()=>{let n=t.offsetTop,r=t.offsetHeight-window.innerHeight,i=r>0?(window.scrollY-n)/r:0;e.style.width=`${Math.min(1,Math.max(0,i))*100}%`};window.addEventListener(`scroll`,n,{passive:!0}),window.addEventListener(`resize`,n),n()}var n=document.querySelector(`[data-copy-cite]`),r=document.querySelector(`[data-cite-text]`),i=document.querySelector(`[data-cite-status]`);n?.addEventListener(`click`,async()=>{if(!r)return;let e=r.textContent?.trim()??``;try{await navigator.clipboard.writeText(e),i&&(i.textContent=document.documentElement.lang===`en`?`Copied`:`已复制`)}catch{i&&(i.textContent=document.documentElement.lang===`en`?`Copy failed; select the text manually.`:`复制失败，请手动选择文字。`)}window.setTimeout(()=>{i&&(i.textContent=``)},2500)});</script>  </main> <footer class="site-footer"> <div class="container footer-inner"> <div class="footer-brand"> <span class="footer-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="28" height="28" alt class="mascot" loading="lazy" decoding="async"></span> <div> <strong>巫妖投资 51Invest</strong> <p class="footer-note">非商业免费知识站。每篇标出来源与口径；这里没有投资建议。</p> </div> </div> <nav class="footer-links" aria-label="知识分站"> <a href="https://51invest.com/" data-main-home>首页</a> <a href="https://51invest.com/contents/">内容地图</a> <a href="https://51invest.com/glossary/">术语表</a> <a href="/search/">搜索</a> <a href="https://51invest.com/charts/" data-main-link>图表</a> <a href="https://51invest.com/sources/" data-main-link>数据与许可</a> <a href="https://51invest.com/about/" data-main-link>关于</a> <a href="https://51invest.com/method/" data-main-link>方法</a> <a href="https://51invest.com/corrections/" data-main-link>更正</a> <a href="https://51invest.com/privacy/" data-main-link>隐私</a> <a href="https://nav.51invest.com/" rel="noopener noreferrer">导航</a> <a href="/">分站首页</a> </nav> </div> </footer> <nav class="mobile-nav" aria-label="快捷导航"> <a class="mobile-link" href="https://51invest.com/" data-main-home> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>    <path d="m3 10 9-7 9 7"></path><path d="M5 9v11h14V9"></path><path d="M9 20v-6h6v6"></path>             </svg> <span>首页</span> </a> <a class="mobile-link" href="https://economics.51invest.com/" aria-label="经济学" title="经济学"> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>           <path d="M4 19V5"></path><path d="M4 19h16"></path><path d="m7 15 3-4 3 2 4-6"></path>      </svg> <span>经济学</span> </a><a class="mobile-link" href="https://finance.51invest.com/" aria-label="金融基础" title="金融基础"> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>            <path d="m3 9 9-6 9 6"></path><path d="M4 10h16"></path><path d="M6 10v8M10 10v8M14 10v8M18 10v8"></path><path d="M3 19h18"></path>     </svg> <span>金融</span> </a><a class="mobile-link active" href="/" aria-current="page" aria-label="市场与产品" title="市场与产品"> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>             <path d="m12 3 9 5-9 5-9-5 9-5Z"></path><path d="m3 12 9 5 9-5"></path><path d="m3 16 9 5 9-5"></path>    </svg> <span>市场</span> </a><a class="mobile-link" href="https://invest.51invest.com/" aria-label="投资方法" title="投资方法"> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>              <circle cx="12" cy="12" r="8"></circle><circle cx="12" cy="12" r="4"></circle><path d="M12 2v3M12 19v3M2 12h3M19 12h3"></path>   </svg> <span>投资</span> </a><a class="mobile-link" href="https://history.51invest.com/" aria-label="经济与金融史" title="经济与金融史"> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>               <circle cx="12" cy="12" r="8.5"></circle><path d="M12 7v5l3 2"></path>  </svg> <span>经济史</span> </a><a class="mobile-link" href="https://research.51invest.com/" aria-label="研究方法" title="研究方法"> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>                <path d="M9 3h6"></path><path d="M10 3v5L5 17a3 3 0 0 0 2.6 4h8.8a3 3 0 0 0 2.6-4L14 8V3"></path><path d="M7 15h10"></path> </svg> <span>研究</span> </a> <a class="mobile-link" href="https://nav.51invest.com/" rel="noopener noreferrer" data-external-nav aria-label="打开外链导航"> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>          <path d="M10 13a5 5 0 0 0 7.1 0l2-2a5 5 0 0 0-7.1-7.1l-1.2 1.2"></path><path d="M14 11a5 5 0 0 0-7.1 0l-2 2A5 5 0 0 0 12 20.1l1.2-1.2"></path>       </svg> <span>导航</span> </a> </nav><script type="module">var e=document.documentElement,t=[`auto`,`light`,`dark`],n=matchMedia(`(prefers-color-scheme: dark)`),r=()=>{let t=e.dataset.themeMode;return t===`light`||t===`dark`?t:`auto`},i=e=>{try{localStorage.setItem(`51invest-theme`,e)}catch{}try{let t=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-theme=${e}; Path=/; Max-Age=31536000; SameSite=Lax${t}`}catch{}},a=e=>{document.querySelectorAll(`[data-theme-toggle]`).forEach(t=>{let n=t.dataset[`label${e[0].toUpperCase()}${e.slice(1)}`];n&&(t.setAttribute(`aria-label`,n),t.setAttribute(`title`,n))})},o=t=>{e.dataset.themeMode=t,e.dataset.theme=t===`auto`?n.matches?`dark`:`light`:t,i(t),a(t)};a(r()),document.querySelectorAll(`[data-theme-toggle]`).forEach(e=>{e.addEventListener(`click`,()=>{let e=t[(t.indexOf(r())+1)%t.length];o(e)})}),n.addEventListener(`change`,()=>{r()===`auto`&&(e.dataset.theme=n.matches?`dark`:`light`)}),document.querySelectorAll(`[data-language-link]`).forEach(e=>{e.addEventListener(`click`,()=>{let t=e.dataset.languageLink;if(t===`zh`||t===`en`){try{localStorage.setItem(`51invest-language`,JSON.stringify(t))}catch{}try{let e=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-language=${t}; Path=/; Max-Age=31536000; SameSite=Lax${e}`}catch{}}})});</script> </body> </html>
